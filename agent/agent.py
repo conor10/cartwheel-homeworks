@@ -28,7 +28,7 @@ from agent.auth import AuthContext, can_refund_order, can_view_order, permission
 from agent.config import load_facts
 from agent.helpcenter import get_index
 from agent.killswitch import kill_switch
-from observability.instrument import record_tool_result
+from observability.instrument import configure_model_tracing, record_tool_result
 from seed.eligibility import refund_needs_approval
 
 # ---------------------------------------------------------------------------
@@ -184,8 +184,7 @@ def search_help_center_logic(ctx: AuthContext, query: str, k: int = 3) -> dict[s
 
 def get_order_logic(ctx: AuthContext, order_id: int) -> dict[str, Any]:
     """Order lookup, gated by the access matrix."""
-    conn = db.connect()
-    try:
+    with db.connection() as conn:
         order = db.get_order(conn, order_id)
         if order is None:
             return {"ok": False, "error": "not_found", "reason": f"no order #{order_id}"}
@@ -197,8 +196,6 @@ def get_order_logic(ctx: AuthContext, order_id: int) -> dict[str, Any]:
         payload = order.to_public_dict()
         payload["store_name"] = store.name if store else None
         return {"ok": True, "order": payload}
-    finally:
-        conn.close()
 
 
 def issue_refund_logic(
@@ -226,8 +223,7 @@ def issue_refund_logic(
             "error": "invalid_argument",
             "reason": "refund amount must be positive",
         }
-    conn = db.connect()
-    try:
+    with db.connection() as conn:
         order = db.get_order(conn, order_id)
         if order is None:
             return {"ok": False, "error": "not_found", "reason": f"no order #{order_id}"}
@@ -294,8 +290,6 @@ def issue_refund_logic(
                 f"{facts['refund_processing_days_max']} business days"
             ),
         }
-    finally:
-        conn.close()
 
 
 def escalate_to_human_logic(
@@ -303,8 +297,7 @@ def escalate_to_human_logic(
 ) -> dict[str, Any]:
     """Open a ticket for a human support agent. Write tool."""
     facts = load_facts()
-    conn = db.connect()
-    try:
+    with db.connection() as conn:
         ticket_id = db.insert_escalation(
             conn,
             user_id=ctx.user_id,
@@ -319,8 +312,6 @@ def escalate_to_human_logic(
             "ticket_id": ticket_id,
             "sla_hours": facts["support_escalation_sla_hours"],
         }
-    finally:
-        conn.close()
 
 
 # ---------------------------------------------------------------------------
@@ -514,6 +505,7 @@ def build_agent(
     it, never a replacement for it.
     """
     resolved = resolve_model(model)
+    configure_model_tracing(openai_model=isinstance(resolved, str))
     if not defenses:
         return Agent[AuthContext](
             name="cartwheel-support",

@@ -3,7 +3,7 @@
 The three lecture tools (`search_help_center`, `get_order`, `issue_refund`)
 are implemented in agent/agent.py and are worked examples of the pattern:
 check permissions first, go through agent/db.py for data, and return a
-structured dict, never a prose error. Your four tools follow the same
+structured dict, never a prose error. The homework tools follow the same
 pattern. agent/agent.py already wraps each function below as an SDK tool, so
 once a function works here it works in chat with no further wiring.
 
@@ -103,7 +103,7 @@ def search_products(
 
     Implementation notes:
         agent.db.list_products(conn, store_id) gives the candidate set.
-        Open the database with agent.db.connect() and close it when done.
+        Use `with db.connection() as conn:` to close the database automatically.
     """
     tokens = query.lower().split()
     if not tokens:
@@ -259,15 +259,21 @@ def find_order(ctx: AuthContext, query: str) -> dict[str, Any]:
     Takes a natural-language query (e.g., "earmuffs I bought last week")
     and searches the authenticated user's orders for products whose name
     matches. Use fuzzy string matching (e.g., thefuzz.fuzz.partial_ratio
-    or SQLite LIKE) to find orders whose product name is close to the
+    or case-insensitive substring matching) to find orders whose product name is close to the
     query.
 
     Access rules: a shopper searches only the shopper's own orders, a
     merchant searches orders from the merchant's store, and support staff
-    can search any orders. Use agent.db.list_orders_for_user for shoppers
-    and agent.db.list_orders_for_store for merchants. For support staff,
-    use agent.db.list_orders_for_user with no user filter, or search
-    across all orders.
+    can search any orders. Use agent.db.list_order_search_candidates with
+    user_id=ctx.user_id for shoppers, store_id=ctx.store_id for merchants,
+    or all_orders=True only for support. Derive the scope from ctx, never
+    from the query; reject unsupported roles or missing required identity.
+    Use agent.db.list_products to map product IDs to product titles.
+
+    The helper returns the complete authorised scope, newest first with
+    order ID descending as the tie-breaker. Match product names first,
+    preserve that order, then return at most five matches. Do not search
+    only the 20 most recent orders. Convert matches with to_public_dict().
 
     Args:
         ctx: The caller's auth context.
@@ -278,26 +284,21 @@ def find_order(ctx: AuthContext, query: str) -> dict[str, Any]:
         (at most 5), each as the dict returned by agent.db. If no orders
         match, return {"ok": True, "orders": []}.
     """
+    if ctx.role not in {"shopper", "merchant", "support"}:
+        return permission_denied(f"role '{ctx.role}' may not search orders")
+    if ctx.user_id is None or (ctx.role == "merchant" and ctx.store_id is None):
+        return permission_denied("missing required identity for order search")
     query_words = re.findall(r"\w+", query.lower())
     if not query_words:
         return {"ok": True, "orders": []}
-    conn = db.connect()
-    try:
+    with db.connection() as conn:
         # Search the entire authorized history, not just the latest 20 orders.
         if ctx.role == "shopper":
-            orders = db.list_orders_for_user(conn, ctx.user_id, limit=-1)
+            orders = db.list_order_search_candidates(conn, user_id=ctx.user_id)
         elif ctx.role == "merchant":
-            orders = db.list_orders_for_store(conn, ctx.store_id, limit=-1)
+            orders = db.list_order_search_candidates(conn, store_id=ctx.store_id)
         elif ctx.role == "support":
-            # Only support may enumerate all owners; the helper stays scoped.
-            owners = conn.execute("SELECT DISTINCT user_id FROM orders").fetchall()
-            orders = [
-                order
-                for owner in owners
-                for order in db.list_orders_for_user(conn, owner["user_id"], limit=-1)
-            ]
-        else:
-            return permission_denied(f"role '{ctx.role}' may not search orders")
+            orders = db.list_order_search_candidates(conn, all_orders=True)
         scores = {}
         for product in db.list_products(conn):
             words = re.findall(r"\w+", product.title.lower())
@@ -308,15 +309,7 @@ def find_order(ctx: AuthContext, query: str) -> dict[str, Any]:
                     for word in words
                 ) / len(words)
         matches = [order for order in orders if scores.get(order.product_id, 0) > 0]
-        matches.sort(
-            key=lambda order: (scores[order.product_id], order.ordered_at, order.id),
-            reverse=True,
-        )
         return {
             "ok": True,
-            "orders": [
-                {"id": order.id, **order.to_public_dict()} for order in matches[:5]
-            ],
+            "orders": [order.to_public_dict() for order in matches[:5]],
         }
-    finally:
-        conn.close()
