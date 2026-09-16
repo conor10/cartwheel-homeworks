@@ -1,0 +1,15 @@
+{"scenario_id": "support-0001", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0031", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0066", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0086", "decision": "revise", "reason": "User judged the followup repetitive within a single customer conversation.", "change": "Removed the followup and set turn_count to 1; retained the opening and grounded expectation."}
+{"scenario_id": "support-0096", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0114", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0161", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0169", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0177", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0183", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0189", "decision": "revise", "reason": "User requested a distinct purpose within the five required scenarios for the same damaged record.", "change": "Changed the conversation to a current-catalog question followed by clarification that the user means an existing purchase. Scoped the escalation expectation to the purchase clarification. Also differentiated the related return-policy and merchant catalog-check cases."}
+{"scenario_id": "support-0193", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0196", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0204", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
+{"scenario_id": "support-0235", "decision": "accept", "reason": "User reviewed the remaining sample conversations and confirmed they were satisfactory.", "change": null}
