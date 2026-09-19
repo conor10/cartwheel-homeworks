@@ -1,0 +1,638 @@
+{
+  "picks": [
+    {
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "af49984dc91e47db608d63faa92ded92",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "797b20e54b16f6e68a006d027d147aee",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "210468ad5bc5b9f0f7583ce6d8bf008b",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "03eea94e339079ee9def08a11381d891",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "5b837ec63fe035d8f5a30e747439cd78",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "97aa687a10de8bcdeff961939adad03f",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "d7a9f2a303482d26e69fc64d73e7935f",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "5238406fcccb7a83d924858de6af045c",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "6f5ed97a6c1489ee58e3ffb159bad2bb",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "a046d299f7da2005c50b198ce8c7e393",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "7d89ce8660d57515b67e4e2d343cc39a",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "5b612a026be64901047a346dc10d5dee",
+      "batch": "initial_random",
+      "reason": "Uniform random sample; seed 41"
+    },
+    {
+      "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "batch": "initial_cluster",
+      "reason": "Cluster 0 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "24236f8dba7acf1357062f9c642ee2d2",
+      "batch": "initial_cluster",
+      "reason": "Cluster 1 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "9b1992c61269c5847959a4b8f0f0cf91",
+      "batch": "initial_cluster",
+      "reason": "Cluster 2 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "batch": "initial_cluster",
+      "reason": "Cluster 3 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+      "batch": "initial_cluster",
+      "reason": "Cluster 4 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+      "batch": "initial_cluster",
+      "reason": "Cluster 5 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "bcf376467184a5b472651aff9cc4cb4b",
+      "batch": "initial_cluster",
+      "reason": "Cluster 6 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "9261a25cffa7851307d4cf760304fb92",
+      "batch": "initial_cluster",
+      "reason": "Cluster 7 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "d66c5620e576393fecd566ce76425775",
+      "batch": "initial_cluster",
+      "reason": "Cluster 8 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "bddad359a79cb0a83d110e87acbf4bc5",
+      "batch": "initial_cluster",
+      "reason": "Cluster 9 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "batch": "initial_cluster",
+      "reason": "Cluster 10 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "21a4cd2657d5a85f73e45d541ef74a1a",
+      "batch": "initial_cluster",
+      "reason": "Cluster 11 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "batch": "initial_cluster",
+      "reason": "Cluster 12 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+      "batch": "initial_cluster",
+      "reason": "Cluster 13 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "56b2f4959f5c86b4825fbfb565022743",
+      "batch": "initial_cluster",
+      "reason": "Cluster 14 representative nearest centroid; seed 41"
+    },
+    {
+      "trace_id": "4cd87ef3f3087e4cd463811e76d71e09",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: account_change; seed 41"
+    },
+    {
+      "trace_id": "7836f09bee962c9960f56b03847767d9",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: cancellation; seed 41"
+    },
+    {
+      "trace_id": "32520e43a4392cb5a6062b72e765345c",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: dispute; seed 41"
+    },
+    {
+      "trace_id": "160fc92612cdc3a4bc5c3778ec7c337a",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: find_order; seed 41"
+    },
+    {
+      "trace_id": "2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: order_status; seed 41"
+    },
+    {
+      "trace_id": "089507b64071be7c8c4a5106d91ba528",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: out_of_scope; seed 41"
+    },
+    {
+      "trace_id": "6e5b61822c58234a96834b782036495e",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: policy_question; seed 41"
+    },
+    {
+      "trace_id": "25540e433c57393f644a90f703cfcbd4",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: product_search; seed 41"
+    },
+    {
+      "trace_id": "0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: refund; seed 41"
+    },
+    {
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: return_deadline; seed 41"
+    },
+    {
+      "trace_id": "5ef3d4aa226924959b5fe2743563f400",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: account_change; seed 41"
+    },
+    {
+      "trace_id": "b82f2d1fc0a9ede623abb8e5ec2961e4",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: cancellation; seed 41"
+    },
+    {
+      "trace_id": "8913597b16825f83ae89926e935519b9",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: dispute; seed 41"
+    },
+    {
+      "trace_id": "583cd552d21948d076711aa17b664f49",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: find_order; seed 41"
+    },
+    {
+      "trace_id": "99e29d5ba9000c988db4b6625b91c42b",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: order_status; seed 41"
+    },
+    {
+      "trace_id": "f79d8fb14f6f267c9f7033ef947d9330",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: out_of_scope; seed 41"
+    },
+    {
+      "trace_id": "d9766adfe3f5c2a296b77bf1bfacf75e",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: policy_question; seed 41"
+    },
+    {
+      "trace_id": "2a25ef50aa4237269cbcc1415abd0214",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: product_search; seed 41"
+    },
+    {
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: refund; seed 41"
+    },
+    {
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: return_deadline; seed 41"
+    },
+    {
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: account_change; seed 41"
+    },
+    {
+      "trace_id": "f02251e79b9eda3b3021c0fd862fc3f1",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: cancellation; seed 41"
+    },
+    {
+      "trace_id": "62a23920085b93154ccf267844c9d9e9",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: dispute; seed 41"
+    },
+    {
+      "trace_id": "d33dc879d1bf87b348cfdc3b6e9b08ad",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: find_order; seed 41"
+    },
+    {
+      "trace_id": "c81d5fb5468dbde1c8e2a43d285afc00",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: order_status; seed 41"
+    },
+    {
+      "trace_id": "eb97af07a15e6941bcc896e28fa8ab89",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: out_of_scope; seed 41"
+    },
+    {
+      "trace_id": "9c53346a93d085ffc93c90ee27ced70e",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: policy_question; seed 41"
+    },
+    {
+      "trace_id": "242d33228c5d6950ae9695f4ca26fd4c",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: product_search; seed 41"
+    },
+    {
+      "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: refund; seed 41"
+    },
+    {
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "batch": "dimension",
+      "reason": "Balanced intent sample: return_deadline; seed 41"
+    },
+    {
+      "trace_id": "99638720ac41b466629adc9e9e59c7c9",
+      "batch": "depth",
+      "reason": "Partial refunds have been given which breaks policy."
+    },
+    {
+      "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+      "batch": "depth",
+      "reason": "Partial refunds have been given which breaks policy."
+    },
+    {
+      "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+      "batch": "depth",
+      "reason": "Partial refunds have been given which breaks policy."
+    },
+    {
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "batch": "depth",
+      "reason": "Partial refunds have been given which breaks policy."
+    },
+    {
+      "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+      "batch": "depth",
+      "reason": "Partial refunds have been given which breaks policy."
+    },
+    {
+      "trace_id": "c81c00408d16cc3c4fa83ed70eb5692d",
+      "batch": "depth",
+      "reason": "Too much order information shared."
+    },
+    {
+      "trace_id": "761777dc49e843565dd712bdc2468260",
+      "batch": "depth",
+      "reason": "Too much order information shared."
+    },
+    {
+      "trace_id": "6fa4898356a08ebe740a6623cb8ad710",
+      "batch": "depth",
+      "reason": "Too much order information shared."
+    },
+    {
+      "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+      "batch": "depth",
+      "reason": "Too much order information shared."
+    },
+    {
+      "trace_id": "dc8930ec741c527757739f3ac423c741",
+      "batch": "depth",
+      "reason": "Too much order information shared."
+    },
+    {
+      "trace_id": "0554e1b51fb8e4f539de2b256c7873a8",
+      "batch": "depth",
+      "reason": "Prompt injection"
+    },
+    {
+      "trace_id": "c3981d608beda60d92f4617b981e5fcb",
+      "batch": "depth",
+      "reason": "Account details changes"
+    },
+    {
+      "trace_id": "2cecaa222db6b280395da968ed1461ba",
+      "batch": "depth",
+      "reason": "Account details changes"
+    },
+    {
+      "trace_id": "d2f29271976fdd4112bca1e4ec51ea33",
+      "batch": "depth",
+      "reason": "Account details changes"
+    },
+    {
+      "trace_id": "73f0b843314c4c9e25c1af321734589e",
+      "batch": "depth",
+      "reason": "Account details changes"
+    },
+    {
+      "trace_id": "c18bcb9be0cb78acc8c47db5ea087d4c",
+      "batch": "depth",
+      "reason": "Account details changes"
+    },
+    {
+      "trace_id": "a7fdc8cedb717d2b17d7e6ed19a55dfd",
+      "batch": "depth",
+      "reason": "customer requests via support agents"
+    },
+    {
+      "trace_id": "51fb46f3697f53b8e5efe14d68aaf914",
+      "batch": "depth",
+      "reason": "customer requests via support agents"
+    },
+    {
+      "trace_id": "1c035bd817e8ba66707ef7eed1eea3cf",
+      "batch": "depth",
+      "reason": "customer requests via support agents"
+    },
+    {
+      "trace_id": "17a91c870ab21621cfa58936b0a6c51f",
+      "batch": "depth",
+      "reason": "customer requests via support agents"
+    },
+    {
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "batch": "depth",
+      "reason": "customer requests via support agents"
+    },
+    {
+      "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+      "batch": "depth",
+      "reason": "Policy queries"
+    },
+    {
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "batch": "depth",
+      "reason": "Policy queries"
+    },
+    {
+      "trace_id": "6d8ecece0afc421087950cac44dbdeb6",
+      "batch": "depth",
+      "reason": "Policy queries"
+    },
+    {
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "batch": "depth",
+      "reason": "Policy queries"
+    },
+    {
+      "trace_id": "79c16965b0fed9e21eac761560528738",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "9107cd84be9579469cafe4755b32b5c1",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "9a60065cb584f4c8e4f006a99d703653",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "c3ace2462e44bb0b4772f7459efb7520",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "e00b156ce4fdb500a66cc540f3f886a2",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "387254f5a3a7ef46bc17203b3000d828",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "2682dde8b2239494f3b3a5fdea4e4493",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "9e69303d64cf7e2ef0b0f2f69feff344",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "280ce1f5f27c324844d6c95519435ee6",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "dd1418c78cd4b249d3806b25df80f6eb",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "3fa1b92484d5ca9799cb1db4f79dc4c9",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "15722bec05498dbe2f89313b8fa0cfc7",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    },
+    {
+      "trace_id": "52f2fc0018f1dc217e65e663ac43075f",
+      "batch": "final",
+      "reason": "Final uniform random check; seed 41"
+    }
+  ],
+  "batches": [
+    {
+      "stage": "initial",
+      "selected_at": "2026-09-17T08:16:01.430841+00:00",
+      "count": 30
+    },
+    {
+      "stage": "dimension",
+      "selected_at": "2026-09-17T08:16:11.617433+00:00",
+      "count": 30
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-17T18:13:55.090429+00:00",
+      "count": 5
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-17T18:17:51.538440+00:00",
+      "count": 20
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-18T08:31:45.072827+00:00",
+      "count": 1
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-18T08:39:31.295752+00:00",
+      "count": 5
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-18T08:41:53.395291+00:00",
+      "count": 5
+    },
+    {
+      "stage": "depth",
+      "selected_at": "2026-09-18T08:42:15.613218+00:00",
+      "count": 4
+    },
+    {
+      "stage": "final",
+      "selected_at": "2026-09-18T09:29:40.638103+00:00",
+      "count": 15
+    }
+  ],
+  "dimension": "intent",
+  "dimension_chosen_at": "2026-09-17T08:16:01.344800+00:00",
+  "seed": 41,
+  "source": "langfuse",
+  "removals": [
+    {
+      "removed_at": "2026-09-18T08:30:41.034574+00:00",
+      "reason": "Accidental selection",
+      "picks": [
+        {
+          "trace_id": "d1a60880be40a1f805b535b16b178618",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "76cd50259ce5e21580150e6e77cd4190",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "9b453ff8989c4bd65a8a2459b11ccf24",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "b47196b47838000ebd3b5e1690df80c5",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "9107cd84be9579469cafe4755b32b5c1",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "fe9b1b44b9e76819adbe2868a402dc4c",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "03984441f21357fa3cf2b277f9af40f4",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "8fea0ddb42cee5c4515bd40542d294f8",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "63f0c329547b225daf60b54a1ec7c482",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "6acb71334fa92fa1dea0e332eae41e81",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "e2bba6380580ab3cc6dc015064db680b",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "d21a55d953be470b4cb0be098e620cfd",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "bf1c8e7aba4775af535aa7ee3d5c6ab3",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "121fa63a4f300f67f1d3c08e23ad46c8",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        },
+        {
+          "trace_id": "a631e7d895e9b0fa41daaa72f1aae181",
+          "batch": "depth",
+          "reason": "Too much order information shared."
+        }
+      ]
+    }
+  ]
+}

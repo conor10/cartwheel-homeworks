@@ -1,0 +1,434 @@
+{
+  "workspace_revision": 264,
+  "verified_score_count": 61,
+  "method": "Read each score back from local Langfuse v2 API; matched trace, mode, value, version and evidence note",
+  "scores": [
+    {
+      "score_id": "d63284a9-90fb-53cd-b141-c8106a093d7c",
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "ef00bdb3-aab6-5a00-9bcb-9a915bb635d8",
+      "trace_id": "797b20e54b16f6e68a006d027d147aee",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "8546ef20-f9ad-5221-a283-bf457ff0b10d",
+      "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "6a815e5a-e39c-5cca-966f-cb83afceefc3",
+      "trace_id": "210468ad5bc5b9f0f7583ce6d8bf008b",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "13f6a23d-e684-5131-97af-ab58f20f4d98",
+      "trace_id": "97aa687a10de8bcdeff961939adad03f",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "002e3214-6eb9-5768-9d08-8065830f2e6d",
+      "trace_id": "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "93c0b414-f56d-5be0-ab6e-46c0aa902b36",
+      "trace_id": "5b612a026be64901047a346dc10d5dee",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "af455592-086a-57ce-86de-cdc2b1095cea",
+      "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "e9438808-e510-5833-8760-a3b8b552ee51",
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "9a04edf0-440e-511e-aba7-816403808200",
+      "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "fc6e8f59-5f11-5712-beb7-997dea64b8bc",
+      "trace_id": "9261a25cffa7851307d4cf760304fb92",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "8277c5e6-18ca-5d56-b5c4-6c6283b5f6ef",
+      "trace_id": "d66c5620e576393fecd566ce76425775",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "7d3f2253-b693-52dd-9e5f-646454b0dee0",
+      "trace_id": "bddad359a79cb0a83d110e87acbf4bc5",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "84dac97b-ab11-50ed-bba5-483914e9f0b9",
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "dc630e9e-ebcf-5aec-826d-d3943100d721",
+      "trace_id": "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "6c4024d8-b042-58f2-8143-eb54d06ab979",
+      "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "6a7d1c8b-225a-5e67-88f0-27233a90bbd1",
+      "trace_id": "160fc92612cdc3a4bc5c3778ec7c337a",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "76b7867f-be1c-5f7f-84c9-f822d28c77f6",
+      "trace_id": "2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "8e27462a-bc6b-5ef5-aa7a-d20364e2edd0",
+      "trace_id": "25540e433c57393f644a90f703cfcbd4",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "83f662ab-adb1-5297-b286-9029bc42a100",
+      "trace_id": "0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "b55f0bb6-15d8-5344-9436-68ed16531cac",
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "ec742056-a420-551d-9db5-7a3d45ca1d1e",
+      "trace_id": "b82f2d1fc0a9ede623abb8e5ec2961e4",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "4dbce42b-39fc-51a8-bfef-58e3ee3f766f",
+      "trace_id": "583cd552d21948d076711aa17b664f49",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "52e4452f-7d0b-58d9-ac85-ab2532c9d9ae",
+      "trace_id": "99e29d5ba9000c988db4b6625b91c42b",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "5c257fa5-3d59-532f-99fe-ba38808f35c7",
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "c2b9abf5-22ec-5cee-b49c-38dcd96493d7",
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "104ed372-b25d-57bc-ad7d-e73b8999cc81",
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "b02bd446-53c4-59c5-a044-59a0ebafd123",
+      "trace_id": "f02251e79b9eda3b3021c0fd862fc3f1",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "1189b327-2b25-5c25-b1c9-4066c203eb65",
+      "trace_id": "c81d5fb5468dbde1c8e2a43d285afc00",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "1bc67b55-0b22-5e1f-b7a0-d5b10dd4d49c",
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "ce198b3f-b910-5eaa-b592-592b9d8a512b",
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "422bf1ef-b1ca-555f-9bcd-ece3dba738f1",
+      "trace_id": "761777dc49e843565dd712bdc2468260",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "f3571ac5-33f7-55b3-9c54-121ef6403980",
+      "trace_id": "6fa4898356a08ebe740a6623cb8ad710",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "3bbfc74f-7634-5bc3-8036-124e534e0c9b",
+      "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "9cdd8984-12d7-5ced-b78c-e3c7776a5247",
+      "trace_id": "dc8930ec741c527757739f3ac423c741",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "2dedd10a-8070-5414-acb1-d13c06a850f3",
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "eb7ee55d-ac51-5037-8864-f02fdcac3c80",
+      "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "ed82bf31-fe83-5f92-ac07-3e8c8f2e17ff",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "356b89cb-ec87-58a6-ad6c-d9706415fed2",
+      "trace_id": "9107cd84be9579469cafe4755b32b5c1",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "3c38e14b-db48-5f2a-a256-753eab1647d2",
+      "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "c8387d81-3797-59dd-95bc-7a45e305f8e7",
+      "trace_id": "9a60065cb584f4c8e4f006a99d703653",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "556b6f07-1042-5fee-bae1-997e17f805b9",
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "6d9c12e1-87c7-5bfe-a86e-f33252088477",
+      "trace_id": "3fa1b92484d5ca9799cb1db4f79dc4c9",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "bfab14d1-9850-5c68-9377-60eb8984500c",
+      "trace_id": "52f2fc0018f1dc217e65e663ac43075f",
+      "mode": "irrelevant_response_detail",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "3197ec8e-c74b-563a-88bd-03f09f4705e5",
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "mode": "unnecessary_tool_use",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "d919cc90-1593-588e-8624-0618b91bcf31",
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "mode": "unnecessary_tool_use",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "d9b30b78-7a1b-54d0-8821-03be59a955bd",
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "mode": "unnecessary_tool_use",
+      "value": 0,
+      "verified": true
+    },
+    {
+      "score_id": "bfbf2283-706f-556a-bac7-9e6589738dfb",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "mode": "unnecessary_tool_use",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "d2940339-62d0-5e65-bbb5-1f8de7a76a0a",
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "mode": "unnecessary_tool_use",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "fb81da73-66ad-5351-83b5-ad07c6e80745",
+      "trace_id": "7d89ce8660d57515b67e4e2d343cc39a",
+      "mode": "account_change_not_escalated",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "05e9cde8-c167-596d-a323-54056508daee",
+      "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+      "mode": "account_change_not_escalated",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "1c1de0a2-decc-56b5-bb94-7a67730fa371",
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "mode": "unresolved_data_not_escalated",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "12c40a36-f147-5844-a0ee-cea691fac356",
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "mode": "unresolved_data_not_escalated",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "d4478a59-13d7-55e6-b2aa-daedb2b86ffa",
+      "trace_id": "9e69303d64cf7e2ef0b0f2f69feff344",
+      "mode": "unresolved_data_not_escalated",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "2129672f-d067-5747-bfe2-6df7d42f5f85",
+      "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+      "mode": "arbitrary_amount_refund_accepted",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "1a9072a0-3fd6-5791-820b-b317695c6c2b",
+      "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+      "mode": "arbitrary_amount_refund_accepted",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "6f72d768-d29e-5c48-81e6-2279bfd76e7a",
+      "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+      "mode": "arbitrary_amount_refund_accepted",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "de29a4d2-4882-5743-9496-73bcb4dd0b35",
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "mode": "arbitrary_amount_refund_accepted",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "f77f2401-b613-57f0-8129-e7bb3b08393e",
+      "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+      "mode": "arbitrary_amount_refund_accepted",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "01e4f53a-6f9a-565b-b621-6af7679a8f15",
+      "trace_id": "eb97af07a15e6941bcc896e28fa8ab89",
+      "mode": "out_of_scope_assistance",
+      "value": 1,
+      "verified": true
+    },
+    {
+      "score_id": "bb4ce660-a102-572f-bddb-8f09c1983b0e",
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "mode": "missing_terminal_response",
+      "value": 1,
+      "verified": true
+    }
+  ]
+}

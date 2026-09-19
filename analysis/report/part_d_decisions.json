@@ -1,0 +1,846 @@
+{
+  "recorded_at": "2026-09-19T07:58:45.126870+00:00",
+  "workspace_revision": 260,
+  "source": "Saved human suggestion decisions; statuses and exact wording preserved",
+  "decisions": [
+    {
+      "id": "hw4-part-d-01",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "text": "Candidate unnecessary tool use. After the shipped status and cancellation rule settle the requested cancellation, the agent pursues several return-policy/override searches that do not change that answer. Identify the extra return-policy branch, not the legitimate full cancellation policy retrieval. The user has already noted too many help-centre/policy calls. Accept only if you agree a specific call was unnecessary. Could a brief alternative return path justify one extra lookup? Yes; the concern is the extended detour, not any mention of returns. Evidence spans: 5a130602373c5bf1, 160e3d097cad92f4, d2f4611ecb9d121a, d8f7f4f058e7debc, d5af192d34cca71a.",
+      "quote": "Hi, I’m a little turned around trying to deal with my purchase for the Modern Mechanical Keyboard from Bright Socket Electronics. Before I go make other arrangements or buy something else, can you help me cancel it if that’s still possible?",
+      "source": "Part D unnecessary_tool_use search v2; agent suggestion, human decision pending",
+      "mode": "unnecessary_tool_use",
+      "search_round": "v2",
+      "evidence": [
+        {
+          "span_id": "5a130602373c5bf1",
+          "name": "get_order",
+          "start": "2026-09-15T16:40:22.954000Z",
+          "end": "2026-09-15T16:40:22.956000Z",
+          "input": {
+            "order_id": 5017
+          },
+          "output": {
+            "ok": true,
+            "order": {
+              "order_id": 5017,
+              "store_id": 6,
+              "product_id": 209,
+              "quantity": 2,
+              "total_usd": 85.5,
+              "status": "shipped",
+              "ordered_at": "2026-06-25",
+              "shipped_at": "2026-06-28",
+              "delivered_at": null,
+              "refund_eligible": false,
+              "store_name": "Bright Socket Electronics"
+            }
+          }
+        },
+        {
+          "span_id": "160e3d097cad92f4",
+          "name": "get_policy",
+          "start": "2026-09-15T16:40:28.199000Z",
+          "end": "2026-09-15T16:40:28.219000Z",
+          "input": {
+            "policy_id": "cw-cancellations"
+          },
+          "output": {
+            "ok": true,
+            "policy_id": "cw-cancellations",
+            "title": "Cartwheel order cancellation policy",
+            "audience": "all",
+            "body": "# Cartwheel order cancellation policy\n\nAn order can be cancelled at no cost any time before the store ships it. Once an order has shipped it can no longer be cancelled; the buyer should instead wait for delivery and request a return under the Cartwheel return policy."
+          }
+        },
+        {
+          "span_id": "d2f4611ecb9d121a",
+          "name": "search_help_center",
+          "start": "2026-09-15T16:40:30.992000Z",
+          "end": "2026-09-15T16:40:30.994000Z",
+          "input": {
+            "query": "Cartwheel return policy return window delivery request return"
+          },
+          "output": {
+            "ok": true,
+            "results": [
+              {
+                "policy_id": "cw-cancellations",
+                "title": "Cartwheel order cancellation policy",
+                "snippet": "# Cartwheel order cancellation policy\n\nAn order can be cancelled at no cost any time before the store ships it. Once an order has shipped it can no longer be cancelled; the buyer should instead wait for delivery and request a return under the Cartwheel return policy.",
+                "score": 8.296
+              },
+              {
+                "policy_id": "cw-returns",
+                "title": "Cartwheel return policy",
+                "snippet": "# Cartwheel return policy\n\nItems bought on Cartwheel can be returned within 30 days of delivery. The window counts from the delivery date, not the purchase date. Items must be in the condition described by the store's listing. Individual stores may override this window; see the store overrides polic",
+                "score": 6.426
+              },
+              {
+                "policy_id": "store-cascade-audio-policy",
+                "title": "Cascade Audio store policy",
+                "snippet": "# Cascade Audio store policy\n\nCascade Audio follows the Cartwheel platform return window of 30 days from delivery. Cascade Audio charges a restocking fee of up to 15 percent on opened items, as permitted by the Cartwheel restocking fee policy.",
+                "score": 5.35
+              }
+            ]
+          }
+        },
+        {
+          "span_id": "d8f7f4f058e7debc",
+          "name": "search_help_center",
+          "start": "2026-09-15T16:40:36.568000Z",
+          "end": "2026-09-15T16:40:36.573000Z",
+          "input": {
+            "query": "Bright Socket Electronics store policy returns"
+          },
+          "output": {
+            "ok": true,
+            "results": [
+              {
+                "policy_id": "store-meridian-cycles-policy",
+                "title": "Meridian Cycles store policy",
+                "snippet": "# Meridian Cycles store policy\n\nMeridian Cycles accepts returns within 21 days of delivery, instead of the Cartwheel platform default of 30 days. This store window takes precedence for all Meridian Cycles orders.",
+                "score": 2.65
+              },
+              {
+                "policy_id": "store-northwind-books-policy",
+                "title": "Northwind Books store policy",
+                "snippet": "# Northwind Books store policy\n\nNorthwind Books accepts returns within 45 days of delivery, instead of the Cartwheel platform default of 30 days. This store window takes precedence for all Northwind Books orders.",
+                "score": 2.65
+              },
+              {
+                "policy_id": "store-saltbox-pantry-policy",
+                "title": "Saltbox Pantry store policy",
+                "snippet": "# Saltbox Pantry store policy\n\nSaltbox Pantry accepts returns within 7 days of delivery, instead of the Cartwheel platform default of 30 days. This store window takes precedence for all Saltbox Pantry orders.",
+                "score": 2.65
+              }
+            ]
+          }
+        },
+        {
+          "span_id": "d5af192d34cca71a",
+          "name": "search_help_center",
+          "start": "2026-09-15T16:40:39.018000Z",
+          "end": "2026-09-15T16:40:39.019000Z",
+          "input": {
+            "query": "store overrides policy Cartwheel return default if no store override"
+          },
+          "output": {
+            "ok": true,
+            "results": [
+              {
+                "policy_id": "cw-returns",
+                "title": "Cartwheel return policy",
+                "snippet": "# Cartwheel return policy\n\nItems bought on Cartwheel can be returned within 30 days of delivery. The window counts from the delivery date, not the purchase date. Items must be in the condition described by the store's listing. Individual stores may override this window; see the store overrides polic",
+                "score": 8.296
+              },
+              {
+                "policy_id": "cw-store-overrides",
+                "title": "How store policies interact with platform policy",
+                "snippet": "# How store policies interact with platform policy\n\nStores on Cartwheel may set their own return windows and fees. An override is valid only if it is stated on the store's own policy page. When a store policy and the platform default disagree, the store policy wins, whether it is stricter or looser ",
+                "score": 7.822
+              },
+              {
+                "policy_id": "cw-cancellations",
+                "title": "Cartwheel order cancellation policy",
+                "snippet": "# Cartwheel order cancellation policy\n\nAn order can be cancelled at no cost any time before the store ships it. Once an order has shipped it can no longer be cancelled; the buyer should instead wait for delivery and request a return under the Cartwheel return policy.",
+                "score": 7.306
+              }
+            ]
+          }
+        }
+      ],
+      "agent_recommendation": "review_positive_candidate",
+      "status": "accepted",
+      "created_at": "2026-09-18T11:49:10.227721+00:00",
+      "decision_reason": "There were too many underlying tool calls. The person just wanted to know if they could return the item.",
+      "decided_at": "2026-09-19T07:25:03.708427+00:00",
+      "annotation_id": "f8ede9d4-78e3-4830-8bd7-d1ba5b869db1",
+      "history": [
+        {
+          "status": "accepted",
+          "decision_reason": "There were too many underlying tool calls. The person just wanted to know if they could return the item.",
+          "decided_at": "2026-09-18T16:33:47.538632+00:00",
+          "annotation_id": "f8ede9d4-78e3-4830-8bd7-d1ba5b869db1"
+        }
+      ]
+    },
+    {
+      "id": "hw4-part-d-02",
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "text": "Candidate unnecessary tool use. A mismatched order/catalog store justifies initial cross-checks. It does not establish Juniper as either seller. Fetching the unrelated Juniper policy and searching that store is the stronger unnecessary-tool-use example, matching the W4 boundary. Missing final response is a separate mode. Accept only if you agree a specific call was unnecessary. Ambiguity justifies verification and escalation, so do not classify every call in this failed attempt as wasteful. Evidence spans: bcce6089164e30fc, b065eb2d567d8d4c.",
+      "quote": "Which stores return rules apply to my Portable Jam Trio purchase? My account shows Blue Heron Ceramics. Please check the item listing as well as my purchase before telling me which policy to use.",
+      "source": "Part D unnecessary_tool_use search v2; agent suggestion, human decision pending",
+      "mode": "unnecessary_tool_use",
+      "search_round": "v2",
+      "evidence": [
+        {
+          "span_id": "bcce6089164e30fc",
+          "name": "get_policy",
+          "start": "2026-09-15T17:08:48.731000Z",
+          "end": "2026-09-15T17:08:48.751000Z",
+          "input": {
+            "policy_id": "store-juniper-home-goods-policy"
+          },
+          "output": {
+            "ok": true,
+            "policy_id": "store-juniper-home-goods-policy",
+            "title": "Juniper Home Goods store policy",
+            "audience": "all",
+            "body": "# Juniper Home Goods store policy\n\nJuniper Home Goods accepts returns within 14 days of delivery, instead of the Cartwheel platform default of 30 days. This store window takes precedence for all Juniper Home Goods orders."
+          }
+        },
+        {
+          "span_id": "b065eb2d567d8d4c",
+          "name": "search_products",
+          "start": "2026-09-15T17:08:56.855000Z",
+          "end": "2026-09-15T17:08:56.860000Z",
+          "input": {
+            "query": "Portable Jam Trio",
+            "store": "Juniper Home Goods",
+            "max_price_usd": null,
+            "limit": 5
+          },
+          "output": {
+            "ok": true,
+            "products": [],
+            "count": 0
+          }
+        }
+      ],
+      "agent_recommendation": "review_positive_candidate",
+      "status": "rejected",
+      "created_at": "2026-09-18T11:49:10.227766+00:00",
+      "decision_reason": "The underlying issue was a mismatch in a store id for a purchase. This should have been escalated to support at the start as it was an unexpected scenario. Instead the agent went off searching policies and ultimately failed.",
+      "decided_at": "2026-09-19T07:38:31.811791+00:00",
+      "history": [
+        {
+          "status": "rejected",
+          "decision_reason": "The underlying issue was",
+          "decided_at": "2026-09-19T07:17:56.396765+00:00",
+          "annotation_id": null
+        },
+        {
+          "status": "rejected",
+          "decision_reason": "The underlying issue was a mismatch in a store id for a purchase. This should have been escalated to support at the start as it was an unexpected scenario. Instead the agent went off searching policies and ultimately failed.",
+          "decided_at": "2026-09-19T07:24:37.502604+00:00",
+          "annotation_id": null
+        },
+        {
+          "status": "rejected",
+          "decision_reason": "The underlying issue was a mismatch in a store id for a purchase. This should have been escalated to support at the start as it was an unexpected scenario. Instead the agent went off searching policies and ultimately failed.",
+          "decided_at": "2026-09-19T07:25:08.616287+00:00",
+          "annotation_id": null
+        }
+      ]
+    },
+    {
+      "id": "hw4-part-d-03",
+      "trace_id": "702493ab24418310a5263988953a73b2",
+      "text": "Candidate unnecessary tool use. After listing orders, the agent tries 15 bare product IDs as text search queries; every query returns no products. This is an unproductive bulk lookup strategy, not merely a high count. Tool search is by text, and no successful ID match establishes this strategy. Accept only if you agree a specific call was unnecessary. The user did ask for another way to locate an unknown order. Trying to enrich identifiers is relevant; the issue is the repeated unsupported method, not the initial list or every exploratory attempt. Check timestamps before claiming sequential retries. Evidence spans: f88d9a14882b6e7a, 42a1db96a3e6797b, 2a38f5daab08abba, fa3a27ffa5d5f210.",
+      "quote": "I need help finding an order on my account, but I can’t remember the item or the store. Please search for it another way, because I really need this order found.",
+      "source": "Part D unnecessary_tool_use search v2; agent suggestion, human decision pending",
+      "mode": "unnecessary_tool_use",
+      "search_round": "v2",
+      "evidence": [
+        {
+          "span_id": "f88d9a14882b6e7a",
+          "name": "list_my_orders",
+          "start": "2026-09-15T17:41:28.725000Z",
+          "end": "2026-09-15T17:41:28.731000Z",
+          "input": {},
+          "output": {
+            "ok": true,
+            "orders": [
+              {
+                "order_id": 8231,
+                "store_id": 11,
+                "product_id": 416,
+                "quantity": 1,
+                "total_usd": 89,
+                "status": "delivered",
+                "ordered_at": "2026-06-16",
+                "shipped_at": "2026-06-19",
+                "delivered_at": "2026-06-25",
+                "refund_eligible": true
+              },
+              {
+                "order_id": 3104,
+                "store_id": 8,
+                "product_id": 307,
+                "quantity": 1,
+                "total_usd": 21.25,
+                "status": "delivered",
+                "ordered_at": "2026-04-09",
+                "shipped_at": "2026-04-12",
+                "delivered_at": "2026-04-14",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 7470,
+                "store_id": 4,
+                "product_id": 139,
+                "quantity": 1,
+                "total_usd": 299,
+                "status": "cancelled",
+                "ordered_at": "2026-03-11",
+                "shipped_at": null,
+                "delivered_at": null,
+                "refund_eligible": false
+              },
+              {
+                "order_id": 3318,
+                "store_id": 10,
+                "product_id": 393,
+                "quantity": 1,
+                "total_usd": 41.75,
+                "status": "delivered",
+                "ordered_at": "2026-02-08",
+                "shipped_at": "2026-02-09",
+                "delivered_at": "2026-02-12",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 4084,
+                "store_id": 13,
+                "product_id": 519,
+                "quantity": 2,
+                "total_usd": 356,
+                "status": "delivered",
+                "ordered_at": "2025-12-07",
+                "shipped_at": "2025-12-09",
+                "delivered_at": "2025-12-12",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 2223,
+                "store_id": 2,
+                "product_id": 44,
+                "quantity": 1,
+                "total_usd": 44.5,
+                "status": "delivered",
+                "ordered_at": "2025-09-25",
+                "shipped_at": "2025-09-27",
+                "delivered_at": "2025-09-30",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 5896,
+                "store_id": 6,
+                "product_id": 220,
+                "quantity": 1,
+                "total_usd": 80.25,
+                "status": "delivered",
+                "ordered_at": "2025-09-23",
+                "shipped_at": "2025-09-26",
+                "delivered_at": "2025-09-29",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 7513,
+                "store_id": 18,
+                "product_id": 683,
+                "quantity": 1,
+                "total_usd": 26,
+                "status": "delivered",
+                "ordered_at": "2025-09-17",
+                "shipped_at": "2025-09-20",
+                "delivered_at": "2025-09-27",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 7135,
+                "store_id": 18,
+                "product_id": 683,
+                "quantity": 2,
+                "total_usd": 52,
+                "status": "delivered",
+                "ordered_at": "2025-08-21",
+                "shipped_at": "2025-08-23",
+                "delivered_at": "2025-08-30",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 9946,
+                "store_id": 17,
+                "product_id": 653,
+                "quantity": 1,
+                "total_usd": 163.75,
+                "status": "refunded",
+                "ordered_at": "2025-07-31",
+                "shipped_at": "2025-08-01",
+                "delivered_at": "2025-08-06",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 638,
+                "store_id": 14,
+                "product_id": 552,
+                "quantity": 2,
+                "total_usd": 76.5,
+                "status": "delivered",
+                "ordered_at": "2025-07-06",
+                "shipped_at": "2025-07-08",
+                "delivered_at": "2025-07-15",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 9214,
+                "store_id": 15,
+                "product_id": 563,
+                "quantity": 1,
+                "total_usd": 117.5,
+                "status": "delivered",
+                "ordered_at": "2025-06-01",
+                "shipped_at": "2025-06-02",
+                "delivered_at": "2025-06-05",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 3193,
+                "store_id": 6,
+                "product_id": 211,
+                "quantity": 1,
+                "total_usd": 185.25,
+                "status": "delivered",
+                "ordered_at": "2025-05-22",
+                "shipped_at": "2025-05-24",
+                "delivered_at": "2025-05-29",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 7388,
+                "store_id": 6,
+                "product_id": 221,
+                "quantity": 1,
+                "total_usd": 9,
+                "status": "delivered",
+                "ordered_at": "2025-03-19",
+                "shipped_at": "2025-03-20",
+                "delivered_at": "2025-03-26",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 420,
+                "store_id": 10,
+                "product_id": 378,
+                "quantity": 1,
+                "total_usd": 191.5,
+                "status": "delivered",
+                "ordered_at": "2025-02-22",
+                "shipped_at": "2025-02-25",
+                "delivered_at": "2025-03-03",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 2555,
+                "store_id": 7,
+                "product_id": 255,
+                "quantity": 1,
+                "total_usd": 85.75,
+                "status": "delivered",
+                "ordered_at": "2025-01-12",
+                "shipped_at": "2025-01-13",
+                "delivered_at": "2025-01-16",
+                "refund_eligible": false
+              }
+            ],
+            "count": 16
+          }
+        },
+        {
+          "span_id": "42a1db96a3e6797b",
+          "name": "search_products",
+          "start": "2026-09-15T17:41:41.322000Z",
+          "end": "2026-09-15T17:41:41.771000Z",
+          "input": {
+            "query": "416",
+            "store": null,
+            "max_price_usd": null,
+            "limit": 1
+          },
+          "output": {
+            "ok": true,
+            "products": [],
+            "count": 0
+          }
+        },
+        {
+          "span_id": "2a38f5daab08abba",
+          "name": "search_products",
+          "start": "2026-09-15T17:41:41.323000Z",
+          "end": "2026-09-15T17:41:41.784000Z",
+          "input": {
+            "query": "44",
+            "store": null,
+            "max_price_usd": null,
+            "limit": 1
+          },
+          "output": {
+            "ok": true,
+            "products": [],
+            "count": 0
+          }
+        },
+        {
+          "span_id": "fa3a27ffa5d5f210",
+          "name": "search_products",
+          "start": "2026-09-15T17:41:41.325000Z",
+          "end": "2026-09-15T17:41:41.814000Z",
+          "input": {
+            "query": "255",
+            "store": null,
+            "max_price_usd": null,
+            "limit": 1
+          },
+          "output": {
+            "ok": true,
+            "products": [],
+            "count": 0
+          }
+        }
+      ],
+      "agent_recommendation": "review_positive_candidate",
+      "status": "accepted",
+      "created_at": "2026-09-18T11:49:10.227804+00:00",
+      "decision_reason": "Agree this was an unproductive bulk lookup strategy with multiple tool calls. More information should have been requested from the user.",
+      "decided_at": "2026-09-19T07:29:01.108853+00:00",
+      "annotation_id": "f47d8647-f4e8-4a96-a7d5-2beac7379962",
+      "history": [
+        {
+          "status": "accepted",
+          "decision_reason": "Agree this was an unproductive bulk lookup strategy with multiple tool calls. More information should have been requested from the user.",
+          "decided_at": "2026-09-19T07:20:47.094071+00:00",
+          "annotation_id": "f47d8647-f4e8-4a96-a7d5-2beac7379962"
+        }
+      ]
+    },
+    {
+      "id": "hw4-part-d-04",
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "text": "Broad-search claim to check: this trace contains unnecessary tool use. Eight calls have distinct purposes: identify the correct store/order from fuzzy results, retrieve the platform timing rule, retrieve Meridian's 21-day override, and verify precedence. Search snippets followed by full policy fetches are reasonable under W5. Existing human count concern is not overwritten. I recommend rejecting the count-based failure suggestion if you agree these calls were justified. This challenges a count-based candidate, not the student's review status. A reviewer may still find an individual call avoidable, but must name its redundant purpose. Evidence spans: 2165cfcadfb44ea8, 988aee040537f12f, 90e49bd1d921a76b, 110d99fb7ea6a789, 5380dbc772a355be, 9e5b31df10877f9f.",
+      "quote": "Midnight Dry Bag from Meridian Cycles. What’s the last day I can return it, and how is that deadline calculated?",
+      "source": "Part D unnecessary_tool_use search v2; agent suggestion, human decision pending",
+      "mode": "unnecessary_tool_use",
+      "search_round": "v2",
+      "evidence": [
+        {
+          "span_id": "2165cfcadfb44ea8",
+          "name": "find_order",
+          "start": "2026-09-15T16:44:48.343000Z",
+          "end": "2026-09-15T16:44:48.372000Z",
+          "input": {
+            "query": "Midnight Dry Bag Meridian Cycles"
+          },
+          "output": {
+            "ok": true,
+            "orders": [
+              {
+                "order_id": 172,
+                "store_id": 3,
+                "product_id": 97,
+                "quantity": 2,
+                "total_usd": 398,
+                "status": "delivered",
+                "ordered_at": "2026-04-25",
+                "shipped_at": "2026-04-26",
+                "delivered_at": "2026-05-03",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 2900,
+                "store_id": 14,
+                "product_id": 560,
+                "quantity": 2,
+                "total_usd": 360.5,
+                "status": "delivered",
+                "ordered_at": "2025-09-15",
+                "shipped_at": "2025-09-17",
+                "delivered_at": "2025-09-24",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 9193,
+                "store_id": 10,
+                "product_id": 362,
+                "quantity": 1,
+                "total_usd": 245,
+                "status": "delivered",
+                "ordered_at": "2025-09-03",
+                "shipped_at": "2025-09-06",
+                "delivered_at": "2025-09-13",
+                "refund_eligible": false
+              },
+              {
+                "order_id": 5322,
+                "store_id": 3,
+                "product_id": 100,
+                "quantity": 1,
+                "total_usd": 133,
+                "status": "delivered",
+                "ordered_at": "2025-03-24",
+                "shipped_at": "2025-03-25",
+                "delivered_at": "2025-03-31",
+                "refund_eligible": false
+              }
+            ]
+          }
+        },
+        {
+          "span_id": "988aee040537f12f",
+          "name": "search_products",
+          "start": "2026-09-15T16:44:51.663000Z",
+          "end": "2026-09-15T16:44:51.696000Z",
+          "input": {
+            "query": "Midnight Dry Bag Meridian Cycles",
+            "store": null,
+            "max_price_usd": null,
+            "limit": 10
+          },
+          "output": {
+            "ok": true,
+            "products": [
+              {
+                "product_id": 362,
+                "store_id": 10,
+                "title": "Midnight Dry Bag",
+                "price_usd": 245
+              }
+            ],
+            "count": 1
+          }
+        },
+        {
+          "span_id": "90e49bd1d921a76b",
+          "name": "get_order",
+          "start": "2026-09-15T16:44:54.616000Z",
+          "end": "2026-09-15T16:44:54.622000Z",
+          "input": {
+            "order_id": 9193
+          },
+          "output": {
+            "ok": true,
+            "order": {
+              "order_id": 9193,
+              "store_id": 10,
+              "product_id": 362,
+              "quantity": 1,
+              "total_usd": 245,
+              "status": "delivered",
+              "ordered_at": "2025-09-03",
+              "shipped_at": "2025-09-06",
+              "delivered_at": "2025-09-13",
+              "refund_eligible": false,
+              "store_name": "Meridian Cycles"
+            }
+          }
+        },
+        {
+          "span_id": "110d99fb7ea6a789",
+          "name": "get_policy",
+          "start": "2026-09-15T16:44:51.663000Z",
+          "end": "2026-09-15T16:44:51.698000Z",
+          "input": {
+            "policy_id": "cw-returns"
+          },
+          "output": {
+            "ok": true,
+            "policy_id": "cw-returns",
+            "title": "Cartwheel return policy",
+            "audience": "all",
+            "body": "# Cartwheel return policy\n\nItems bought on Cartwheel can be returned within 30 days of delivery. The window counts from the delivery date, not the purchase date. Items must be in the condition described by the store's listing. Individual stores may override this window; see the store overrides policy and the store's own policy page."
+          }
+        },
+        {
+          "span_id": "5380dbc772a355be",
+          "name": "get_policy",
+          "start": "2026-09-15T16:44:57.279000Z",
+          "end": "2026-09-15T16:44:57.302000Z",
+          "input": {
+            "policy_id": "store-meridian-cycles-policy"
+          },
+          "output": {
+            "ok": true,
+            "policy_id": "store-meridian-cycles-policy",
+            "title": "Meridian Cycles store policy",
+            "audience": "all",
+            "body": "# Meridian Cycles store policy\n\nMeridian Cycles accepts returns within 21 days of delivery, instead of the Cartwheel platform default of 30 days. This store window takes precedence for all Meridian Cycles orders."
+          }
+        },
+        {
+          "span_id": "9e5b31df10877f9f",
+          "name": "get_policy",
+          "start": "2026-09-15T16:44:57.280000Z",
+          "end": "2026-09-15T16:44:57.301000Z",
+          "input": {
+            "policy_id": "cw-store-overrides"
+          },
+          "output": {
+            "ok": true,
+            "policy_id": "cw-store-overrides",
+            "title": "How store policies interact with platform policy",
+            "audience": "all",
+            "body": "# How store policies interact with platform policy\n\nStores on Cartwheel may set their own return windows and fees. An override is valid only if it is stated on the store's own policy page. When a store policy and the platform default disagree, the store policy wins, whether it is stricter or looser than the platform default of 30 days."
+          }
+        }
+      ],
+      "agent_recommendation": "reject_failure_hypothesis",
+      "status": "rejected",
+      "created_at": "2026-09-18T11:49:10.227841+00:00",
+      "decision_reason": "Clarified by the reviewer on 19 September: unnecessary tools absent; excessive response detail present.",
+      "decided_at": "2026-09-19T07:55:31.362571+00:00",
+      "history": [
+        {
+          "status": "rejected",
+          "decision_reason": "Agree with rejection — the tool call appears reasonable. However, the text returned to the user is excessive in terms of all the order information provided.",
+          "decided_at": "2026-09-19T07:22:47.711199+00:00",
+          "annotation_id": null
+        },
+        {
+          "status": "accepted",
+          "decision_reason": "Agree with suggestion — the tool call appears reasonable. However, the text returned to the user is excessive in terms of all the order information provided.",
+          "decided_at": "2026-09-19T07:28:31.028317+00:00",
+          "annotation_id": "0d24981c-b223-44e6-9835-028001d90be5"
+        },
+        {
+          "status": "accepted",
+          "decision_reason": "Agree with suggestion — the tool call appears reasonable. However, the text returned to the user is excessive in terms of all the order information provided.",
+          "decided_at": "2026-09-19T07:29:04.172211+00:00",
+          "annotation_id": "0d24981c-b223-44e6-9835-028001d90be5"
+        }
+      ],
+      "annotation_id": "0d24981c-b223-44e6-9835-028001d90be5"
+    },
+    {
+      "id": "hw4-part-d-05",
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "text": "Broad-search claim to check: this trace contains unnecessary tool use. The follow-up explicitly asks the agent to look through the account further. Each get_order adds a store_name omitted from the earlier list, so these are distinct enrichment calls on different orders, not 16 duplicates. Contrast with the preceding failed product-ID text searches. I recommend rejecting the count-based failure suggestion if you agree these calls were justified. A clarification question might be more efficient, but no firm maximum or batching affordance is established; keep this a close negative, with existing human count concern visible. Evidence spans: 0fa6ee2fa1d5ab83, 3526a137184868e4, 7b892c9e96492f6e.",
+      "quote": "I still need help with this. I don’t remember the item or store, but please don’t leave it there—can you look through my account somehow and help me find the order?",
+      "source": "Part D unnecessary_tool_use search v2; agent suggestion, human decision pending",
+      "mode": "unnecessary_tool_use",
+      "search_round": "v2",
+      "evidence": [
+        {
+          "span_id": "0fa6ee2fa1d5ab83",
+          "name": "get_order",
+          "start": "2026-09-15T17:42:04.595000Z",
+          "end": "2026-09-15T17:42:04.609000Z",
+          "input": {
+            "order_id": 8231
+          },
+          "output": {
+            "ok": true,
+            "order": {
+              "order_id": 8231,
+              "store_id": 11,
+              "product_id": 416,
+              "quantity": 1,
+              "total_usd": 89,
+              "status": "delivered",
+              "ordered_at": "2026-06-16",
+              "shipped_at": "2026-06-19",
+              "delivered_at": "2026-06-25",
+              "refund_eligible": true,
+              "store_name": "Little Fox Toys"
+            }
+          }
+        },
+        {
+          "span_id": "3526a137184868e4",
+          "name": "get_order",
+          "start": "2026-09-15T17:42:04.596000Z",
+          "end": "2026-09-15T17:42:04.609000Z",
+          "input": {
+            "order_id": 3104
+          },
+          "output": {
+            "ok": true,
+            "order": {
+              "order_id": 3104,
+              "store_id": 8,
+              "product_id": 307,
+              "quantity": 1,
+              "total_usd": 21.25,
+              "status": "delivered",
+              "ordered_at": "2026-04-09",
+              "shipped_at": "2026-04-12",
+              "delivered_at": "2026-04-14",
+              "refund_eligible": false,
+              "store_name": "Paper Lantern Press"
+            }
+          }
+        },
+        {
+          "span_id": "7b892c9e96492f6e",
+          "name": "get_order",
+          "start": "2026-09-15T17:42:04.596000Z",
+          "end": "2026-09-15T17:42:04.618000Z",
+          "input": {
+            "order_id": 3318
+          },
+          "output": {
+            "ok": true,
+            "order": {
+              "order_id": 3318,
+              "store_id": 10,
+              "product_id": 393,
+              "quantity": 1,
+              "total_usd": 41.75,
+              "status": "delivered",
+              "ordered_at": "2026-02-08",
+              "shipped_at": "2026-02-09",
+              "delivered_at": "2026-02-12",
+              "refund_eligible": false,
+              "store_name": "Meridian Cycles"
+            }
+          }
+        }
+      ],
+      "agent_recommendation": "reject_failure_hypothesis",
+      "status": "accepted",
+      "created_at": "2026-09-18T11:49:10.227877+00:00",
+      "decision_reason": "Clarified by the reviewer on 19 September: this second turn should be labelled as unnecessary tool calls; a clarification question would have been more efficient.",
+      "decided_at": "2026-09-19T07:55:31.904830+00:00",
+      "history": [
+        {
+          "status": "rejected",
+          "decision_reason": "A clarification question would have been far more efficient.",
+          "decided_at": "2026-09-19T07:39:37.991612+00:00",
+          "annotation_id": null
+        }
+      ],
+      "annotation_id": "dfded0aa-3b3b-40fa-9ade-3271494d83c3"
+    },
+    {
+      "id": "hw4-part-d-06",
+      "trace_id": "373cebad318b3529379647df85247c78",
+      "text": "The second support-0235 turn again directs an explicit account-contact update to settings and offers a ticket only conditionally. No ticket exists yet in this session; ticket 194 is opened in the following turn. Candidate third positive for missing account-change escalation (ESC-2). A later ticket does not erase this earlier turn.",
+      "quote": "Got it — thanks for clarifying. Since this is for your **overall Cartwheel account profile**, not a specific order, I still can’t directly change your notification/contact details for you in chat.\n\nPlease update it from your account settings instead:\n\n1. Sign in to Cartwheel.\n2. Go to **Account / Profile Settings**.\n3. Look for **Contact info**, **Profile**, **Notifications**, or **Communication p",
+      "source": "Part D targeted evidence check; agent suggestion, human decision pending",
+      "mode": "account_change_not_escalated",
+      "status": "accepted",
+      "created_at": "2026-09-18T11:49:10.227913+00:00",
+      "decision_reason": "Ticket should have been created at this stage.",
+      "decided_at": "2026-09-19T07:41:14.805716+00:00",
+      "annotation_id": "84aeb03b-16fd-4a93-867b-c5a78c947a06"
+    },
+    {
+      "id": "hw4-part-d-07",
+      "trace_id": "6c9625259d50ac10622cf49a9b723fb3",
+      "text": "This is the completed HW3 retry of support-0187, distinct from both the failed original and the fresh Workshop run. It identifies order store 1 versus catalogue store 14, chooses the order store/default policy and does not escalate. Candidate matching your accepted W3 decision: unresolved merchant conflict should go to a human. It is not a missing-response example.",
+      "quote": "I checked both places you asked me to check:\n\n1. **Your purchase record:** Order **#8003** for **Portable Jam Trio** shows the selling store as **Blue Heron Ceramics** — store_id **1**.  \n2. **Current item listing:** The current catalog listing for **Portable Jam Trio** — product_id **553** — shows store_id **14**, and I did **not** find a current Blue Heron Ceramics listing for that product.\n\n**W",
+      "source": "Part D targeted evidence check; agent suggestion, human decision pending",
+      "mode": "unresolved_data_not_escalated",
+      "status": "accepted",
+      "created_at": "2026-09-18T11:49:10.227949+00:00",
+      "decision_reason": "Agree — it should be escalated to a human.",
+      "decided_at": "2026-09-19T07:42:25.012269+00:00",
+      "annotation_id": "d0354240-ac9b-4dd3-9963-53b312a211b0"
+    }
+  ],
+  "mapping_clarifications_pending": [],
+  "mapping_clarifications": {
+    "support-0098": "unnecessary_tool_use=0; irrelevant_response_detail=1",
+    "support-0246_second_turn": "unnecessary_tool_use=1"
+  }
+}

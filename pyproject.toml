@@ -28,6 +28,9 @@ dev = [
 optimization = [
     "gepa>=0.1.4,<0.2",
 ]
+workshop = [
+    "raindrop-ai>=0.0.68",
+]
 
 [build-system]
 requires = ["hatchling"]

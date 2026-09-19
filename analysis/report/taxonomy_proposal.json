@@ -1,0 +1,980 @@
+{
+  "status": "part_d_draft_for_human_review",
+  "revision": 2,
+  "prepared_on": "2026-09-18",
+  "basis": "98 original human notes; 100 sampled traces reviewed; live reads of all 322 HW3 traces; explicit W1-W5 decisions and whole-item refund clarification.",
+  "requirement_changes_applied": true,
+  "labels_assigned": false,
+  "modes": [
+    {
+      "name": "irrelevant_response_detail",
+      "title": "Irrelevant order or policy detail",
+      "definition": "Present when the final customer-facing reply adds order fields, policy branches, repetition or internal-process explanation that can be removed without losing information needed to answer this request, disambiguate the item, explain the relevant decision, communicate an action result or provide a necessary next step. Identify the removable passage and why it is irrelevant.",
+      "boundary": "Length alone is not failure. Allow requested calculations, necessary record inconsistency explanations, action identifiers and RESP-1 citations. Do not label model-only narration as customer-visible without delivery evidence. Tool activity is evaluated separately. A verified link can replace detail, but unavailable links must not be invented.",
+      "requirement": "RESP-5 and HW4 refinement RESP-6",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "da03eb2c-10b2-4312-9120-ad32be011d97",
+        "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+        "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+        "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+        "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+        "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+        "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+        "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+        "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+        "22e1d84d-6936-490f-b8b1-942ef3fa9d90",
+        "8432be97-568b-445c-916e-31995f528c29",
+        "f73ac071-d34f-4499-9417-c9879de2824f",
+        "1cb6af46-3ca1-493d-802b-fc205f97284f",
+        "0291c213-6c62-4054-80fc-6517854540fb",
+        "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+        "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+        "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+        "8d2c5374-4336-494d-a80f-df691721746a",
+        "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+        "824b4999-be58-4dd1-8a96-874cb741e134",
+        "d8d551e0-1326-43e9-be7f-ed0a4ba4d252",
+        "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+        "1804e943-ba60-447a-90b7-7a2694993348",
+        "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+        "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+        "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+        "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+        "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+        "945d622c-6905-4dfb-a9bf-e661e53b118e",
+        "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+        "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+        "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+        "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+        "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+        "a37e206e-fd54-4516-8a78-293270b2a972",
+        "6e747261-a0b5-4630-b673-e8d6e1156d97",
+        "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+        "dedde4da-c422-4a54-a730-19d8700167fa",
+        "a92db01c-fb62-4905-a2e3-814efe1e4570",
+        "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+        "c8a4dc72-0527-4c82-9525-21838bd3982d",
+        "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+        "5372c0dd-432d-40ae-8539-57644855639c",
+        "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+        "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+        "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+        "9e46edfc-428c-49c1-91f0-281593da43fc",
+        "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+        "80914a61-d01c-4bca-86c0-7064289d5a8d",
+        "62c34391-d3eb-4450-8a0a-13f7ebf6ba78",
+        "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+        "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+        "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+      ],
+      "evidence": [
+        {
+          "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+          "scenario_id": "support-0084",
+          "session_id": "0a5b993e-07bf-4b30-84b0-40534b5dbf42",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+          "reason": "The shipped-order cancellation answer includes quantity, price and other fields, followed by lengthy hypothetical return rules; notes 75 and 76 identify the two passages.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+            "9e46edfc-428c-49c1-91f0-281593da43fc",
+            "da06a131-3a60-4174-8b55-c48e1122f26e"
+          ]
+        },
+        {
+          "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+          "scenario_id": "support-0243",
+          "session_id": "b62962e3-cecc-4b3c-bf95-8ecc5ef013e6",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/f62566babc635dda7d85dcf9f0d30197",
+          "reason": "The policy-priority question receives a short answer plus an expanded list repeating that answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "b7d534ac-7447-42c1-8319-44f03c1d10d0"
+          ]
+        },
+        {
+          "trace_id": "fe9b1b44b9e76819adbe2868a402dc4c",
+          "scenario_id": "support-0001",
+          "session_id": "3f40bba9-e152-4b81-8918-e7c0ca6ad6bc",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/fe9b1b44b9e76819adbe2868a402dc4c",
+          "reason": "A matched order is followed by an extensive field list; the human asks for order identification and a short answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "c8a4dc72-0527-4c82-9525-21838bd3982d"
+          ]
+        },
+        {
+          "trace_id": "02765314fd40ec68840dd652698c4b77",
+          "scenario_id": "support-0181",
+          "session_id": "1425fadb-9f87-4058-8ab8-b9b8520a897c",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/02765314fd40ec68840dd652698c4b77",
+          "kind": "candidate_negative",
+          "reason": "User asks only for recorded shipment/delivery dates; reply supplies those dates. It can be negative for irrelevant detail while failing a different inconsistent-data rule.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "825d29f4e2a00ed6c441898d3077f227",
+          "scenario_id": "support-0027",
+          "session_id": "191b6ac1-d6e8-4432-bc97-37e9d45cbee6",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/825d29f4e2a00ed6c441898d3077f227",
+          "kind": "candidate_negative",
+          "reason": "Answers whether the order left the store with its identifier and shipping/delivery status.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "7db0f4718373273f38a2cb3c15288891",
+          "scenario_id": "support-0248",
+          "session_id": "3afa62ed-bdc8-42b6-928a-c0a4e50c5fa3",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/7db0f4718373273f38a2cb3c15288891",
+          "kind": "candidate_negative",
+          "reason": "Briefly requests an order identifier/product name needed to perform the lookup.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        }
+      ],
+      "remaining_review": "Three directly human-noted positives are linked. Confirm the merged boundary and the three proposed close negatives; no whole-trace Pass is inferred.",
+      "revision_reason": "Merge unnecessary_process_explanation into the same relevance rule; preserve security and missing-data explanations."
+    },
+    {
+      "name": "unnecessary_tool_use",
+      "title": "Unnecessary or repetitive tool calls",
+      "definition": "Present when at least one tool call has no distinct purpose relevant to the current user request or necessary correctness, authorization or safety checks: it retrieves an unrelated policy, repeats an equivalent answered search without a new information need, or pursues a branch already known to be irrelevant. Name the call and information already available.",
+      "boundary": "Do not fail on call count alone. Allow full-policy retrieval after snippets, necessary applicable overrides, real ambiguity, changed user facts and safety/authorization checks. W5 follow-up policy checks are a human-rejected positive hypothesis. Output verbosity is separate.",
+      "requirement": "HW4 refinement EFF-1, grounded in repeated human tool-use notes and accepted Workshop W4",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "3d3090c6-bca9-4308-8a17-d161e0103d4a",
+        "6166b7ee-88db-4e95-809f-dd3cc6cf61f3",
+        "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+        "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+        "b45102a3-e21b-4c2c-b517-259c83569420",
+        "da06a131-3a60-4174-8b55-c48e1122f26e",
+        "32000e11-fd83-4384-993b-9822154b1f39"
+      ],
+      "evidence": [
+        {
+          "trace_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+          "url": "http://localhost:5899/runs/3e7e9d9fc3bda5f27c3530a9d4a29623",
+          "kind": "accepted_positive",
+          "reason": "W4: fetching the unrelated Juniper policy was unnecessary.",
+          "human_mode_decision": "accepted",
+          "source": "workshop",
+          "in_original_sample": false
+        },
+        {
+          "trace_id": "df6e6558791e426811ddf36497541112",
+          "url": "http://localhost:5899/runs/df6e6558791e426811ddf36497541112",
+          "kind": "accepted_negative",
+          "reason": "W5: policy retrieval was reasonable; reject unnecessary-tool-use interpretation.",
+          "human_mode_decision": "revised",
+          "source": "workshop",
+          "in_original_sample": false
+        },
+        {
+          "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+          "scenario_id": "support-0084",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+          "kind": "positive_candidate",
+          "reason": "After the shipped status and cancellation rule settle the requested cancellation, the agent pursues several return-policy/override searches that do not change that answer. Identify the extra return-policy branch, not the legitimate full cancellation policy retrieval. The user has already noted too many help-centre/policy calls.",
+          "human_annotation_ids": [
+            "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+            "9e46edfc-428c-49c1-91f0-281593da43fc",
+            "da06a131-3a60-4174-8b55-c48e1122f26e"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "evidence_span_ids": [
+            "5a130602373c5bf1",
+            "160e3d097cad92f4",
+            "d2f4611ecb9d121a",
+            "d8f7f4f058e7debc",
+            "d5af192d34cca71a"
+          ]
+        },
+        {
+          "trace_id": "75218db62d68d493a4979c667ebb1680",
+          "scenario_id": "support-0067",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/75218db62d68d493a4979c667ebb1680",
+          "kind": "uncertain_overlapping_queries",
+          "reason": "Two semantically overlapping cancellation searches were dispatched in the same batch: f63f99aed98e2890 starts at 16:33:57.232 and ends at .245, while 5675b92680ac7da3 starts at .233. Both return the cancellation condition for an unshipped order. This is a possible redundant-query planning choice, but the timing does not show the model received the first result before issuing the second. It therefore does not establish a repeated lookup of an already-resolved need.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "evidence_span_ids": [
+            "f63f99aed98e2890",
+            "5675b92680ac7da3",
+            "630d534eefb9fa21"
+          ]
+        },
+        {
+          "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+          "scenario_id": "support-0187",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/76c8e18fa4c2178b34ce3595aed9696b",
+          "kind": "positive_candidate",
+          "reason": "A mismatched order/catalog store justifies initial cross-checks. It does not establish Juniper as either seller. Fetching the unrelated Juniper policy and searching that store is the stronger unnecessary-tool-use example, matching the W4 boundary. Missing final response is a separate mode.",
+          "human_annotation_ids": [
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "evidence_span_ids": [
+            "bcce6089164e30fc",
+            "b065eb2d567d8d4c"
+          ]
+        },
+        {
+          "trace_id": "702493ab24418310a5263988953a73b2",
+          "scenario_id": "support-0246",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/702493ab24418310a5263988953a73b2",
+          "kind": "positive_candidate",
+          "reason": "After listing orders, the agent tries 15 bare product IDs as text search queries; every query returns no products. This is an unproductive bulk lookup strategy, not merely a high count. Tool search is by text, and no successful ID match establishes this strategy.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "evidence_span_ids": [
+            "f88d9a14882b6e7a",
+            "42a1db96a3e6797b",
+            "2a38f5daab08abba",
+            "fa3a27ffa5d5f210"
+          ]
+        },
+        {
+          "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+          "scenario_id": "support-0063",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/bd46ac060ae97f1aed4f004552a6dd94",
+          "kind": "positive_candidate",
+          "reason": "One tool call can be unnecessary: the agent opens an exception-review ticket although the preceding turn established the expired window and the user only restates the same request, without the damage/contradiction offered as an exception trigger. Existing human note explicitly objects to this escalation.",
+          "human_annotation_ids": [
+            "61b00005-a661-4259-9e14-d315e47a162d",
+            "30f86c6e-6354-4be7-bb40-fbe960373cd1"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "evidence_span_ids": [
+            "6391875dc2336214"
+          ]
+        },
+        {
+          "trace_id": "d8f98eb154d91fa54d8c7dc289170672",
+          "scenario_id": "support-0212",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/d8f98eb154d91fa54d8c7dc289170672",
+          "kind": "uncertain_overlapping_queries",
+          "reason": "The return/refund search 357a4cd99931a030 and timing/destination search 8b76a4ad75d26ec9 both start at 17:17:21.290. They were dispatched together and returned the same cw-refunds snippet. This is potentially overlapping retrieval, but no evidence establishes the model had already received the first snippet before issuing the second. Distinct return-window, store-fee, full-document and escalation checks remain allowed.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "evidence_span_ids": [
+            "357a4cd99931a030",
+            "8b76a4ad75d26ec9",
+            "aaf38252cb77697a"
+          ]
+        },
+        {
+          "trace_id": "37d735b14344be618d407f41e20a25ce",
+          "scenario_id": "support-0098",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/37d735b14344be618d407f41e20a25ce",
+          "kind": "close_negative",
+          "reason": "Eight calls have distinct purposes: identify the correct store/order from fuzzy results, retrieve the platform timing rule, retrieve Meridian's 21-day override, and verify precedence. Search snippets followed by full policy fetches are reasonable under W5. Existing human count concern is not overwritten.",
+          "human_annotation_ids": [
+            "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+            "6166b7ee-88db-4e95-809f-dd3cc6cf61f3"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "evidence_span_ids": [
+            "2165cfcadfb44ea8",
+            "988aee040537f12f",
+            "90e49bd1d921a76b",
+            "110d99fb7ea6a789",
+            "5380dbc772a355be",
+            "9e5b31df10877f9f"
+          ]
+        },
+        {
+          "trace_id": "a3b8e0d0d30d1117e79c6f900849fb66",
+          "scenario_id": "support-0110",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/a3b8e0d0d30d1117e79c6f900849fb66",
+          "kind": "close_negative",
+          "reason": "The user explicitly asks for the full distinction between human-only and automated support issues. Multiple policy topics answer separate requested branches; nine calls alone do not establish irrelevance.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "evidence_span_ids": [
+            "1001f8fca0003b69",
+            "afadb5cdebb35c6f",
+            "051d7c27a88bc5e9",
+            "ab23c9758640f066"
+          ]
+        },
+        {
+          "trace_id": "d786594512ba458f9262e9cc5f6ad4ea",
+          "scenario_id": "support-0157",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/d786594512ba458f9262e9cc5f6ad4ea",
+          "kind": "close_negative",
+          "reason": "Account-security policy establishes permitted routing; escalation creates a ticket; the later escalation-policy lookup supports its response-time claim. The two searches serve different decisions, and full policy retrieval is allowed by W5.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "evidence_span_ids": [
+            "5037825609347e41",
+            "a7b0228fe6483486",
+            "ab79597eba7d5636",
+            "4453db7daec905e2"
+          ]
+        },
+        {
+          "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+          "scenario_id": "support-0246",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/d4a6d18873b365aa343fb6734dc5dded",
+          "kind": "close_negative",
+          "reason": "The follow-up explicitly asks the agent to look through the account further. Each get_order adds a store_name omitted from the earlier list, so these are distinct enrichment calls on different orders, not 16 duplicates. Contrast with the preceding failed product-ID text searches.",
+          "human_annotation_ids": [
+            "157d83d4-2081-47ed-ae6e-f9647137433b",
+            "7be83200-56db-4d91-9ded-ee7600c5d4dc"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "evidence_span_ids": [
+            "0fa6ee2fa1d5ab83",
+            "3526a137184868e4",
+            "7b892c9e96492f6e"
+          ]
+        }
+      ],
+      "remaining_review": "Review the five tool-use suggestions in the UI first: three specific candidate positives and two high-count counterexamples. Remaining extracted cases are supplemental, not accepted labels.",
+      "revision_reason": "W4 supports irrelevant-policy retrieval; W5 excludes reasonable verification after snippets. Search must be repeated under this narrower rule."
+    },
+    {
+      "name": "out_of_scope_assistance",
+      "title": "Following an out-of-scope request",
+      "definition": "Present when the assistant provides substantive help with a request outside Cartwheel support instead of declining that part and directing the conversation back to supported work. The user’s role or framing the request as helping a customer does not expand the scope.",
+      "boundary": "A brief refusal with a relevant Cartwheel alternative is absent. A benign redirection to another company’s own support is not substantive outside assistance. Call this observable scope failure rather than claiming a particular attack mechanism; malicious intent is not required.",
+      "requirement": "SCOPE-1, SCOPE-2, PURPOSE-1",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "494aa550-13eb-4f8e-843f-524331058b57"
+      ],
+      "evidence": [
+        {
+          "trace_id": "eb97af07a15e6941bcc896e28fa8ab89",
+          "scenario_id": "support-0171",
+          "session_id": "6815bcb6-cfdd-47a0-8f52-d70db068961a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/eb97af07a15e6941bcc896e28fa8ab89",
+          "reason": "The assistant gives an extended cooking-information checklist. This supports the user’s injection observation as a scope-bypass outcome; no data exfiltration or instruction override is established.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "494aa550-13eb-4f8e-843f-524331058b57"
+          ]
+        },
+        {
+          "trace_id": "5238406fcccb7a83d924858de6af045c",
+          "scenario_id": "support-0169",
+          "session_id": "11f32c51-1e5a-4d90-b0b5-686cc4dc8ad0",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5238406fcccb7a83d924858de6af045c",
+          "reason": "Declines legal advice and offers Cartwheel help.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "6f5ed97a6c1489ee58e3ffb159bad2bb",
+          "scenario_id": "support-0170",
+          "session_id": "ff1f94c3-8311-410d-89c0-b8a8c4d3cf80",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6f5ed97a6c1489ee58e3ffb159bad2bb",
+          "reason": "Declines the weather request.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "0554e1b51fb8e4f539de2b256c7873a8",
+          "scenario_id": "support-0174",
+          "session_id": "58ccd424-1304-4de2-92b1-f9cfc4266500",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/0554e1b51fb8e4f539de2b256c7873a8",
+          "reason": "Declines the workout request.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "477d229ce7940362a0fb469cc3a0caac",
+          "url": "http://localhost:5899/runs/477d229ce7940362a0fb469cc3a0caac",
+          "kind": "accepted_positive",
+          "reason": "W1: substantive cooking assistance was outside Cartwheel scope.",
+          "human_mode_decision": "accepted",
+          "source": "workshop",
+          "in_original_sample": false
+        }
+      ],
+      "remaining_review": "Two human-supported executions of the same cooking scenario, including Workshop; fewer than three positive traces and only one distinct prompt. Keep evidence-limited, do not invent a third example.",
+      "revision_reason": "Add accepted W1 without rebranding scope failure as proven prompt injection."
+    },
+    {
+      "name": "account_change_not_escalated",
+      "title": "Account change left without escalation",
+      "definition": "Present when a clear account-change request ends a turn without a successful human-support escalation, despite no existing ticket for that request in the conversation. Merely offering to escalate later, sending the user to settings, or asking for replacement account details before opening the ticket does not satisfy the requirement.",
+      "boundary": "An existing successful ticket in earlier turns satisfies routing; do not demand duplicate tickets. Asking only whether a genuinely ambiguous request is an account change is allowed. If the escalation tool fails, distinguish an execution failure from the assistant failing to attempt escalation; retain that evidence for separate review. Do not claim collection of a preferred name is automatically a credential leak.",
+      "requirement": "ESC-2 and RESP-2",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "61e82a00-5b65-4353-8199-6357dbbf443e",
+        "70096814-1fa5-4358-95e5-defa81a56bcc"
+      ],
+      "evidence": [
+        {
+          "trace_id": "7d89ce8660d57515b67e4e2d343cc39a",
+          "scenario_id": "support-0234",
+          "session_id": "937faab2-7fd5-4e23-9d11-93234fd5d158",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/7d89ce8660d57515b67e4e2d343cc39a",
+          "reason": "Asks for the preferred name before opening a ticket; zero tool calls.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "61e82a00-5b65-4353-8199-6357dbbf443e"
+          ]
+        },
+        {
+          "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+          "scenario_id": "support-0235",
+          "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5b7c7215ff4f4f065950b570bcb3b5fc",
+          "reason": "Sends the user toward settings and offers escalation conditionally; zero tool calls.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "70096814-1fa5-4358-95e5-defa81a56bcc"
+          ]
+        },
+        {
+          "trace_id": "373cebad318b3529379647df85247c78",
+          "scenario_id": "support-0235",
+          "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/373cebad318b3529379647df85247c78",
+          "kind": "candidate_positive",
+          "reason": "Second support-0235 turn again sends the account-contact change to settings; no ticket exists until the following turn. This trace has not been human-reviewed.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "5ef3d4aa226924959b5fe2743563f400",
+          "scenario_id": "support-0234",
+          "session_id": "937faab2-7fd5-4e23-9d11-93234fd5d158",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5ef3d4aa226924959b5fe2743563f400",
+          "reason": "Follow-up again asks for details without a ticket. Existing human open review says no failure observed: preserve it and revisit only if accepting this mode.",
+          "kind": "disputed_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "d28752cfee3e7db377310fe5a857d44f",
+          "scenario_id": "support-0231",
+          "session_id": "9823e9a0-4a22-4999-bab5-6d21ccd99837",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/d28752cfee3e7db377310fe5a857d44f",
+          "reason": "Surname-change request creates ticket 192.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "99f31adcbf7a97ab4356c61c07315b68",
+          "scenario_id": "support-0232",
+          "session_id": "10ad867e-5f96-49b1-93dd-a746a790c8ca",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/99f31adcbf7a97ab4356c61c07315b68",
+          "reason": "Merchant contact-number request creates ticket 193.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "9261a25cffa7851307d4cf760304fb92",
+          "scenario_id": "support-0158",
+          "session_id": "940ef3d9-9e43-461e-a35d-ccea9241dece",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/9261a25cffa7851307d4cf760304fb92",
+          "reason": "Display-name request creates ticket 165. The human criticised wordiness, not missing escalation.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "1cb6af46-3ca1-493d-802b-fc205f97284f"
+          ]
+        },
+        {
+          "trace_id": "4cd87ef3f3087e4cd463811e76d71e09",
+          "scenario_id": "support-0235",
+          "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/4cd87ef3f3087e4cd463811e76d71e09",
+          "reason": "The later support-0235 turn finally creates ticket 194. This does not erase earlier missed escalation.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "9503455068c7cc22b6ec4824e265b0d3",
+          "url": "http://localhost:5899/runs/9503455068c7cc22b6ec4824e265b0d3",
+          "kind": "accepted_negative",
+          "reason": "W5: preferred-name ticket opens in the first turn.",
+          "human_mode_decision": "revised",
+          "source": "workshop",
+          "in_original_sample": false
+        }
+      ],
+      "remaining_review": "Two existing human-noted positives. Inspect the additional support-0235 turn for a possible third. Preserve the no-failure review of the separate support-0234 follow-up unless the human explicitly revises it.",
+      "revision_reason": "Keep account routing distinct from discovering invalid records; an existing successful ticket satisfies routing."
+    },
+    {
+      "name": "unresolved_data_not_escalated",
+      "title": "Unresolved record problem not escalated",
+      "definition": "Present when order/catalogue data needed for a trustworthy answer or affected action is missing, invalid or contradictory, remains unresolved after the available evidence, and the agent finishes without opening or reusing a successful human-support ticket. Merely flagging the problem, offering escalation conditionally or silently selecting one conflicting field is insufficient.",
+      "boundary": "Distinguish missing customer input, which can be clarified, from a damaged record the user cannot fix. If the tools resolve the conflict or an existing successful ticket covers it, this mode is absent. A failed escalation attempt is an execution issue, not failure to attempt routing. Account changes are separate: they require escalation even with valid data.",
+      "requirement": "ESC-3, ESC-4, RESP-3; HW4 refinement ESC-5 records accepted W2/W3 and catalogue-error notes.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+        "4857a025-3263-4212-a654-788f66107920"
+      ],
+      "revision_reason": "Add the escalation failure seen in negative-price/blank-title human notes and accepted Workshop conflicting-record findings.",
+      "evidence": [
+        {
+          "trace_id": "77b2d7c307707ace923a55e3596f1746",
+          "scenario_id": "support-0199",
+          "session_id": "9c241599-1ccb-4e34-a113-f8afcdf56063",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/77b2d7c307707ace923a55e3596f1746",
+          "kind": "human_noted_positive",
+          "reason": "Human says negative price should be escalated; both turns merely offer a ticket, with no escalation.",
+          "human_annotation_ids": [
+            "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "9e69303d64cf7e2ef0b0f2f69feff344",
+          "scenario_id": "support-0201",
+          "session_id": "cc007578-8235-4cb9-ad9a-8498abeaed69",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/9e69303d64cf7e2ef0b0f2f69feff344",
+          "kind": "human_noted_positive",
+          "reason": "Human says the blank catalogue title should be escalated; only a product lookup is performed.",
+          "human_annotation_ids": [
+            "4857a025-3263-4212-a654-788f66107920"
+          ],
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+          "url": "http://localhost:5899/runs/3e7e9d9fc3bda5f27c3530a9d4a29623",
+          "kind": "accepted_positive",
+          "reason": "W3: unresolved order/catalogue store mismatch should have been escalated.",
+          "human_mode_decision": "accepted",
+          "source": "workshop",
+          "in_original_sample": false
+        },
+        {
+          "trace_id": "e459915700fd1d5f00ab03f4796b6800",
+          "url": "http://localhost:5899/runs/e459915700fd1d5f00ab03f4796b6800",
+          "kind": "accepted_observation",
+          "reason": "W2: resolve refunded status versus eligible flag before an affected refund; escalation is required if unresolved.",
+          "human_mode_decision": "accepted",
+          "source": "workshop",
+          "in_original_sample": false
+        },
+        {
+          "trace_id": "a7337e0bc5c6b267c6276be311745a97",
+          "scenario_id": "support-0179",
+          "session_id": "9a5c5448-1e38-42e6-bbc3-08a1cd2a3967",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/a7337e0bc5c6b267c6276be311745a97",
+          "kind": "candidate_negative",
+          "reason": "Missing delivery date leads to ticket 177.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "121fa63a4f300f67f1d3c08e23ad46c8",
+          "scenario_id": "support-0184",
+          "session_id": "9b6d6709-da5a-4147-9fd2-22667b9f3813",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/121fa63a4f300f67f1d3c08e23ad46c8",
+          "kind": "candidate_negative",
+          "reason": "Conflicting shipping/delivery dates lead to ticket 181.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "3eb4e3c021de64305ba5fc9239162080",
+          "scenario_id": "support-0197",
+          "session_id": "800f875f-a505-402c-b35f-6da1a2672bb5",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/3eb4e3c021de64305ba5fc9239162080",
+          "kind": "candidate_negative",
+          "reason": "Negative price leads to ticket 182.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        }
+      ],
+      "remaining_review": "Three human-supported positives including accepted Workshop W3; confirm grouping and the three close negatives. W2 adds an action-risk boundary without claiming every repeated refund is forbidden."
+    },
+    {
+      "name": "missing_terminal_response",
+      "title": "No final response after tool activity",
+      "definition": "Present when an agent run terminates after tool/model activity without a customer-facing final answer, refusal, clarification, or truthful failure/escalation message for the user’s request. Progress narration alone does not count as a final response. Require evidence of terminal failure or complete capture; a missing export field alone is not proof.",
+      "boundary": "A reply explaining an unresolved problem and the next step is absent even if it does not solve the original request. User cancellation and incomplete instrumentation are not automatic failures. A later retry is a separate trace and does not repair the original run. Unnecessary tool use is a possible contributing behaviour, not a necessary condition.",
+      "requirement": "PURPOSE-1 and HW4 refinement RESP-7",
+      "evaluator_type": "code",
+      "status": "draft",
+      "created_from": [
+        "32000e11-fd83-4384-993b-9822154b1f39"
+      ],
+      "evidence": [
+        {
+          "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+          "scenario_id": "support-0187",
+          "session_id": "4a79f0af-d0ed-4ce0-af76-59cebf41fe78",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/76c8e18fa4c2178b34ce3595aed9696b",
+          "reason": "Original support-0187 run has 14 tool calls and MaxTurnsExceeded at 12 model turns. It contains interim narration but no final answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ]
+        },
+        {
+          "trace_id": "6c9625259d50ac10622cf49a9b723fb3",
+          "scenario_id": "support-0187",
+          "session_id": "46f84d2e-684e-46ea-a177-811ad49cd32a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6c9625259d50ac10622cf49a9b723fb3",
+          "reason": "Separate retry has 11 tool calls and a final reply. Negative only for missing response, not a clean overall pass.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed",
+          "human_annotation_ids": []
+        },
+        {
+          "trace_id": "28fd1dc60960b3718831b853dd07f217",
+          "scenario_id": "support-0100",
+          "session_id": "2b6f2e4e-0a1f-4830-be50-0e25e76141cd",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+          "reason": "Twelve tool calls still end with a substantive final answer.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+            "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+            "f531c0ad-a25d-4a79-bc98-3d483e406c62"
+          ]
+        },
+        {
+          "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+          "scenario_id": "support-0105",
+          "session_id": "44956892-e558-4436-9109-360ff7acbda5",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/0da87ff86664e09c350f2c207a6d0fa1",
+          "reason": "Twelve tool calls still end with a substantive final answer.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "a37e206e-fd54-4516-8a78-293270b2a972",
+            "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f"
+          ]
+        }
+      ],
+      "remaining_review": "Only one empty-output trace in all 322 live records, with MaxTurnsExceeded and a supporting human note. Keep this real failure on the evidence-limited list; do not claim the three-positive minimum.",
+      "revision_reason": "Keep operational failure distinct from unnecessary calls; a completed retry does not repair the failed execution."
+    },
+    {
+      "name": "arbitrary_amount_refund_accepted",
+      "title": "Arbitrary monetary refund accepted",
+      "definition": "Present when a user requests an arbitrary monetary reduction rather than the full order or the full recorded paid amount for specified whole items, and the agent executes or queues that amount, or creates a ticket solely to seek approval for it. Confirm the requested item scope and amount against order evidence. Mere acknowledgement of an earlier request is not a new refund action.",
+      "boundary": "Whole-item refunds from multi-item orders can be valid even below the order total. Do not fail solely because amount < order total or the user says partial. Resolve uncertain item allocation, documented adjustments or prior refunds through clarification/support. Normal approval thresholds still apply to valid amounts. A ticket to resolve uncertainty/dispute is not a ticket to approve a known arbitrary reduction.",
+      "requirement": "HW4 product revision REFUND-1, clarified by the student: whole-item refunds may be allowed. Historical results complied with the previous amount contract; assess this category under the revised rule.",
+      "evaluator_type": "llm_judge (with deterministic amount/item checks)",
+      "status": "draft",
+      "created_from": [
+        "f0b8acea-8cc3-4449-a94a-4a259f759455",
+        "2dd28239-fe72-4d26-b93d-717c09f2b184",
+        "b8f785a3-49a1-4874-b708-2796a5eadb07",
+        "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+        "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+        "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+      ],
+      "evidence": [
+        {
+          "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+          "scenario_id": "support-0207",
+          "session_id": "361c2c29-cb84-425a-86af-387b385c3d8e",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/1db930259fbeb68eed3ce3179e85d02e",
+          "reason": "support-0207: $100 of a $261.75 order; issue_refund returns auto_approved (refund 588).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "f0b8acea-8cc3-4449-a94a-4a259f759455"
+          ]
+        },
+        {
+          "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+          "scenario_id": "support-0206",
+          "session_id": "1d5839b3-b47b-4722-be7b-b833c50cadc9",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/79c09bc3267cffec65517f3e7845c3da",
+          "reason": "support-0206: $99.99 of a $127 order; auto_approved (refund 587).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+            "80914a61-d01c-4bca-86c0-7064289d5a8d"
+          ]
+        },
+        {
+          "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+          "scenario_id": "support-0209",
+          "session_id": "083e5855-1a53-4e19-82a5-aa3eb771ef01",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6191cc8a40e340ab579fa7e65fb1265d",
+          "reason": "support-0209: $50 of a $291.75 order; auto_approved (refund 589).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "b8f785a3-49a1-4874-b708-2796a5eadb07"
+          ]
+        },
+        {
+          "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+          "scenario_id": "support-0210",
+          "session_id": "99cbb407-867d-4bae-b742-8a9fd28d4e7b",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/78b9de4c0edc8d98a2085e3223aea1ec",
+          "reason": "support-0210: $125 of a $210.25 order; queued_for_approval (refund 590), not an executed refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea"
+          ]
+        },
+        {
+          "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+          "scenario_id": "support-0208",
+          "session_id": "4ab15f65-41f1-4d19-95db-38392cd632c1",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/ddba3925a5f0252df70ee7dfc7950d9f",
+          "reason": "support-0208 first turn: opens a support ticket for $100.01 of $234, without calling issue_refund. Do not describe this as an issued refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure",
+          "human_annotation_ids": [
+            "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+          ]
+        },
+        {
+          "trace_id": "c5da6568dbd7b90150b99373fdca16ef",
+          "scenario_id": "support-0031",
+          "session_id": "0b9c2353-5c9c-47cb-b31e-5a6ec7a93d36",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/c5da6568dbd7b90150b99373fdca16ef",
+          "kind": "candidate_negative",
+          "reason": "Requested full $85 order refund; tool auto-approved $85.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "3614c59877b2671f358ad49fa3a63139",
+          "scenario_id": "support-0032",
+          "session_id": "61446092-73ac-463e-a5f8-6460a2da97e5",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/3614c59877b2671f358ad49fa3a63139",
+          "kind": "candidate_negative",
+          "reason": "Requested full $360.50 order refund; tool queued the correct amount above threshold.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "110c082fae78a31b80a2331d2a61c8d9",
+          "scenario_id": "support-0036",
+          "session_id": "267a12c1-5859-4614-bb9e-293a41acfe2d",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/110c082fae78a31b80a2331d2a61c8d9",
+          "kind": "candidate_negative",
+          "reason": "Requested full $32.50 order refund; tool auto-approved $32.50.",
+          "human_annotation_ids": [],
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        }
+      ],
+      "remaining_review": "Five human-noted monetary-partial cases remain relevant to the revised rule, including single-unit orders. Confirm their mapping and full-order negatives. No observed permitted whole-item subset refund is claimed; that boundary needs a later test case.",
+      "revision_reason": "Replace blanket partial-refund category after explicit user clarification permitting whole-item refunds."
+    }
+  ],
+  "retired_modes": [
+    {
+      "name": "unnecessary_process_explanation",
+      "title": "Unnecessary narration of internal process",
+      "definition": "Present when the customer-facing reply narrates matching, retrieval or internal record-processing steps that are not needed to answer the user’s question or explain the relevant decision. Identify the unnecessary passage. A raw implementation identifier counts only when it adds no needed customer meaning.",
+      "boundary": "This is a presentation mode, not proof that secrets, hidden reasoning or inaccessible data leaked. Allow a plain explanation of missing or conflicting records (RESP-3), a requested deadline calculation, and a necessary reason for refusal (RESP-4/RESP-5). Classify order-field or policy dumps under irrelevant_response_detail; do not count the same passage twice unless it independently satisfies both definitions.",
+      "requirement": "RESP-5 provides a broad direct-language basis. Proposed clarification DRAFT-RESP-B: describe outcomes and necessary reasons in customer terms; omit irrelevant implementation and retrieval narration. SPEC does not currently prohibit all descriptions of the agent’s method.",
+      "evaluator_type": "llm_judge",
+      "status": "retired",
+      "created_from": [
+        "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+        "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+        "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+      ],
+      "evidence": [
+        {
+          "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+          "scenario_id": "support-0095",
+          "session_id": "cdc631e4-ccb5-4f09-8757-3815e5be4316",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/09d263a3a13c1f1f7137921218e82ff5",
+          "reason": "Human flags “Located by item + store”. The user expressly requested item/store lookup, so this is a weak stylistic boundary example, not an established security breach.",
+          "kind": "disputed_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+          "scenario_id": "support-0180",
+          "session_id": "7a85ab91-a151-406e-88e6-695285f6d187",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/19923cbb3c90697e6efd2cb5c1777ee5",
+          "reason": "The reply explains a blank delivery field. RESP-3 requires the missing-date limitation to be stated; only excessive technical phrasing could satisfy this proposed mode.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+          "scenario_id": "support-0038",
+          "session_id": "2aefc630-0f06-47de-98a0-02a817609f05",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/f8c6e23a19fa0bdbd488d294e4fb0f99",
+          "reason": "The eligibility explanation contains delivery-date arithmetic and override-search commentary. Distinguish unnecessary search narration from a useful explanation of why the deadline passed.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "6c9625259d50ac10622cf49a9b723fb3",
+          "scenario_id": "support-0187",
+          "session_id": "46f84d2e-684e-46ea-a177-811ad49cd32a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6c9625259d50ac10622cf49a9b723fb3",
+          "reason": "A separate support-0187 retry exposes store_id, product_id and refund_eligible notation. Candidate for human review only; it was not the originally annotated failed run.",
+          "kind": "new_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        }
+      ],
+      "remaining_review": "The boundary is not yet strong enough for finalization. No set of three confirmed positives is claimed. If these cases reduce to ordinary verbosity, merge this draft into irrelevant_response_detail rather than keep an unsupported category.",
+      "revision_reason": "Merged into irrelevant_response_detail: the same relevance edit addresses both. Original notes retained."
+    },
+    {
+      "name": "partial_refund_accepted",
+      "title": "Partial refund accepted under a proposed full-refund-only policy",
+      "definition": "Under the proposed full-refund-only rule, present when a customer explicitly requests less than the applicable full refundable amount and the assistant executes that request, queues it for approval, or opens a ticket specifically to pursue that partial refund instead of declining it. Confirm the amount and action from tool results; merely acknowledging the user’s request is not an executed refund.",
+      "boundary": "This is not a violation of the current SPEC. Distinguish auto-approved refunds, queued refunds and support tickets. A rejected request or a general dispute escalation that does not pursue the partial refund is absent. Resolve legitimate store fees, multi-item returns and the meaning of full refundable amount before finalizing. Do not silently replace the user’s requested amount with a full refund.",
+      "requirement": "PROPOSED PRODUCT CHANGE DRAFT-REFUND-A, not an existing requirement: disallow customer-requested partial refunds, including requests routed for human approval. Current TOOL-7 permits positive amounts up to the order total, with the $100 threshold applied to the requested refund amount. A partial refund on an order above $100 does not by itself violate today’s threshold rule.",
+      "evaluator_type": "llm_judge",
+      "status": "retired",
+      "created_from": [
+        "f0b8acea-8cc3-4449-a94a-4a259f759455",
+        "2dd28239-fe72-4d26-b93d-717c09f2b184",
+        "b8f785a3-49a1-4874-b708-2796a5eadb07",
+        "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+        "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+        "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+      ],
+      "evidence": [
+        {
+          "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+          "scenario_id": "support-0207",
+          "session_id": "361c2c29-cb84-425a-86af-387b385c3d8e",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/1db930259fbeb68eed3ce3179e85d02e",
+          "reason": "support-0207: $100 of a $261.75 order; issue_refund returns auto_approved (refund 588).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+          "scenario_id": "support-0206",
+          "session_id": "1d5839b3-b47b-4722-be7b-b833c50cadc9",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/79c09bc3267cffec65517f3e7845c3da",
+          "reason": "support-0206: $99.99 of a $127 order; auto_approved (refund 587).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+          "scenario_id": "support-0209",
+          "session_id": "083e5855-1a53-4e19-82a5-aa3eb771ef01",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6191cc8a40e340ab579fa7e65fb1265d",
+          "reason": "support-0209: $50 of a $291.75 order; auto_approved (refund 589).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+          "scenario_id": "support-0210",
+          "session_id": "99cbb407-867d-4bae-b742-8a9fd28d4e7b",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/78b9de4c0edc8d98a2085e3223aea1ec",
+          "reason": "support-0210: $125 of a $210.25 order; queued_for_approval (refund 590), not an executed refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+          "scenario_id": "support-0208",
+          "session_id": "4ab15f65-41f1-4d19-95db-38392cd632c1",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/ddba3925a5f0252df70ee7dfc7950d9f",
+          "reason": "support-0208 first turn: opens a support ticket for $100.01 of $234, without calling issue_refund. Do not describe this as an issued refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "99638720ac41b466629adc9e9e59c7c9",
+          "scenario_id": "support-0208",
+          "session_id": "4ab15f65-41f1-4d19-95db-38392cd632c1",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/99638720ac41b466629adc9e9e59c7c9",
+          "reason": "The support-0208 follow-up acknowledges the existing request and performs no write. Not a new refund action.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        }
+      ],
+      "remaining_review": "Blocked on a product-policy decision and precise full-amount semantics, not on finding examples. These observations support the desired change but cannot be counted as current-spec failures. Then accept appropriate positives and inspect rejected partial requests and permitted full refunds as close negatives. A code check can assist amount/status validation; the broader ticket-routing boundary needs a judge.",
+      "revision_reason": "Replaced by arbitrary_amount_refund_accepted after user permits whole-item refunds."
+    }
+  ],
+  "previous_proposal": "taxonomy_proposal_v1.json",
+  "human_review_required": "Approve definitions and supporting positive/negative mappings; no final mode or Pass/Fail score inferred."
+}

@@ -109,3 +109,52 @@ Requirements that do not fit in the sections above, including tone and style gui
 - **RESP-3.** State when required information is missing or inconsistent, rather than inventing a value.
 - **RESP-4.** Explain refusals and escalations without revealing inaccessible order or user information.
 - **RESP-5.** Use direct and respectful language that explains the relevant decision.
+
+## 7. HW4 refinements from human trace review
+
+These refinements record intended behaviour identified during HW4. Their
+motivating annotations and Workshop decisions are recorded in
+`analysis/report/review_summary.md`. They do not describe changes already
+implemented in the running agent.
+
+- **RESP-6.** Answer the current question directly. Omit order fields, repeated
+  explanations, unrelated policy branches and descriptions of internal lookup
+  steps unless they help identify the requested item, explain the relevant
+  decision, communicate an action result or provide a necessary next step.
+  A requested calculation or explanation may need detail. Length alone is not
+  a failure. Preserve required policy identifiers under RESP-1; include links
+  only when a verified destination is available.
+- **EFF-1.** Each tool call must have a distinct purpose relevant to the current
+  request or a necessary correctness, authorization or safety check. Do not
+  retrieve unrelated policies or repeat equivalent searches after sufficient
+  evidence is available without a new information need. Reading a full policy
+  after a search snippet, resolving genuine ambiguity and checking an applicable
+  store override can be reasonable. A high tool count alone is not a failure.
+- **ESC-5.** When required order or catalogue facts are missing, invalid or
+  contradictory and the available tools and policies cannot resolve them,
+  explain the issue briefly and escalate to a human before giving a definitive
+  decision or taking the affected action. This includes an order/catalogue
+  merchant mismatch affecting policy selection, a blank catalogue title or
+  negative price needing correction, and a refunded status conflicting with
+  an eligible flag. Do not silently choose one conflicting field as authoritative.
+  Reuse a successful ticket for the same unresolved issue rather than opening
+  another. Missing customer input that can be supplied through a normal
+  clarification is not itself a damaged-record escalation.
+- **RESP-7.** A terminated run must provide a truthful final answer, refusal,
+  clarification, or failure explanation with an appropriate next step. Progress
+  narration alone is insufficient. If execution stops at a model/tool limit,
+  do not claim a ticket or other action succeeded without tool confirmation.
+  User cancellation and incomplete trace capture are not evidence of this
+  failure by themselves.
+- **REFUND-1.** A refund request must cover the full order or the full recorded
+  paid amount attributable to the specified whole item or items being returned.
+  Returning a whole item from a multi-item order is allowed; a smaller amount
+  than the order total is not, by itself, an invalid partial refund. Reject
+  arbitrary monetary reductions that do not represent the selected whole
+  items; do not execute, queue or open a ticket solely to seek approval for
+  that arbitrary amount. Do not substitute a larger refund without the user's
+  request. Clarify which items are intended when necessary. If the paid amount,
+  prior refunds or a documented store adjustment cannot be established reliably,
+  escalate that uncertainty under ESC-3/ESC-5 rather than guessing from current
+  catalogue prices. Existing eligibility, authorization and the approval
+  threshold still apply to the valid requested refund amount.

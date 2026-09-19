@@ -1,0 +1,300 @@
+{
+  "generated_at": "2026-09-19T08:08:45.676176+00:00",
+  "workspace_revision": 264,
+  "sample_size": 100,
+  "final_mode_count": 7,
+  "accepted_judgments": 61,
+  "required_judgments": 700,
+  "pending_judgments": 639,
+  "unresolved_proposals": 15,
+  "counts": [
+    {
+      "mode": "irrelevant_response_detail",
+      "mode_version": 3,
+      "reviewed_sample_size": 100,
+      "accepted_present": 44,
+      "accepted_absent": 0,
+      "pending_pairs": 56,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "unnecessary_tool_use",
+      "mode_version": 3,
+      "reviewed_sample_size": 100,
+      "accepted_present": 4,
+      "accepted_absent": 1,
+      "pending_pairs": 95,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "out_of_scope_assistance",
+      "mode_version": 3,
+      "reviewed_sample_size": 100,
+      "accepted_present": 1,
+      "accepted_absent": 0,
+      "pending_pairs": 99,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "account_change_not_escalated",
+      "mode_version": 3,
+      "reviewed_sample_size": 100,
+      "accepted_present": 2,
+      "accepted_absent": 0,
+      "pending_pairs": 98,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "missing_terminal_response",
+      "mode_version": 3,
+      "reviewed_sample_size": 100,
+      "accepted_present": 1,
+      "accepted_absent": 0,
+      "pending_pairs": 99,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "unresolved_data_not_escalated",
+      "mode_version": 2,
+      "reviewed_sample_size": 100,
+      "accepted_present": 3,
+      "accepted_absent": 0,
+      "pending_pairs": 97,
+      "sample_fraction": null,
+      "status": "incomplete"
+    },
+    {
+      "mode": "arbitrary_amount_refund_accepted",
+      "mode_version": 2,
+      "reviewed_sample_size": 100,
+      "accepted_present": 5,
+      "accepted_absent": 0,
+      "pending_pairs": 95,
+      "sample_fraction": null,
+      "status": "incomplete"
+    }
+  ],
+  "final_15": {
+    "assessment_source": "Human confirmation in chat, based on the existing final 15 reviewed traces",
+    "new_consequential_modes_identified": 0,
+    "evidence": [
+      {
+        "trace_id": "79c16965b0fed9e21eac761560528738",
+        "scenario_id": "support-0106",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "9107cd84be9579469cafe4755b32b5c1",
+        "scenario_id": "support-0093",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "86520981-04b8-4dc1-819d-acabe4a0aef1",
+            "note": "A link to this information and just showing the the order id and delivery date would suffice here."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+        "scenario_id": "support-0062",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "576434dd-7624-4b97-87b8-bcc12ac4f146",
+            "note": "You just need a link to the order in the next paragraph instead of having this here."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "9a60065cb584f4c8e4f006a99d703653",
+        "scenario_id": "support-0046",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "cce4d789-f065-4879-a93c-eb75a73d015a",
+            "note": "A link to the order should suffice with the refund amount."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "c3ace2462e44bb0b4772f7459efb7520",
+        "scenario_id": "support-0247",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "e00b156ce4fdb500a66cc540f3f886a2",
+        "scenario_id": "support-0248",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "387254f5a3a7ef46bc17203b3000d828",
+        "scenario_id": "support-0108",
+        "human_review": "no_failure_observed",
+        "human_notes": [
+          {
+            "id": "b16bc1c8-8a3d-4a69-bddd-716398629396",
+            "note": "Perhaps unnecessary additional information."
+          }
+        ],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "2682dde8b2239494f3b3a5fdea4e4493",
+        "scenario_id": "support-0167",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+        "scenario_id": "support-0246",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "157d83d4-2081-47ed-ae6e-f9647137433b",
+            "note": "A bit too verbose — listing the orders would be a good starting point."
+          },
+          {
+            "id": "7be83200-56db-4d91-9ded-ee7600c5d4dc",
+            "note": "A lot of tool calls."
+          },
+          {
+            "id": "dfded0aa-3b3b-40fa-9ade-3271494d83c3",
+            "note": "Clarified by the reviewer on 19 September: this second turn should be labelled as unnecessary tool calls; a clarification question would have been more efficient."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail",
+          "unnecessary_tool_use"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "9e69303d64cf7e2ef0b0f2f69feff344",
+        "scenario_id": "support-0201",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "4857a025-3263-4212-a654-788f66107920",
+            "note": "This appears to be an error so should be escalated to support for resolution."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "unresolved_data_not_escalated"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "280ce1f5f27c324844d6c95519435ee6",
+        "scenario_id": "support-0076",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "dd1418c78cd4b249d3806b25df80f6eb",
+        "scenario_id": "support-0161",
+        "human_review": "no_failure_observed",
+        "human_notes": [],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "3fa1b92484d5ca9799cb1db4f79dc4c9",
+        "scenario_id": "support-0073",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "2011f548-7252-4dde-b9cd-b9a580577c40",
+            "note": "Unnecessary details, just link to the order"
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "15722bec05498dbe2f89313b8fa0cfc7",
+        "scenario_id": "support-0241",
+        "human_review": "no_failure_observed",
+        "human_notes": [
+          {
+            "id": "f5d4bf43-443c-44d9-bd7a-a31fb49d699b",
+            "note": "This should be the first point highlighted as its the question the user asked."
+          }
+        ],
+        "matching_existing_proposed_modes": [],
+        "new_consequential_mode_identified": false
+      },
+      {
+        "trace_id": "52f2fc0018f1dc217e65e663ac43075f",
+        "scenario_id": "support-0214",
+        "human_review": "first_failure",
+        "human_notes": [
+          {
+            "id": "7e3d5adb-1067-4e3a-9ddf-127379eca778",
+            "note": "Unecessary, could just provide order id."
+          },
+          {
+            "id": "87574a05-fe78-46ad-9a58-ad6e574596de",
+            "note": "Too much information."
+          },
+          {
+            "id": "25392225-3757-420d-91f2-d5a05aaa5b47",
+            "note": "Too many tool calls."
+          }
+        ],
+        "matching_existing_proposed_modes": [
+          "irrelevant_response_detail"
+        ],
+        "new_consequential_mode_identified": false
+      }
+    ],
+    "human_confirmation": {
+      "statement": "No new modes in the final 15.",
+      "recorded_at": "2026-09-19T10:34:16.855558+00:00",
+      "source": "reviewer_chat",
+      "status": "confirmed"
+    }
+  },
+  "rare_findings_retained": [
+    "out_of_scope_assistance",
+    "missing_terminal_response"
+  ],
+  "pending_sync": 0,
+  "rare_findings_status": "Included as final modes by explicit reviewer instruction; insufficient positive examples documented, not omitted."
+}

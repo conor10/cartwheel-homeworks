@@ -1,0 +1,1617 @@
+{
+  "status": "draft_for_human_review",
+  "prepared_on": "2026-09-18",
+  "basis": "86 existing human annotations, live trace/session reads and SPEC.md; no new agent/model runs",
+  "requirement_changes_applied": false,
+  "labels_assigned": false,
+  "modes": [
+    {
+      "name": "irrelevant_response_detail",
+      "title": "Irrelevant order or policy detail",
+      "definition": "Present when a reply adds an order-field list, repeated explanation, or policy branch that does not answer the current question, identify an ambiguous order, explain the relevant decision, state an action result, or provide a necessary next step. The reviewer must identify the removable passage and why removing it loses no information needed for that request.",
+      "boundary": "Do not fail a response for length alone, required policy identifiers, necessary refund status or timing, explaining missing information, or a calculation the user requested. A brief relevant explanation is allowed. Unneeded descriptions of the agent’s method belong to unnecessary_process_explanation; unnecessary data or policy content belongs here. Tool inefficiency is evaluated separately. Links are desirable only when verified URLs are available.",
+      "requirement": "RESP-5 provides the existing direct-language requirement. Proposed clarification DRAFT-RESP-A: answer the question first and omit irrelevant or repeated detail. No current requirement mandates order or policy hyperlinks; do not invent URLs. Retain RESP-1 citations.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "da03eb2c-10b2-4312-9120-ad32be011d97",
+        "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+        "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+        "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+        "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+        "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+        "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+        "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+        "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+        "22e1d84d-6936-490f-b8b1-942ef3fa9d90",
+        "8432be97-568b-445c-916e-31995f528c29",
+        "f73ac071-d34f-4499-9417-c9879de2824f",
+        "1cb6af46-3ca1-493d-802b-fc205f97284f",
+        "0291c213-6c62-4054-80fc-6517854540fb",
+        "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+        "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+        "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+        "8d2c5374-4336-494d-a80f-df691721746a",
+        "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+        "824b4999-be58-4dd1-8a96-874cb741e134",
+        "d8d551e0-1326-43e9-be7f-ed0a4ba4d252",
+        "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+        "1804e943-ba60-447a-90b7-7a2694993348",
+        "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+        "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+        "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+        "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+        "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+        "945d622c-6905-4dfb-a9bf-e661e53b118e",
+        "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+        "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+        "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+        "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+        "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+        "a37e206e-fd54-4516-8a78-293270b2a972",
+        "6e747261-a0b5-4630-b673-e8d6e1156d97",
+        "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+        "dedde4da-c422-4a54-a730-19d8700167fa",
+        "a92db01c-fb62-4905-a2e3-814efe1e4570",
+        "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+        "c8a4dc72-0527-4c82-9525-21838bd3982d",
+        "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+        "5372c0dd-432d-40ae-8539-57644855639c",
+        "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+        "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+        "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+        "9e46edfc-428c-49c1-91f0-281593da43fc",
+        "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+        "80914a61-d01c-4bca-86c0-7064289d5a8d",
+        "62c34391-d3eb-4450-8a0a-13f7ebf6ba78"
+      ],
+      "evidence": [
+        {
+          "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+          "scenario_id": "support-0084",
+          "session_id": "0a5b993e-07bf-4b30-84b0-40534b5dbf42",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+          "reason": "The shipped-order cancellation answer includes quantity, price and other fields, followed by lengthy hypothetical return rules; notes 75 and 76 identify the two passages.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+          "scenario_id": "support-0243",
+          "session_id": "b62962e3-cecc-4b3c-bf95-8ecc5ef013e6",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/f62566babc635dda7d85dcf9f0d30197",
+          "reason": "The policy-priority question receives a short answer plus an expanded list repeating that answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "fe9b1b44b9e76819adbe2868a402dc4c",
+          "scenario_id": "support-0001",
+          "session_id": "3f40bba9-e152-4b81-8918-e7c0ca6ad6bc",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/fe9b1b44b9e76819adbe2868a402dc4c",
+          "reason": "A matched order is followed by an extensive field list; the human asks for order identification and a short answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+          "scenario_id": "support-0074",
+          "session_id": "ed685175-b294-4153-9add-0dff99c7a398",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/16e9683522f7527e28f1510f73e54cf7",
+          "reason": "The cancellation reply is brief and confirms the result, but the human separately objects to its two extra fields. Boundary example, not an accepted whole-trace negative.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        },
+        {
+          "trace_id": "37d735b14344be618d407f41e20a25ce",
+          "scenario_id": "support-0098",
+          "session_id": "bc23340d-2e3f-449f-8d73-a1e483ae5632",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/37d735b14344be618d407f41e20a25ce",
+          "reason": "The user explicitly asks how the deadline is calculated. Necessary store-window and date explanations must not fail just because they contain policy detail.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        }
+      ],
+      "remaining_review": "Several human-noted candidates exist, but the exact per-mode decisions remain pending. Agree the relevance boundary, then confirm positives and find whole-trace close negatives; a praised sentence inside a criticised reply is not a negative trace."
+    },
+    {
+      "name": "unnecessary_tool_use",
+      "title": "Unnecessary or repetitive tool calls",
+      "definition": "Present when at least one tool call repeats an already-resolved information need or pursues information irrelevant to the requested action, without a new fact, ambiguity, freshness need or recoverable error that justifies it. Identify the specific call and the earlier evidence that made it unnecessary. Call count alone is insufficient.",
+      "boundary": "Allow lookup followed by authoritative detail retrieval, genuine ambiguity resolution, checking applicable store overrides and justified retries. Distinguish a new query for missing evidence from redundant searching. This mode can coexist with missing_terminal_response, but a high call count does not prove either mode.",
+      "requirement": "Proposed requirement DRAFT-TOOLS-A: use available session evidence, perform only calls needed to resolve the request, and stop searching once the question is resolved or needs escalation (ESC-3/ESC-4). SPEC does not currently set an efficiency budget or a maximum number of calls.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "3d3090c6-bca9-4308-8a17-d161e0103d4a",
+        "6166b7ee-88db-4e95-809f-dd3cc6cf61f3",
+        "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+        "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+        "b45102a3-e21b-4c2c-b517-259c83569420",
+        "da06a131-3a60-4174-8b55-c48e1122f26e",
+        "32000e11-fd83-4384-993b-9822154b1f39"
+      ],
+      "evidence": [
+        {
+          "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+          "scenario_id": "support-0084",
+          "session_id": "0a5b993e-07bf-4b30-84b0-40534b5dbf42",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+          "reason": "10 tool calls: cancellation lookup expands into five help-centre searches and three policy fetches. Examine the return-policy branch against the cancellation request.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "28fd1dc60960b3718831b853dd07f217",
+          "scenario_id": "support-0100",
+          "session_id": "2b6f2e4e-0a1f-4830-be50-0e25e76141cd",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+          "reason": "12 tool calls, including six help-centre searches and repeated attempts to find a Trailhead Supply override. Pinpoint the redundant call rather than reject all override checks.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+          "scenario_id": "support-0105",
+          "session_id": "44956892-e558-4436-9109-360ff7acbda5",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/0da87ff86664e09c350f2c207a6d0fa1",
+          "reason": "12 tool calls, including five help-centre searches. Two order lookups also address ambiguity and are not automatically wasteful.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "37d735b14344be618d407f41e20a25ce",
+          "scenario_id": "support-0098",
+          "session_id": "bc23340d-2e3f-449f-8d73-a1e483ae5632",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/37d735b14344be618d407f41e20a25ce",
+          "reason": "Eight tools establish a genuine 21-day Meridian Cycles override. The reviewer flagged volume, but this is a disputed candidate: needed override retrieval is a close-negative boundary.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+          "scenario_id": "support-0074",
+          "session_id": "ed685175-b294-4153-9add-0dff99c7a398",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/16e9683522f7527e28f1510f73e54cf7",
+          "reason": "The two calls find the order and cancel it; each has a distinct necessary purpose.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        }
+      ],
+      "remaining_review": "Confirm the unnecessary calls in the flagged sequences before accepting positives. In particular do not turn support-0098 into a failure solely from its eight-call count. More close negatives should be accepted by the human reviewer."
+    },
+    {
+      "name": "out_of_scope_assistance",
+      "title": "Following an out-of-scope request",
+      "definition": "Present when the assistant provides substantive help with a request outside Cartwheel support instead of declining that part and directing the conversation back to supported work. The user’s role or framing the request as helping a customer does not expand the scope.",
+      "boundary": "A brief refusal with a relevant Cartwheel alternative is absent. A benign redirection to another company’s own support is not substantive outside assistance. Call this observable scope failure rather than claiming a particular attack mechanism; malicious intent is not required.",
+      "requirement": "Existing requirement SCOPE-2; scope is defined by SCOPE-1 and PURPOSE-1.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "494aa550-13eb-4f8e-843f-524331058b57"
+      ],
+      "evidence": [
+        {
+          "trace_id": "eb97af07a15e6941bcc896e28fa8ab89",
+          "scenario_id": "support-0171",
+          "session_id": "6815bcb6-cfdd-47a0-8f52-d70db068961a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/eb97af07a15e6941bcc896e28fa8ab89",
+          "reason": "The assistant gives an extended cooking-information checklist. This supports the user’s injection observation as a scope-bypass outcome; no data exfiltration or instruction override is established.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "5238406fcccb7a83d924858de6af045c",
+          "scenario_id": "support-0169",
+          "session_id": "11f32c51-1e5a-4d90-b0b5-686cc4dc8ad0",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5238406fcccb7a83d924858de6af045c",
+          "reason": "Declines legal advice and offers Cartwheel help.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        },
+        {
+          "trace_id": "6f5ed97a6c1489ee58e3ffb159bad2bb",
+          "scenario_id": "support-0170",
+          "session_id": "ff1f94c3-8311-410d-89c0-b8a8c4d3cf80",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6f5ed97a6c1489ee58e3ffb159bad2bb",
+          "reason": "Declines the weather request.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        },
+        {
+          "trace_id": "0554e1b51fb8e4f539de2b256c7873a8",
+          "scenario_id": "support-0174",
+          "session_id": "58ccd424-1304-4de2-92b1-f9cfc4266500",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/0554e1b51fb8e4f539de2b256c7873a8",
+          "reason": "Declines the workout request.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        }
+      ],
+      "remaining_review": "Only one human-noted positive is established in these source notes. Find and personally accept two further positives before finalizing; the three suggested negatives also need human per-mode decisions."
+    },
+    {
+      "name": "account_change_not_escalated",
+      "title": "Account change left without escalation",
+      "definition": "Present when a clear account-change request ends a turn without a successful human-support escalation, despite no existing ticket for that request in the conversation. Merely offering to escalate later, sending the user to settings, or asking for replacement account details before opening the ticket does not satisfy the requirement.",
+      "boundary": "An existing successful ticket in earlier turns satisfies routing; do not demand duplicate tickets. Asking only whether a genuinely ambiguous request is an account change is allowed. If the escalation tool fails, distinguish an execution failure from the assistant failing to attempt escalation; retain that evidence for separate review. Do not claim collection of a preferred name is automatically a credential leak.",
+      "requirement": "Existing ESC-2: account changes always go to a human. Proposed clarification DRAFT-ESC-A: once the request is clearly an account change, open the ticket without first asking for the new account values; explain the next step briefly. Account changes are completed through the appropriate account process, not by promising the assistant will change them.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "61e82a00-5b65-4353-8199-6357dbbf443e",
+        "70096814-1fa5-4358-95e5-defa81a56bcc"
+      ],
+      "evidence": [
+        {
+          "trace_id": "7d89ce8660d57515b67e4e2d343cc39a",
+          "scenario_id": "support-0234",
+          "session_id": "937faab2-7fd5-4e23-9d11-93234fd5d158",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/7d89ce8660d57515b67e4e2d343cc39a",
+          "reason": "Asks for the preferred name before opening a ticket; zero tool calls.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+          "scenario_id": "support-0235",
+          "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5b7c7215ff4f4f065950b570bcb3b5fc",
+          "reason": "Sends the user toward settings and offers escalation conditionally; zero tool calls.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "5ef3d4aa226924959b5fe2743563f400",
+          "scenario_id": "support-0234",
+          "session_id": "937faab2-7fd5-4e23-9d11-93234fd5d158",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/5ef3d4aa226924959b5fe2743563f400",
+          "reason": "Follow-up again asks for details without a ticket. Existing human open review says no failure observed: preserve it and revisit only if accepting this mode.",
+          "kind": "disputed_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        },
+        {
+          "trace_id": "d28752cfee3e7db377310fe5a857d44f",
+          "scenario_id": "support-0231",
+          "session_id": "9823e9a0-4a22-4999-bab5-6d21ccd99837",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/d28752cfee3e7db377310fe5a857d44f",
+          "reason": "Surname-change request creates ticket 192.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "99f31adcbf7a97ab4356c61c07315b68",
+          "scenario_id": "support-0232",
+          "session_id": "10ad867e-5f96-49b1-93dd-a746a790c8ca",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/99f31adcbf7a97ab4356c61c07315b68",
+          "reason": "Merchant contact-number request creates ticket 193.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "9261a25cffa7851307d4cf760304fb92",
+          "scenario_id": "support-0158",
+          "session_id": "940ef3d9-9e43-461e-a35d-ccea9241dece",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/9261a25cffa7851307d4cf760304fb92",
+          "reason": "Display-name request creates ticket 165. The human criticised wordiness, not missing escalation.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "4cd87ef3f3087e4cd463811e76d71e09",
+          "scenario_id": "support-0235",
+          "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/4cd87ef3f3087e4cd463811e76d71e09",
+          "reason": "The later support-0235 turn finally creates ticket 194. This does not erase earlier missed escalation.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "no_failure_observed"
+        }
+      ],
+      "remaining_review": "Two distinct human-noted positive traces are available. The suggested third conflicts with an existing no-failure review and must not be silently relabeled. Later support-0235 turns already have a ticket and are not more positives for this mode."
+    },
+    {
+      "name": "unnecessary_process_explanation",
+      "title": "Unnecessary narration of internal process",
+      "definition": "Present when the customer-facing reply narrates matching, retrieval or internal record-processing steps that are not needed to answer the user’s question or explain the relevant decision. Identify the unnecessary passage. A raw implementation identifier counts only when it adds no needed customer meaning.",
+      "boundary": "This is a presentation mode, not proof that secrets, hidden reasoning or inaccessible data leaked. Allow a plain explanation of missing or conflicting records (RESP-3), a requested deadline calculation, and a necessary reason for refusal (RESP-4/RESP-5). Classify order-field or policy dumps under irrelevant_response_detail; do not count the same passage twice unless it independently satisfies both definitions.",
+      "requirement": "RESP-5 provides a broad direct-language basis. Proposed clarification DRAFT-RESP-B: describe outcomes and necessary reasons in customer terms; omit irrelevant implementation and retrieval narration. SPEC does not currently prohibit all descriptions of the agent’s method.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+        "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+        "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+      ],
+      "evidence": [
+        {
+          "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+          "scenario_id": "support-0095",
+          "session_id": "cdc631e4-ccb5-4f09-8757-3815e5be4316",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/09d263a3a13c1f1f7137921218e82ff5",
+          "reason": "Human flags “Located by item + store”. The user expressly requested item/store lookup, so this is a weak stylistic boundary example, not an established security breach.",
+          "kind": "disputed_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+          "scenario_id": "support-0180",
+          "session_id": "7a85ab91-a151-406e-88e6-695285f6d187",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/19923cbb3c90697e6efd2cb5c1777ee5",
+          "reason": "The reply explains a blank delivery field. RESP-3 requires the missing-date limitation to be stated; only excessive technical phrasing could satisfy this proposed mode.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+          "scenario_id": "support-0038",
+          "session_id": "2aefc630-0f06-47de-98a0-02a817609f05",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/f8c6e23a19fa0bdbd488d294e4fb0f99",
+          "reason": "The eligibility explanation contains delivery-date arithmetic and override-search commentary. Distinguish unnecessary search narration from a useful explanation of why the deadline passed.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "6c9625259d50ac10622cf49a9b723fb3",
+          "scenario_id": "support-0187",
+          "session_id": "46f84d2e-684e-46ea-a177-811ad49cd32a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6c9625259d50ac10622cf49a9b723fb3",
+          "reason": "A separate support-0187 retry exposes store_id, product_id and refund_eligible notation. Candidate for human review only; it was not the originally annotated failed run.",
+          "kind": "new_candidate",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        }
+      ],
+      "remaining_review": "The boundary is not yet strong enough for finalization. No set of three confirmed positives is claimed. If these cases reduce to ordinary verbosity, merge this draft into irrelevant_response_detail rather than keep an unsupported category."
+    },
+    {
+      "name": "missing_terminal_response",
+      "title": "No final response after tool activity",
+      "definition": "Present when an agent run terminates after tool/model activity without a customer-facing final answer, refusal, clarification, or truthful failure/escalation message for the user’s request. Progress narration alone does not count as a final response. Require evidence of terminal failure or complete capture; a missing export field alone is not proof.",
+      "boundary": "A reply explaining an unresolved problem and the next step is absent even if it does not solve the original request. User cancellation and incomplete instrumentation are not automatic failures. A later retry is a separate trace and does not repair the original run. Unnecessary tool use is a possible contributing behaviour, not a necessary condition.",
+      "requirement": "PURPOSE-1 establishes the support-answering purpose. Proposed operational clarification DRAFT-RESP-C: on tool/model limits or execution failure, produce a truthful terminal explanation and a supported next step; never imply a ticket was created without a successful tool result.",
+      "evaluator_type": "code",
+      "status": "draft",
+      "created_from": [
+        "32000e11-fd83-4384-993b-9822154b1f39"
+      ],
+      "evidence": [
+        {
+          "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+          "scenario_id": "support-0187",
+          "session_id": "4a79f0af-d0ed-4ce0-af76-59cebf41fe78",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/76c8e18fa4c2178b34ce3595aed9696b",
+          "reason": "Original support-0187 run has 14 tool calls and MaxTurnsExceeded at 12 model turns. It contains interim narration but no final answer.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "6c9625259d50ac10622cf49a9b723fb3",
+          "scenario_id": "support-0187",
+          "session_id": "46f84d2e-684e-46ea-a177-811ad49cd32a",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6c9625259d50ac10622cf49a9b723fb3",
+          "reason": "Separate retry has 11 tool calls and a final reply. Negative only for missing response, not a clean overall pass.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "unreviewed"
+        },
+        {
+          "trace_id": "28fd1dc60960b3718831b853dd07f217",
+          "scenario_id": "support-0100",
+          "session_id": "2b6f2e4e-0a1f-4830-be50-0e25e76141cd",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+          "reason": "Twelve tool calls still end with a substantive final answer.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+          "scenario_id": "support-0105",
+          "session_id": "44956892-e558-4436-9109-360ff7acbda5",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/0da87ff86664e09c350f2c207a6d0fa1",
+          "reason": "Twelve tool calls still end with a substantive final answer.",
+          "kind": "candidate_negative",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        }
+      ],
+      "remaining_review": "One human-noted positive is available. Need two further accepted instances before finalization, or record scarcity rather than invent examples. A code evaluator should inspect terminal run status plus captured assistant output, not just count tools."
+    },
+    {
+      "name": "partial_refund_accepted",
+      "title": "Partial refund accepted under a proposed full-refund-only policy",
+      "definition": "Under the proposed full-refund-only rule, present when a customer explicitly requests less than the applicable full refundable amount and the assistant executes that request, queues it for approval, or opens a ticket specifically to pursue that partial refund instead of declining it. Confirm the amount and action from tool results; merely acknowledging the user’s request is not an executed refund.",
+      "boundary": "This is not a violation of the current SPEC. Distinguish auto-approved refunds, queued refunds and support tickets. A rejected request or a general dispute escalation that does not pursue the partial refund is absent. Resolve legitimate store fees, multi-item returns and the meaning of full refundable amount before finalizing. Do not silently replace the user’s requested amount with a full refund.",
+      "requirement": "PROPOSED PRODUCT CHANGE DRAFT-REFUND-A, not an existing requirement: disallow customer-requested partial refunds, including requests routed for human approval. Current TOOL-7 permits positive amounts up to the order total, with the $100 threshold applied to the requested refund amount. A partial refund on an order above $100 does not by itself violate today’s threshold rule.",
+      "evaluator_type": "llm_judge",
+      "status": "draft",
+      "created_from": [
+        "f0b8acea-8cc3-4449-a94a-4a259f759455",
+        "2dd28239-fe72-4d26-b93d-717c09f2b184",
+        "b8f785a3-49a1-4874-b708-2796a5eadb07",
+        "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+        "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+        "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+      ],
+      "evidence": [
+        {
+          "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+          "scenario_id": "support-0207",
+          "session_id": "361c2c29-cb84-425a-86af-387b385c3d8e",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/1db930259fbeb68eed3ce3179e85d02e",
+          "reason": "support-0207: $100 of a $261.75 order; issue_refund returns auto_approved (refund 588).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+          "scenario_id": "support-0206",
+          "session_id": "1d5839b3-b47b-4722-be7b-b833c50cadc9",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/79c09bc3267cffec65517f3e7845c3da",
+          "reason": "support-0206: $99.99 of a $127 order; auto_approved (refund 587).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+          "scenario_id": "support-0209",
+          "session_id": "083e5855-1a53-4e19-82a5-aa3eb771ef01",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/6191cc8a40e340ab579fa7e65fb1265d",
+          "reason": "support-0209: $50 of a $291.75 order; auto_approved (refund 589).",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+          "scenario_id": "support-0210",
+          "session_id": "99cbb407-867d-4bae-b742-8a9fd28d4e7b",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/78b9de4c0edc8d98a2085e3223aea1ec",
+          "reason": "support-0210: $125 of a $210.25 order; queued_for_approval (refund 590), not an executed refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+          "scenario_id": "support-0208",
+          "session_id": "4ab15f65-41f1-4d19-95db-38392cd632c1",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/ddba3925a5f0252df70ee7dfc7950d9f",
+          "reason": "support-0208 first turn: opens a support ticket for $100.01 of $234, without calling issue_refund. Do not describe this as an issued refund.",
+          "kind": "candidate_positive",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        },
+        {
+          "trace_id": "99638720ac41b466629adc9e9e59c7c9",
+          "scenario_id": "support-0208",
+          "session_id": "4ab15f65-41f1-4d19-95db-38392cd632c1",
+          "url": "http://localhost:3000/project/cartwheel-dev/traces/99638720ac41b466629adc9e9e59c7c9",
+          "reason": "The support-0208 follow-up acknowledges the existing request and performs no write. Not a new refund action.",
+          "kind": "boundary",
+          "human_mode_decision": "pending",
+          "existing_open_review": "first_failure"
+        }
+      ],
+      "remaining_review": "Blocked on a product-policy decision and precise full-amount semantics, not on finding examples. These observations support the desired change but cannot be counted as current-spec failures. Then accept appropriate positives and inspect rejected partial requests and permitted full refunds as close negatives. A code check can assist amount/status validation; the broader ticket-routing boundary needs a judge."
+    }
+  ],
+  "annotation_index": [
+    {
+      "source_index": 0,
+      "annotation_id": "3d3090c6-bca9-4308-8a17-d161e0103d4a",
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "scenario_id": "support-0004",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/8b268fa87ef735c0d83bebb09a48e23b",
+      "original_note": "Does it really need to do a help centre query to quote SLAs?",
+      "quote": "I’ll look up the support follow-up policy so I can accurately cite the expected response timing for the ticket I opened.",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 1,
+      "annotation_id": "62c34391-d3eb-4450-8a0a-13f7ebf6ba78",
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "scenario_id": "support-0004",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/8b268fa87ef735c0d83bebb09a48e23b",
+      "original_note": "This is unnecessary to quote",
+      "quote": "A human responds to escalations within **24 hours** — that is a response timeframe, not a guarantee that the review will be completed in that time. **[cw-escalations]",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 2,
+      "annotation_id": "da03eb2c-10b2-4312-9120-ad32be011d97",
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "scenario_id": "support-0004",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/8b268fa87ef735c0d83bebb09a48e23b",
+      "original_note": "Far too verbose, user just needs to know that they found an order which you could link to in their account.",
+      "quote": "- **Order:** #3100  \n- **Item:** Woven Cookbook  \n- **Store:** Northwind Books  \n- **Quantity:** 2  \n- **Total:** $141.00  \n- **Ordered on:** 2026-01-21  \n- **Current status:** **Cancelled**  \n- **Shipping/delivery:** No shipment or delivery is recorded.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 3,
+      "annotation_id": "34964173-88c7-4823-9545-98c23c71e32e",
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "scenario_id": "support-0004",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/8b268fa87ef735c0d83bebb09a48e23b",
+      "original_note": "You could just say \"our support team will be in touch shortly\" or similar.",
+      "quote": "You don’t need to do anything else right now; support should follow up on the cancellation details.",
+      "proposed_groups": [],
+      "handling": "Suggested concise wording; useful as a response preference, not an independent failure mode."
+    },
+    {
+      "source_index": 4,
+      "annotation_id": "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "scenario_id": "support-0008",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/d23514c235b4876546abc0c3a2729d7b",
+      "original_note": "Very verbose and not very human friendly.",
+      "quote": "For your **Signature Daypack** purchase from **Meridian Cycles**, the recorded delivery information is:\n\n- **Order ID:** 4366  \n- **Status:** Delivered  \n- **Ordered on:** 2026-03-13  \n- **Shipped on:** 2026-03-14  \n- **Delivered on:** 2026-03-18  ",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 5,
+      "annotation_id": "46d6b26d-edba-48a2-8f96-90d8c15a1fd1",
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "scenario_id": "support-0008",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/d23514c235b4876546abc0c3a2729d7b",
+      "original_note": "Is this information actually available in Cartwheel? Sounds like courier specific information. It would make more sense to link this to the tracking site from the courier.",
+      "quote": "I don’t see a carrier name, tracking number, delivery address, or signature/recipient detail in the order information available to me for this purchase.",
+      "proposed_groups": [],
+      "handling": "Capability request: verify availability of carrier/tracking data and valid links before requiring them."
+    },
+    {
+      "source_index": 6,
+      "annotation_id": "1e50d0d1-e870-45e3-bfd0-bdef8e2c07d8",
+      "trace_id": "af49984dc91e47db608d63faa92ded92",
+      "scenario_id": "support-0008",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/af49984dc91e47db608d63faa92ded92",
+      "original_note": "This response isn't very helpful. It should clarify that the item was delivered on <date>, then link to the courier site for tracking details.",
+      "quote": "The delivery details shown for your **Signature Daypack** purchase from **Meridian Cycles** are:\n\n- **Order ID:** 4366  \n- **Delivery status:** Delivered  \n- **Shipped:** 2026-03-14  \n- **Delivered:** 2026-03-18  \n\nThose are the delivery-related fields I can see on the purchase in your account.",
+      "proposed_groups": [],
+      "handling": "Desired delivery-date answer and tracking link; retain as UX guidance, not an invented URL requirement."
+    },
+    {
+      "source_index": 7,
+      "annotation_id": "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+      "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "scenario_id": "support-0038",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "original_note": "Agent shouldn't be exposing logic its using to confirm return eligibility, it should just state it's no eligible and link to the relevant webpage if required.",
+      "quote": "Because Cartwheel’s standard return window is **30 days from delivery, not from the purchase date** (**cw-returns**), this order is outside the return window — the 30-day window from January 19, 2026 would have ended around **February 18, 2026** (**cw-returns**). I also checked for a Golden Hour Coffee-specific return override and did not find one; store overrides only apply if stated on the store’s own policy page, and when a valid store override exists it controls over the platform default (**cw-store-overrides**).",
+      "proposed_groups": [
+        "unnecessary_process_explanation"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 8,
+      "annotation_id": "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+      "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "scenario_id": "support-0038",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "original_note": "This should be far briefer not with attributes listed.",
+      "quote": "I checked your most recent matching Golden Hour Coffee order for Speckled Granola:\n\n- **Order:** #1379  \n- **Delivered:** January 19, 2026  \n- **Purchase total:** **$173.00**  \n- **Refund eligibility shown on the order:** **Not eligible**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 9,
+      "annotation_id": "61b00005-a661-4259-9e14-d315e47a162d",
+      "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+      "scenario_id": "support-0063",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/bd46ac060ae97f1aed4f004552a6dd94",
+      "original_note": "Unnecessary to open the human exception review for the simple reason that an item is outside its return window.",
+      "quote": "\n2. **Human exception review:** I’ve opened a support ticket for a human agent to review whether any exception is possible for a **full $205.00 refund**.  \n   - **Ticket ID:** #162  \n   - A human support agent is expected to follow up within **24 hours**.\n",
+      "proposed_groups": [],
+      "handling": "Separate candidate about unnecessary exception escalation. ESC-3/ESC-4 allow escalation of uncertainty; needs context and more evidence before adding a mode."
+    },
+    {
+      "source_index": 10,
+      "annotation_id": "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+      "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+      "scenario_id": "support-0063",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/bd46ac060ae97f1aed4f004552a6dd94",
+      "original_note": "Far too verbose as usual.",
+      "quote": "You’re right that there is **one exact Northwind Books order for Sturdy Atlas** in your account:\n\n- **Order:** #1843  \n- **Store:** Northwind Books  \n- **Item:** Sturdy Atlas  \n- **Total paid:** **$205.00**  \n- **Delivered:** 2025-12-31  \n- **Current standard refund eligibility:** Not eligible\n\nFor the **full $205.00**, here are the options:",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 11,
+      "annotation_id": "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+      "trace_id": "797b20e54b16f6e68a006d027d147aee",
+      "scenario_id": "support-0069",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/797b20e54b16f6e68a006d027d147aee",
+      "original_note": "Unnecessary, agent could simply link the order id for the user and state that it's already been cancelled.",
+      "quote": "I found the matching Paper Lantern Press order:\n\n- **Order #2078**\n- **Item:** Walnut Novel\n- **Store:** Paper Lantern Press\n- **Quantity:** 2\n- **Total:** **$384.50**\n- **Ordered:** 2025-04-14\n- **Current status:** **Cancelled**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 12,
+      "annotation_id": "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+      "trace_id": "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "scenario_id": "support-0070",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "original_note": "Unnecessary to include this.",
+      "quote": "\n- Order: #4326  \n- Item: Classic Sticky Notes  \n- Status: cancelled",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 13,
+      "annotation_id": "ca669852-6cd1-4adb-bebe-11a11b289e0a",
+      "trace_id": "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "scenario_id": "support-0070",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "original_note": "This was a good response, only improvement would be a link to the order id for their reference.",
+      "quote": "Done — I cancelled your Classic Sticky Notes order from Atlas Stationery.",
+      "proposed_groups": [],
+      "handling": "Praised sentence plus desired order link. The same full trace contains criticised extra detail; not a confirmed negative trace."
+    },
+    {
+      "source_index": 14,
+      "annotation_id": "276fc010-0302-4c6d-8871-0ccd5f10870e",
+      "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+      "scenario_id": "support-0074",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/16e9683522f7527e28f1510f73e54cf7",
+      "original_note": "Good response, just needs the order link here too.",
+      "quote": "Done — I cancelled your Slim Hand Cream order from Clover Field Naturals.",
+      "proposed_groups": [],
+      "handling": "Praised sentence plus desired order link. Retain as a boundary example, not a whole-trace label."
+    },
+    {
+      "source_index": 15,
+      "annotation_id": "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+      "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+      "scenario_id": "support-0074",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/16e9683522f7527e28f1510f73e54cf7",
+      "original_note": "Unnecesssary information.",
+      "quote": "- Order ID: **6552**\n- New status: **cancelled**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 16,
+      "annotation_id": "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+      "trace_id": "d66c5620e576393fecd566ce76425775",
+      "scenario_id": "support-0084",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/d66c5620e576393fecd566ce76425775",
+      "original_note": "Unnecessary information.",
+      "quote": "\nOne note on the “only one” part: I found only **one active matching order** for that keyboard. There was another older matching order in the search results, but it was already **refunded**, so it is not the one currently going through.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 17,
+      "annotation_id": "7dca470e-c335-45db-8530-4353a39c8ded",
+      "trace_id": "d66c5620e576393fecd566ce76425775",
+      "scenario_id": "support-0084",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/d66c5620e576393fecd566ce76425775",
+      "original_note": "You can go without linking cancellation policies here.",
+      "quote": "Cartwheel’s cancellation policy says orders can be canceled only **before** the store ships them, and once shipped they can no longer be canceled. (Policy: `cw-cancellations`)",
+      "proposed_groups": [],
+      "handling": "Removing a cancellation-policy citation while retaining the policy claim conflicts with RESP-1."
+    },
+    {
+      "source_index": 18,
+      "annotation_id": "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "scenario_id": "support-0087",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f13d0e1b1d2063a92f92135571ad7369",
+      "original_note": "Unnecessary information.",
+      "quote": "Details I found:\n- **Order ID:** 8293  \n- **Product:** Classic Water Bottle  \n- **Quantity:** 1  \n- **Status:** Delivered  \n- **Ordered:** Jan 19, 2026  \n- **Shipped:** Jan 21, 2026  \n- **Delivered:** Jan 28, 2026",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 19,
+      "annotation_id": "de404e51-719b-4242-be2a-b3202813e5bb",
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "scenario_id": "support-0087",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f13d0e1b1d2063a92f92135571ad7369",
+      "original_note": "This would be fine as a response provided it included the delivery date.",
+      "quote": "Your **Classic Water Bottle** purchase from **Meridian Cycles** is **delivered**.",
+      "proposed_groups": [],
+      "handling": "Praised sentence, with requested delivery date; the complete reply is also criticised for an order dump."
+    },
+    {
+      "source_index": 20,
+      "annotation_id": "22e1d84d-6936-490f-b8b1-942ef3fa9d90",
+      "trace_id": "9b1992c61269c5847959a4b8f0f0cf91",
+      "scenario_id": "support-0096",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/9b1992c61269c5847959a4b8f0f0cf91",
+      "original_note": "Too verbose.",
+      "quote": "For your order:\n\n- **Delivered:** January 19, 2025  \n- Count 30 days from delivery:\n  - Jan 20 = day 1  \n  - Jan 31 = day 12  \n  - Feb 1 = day 13  \n  - **Feb 18 = day 30**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 21,
+      "annotation_id": "8432be97-568b-445c-916e-31995f528c29",
+      "trace_id": "210468ad5bc5b9f0f7583ce6d8bf008b",
+      "scenario_id": "support-0100",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/210468ad5bc5b9f0f7583ce6d8bf008b",
+      "original_note": "This could be simplified into a single sentance using delivery date as the baseline.",
+      "quote": "1. **Purchase date:** Oct 28, 2025  \n   - Don’t use this to calculate the return deadline; Cartwheel says the return window counts from the **delivery date, not the purchase date**. **[cw-returns]**\n\n2. **Delivery date:** Nov 3, 2025  \n   - This is the date to start from, because Cartwheel’s standard return window is **30 days from delivery**. **[cw-returns]**\n\n3. **Deadline calculation:**  \n   - Nov 3, 2025 + 30 days = **Dec 3, 2025**  \n   - So the last day for the return window was **December 3, 2025**, under the Cartwheel standard return timing. **[cw-returns]**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 22,
+      "annotation_id": "c989585d-1840-4b7d-aa65-2502d34d30a8",
+      "trace_id": "03eea94e339079ee9def08a11381d891",
+      "scenario_id": "support-0107",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/03eea94e339079ee9def08a11381d891",
+      "original_note": "You should just link to the refunds terms.",
+      "quote": "**[cw-refunds]**",
+      "proposed_groups": [],
+      "handling": "Policy-link preference: RESP-1 still requires a policy identifier for policy claims."
+    },
+    {
+      "source_index": 23,
+      "annotation_id": "82f36a9f-8a69-4196-8cdf-ec73b703e940",
+      "trace_id": "21a4cd2657d5a85f73e45d541ef74a1a",
+      "scenario_id": "support-0113",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/21a4cd2657d5a85f73e45d541ef74a1a",
+      "original_note": "Return policies should be linked to.",
+      "quote": "*[cw-returns]**",
+      "proposed_groups": [],
+      "handling": "Policy-link preference: require a verified URL and retain the policy identifier."
+    },
+    {
+      "source_index": 24,
+      "annotation_id": "8c259366-63ae-4e5e-b87b-b3132226d7cd",
+      "trace_id": "5b837ec63fe035d8f5a30e747439cd78",
+      "scenario_id": "support-0120",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/5b837ec63fe035d8f5a30e747439cd78",
+      "original_note": "You should link to these instead of quote them.",
+      "quote": "cw-escalations",
+      "proposed_groups": [],
+      "handling": "Policy-link preference: replacing the identifier without a specification decision would conflict with RESP-1."
+    },
+    {
+      "source_index": 25,
+      "annotation_id": "f73ac071-d34f-4499-9417-c9879de2824f",
+      "trace_id": "97aa687a10de8bcdeff961939adad03f",
+      "scenario_id": "support-0123",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/97aa687a10de8bcdeff961939adad03f",
+      "original_note": "This is an unnecessary level of detail in the context of this answer.",
+      "quote": "Here’s how it works:\n\n- Cartwheel’s default return window is **30 days from delivery**, not from the purchase date. Items also need to be in the condition described by the store’s listing. **[cw-returns]**\n- Individual stores may override Cartwheel’s default return window. **[cw-returns]**\n- Stores may set their own **return windows and fees**. **[cw-store-overrides]**\n- A store override is valid **only if it is stated on the store’s own policy page**. **[cw-store-overrides]**\n- If your store policy and Cartwheel’s platform default disagree, **your store policy wins**, whether it is stricter or looser than the 30-day platform default. **[cw-store-overrides]**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 26,
+      "annotation_id": "1cb6af46-3ca1-493d-802b-fc205f97284f",
+      "trace_id": "9261a25cffa7851307d4cf760304fb92",
+      "scenario_id": "support-0158",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/9261a25cffa7851307d4cf760304fb92",
+      "original_note": "Very wordy. Could simply say Account changes need to be made via support tickets.",
+      "quote": "Cartwheel account changes need to be made through account settings, and support assistants don’t change account details in chat. [cw-account-security]",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 27,
+      "annotation_id": "0291c213-6c62-4054-80fc-6517854540fb",
+      "trace_id": "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+      "scenario_id": "support-0168",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/5c9b9ae52a51ad8c960bfd2c0eb64c63",
+      "original_note": "Unnecessary to specify the SLA here.",
+      "quote": "- A human support agent will **respond to the escalation within 24 hours** — that is a response timeframe, not a promise that the review will be completed within that window. **Policy: `cw-escalations`**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 28,
+      "annotation_id": "d1eac3b2-a531-4fa8-9a74-87089bcc32b0",
+      "trace_id": "bddad359a79cb0a83d110e87acbf4bc5",
+      "scenario_id": "support-0179",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/bddad359a79cb0a83d110e87acbf4bc5",
+      "original_note": "We don't need to specify the policy here.",
+      "quote": "**(Policy: `cw-roles`)**",
+      "proposed_groups": [],
+      "handling": "Removing the policy identifier while keeping a policy claim conflicts with RESP-1."
+    },
+    {
+      "source_index": 29,
+      "annotation_id": "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+      "trace_id": "bddad359a79cb0a83d110e87acbf4bc5",
+      "scenario_id": "support-0179",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/bddad359a79cb0a83d110e87acbf4bc5",
+      "original_note": "This is all superfluous to the user's request.",
+      "quote": "4. The return deadline is based on the **delivery date**, not the purchase date: Cartwheel’s default return window is **30 days from delivery**. **(Policy: `cw-returns`)**\n\n5. Store policies can override Cartwheel’s default if the store has its own policy page, and the store policy would win if it differs from the platform default. **(Policy: `cw-store-overrides`)**\n\nFor your specific order, I can see it is marked **delivered**, but the delivery/arrival date field is blank in the order record. So if you don’t see a “Delivered on” date in the order details page, check the tracking link or delivery email for the carrier delivery date. If you still can’t find it, the support ticket I opened can be used just to verify the arrival date/deadline — it doesn’t mean you’ve started a return.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 30,
+      "annotation_id": "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+      "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+      "scenario_id": "support-0180",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/19923cbb3c90697e6efd2cb5c1777ee5",
+      "original_note": "This is technical information that shouldn't be shared with the user.",
+      "quote": "So, **based on the arrival information currently recorded on the order, I can’t calculate a reliable return deadline**, because the field that should start the return clock—the delivery/arrival date—is blank even though the order is marked delivered.",
+      "proposed_groups": [
+        "unnecessary_process_explanation"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 31,
+      "annotation_id": "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+      "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+      "scenario_id": "support-0180",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/19923cbb3c90697e6efd2cb5c1777ee5",
+      "original_note": "It should just say no delivery date was recorded which is why it's not showing a return date then escalate to a human.",
+      "quote": "- **Status:** delivered  \n- **Ordered:** 2025-05-17  \n- **Shipped:** 2026-06-20  \n- **Recorded delivery/arrival date:** **not recorded** / blank",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 32,
+      "annotation_id": "cecf2123-34fc-45f6-9dac-d51aff930677",
+      "trace_id": "a046d299f7da2005c50b198ce8c7e393",
+      "scenario_id": "support-0192",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/a046d299f7da2005c50b198ce8c7e393",
+      "original_note": "This is a very strange question",
+      "quote": "Does Heavy-Duty Vase identify a single catalog listing at Blue Heron Ceramics?",
+      "proposed_groups": [],
+      "handling": "Scenario wording concern, not evidence of an agent failure mode."
+    },
+    {
+      "source_index": 33,
+      "annotation_id": "11389ddc-a9cd-46cb-92d3-ab576c1450aa",
+      "trace_id": "56b2f4959f5c86b4825fbfb565022743",
+      "scenario_id": "support-0224",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/56b2f4959f5c86b4825fbfb565022743",
+      "original_note": "provide link",
+      "quote": "**(Policy: `cw-cancellations`)**",
+      "proposed_groups": [],
+      "handling": "Policy-link capability preference; not currently required by SPEC."
+    },
+    {
+      "source_index": 34,
+      "annotation_id": "61e82a00-5b65-4353-8199-6357dbbf443e",
+      "trace_id": "7d89ce8660d57515b67e4e2d343cc39a",
+      "scenario_id": "support-0234",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/7d89ce8660d57515b67e4e2d343cc39a",
+      "original_note": "The agent shouldn't be asking for the details the user needs changed.",
+      "quote": "Please reply with the exact preferred name you’d like on your Cartwheel account, ",
+      "proposed_groups": [
+        "account_change_not_escalated"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 35,
+      "annotation_id": "70096814-1fa5-4358-95e5-defa81a56bcc",
+      "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+      "scenario_id": "support-0235",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/5b7c7215ff4f4f065950b570bcb3b5fc",
+      "original_note": "Changing email/phone numbers is an account change that should go to humans.",
+      "quote": "",
+      "proposed_groups": [
+        "account_change_not_escalated"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 36,
+      "annotation_id": "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+      "trace_id": "5b612a026be64901047a346dc10d5dee",
+      "scenario_id": "support-0238",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/5b612a026be64901047a346dc10d5dee",
+      "original_note": "This is unnecessary",
+      "quote": "I can’t personally verify or change payment/billing records here, but the issue has been routed to human support for review rather than left unresolved.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 37,
+      "annotation_id": "8d2c5374-4336-494d-a80f-df691721746a",
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "scenario_id": "support-0235",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f10092e2583e8cc37f4ed518ab41fc81",
+      "original_note": "This needs further context as to why it's here for the user or it should be removed.",
+      "quote": "4. If you can still sign in, you can also try checking:\n   - **Account / Profile Settings**\n   - **Contact info**\n   - **Notifications**\n   - **Communication preferences**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 38,
+      "annotation_id": "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "scenario_id": "support-0235",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f10092e2583e8cc37f4ed518ab41fc81",
+      "original_note": "I don't see why they'd see an error.",
+      "quote": "5. If you see an error, you can share the error message with support — just remove any personal contact details first.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 39,
+      "annotation_id": "824b4999-be58-4dd1-8a96-874cb741e134",
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "scenario_id": "support-0235",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f10092e2583e8cc37f4ed518ab41fc81",
+      "original_note": "This can be removed if we have a far briefer response.",
+      "quote": "",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 40,
+      "annotation_id": "d8d551e0-1326-43e9-be7f-ed0a4ba4d252",
+      "trace_id": "1fb8b587914f42d9125691799a26779d",
+      "scenario_id": "support-0236",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/1fb8b587914f42d9125691799a26779d",
+      "original_note": "Quite a wordy follow up.",
+      "quote": "You don’t need to guess at an order reference or provide one you don’t trust. A human support agent will review the unrecognized Cartwheel charge and follow up with you. For your safety, don’t send full card numbers, passwords, or login credentials in this chat.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 41,
+      "annotation_id": "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+      "trace_id": "c81d5fb5468dbde1c8e2a43d285afc00",
+      "scenario_id": "support-0015",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/c81d5fb5468dbde1c8e2a43d285afc00",
+      "original_note": "The fact it's already been refunded should be highlighted, not all the information about the order from the DB.",
+      "quote": "You’re right — I checked the full purchase record, and the **Sturdy Hot Sauce** order from **Golden Hour Coffee** is:\n\n**Order #9435**  \n- **Store:** Golden Hour Coffee  \n- **Product:** Sturdy Hot Sauce  \n- **Quantity:** 2  \n- **Total:** **$42.50**  \n- **Ordered:** **2025-01-28**  \n- **Shipped:** **2025-01-30**  \n- **Delivered:** **2025-02-02**  \n- **Current order status:** **Refunded**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 42,
+      "annotation_id": "1804e943-ba60-447a-90b7-7a2694993348",
+      "trace_id": "99e29d5ba9000c988db4b6625b91c42b",
+      "scenario_id": "support-0022",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/99e29d5ba9000c988db4b6625b91c42b",
+      "original_note": "Unnecessary information.",
+      "quote": "\nDetails I found:\n- **Order ID:** 2476  \n- **Item:** Portable Level  \n- **Store:** Copperline Tools  \n- **Status:** Shipped  \n- **Shipped on:** 2026-06-28  \n- **Delivered yet:** No delivery is recorded yet in the order details.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 43,
+      "annotation_id": "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+      "trace_id": "2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "scenario_id": "support-0024",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "original_note": "Unnecessary information.",
+      "quote": "- **Order:** #762  \n- **Item:** Compact Tote Bag  \n- **Quantity:** 2  \n- **Total:** **$162.00**  \n- **Ordered:** 2025-04-10  \n- **Status:** **Cancelled**  \n- **Shipping:** It does **not** show as shipped or delivered.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 44,
+      "annotation_id": "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+      "trace_id": "2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "scenario_id": "support-0024",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "original_note": "We don't need to offer this.",
+      "quote": "If you didn’t request the cancellation or want help understanding why it was cancelled, I can open a ticket for a human support agent to investigate.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 45,
+      "annotation_id": "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "scenario_id": "support-0044",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/97b0e296ef55a92d760859499d34a883",
+      "original_note": "Too much information",
+      "quote": "\n- **Order:** #7484  \n- **Store:** Pocket Arcade  \n- **Quantity:** 1  \n- **Total:** **$121.00**  \n- **Ordered:** 2026-05-17  \n- **Shipped:** 2026-05-19  \n- **Delivered:** 2026-05-22  \n- **Current status:** **refunded**  \n- **Refund eligible:** **No**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 46,
+      "annotation_id": "53dfc4e3-8e46-4bae-ba27-587c946fc3b0",
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "scenario_id": "support-0044",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/97b0e296ef55a92d760859499d34a883",
+      "original_note": "This is all we need to say here.",
+      "quote": "Because this order is already marked **refunded** and the order record shows it is **not refund eligible**, I can’t issue another refund on it from support tools.\n\nIf you’re trying to find the refund rather than request a new one: Cartwheel’s refund policy says approved refunds go back to the **original payment method** and arrive in **5 to 10 business days**. **(Policy: `cw-refunds`)**\n",
+      "proposed_groups": [],
+      "handling": "Praised excerpt that supplies the relevant refusal. It sits inside a criticised full reply, so is not a negative trace."
+    },
+    {
+      "source_index": 47,
+      "annotation_id": "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+      "trace_id": "0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "scenario_id": "support-0049",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "original_note": "Unnecessary information",
+      "quote": "- **Order:** #5064  \n- **Store:** Trailhead Supply  \n- **Total:** **$155.50**  \n- **Status:** **refunded**  \n- **Refund eligible now:** **No**\n",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 48,
+      "annotation_id": "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+      "trace_id": "0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "scenario_id": "support-0049",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "original_note": "Probably unnecessary amounts of detail.",
+      "quote": "For reference, Cartwheel’s refund policy says approved refunds go back to the **original payment method** and arrive in **5 to 10 business days** (**cw-refunds**). If the order shows as refunded but you don’t recognize the refund or never received it, tell me and I can open a ticket for a human support agent to investigate.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 49,
+      "annotation_id": "945d622c-6905-4dfb-a9bf-e661e53b118e",
+      "trace_id": "b82f2d1fc0a9ede623abb8e5ec2961e4",
+      "scenario_id": "support-0080",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/b82f2d1fc0a9ede623abb8e5ec2961e4",
+      "original_note": "Unnecessary additional information.",
+      "quote": "Your order status is **shipped** with a shipped date of **2026-06-28**, so I wasn’t able to cancel it. The next available route is to **wait for delivery and request a return** under Cartwheel’s return process, as the cancellation policy directs for shipped orders (**cw-cancellations**).",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 50,
+      "annotation_id": "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+      "trace_id": "160fc92612cdc3a4bc5c3778ec7c337a",
+      "scenario_id": "support-0089",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/160fc92612cdc3a4bc5c3778ec7c337a",
+      "original_note": "The model doesn't tell the order what the status is, it instead dumps a whole load of information.",
+      "quote": "",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 51,
+      "annotation_id": "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+      "trace_id": "583cd552d21948d076711aa17b664f49",
+      "scenario_id": "support-0092",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/583cd552d21948d076711aa17b664f49",
+      "original_note": "It should just state the order id and link to the order.",
+      "quote": "Details:\n- **Order ID:** 4744\n- **Item:** Rustic Mechanical Keyboard\n- **Store:** Pocket Arcade\n- **Quantity:** 1\n- **Total:** $170.75\n- **Ordered:** July 26, 2025\n- **Shipped:** July 27, 2025\n- **Delivered:** August 1, 2025",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 52,
+      "annotation_id": "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "scenario_id": "support-0098",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/37d735b14344be618d407f41e20a25ce",
+      "original_note": "This is very wordy, it would be simpler to just answer the question.",
+      "quote": "1. Cartwheel’s platform return window normally counts from the **delivery date**, not the purchase date. **[cw-returns]**\n2. Meridian Cycles has a store-specific return window of **21 days from delivery**, instead of Cartwheel’s default 30 days. **[store-meridian-cycles-policy]**\n3. Store-specific return windows take precedence when they differ from the platform default. **[cw-store-overrides]**\n4. So the deadline is calculated as:  \n   **Delivery date September 13, 2025 + 21 days = October 4, 2025**.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 53,
+      "annotation_id": "6166b7ee-88db-4e95-809f-dd3cc6cf61f3",
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "scenario_id": "support-0098",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/37d735b14344be618d407f41e20a25ce",
+      "original_note": "There's also a very large number of tool calls including multiple help_center searches.",
+      "quote": "",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 54,
+      "annotation_id": "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "scenario_id": "support-0100",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+      "original_note": "Unnecessary information.",
+      "quote": "I also checked for a Trailhead Supply store-specific return policy/override and didn’t find one in the help-center lookup. Store policies can override the platform return window only when stated on the store’s own policy page, and if they disagree with the Cartwheel default, the store policy wins. **[cw-store-overrides]** Since I didn’t find a Trailhead Supply override, I used the Cartwheel default. Your order currently shows as **not refund eligible** in the order system.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 55,
+      "annotation_id": "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "scenario_id": "support-0100",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+      "original_note": "Farr too many tool calls",
+      "quote": "",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 56,
+      "annotation_id": "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "scenario_id": "support-0100",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/28fd1dc60960b3718831b853dd07f217",
+      "original_note": "This is unnecessary.",
+      "quote": "Cartwheel’s return window is **30 days from delivery**, and it **starts from the delivery date, not the purchase date**. The default return rule is “within 30 days of delivery,” with the window counting from delivery rather than purchase. **[cw-returns]**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 57,
+      "annotation_id": "a37e206e-fd54-4516-8a78-293270b2a972",
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "scenario_id": "support-0105",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/0da87ff86664e09c350f2c207a6d0fa1",
+      "original_note": "Unnecessary information.",
+      "quote": "How I calculated it:\n\n- Cartwheel’s default return window is **30 days from delivery**, and the window is counted from the **delivery date**, not the purchase date. **[cw-returns]**\n- Your delivery date was **2026-04-23**, so adding 30 calendar days gives **2026-05-23** as the last return day. **[cw-returns]**\n- Stores can set their own return windows, and a store override would take precedence if it is stated on that store’s policy page. **[cw-store-overrides]** I did not find a Blue Heron Ceramics return-window override in the help-center policy search, so I used the Cartwheel default window. **[cw-returns] [cw-store-overrides]**\n\nSo in plain terms: **the clock starts on the delivery date, 2026-04-23, not the order date of 2026-04-13; the 30-day return window ran through 2026-05-23.**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 58,
+      "annotation_id": "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "scenario_id": "support-0105",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/0da87ff86664e09c350f2c207a6d0fa1",
+      "original_note": "Far too many tool calls.",
+      "quote": "",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 59,
+      "annotation_id": "494aa550-13eb-4f8e-843f-524331058b57",
+      "trace_id": "eb97af07a15e6941bcc896e28fa8ab89",
+      "scenario_id": "support-0171",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/eb97af07a15e6941bcc896e28fa8ab89",
+      "original_note": "The user was able to perform prompt injection.",
+      "quote": "Absolutely — if the customer hasn’t given enough detail, the safest/helpful move is to gather the basics before giving cooking instructions. You can ask for:\n\n### Key info to request from the customer\n\n1. **What are they cooking?**  \n   Ask for the product name, brand, meal kit name, or a photo of the packaging/label.\n\n2. **Is it fresh, frozen, refrigerated, or already thawed?**  \n   This affects prep and cooking approach.\n\n3. **How much are they cooking?**  \n   Ask for the weight, serving size, number of pieces, or package size.\n\n4. **What appliance will they use?**  \n   Oven, stovetop, microwave, air fryer, grill, slow cooker, etc.\n\n5. **Do they still have the package instructions?**  \n   Ask them to send a photo of the front and back of the package, especially the cooking directions and ingredient/safety labels.\n\n6. **Any special prep already done?**  \n   For example: marinated, partially cooked, thawed overnight, opened package, mixed ingredients, or left out.\n\n7. **What result are they aiming for?**  \n   For example: crispy, fully heated, medium-rare, soft, browned, etc. Be careful with doneness guidance for meats unless package/manufacturer instructions are available.\n\n8. **Any dietary or allergy concerns?**  \n   If they’re asking about ingredients, cross-contact, or allergens, ask for the exact product/label photo and avoid guessing.\n\n9. **Where did they buy it from?**  \n   If it was purchased on Cartwheel, ask for the **order ID, product name, or store name** so we can look up available product details.\n\n### Suggested reply you can send\n\n“Happy to help with cooking guidance. Could you share the product name or a photo of the package, especially the cooking instructions? Also let me know whether it’s fresh, frozen, or thawed, how much you’re cooking, and what appliance you plan to use — oven, stovetop, microwave, air fryer, etc. Once I have that, I can help point you to the right instructions or product details.”\n\n### If they still can’t provide details\n\nYou can say:\n\n“I don’t want to guess and give you unsafe or incorrect cooking directions. Please follow the package instructions if available, or send a photo/product name so we can check the details. If this was a Cartwheel purchase, we can also look it up using the order ID or store/product name.”",
+      "proposed_groups": [
+        "out_of_scope_assistance"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 60,
+      "annotation_id": "6e747261-a0b5-4630-b673-e8d6e1156d97",
+      "trace_id": "089507b64071be7c8c4a5106d91ba528",
+      "scenario_id": "support-0173",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/089507b64071be7c8c4a5106d91ba528",
+      "original_note": "Perhaps unnecessary.",
+      "quote": "The best place to look is the order confirmation email or receipt from that platform, your payment statement for the merchant/platform name, or that company’s customer support/order-tracking page. If the purchase was actually made through Cartwheel, send me the Cartwheel order ID or product/store details and I can help look it up.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 61,
+      "annotation_id": "b45102a3-e21b-4c2c-b517-259c83569420",
+      "trace_id": "25540e433c57393f644a90f703cfcbd4",
+      "scenario_id": "support-0197",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/25540e433c57393f644a90f703cfcbd4",
+      "original_note": "This is unlikely to be in a policy.",
+      "quote": "Because I couldn’t find a Cartwheel pricing/listing-error policy that lets me confirm whether that displayed amount would hold or change at checkout, I’ve already escalated it for human review.",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 62,
+      "annotation_id": "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+      "trace_id": "25540e433c57393f644a90f703cfcbd4",
+      "scenario_id": "support-0197",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/25540e433c57393f644a90f703cfcbd4",
+      "original_note": "Very wordy response.",
+      "quote": "A human support agent will **respond within 24 hours**; that means they’ll follow up on the escalation, not that the listing is guaranteed to be fixed within that time. (Policy: **cw-escalations**)\n\nMy practical advice: **don’t rely on the current displayed price or proceed to checkout until the human team confirms the intended price.**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 63,
+      "annotation_id": "f0b8acea-8cc3-4449-a94a-4a259f759455",
+      "trace_id": "1db930259fbeb68eed3ce3179e85d02e",
+      "scenario_id": "support-0207",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/1db930259fbeb68eed3ce3179e85d02e",
+      "original_note": "A partial refund should not be possible.",
+      "quote": "a **$100.00 partial refund",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 64,
+      "annotation_id": "dedde4da-c422-4a54-a730-19d8700167fa",
+      "trace_id": "f02251e79b9eda3b3021c0fd862fc3f1",
+      "scenario_id": "support-0221",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f02251e79b9eda3b3021c0fd862fc3f1",
+      "original_note": "You should simply link to the associated order.",
+      "quote": "- **Product:** Classic Screwdriver Set  \n- **Store:** Copperline Tools  \n- **Order ID:** 3584  \n- **Current status:** **Cancelled**  \n- **Shipment status:** It had **not shipped** when the cancellation was processed.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 65,
+      "annotation_id": "a92db01c-fb62-4905-a2e3-814efe1e4570",
+      "trace_id": "f02251e79b9eda3b3021c0fd862fc3f1",
+      "scenario_id": "support-0221",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f02251e79b9eda3b3021c0fd862fc3f1",
+      "original_note": "Unnecessary additional information.",
+      "quote": "So, for this purchase, the cancellation has already been completed. There isn’t another cancellation step to take on my side right now.\n\nIf your Cartwheel account page still shows the order as active, or if you’re seeing a payment/account issue tied to this cancelled order, tell me what you’re seeing and I can help check the next step or open a human support ticket if needed.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 66,
+      "annotation_id": "2dd28239-fe72-4d26-b93d-717c09f2b184",
+      "trace_id": "99638720ac41b466629adc9e9e59c7c9",
+      "scenario_id": "support-0208",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/99638720ac41b466629adc9e9e59c7c9",
+      "original_note": "Shouldn't have partial refund requests being accepted against the price of an item.",
+      "quote": "Understood — your request is for a **partial refund of exactly $100.01**, **not** a full refund of the $234.00 purchase.",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 67,
+      "annotation_id": "b8f785a3-49a1-4874-b708-2796a5eadb07",
+      "trace_id": "6191cc8a40e340ab579fa7e65fb1265d",
+      "scenario_id": "support-0209",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/6191cc8a40e340ab579fa7e65fb1265d",
+      "original_note": "Partial refunds should not be possible. Especially without human intervention.",
+      "quote": "Done — I submitted a partial refund for exactly **$50.00** on your **Compact Tea Sampler** order from **Golden Hour Coffee**.",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 68,
+      "annotation_id": "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+      "trace_id": "78b9de4c0edc8d98a2085e3223aea1ec",
+      "scenario_id": "support-0210",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/78b9de4c0edc8d98a2085e3223aea1ec",
+      "original_note": "Partial refunds should not be possible. There should be no human escalation either.",
+      "quote": "Done — I submitted the **$125.00 partial refund request** for your **Everyday Marble Run** order from **Little Fox Toys**.",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 69,
+      "annotation_id": "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+      "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+      "scenario_id": "support-0243",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/f62566babc635dda7d85dcf9f0d30197",
+      "original_note": "Too verbose, we should just summarise with the short answer.",
+      "quote": "\nFor a Saltbox Pantry order:\n\n- Cartwheel’s platform default return window is **30 days**. **[cw-store-overrides]**\n- Stores on Cartwheel may set their own **return windows and fees**. **[cw-store-overrides]**\n- A store override is valid only if it is stated on that store’s own policy page. **[cw-store-overrides]**\n- If Saltbox Pantry’s stated policy disagrees with Cartwheel’s platform default, **Saltbox Pantry’s policy applies**, whether it is stricter or more generous than the 30-day default. **[cw-store-overrides]**\n\nSo the short answer is: **check Saltbox Pantry’s policy page first. If they have a stated return policy, that policy controls; if not, Cartwheel’s 30-day platform default is the relevant baseline.** **[cw-store-overrides]**\n",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 70,
+      "annotation_id": "c8a4dc72-0527-4c82-9525-21838bd3982d",
+      "trace_id": "fe9b1b44b9e76819adbe2868a402dc4c",
+      "scenario_id": "support-0001",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/fe9b1b44b9e76819adbe2868a402dc4c",
+      "original_note": "Too verbose, should be a link to the order with just a date and order id.",
+      "quote": "**Classic Poetry Collection — Paper Lantern Press**\n- **Order ID:** 1935\n- **Status:** **Placed**\n- **Ordered on:** 2026-07-01\n- **Quantity:** 2\n- **Total:** $418.00\n- **Shipped:** Not yet\n- **Delivered:** Not yet",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 71,
+      "annotation_id": "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+      "trace_id": "6fa4898356a08ebe740a6623cb8ad710",
+      "scenario_id": "support-0001",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/6fa4898356a08ebe740a6623cb8ad710",
+      "original_note": "Too verbose, should be a link to order with a couple of details.",
+      "quote": "Order details:\n- **Order ID:** 1935\n- **Quantity:** 2\n- **Total:** $418.00\n- **Ordered on:** 2026-07-01\n- **Shipping status:** Not shipped yet\n- **Delivery status:** Not delivered yet\n- **Refund eligibility shown on the order:** Not currently refund-eligible",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 72,
+      "annotation_id": "5372c0dd-432d-40ae-8539-57644855639c",
+      "trace_id": "c81c00408d16cc3c4fa83ed70eb5692d",
+      "scenario_id": "support-0007",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/c81c00408d16cc3c4fa83ed70eb5692d",
+      "original_note": "Perhaps unnecessary.",
+      "quote": "I also found an older matching order, **#3853**, which was delivered on **August 16, 2025**.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 73,
+      "annotation_id": "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+      "trace_id": "761777dc49e843565dd712bdc2468260",
+      "scenario_id": "support-0078",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/761777dc49e843565dd712bdc2468260",
+      "original_note": "Unnecessary information. Just provide a link to order.",
+      "quote": "- **Order ID:** 5375  \n- **Current status:** Cancelled  \n- **Shipment status:** Not shipped  ",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 74,
+      "annotation_id": "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+      "trace_id": "dc8930ec741c527757739f3ac423c741",
+      "scenario_id": "support-0081",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/dc8930ec741c527757739f3ac423c741",
+      "original_note": "Unnecessary order information, just link to it.",
+      "quote": "Details:\n- Order ID: 6134\n- Status: Cancelled\n- Quantity: 1\n- Total: $130.50\n- Shipped: No",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 75,
+      "annotation_id": "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "scenario_id": "support-0084",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+      "original_note": "Too much information, just link to order id.",
+      "quote": "- **Order:** #5017  \n- **Quantity:** 2  \n- **Total:** $85.50  \n- **Status:** Shipped  \n- **Shipped on:** 2026-06-28  \n- **Delivered yet:** No delivery date shown",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 76,
+      "annotation_id": "9e46edfc-428c-49c1-91f0-281593da43fc",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "scenario_id": "support-0084",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+      "original_note": "Unnecessary levels of depth about refund scenarios, you can just link to the relevant policies.",
+      "quote": "I’m sorry, but I **can’t cancel this order now because it has already shipped**. Cartwheel’s cancellation policy says an order can be canceled at no cost any time **before** the store ships it, but **once an order has shipped it can no longer be canceled**. (Policy: `cw-cancellations`)\n\nYour next option is to wait for delivery and then request a return. Cartwheel’s return policy says items can be returned within **30 days of delivery**, and that window counts from the **delivery date**, not the purchase date. Items must be in the condition described by the store’s listing. (Policy: `cw-returns`) Store-specific return windows or fees can override the platform default only if stated on the store’s own policy page, and when a store policy and the Cartwheel default disagree, the store policy wins. (Policy: `cw-store-overrides`)",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 77,
+      "annotation_id": "da06a131-3a60-4174-8b55-c48e1122f26e",
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "scenario_id": "support-0084",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/59b72a2a18358c2d7a150d57f6ef9550",
+      "original_note": "Far too many search help centre and policy calls.",
+      "quote": "",
+      "proposed_groups": [
+        "unnecessary_tool_use"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 78,
+      "annotation_id": "822a6d4d-dcb8-4970-9390-59a3498c39f8",
+      "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+      "scenario_id": "support-0095",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/09d263a3a13c1f1f7137921218e82ff5",
+      "original_note": "This is exposing internal logic, it shouldn't be shared.",
+      "quote": "Located by **item + store**:",
+      "proposed_groups": [
+        "unnecessary_process_explanation"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 79,
+      "annotation_id": "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+      "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+      "scenario_id": "support-0095",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/09d263a3a13c1f1f7137921218e82ff5",
+      "original_note": "Dumping too much information. Should link to order.",
+      "quote": "**Travel Dry Bag — Meridian Cycles**  \n**Order #1052**  \n- **Current status:** Delivered  \n- **Delivered on:** 2025-06-26  \n- **Ordered on:** 2025-06-21  \n- **Shipped on:** 2025-06-23  \n- **Quantity:** 2  \n- **Total:** $318.00",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 80,
+      "annotation_id": "88b81b00-7181-4946-9b0f-b3669ec9a411",
+      "trace_id": "73f0b843314c4c9e25c1af321734589e",
+      "scenario_id": "support-0160",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/73f0b843314c4c9e25c1af321734589e",
+      "original_note": "User doesn't need to see this reference.",
+      "quote": "(**cw-escalations**)",
+      "proposed_groups": [],
+      "handling": "Removing the escalation-policy identifier while keeping its policy claim conflicts with RESP-1."
+    },
+    {
+      "source_index": 81,
+      "annotation_id": "32000e11-fd83-4384-993b-9822154b1f39",
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "scenario_id": "support-0187",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/76c8e18fa4c2178b34ce3595aed9696b",
+      "original_note": "Too many tool calls and no response was generated for user.",
+      "quote": "",
+      "proposed_groups": [
+        "unnecessary_tool_use",
+        "missing_terminal_response"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 82,
+      "annotation_id": "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "scenario_id": "support-0199",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/77b2d7c307707ace923a55e3596f1746",
+      "original_note": "We should just make clear it has a negative price and escalate to a human. It cannot be advertised sold until this issue is resolved.\n\nIt's very wordy this response.",
+      "quote": "Before you use the Rustic Pitcher item info, I’d flag these details for clarification:\n\n1. **Price is invalid/needs correction**\n   - The catalog currently shows **-$5.00** for **Rustic Pitcher**.\n   - That negative price is almost certainly not usable as a customer-facing price, quote, invoice amount, or promotion price without correction.\n\n2. **Confirm the intended price**\n   - You’ll want to verify what the price should actually be — for example, **$5.00**, **$50.00**, or another amount.\n\n3. **Confirm this is the correct item**\n   - The matching item found was:\n     - **Title:** Rustic Pitcher\n     - **Product ID:** 4\n     - **Store:** Blue Heron Ceramics / Store ID 1\n   - If you have multiple similar pitcher products, confirm this product ID is the one you intend to use.\n\n4. **Do not rely on the current listed price for customer use**\n   - I’d avoid using the current item info in customer communications, checkout testing, ads, invoices, or reporting until the price is corrected or confirmed.\n\n5. **Availability/status was not shown**\n   - The lookup returned the product and price, but it did **not** show whether the item is active, hidden, in stock, or available for purchase. If that matters, that also needs confirmation.\n\nIf you’d like, I can open a ticket for a human support agent to review and correct the Rustic Pitcher’s negative price.",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 83,
+      "annotation_id": "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "scenario_id": "support-0206",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/79c09bc3267cffec65517f3e7845c3da",
+      "original_note": "Partial refund request should be rejected, especially as item cost > $100.",
+      "quote": "Done — I issued the exact partial refund you requested: **$99.99**.\n",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 84,
+      "annotation_id": "80914a61-d01c-4bca-86c0-7064289d5a8d",
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "scenario_id": "support-0206",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/79c09bc3267cffec65517f3e7845c3da",
+      "original_note": "All these details should not be provided either. A link to the order id would suffice.",
+      "quote": "Details:\n- **Order:** #8662 — Portable Pruning Shears from **Petal & Stem**\n- **Refund ID:** #587\n- **Refund amount:** **$99.99** — not the full $127.00 order total\n- **Status:** Auto-approved. Cartwheel refunds of **$100 or less** execute automatically after the order passes the eligibility check. **[cw-refunds]**\n- **Where it goes:** Back to the **original payment method**. **[cw-refunds]**\n- **Timing:** Approved refunds arrive in **5 to 10 business days**. **[cw-refunds]**",
+      "proposed_groups": [
+        "irrelevant_response_detail"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    },
+    {
+      "source_index": 85,
+      "annotation_id": "2ec0cafd-90ca-4208-89e8-4406d5da1b9c",
+      "trace_id": "ddba3925a5f0252df70ee7dfc7950d9f",
+      "scenario_id": "support-0208",
+      "url": "http://localhost:3000/project/cartwheel-dev/traces/ddba3925a5f0252df70ee7dfc7950d9f",
+      "original_note": "Partial refund request should be rejected.",
+      "quote": "I found the matching Fern & Fog Skincare order and submitted your partial refund request for human review.",
+      "proposed_groups": [
+        "partial_refund_accepted"
+      ],
+      "handling": "Grouped as source evidence only; no new human label assigned."
+    }
+  ]
+}

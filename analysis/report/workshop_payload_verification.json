@@ -1,0 +1,243 @@
+{
+  "checked_at": "2026-09-19T07:09:58.140441+00:00",
+  "workshop_version": "0.1.21",
+  "cause": "GenAI tool arguments/results stored in attributes but not mapped to Workshop payload panels",
+  "source": "Existing recorded gen_ai.tool.call.arguments and gen_ai.tool.call.result attributes only",
+  "backup": "/tmp/hw4-workshop-before-payload-repair-20260919.db",
+  "span_count_unchanged": true,
+  "annotations_unchanged": true,
+  "inspected_homework_runs": 10,
+  "repaired_tool_spans": 24,
+  "repairs": [
+    {
+      "run_id": "12f5e9a18063d794761e231883a106ba",
+      "span_id": "bd8c238b29a96fab",
+      "name": "search_products",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "9c2fc99d4c8fd991a3c80b4363402f0cde8b1842b8f8a9150b5d9b741946ee27",
+      "output_sha256": "fdb1924064f0b41faf6dde7f79deaeae24311da0008756a24df1302399a55940"
+    },
+    {
+      "run_id": "38b8add87bcf261c8e1138ef45bd19b5",
+      "span_id": "79c0482e9df3a071",
+      "name": "search_products",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "c3f8cbbc8d25868da195dfb57277c2fafbe0e4edafcb02956a07b8cc9ee200c4",
+      "output_sha256": "f7239097c880dd1483e190a057fef933e952fcb7b4f45f9ea04a26ef7460cf9a"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "c7cf252eaf33ec10",
+      "name": "search_products",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "52179f130b52a19e5f067a8b242c882dc74789b207dcfa6dbfea2bc3c2a2a5e0",
+      "output_sha256": "a94fd79998376b5a9228eb4877cf0998206f54107d0213bf88b69ef9c4ee2ead"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "f94f5cfdb5882c92",
+      "name": "find_order",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "f27bd647f2381f3c16a1ef59373bd9fa463be48cd1d7c0bfe24206ed157c8091",
+      "output_sha256": "289c6ac1da4fc17013c49c833aaafc51e4a12981c168cbcc59944fe4e136ec3c"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "772af2fefc8f6f5b",
+      "name": "get_order",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "0c1d769e112e30752830b746acfe007b99c029615162a739e9ea3935f4574467",
+      "output_sha256": "8d9058bdc58eb4e8622e5e8cac0a549593931025ddd72a170b8c67c08958224c"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "f74eb15de94a3ee0",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "a68b148bb5104e7d7c8c853cdee73801d63eb35348c40f1efbdbc6cc17def534",
+      "output_sha256": "34a138ae1472a736577c2213495828458266b814be11960d8eecca50a75dc237"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "c4fdbd5a2e85b667",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "80d40a54fc404439f51c9e62d4d271b76a6a9312b26b98c34706d71be9556367",
+      "output_sha256": "d0cf8e8a4d7f121ee5c8e2cbe6124cca6339a156faf96478fd0a0ae6e9fad850"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "5fbb865fc2d02795",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "3cca667422ec78b063d765bfb694554bf336728f85f5eee272fe56e0141299ac",
+      "output_sha256": "6d11defcb62ea1868824ca3ad9b803e5122976d6a24875468cfc42733aad7fa5"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "77b06dafdb032f3b",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "14be97609bab057e9801786fa8de35ddbdf691eaa56de2a37e606b3319aae4bd",
+      "output_sha256": "e6458c3e9c67e1e5bb8b1382591c34766a4874de1355c8c0e36b7d066c3207cd"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "6e00aed873aed811",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "33131905c024aaccbc46ccf7cd4703b3883344f07c2ad2e6d0a150008d8a6960",
+      "output_sha256": "3e8332b9814522bdb2bf579c109cb0f1938ba48aca6e7648e04bc6ba15873df0"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "591826b29acf3682",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "31954f91e846f6fcabc52b8c3b233464b26a4c807e36b2b2b1bc5c4a3cd1323a",
+      "output_sha256": "67579845beeb4e2134ad0be3e18cae878b1727bc361269b685124fabb10f36d4"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "657bad3edb21a6e9",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "e383d6852c3fdc81bdc1a7ad5ee7de3617a6e7216e5ace59b216390528d2bb7a",
+      "output_sha256": "d9a94e373ccc3bd00a9e90acb3d37a0d0b18a21840a4a2b56e69d82c48451cb3"
+    },
+    {
+      "run_id": "3e7e9d9fc3bda5f27c3530a9d4a29623",
+      "span_id": "bb635543134476b5",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "34f09a1b8a3f70070a87872536706e6897ea66aab2a5b55dbf6aa1a570053b63",
+      "output_sha256": "eec83ffd7876a6461ad2843e7507e47cc245e2efc851c1b9dd84385a6eed08f6"
+    },
+    {
+      "run_id": "636b5087cd3f948dcf2e930da2753431",
+      "span_id": "72f6643cdf121dac",
+      "name": "find_order",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "019dc8e490c72421f23e4d090a9ee1f4e83521fe9599aea5e075a8ff6bc8f964",
+      "output_sha256": "4d99612c2f9bcc97860837d1295359c82eb5b76602716f05fc13a85a1c621215"
+    },
+    {
+      "run_id": "9503455068c7cc22b6ec4824e265b0d3",
+      "span_id": "8ae0929405d161a4",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "670cb6623604e082bb05639e1235f244313e990174701e0cf258a9dd37104118",
+      "output_sha256": "3cf3f2ea70b08594519804467298c3e96862793c8ef8d2bea44f2e0fcd5d81ff"
+    },
+    {
+      "run_id": "9503455068c7cc22b6ec4824e265b0d3",
+      "span_id": "3b9d6e15bd16a4a4",
+      "name": "escalate_to_human",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "7aec0e3f6c9db2347e55a6adb33d1091b361600a51d334fc9611a5de576410c7",
+      "output_sha256": "202fbf15f2e7b93ec616eee3ef5397158b9f3b78db8d2b96e084c4d376209e0d"
+    },
+    {
+      "run_id": "df6e6558791e426811ddf36497541112",
+      "span_id": "49cbd1544c828b97",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "38fa7898b3f858c691032875bf313fa86ae151962c07ef8c98a950daf8453bc0",
+      "output_sha256": "70aae8a1081db76bd41932cf2dc5c082ad9e77d8a06d63102efa88130f8cf473"
+    },
+    {
+      "run_id": "df6e6558791e426811ddf36497541112",
+      "span_id": "7c6685967d5af718",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "a7a1a863e54c347dc45b64e84d165568abd012dd874ed0a2a063e08fc6919bfa",
+      "output_sha256": "387f51a4c5340a697aa257abf098563162a7aecc33228804b059cf1843283c6b"
+    },
+    {
+      "run_id": "e459915700fd1d5f00ab03f4796b6800",
+      "span_id": "f2ff2c6f90d2aea8",
+      "name": "find_order",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "cc9f19a4559aedd1b5a71496047a98d861b1d97034b1d8756e66f0503d0d1a2b",
+      "output_sha256": "aff798c08a0e1ba12161731a1e865044537cda92f3c93813ed677f59e08dda2f"
+    },
+    {
+      "run_id": "e459915700fd1d5f00ab03f4796b6800",
+      "span_id": "cc3f8a8ca5ebcb49",
+      "name": "search_help_center",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "5df0a6e7970e7944b2e132a36f75ae3719e59135348cf1be2a60131b11871c4d",
+      "output_sha256": "983972959b38e1cbfdc98358601899a5919e4cc969ccd4f5280241b3a2fd6c81"
+    },
+    {
+      "run_id": "e459915700fd1d5f00ab03f4796b6800",
+      "span_id": "14759bfb2ddbd490",
+      "name": "get_order",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "c665f1831502e9ad479e7f789c020bc402acc9da9745888389458f9a71e5aabb",
+      "output_sha256": "a9f7d804ad4e20674129e71ff26ae8dc9bfcdf17ebd17cad40feae6c7b0d4ef2"
+    },
+    {
+      "run_id": "e459915700fd1d5f00ab03f4796b6800",
+      "span_id": "fa2592d9b0ca0cd2",
+      "name": "get_policy",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "e08f329967fa673437fa83c998200a76c264daca92ab9cf16e53e46efd2aded3",
+      "output_sha256": "4ece37f3fd22b585409388ce76866d347e485040a570f4cb7f99f052fe7db0c0"
+    },
+    {
+      "run_id": "e459915700fd1d5f00ab03f4796b6800",
+      "span_id": "6b7ad7012fe2f13e",
+      "name": "issue_refund",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "6d3f1968c0c1357db6691c369293c975f622f1d8db5f180f2d5dc9407f34f579",
+      "output_sha256": "2eaf2db41a090f1767d45682530f66801fd6e1f4ca2f3bf989b6715d51a522bd"
+    },
+    {
+      "run_id": "fa06561e1e5115e7ce3318425a314439",
+      "span_id": "043d5eaca027faf0",
+      "name": "search_products",
+      "input_filled": true,
+      "output_filled": true,
+      "input_sha256": "9c2fc99d4c8fd991a3c80b4363402f0cde8b1842b8f8a9150b5d9b741946ee27",
+      "output_sha256": "fdb1924064f0b41faf6dde7f79deaeae24311da0008756a24df1302399a55940"
+    }
+  ],
+  "verified_repaired_payloads": 24,
+  "offline_tests": {
+    "command": ".venv/bin/python -m pytest tests/test_workshop_runner.py tests/test_observability.py -q",
+    "passed": 5,
+    "warnings": [
+      "Existing StarletteDeprecationWarning for httpx"
+    ]
+  },
+  "ui_verified": {
+    "run_id": "e459915700fd1d5f00ab03f4796b6800",
+    "tool": "issue_refund",
+    "input_and_output_visible": true
+  },
+  "fresh_model_run_performed": false
+}

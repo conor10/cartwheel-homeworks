@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cartwheel · Trace review</title><link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand"><span class="brand-icon">C</span><div>Cartwheel <small>TRACE REVIEW · HW4</small></div></div>
+    <nav aria-label="Workspace views">
+      <button data-view="review" class="active">Review</button><button data-view="explore">Explore & sample</button>
+      <button data-view="taxonomy">Taxonomy</button><button data-view="labels">Labeling</button>
+      <button data-view="progress">Progress</button><button data-view="suggestions">Suggestions</button>
+    </nav>
+    <button id="spec-button" class="quiet">Specification ↗</button>
+  </header>
+  <div class="statusbar"><span id="connection">Connecting to Langfuse…</span><span id="sync-status"></span><button id="refresh" class="quiet">Refresh state</button></div>
+  <div id="notice" role="alert" hidden></div>
+  <main id="app"><div class="loading">Loading your live trace collection…</div></main>
+  <dialog id="spec-dialog"><div class="dialog-head"><h2>Product requirements</h2><button id="close-spec">Close</button></div><pre id="spec-text"></pre></dialog>
+</body>
+</html>

@@ -1,1 +1,555 @@
-{"modes": []}
+{
+  "modes": [
+    {
+      "name": "irrelevant_response_detail",
+      "definition": "Present when the final customer-facing reply adds order fields, policy branches, repetition or internal-process explanation that can be removed without losing information needed to answer this request, disambiguate the item, explain the relevant decision, communicate an action result or provide a necessary next step. Identify the removable passage and why it is irrelevant.",
+      "boundary": "Length alone is not failure. Allow requested calculations, necessary record inconsistency explanations, action identifiers and RESP-1 citations. Do not label model-only narration as customer-visible without delivery evidence. Tool activity is evaluated separately. A verified link can replace detail, but unavailable links must not be invented.",
+      "requirement": "RESP-5 and HW4 refinement RESP-6",
+      "evaluator_type": "llm_judge",
+      "status": "final",
+      "created_from": [
+        "62c34391-d3eb-4450-8a0a-13f7ebf6ba78",
+        "da03eb2c-10b2-4312-9120-ad32be011d97",
+        "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+        "276fc010-0302-4c6d-8871-0ccd5f10870e",
+        "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+        "8432be97-568b-445c-916e-31995f528c29",
+        "f73ac071-d34f-4499-9417-c9879de2824f",
+        "0291c213-6c62-4054-80fc-6517854540fb",
+        "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+        "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+        "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+        "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+        "46d6b26d-edba-48a2-8f96-90d8c15a1fd1",
+        "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+        "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+        "1cb6af46-3ca1-493d-802b-fc205f97284f",
+        "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+        "7dca470e-c335-45db-8530-4353a39c8ded",
+        "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+        "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+        "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+        "ca669852-6cd1-4adb-bebe-11a11b289e0a",
+        "61b00005-a661-4259-9e14-d315e47a162d",
+        "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+        "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+        "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+        "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+        "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+        "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+        "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+        "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+        "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+        "945d622c-6905-4dfb-a9bf-e661e53b118e",
+        "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+        "1804e943-ba60-447a-90b7-7a2694993348",
+        "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+        "a37e206e-fd54-4516-8a78-293270b2a972",
+        "8d2c5374-4336-494d-a80f-df691721746a",
+        "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+        "824b4999-be58-4dd1-8a96-874cb741e134",
+        "dedde4da-c422-4a54-a730-19d8700167fa",
+        "a92db01c-fb62-4905-a2e3-814efe1e4570",
+        "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+        "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+        "0d24981c-b223-44e6-9835-028001d90be5",
+        "80914a61-d01c-4bca-86c0-7064289d5a8d",
+        "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+        "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+        "822a6d4d-dcb8-4970-9390-59a3498c39f8",
+        "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+        "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+        "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+        "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+        "9e46edfc-428c-49c1-91f0-281593da43fc",
+        "86520981-04b8-4dc1-819d-acabe4a0aef1",
+        "576434dd-7624-4b97-87b8-bcc12ac4f146",
+        "cce4d789-f065-4879-a93c-eb75a73d015a",
+        "157d83d4-2081-47ed-ae6e-f9647137433b",
+        "2011f548-7252-4dde-b9cd-b9a580577c40",
+        "87574a05-fe78-46ad-9a58-ad6e574596de"
+      ],
+      "version": 3,
+      "updated_at": "2026-09-19T07:57:17.403762+00:00",
+      "revision_reason": "Part E uses the five supported definitions after human review and clarification. Rare scope/missing-response findings remain documented separately. Supporting references narrowed to specific corroborated human positive observations; earlier sources remain in history.",
+      "history": [
+        {
+          "name": "irrelevant_response_detail",
+          "definition": "Present when a reply adds an order-field list, repeated explanation, or policy branch that does not answer the current question, identify an ambiguous order, explain the relevant decision, state an action result, or provide a necessary next step. The reviewer must identify the removable passage and why removing it loses no information needed for that request.",
+          "boundary": "Do not fail a response for length alone, required policy identifiers, necessary refund status or timing, explaining missing information, or a calculation the user requested. A brief relevant explanation is allowed. Unneeded descriptions of the agent\u2019s method belong to unnecessary_process_explanation; unnecessary data or policy content belongs here. Tool inefficiency is evaluated separately. Links are desirable only when verified URLs are available.",
+          "requirement": "RESP-5 provides the existing direct-language requirement. Proposed clarification DRAFT-RESP-A: answer the question first and omit irrelevant or repeated detail. No current requirement mandates order or policy hyperlinks; do not invent URLs. Retain RESP-1 citations.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "da03eb2c-10b2-4312-9120-ad32be011d97",
+            "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+            "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+            "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+            "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+            "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+            "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+            "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+            "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+            "22e1d84d-6936-490f-b8b1-942ef3fa9d90",
+            "8432be97-568b-445c-916e-31995f528c29",
+            "f73ac071-d34f-4499-9417-c9879de2824f",
+            "1cb6af46-3ca1-493d-802b-fc205f97284f",
+            "0291c213-6c62-4054-80fc-6517854540fb",
+            "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+            "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+            "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+            "8d2c5374-4336-494d-a80f-df691721746a",
+            "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+            "824b4999-be58-4dd1-8a96-874cb741e134",
+            "d8d551e0-1326-43e9-be7f-ed0a4ba4d252",
+            "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+            "1804e943-ba60-447a-90b7-7a2694993348",
+            "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+            "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+            "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+            "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+            "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+            "945d622c-6905-4dfb-a9bf-e661e53b118e",
+            "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+            "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+            "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+            "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+            "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+            "a37e206e-fd54-4516-8a78-293270b2a972",
+            "6e747261-a0b5-4630-b673-e8d6e1156d97",
+            "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+            "dedde4da-c422-4a54-a730-19d8700167fa",
+            "a92db01c-fb62-4905-a2e3-814efe1e4570",
+            "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+            "c8a4dc72-0527-4c82-9525-21838bd3982d",
+            "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+            "5372c0dd-432d-40ae-8539-57644855639c",
+            "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+            "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+            "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+            "9e46edfc-428c-49c1-91f0-281593da43fc",
+            "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+            "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+            "80914a61-d01c-4bca-86c0-7064289d5a8d",
+            "62c34391-d3eb-4450-8a0a-13f7ebf6ba78"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.055497+00:00",
+          "revision_reason": "Initial definition"
+        },
+        {
+          "name": "irrelevant_response_detail",
+          "definition": "Present when the final customer-facing reply adds order fields, policy branches, repetition or internal-process explanation that can be removed without losing information needed to answer this request, disambiguate the item, explain the relevant decision, communicate an action result or provide a necessary next step. Identify the removable passage and why it is irrelevant.",
+          "boundary": "Length alone is not failure. Allow requested calculations, necessary record inconsistency explanations, action identifiers and RESP-1 citations. Do not label model-only narration as customer-visible without delivery evidence. Tool activity is evaluated separately. A verified link can replace detail, but unavailable links must not be invented.",
+          "requirement": "RESP-5 and HW4 refinement RESP-6",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "da03eb2c-10b2-4312-9120-ad32be011d97",
+            "7a8a5bb4-0acd-430d-b6a4-ffc40f954ab1",
+            "e918afa5-3655-4f70-b7a3-4e33f22c7a5e",
+            "30f86c6e-6354-4be7-bb40-fbe960373cd1",
+            "53dd68ef-948d-4f8e-b1bf-4e152f7c72e4",
+            "4aa8e28c-f753-41ce-855a-ed3e459cd803",
+            "8d275c34-7cc4-4843-bddf-ad50ed1e4cfe",
+            "a2621038-f11b-4638-9e7c-2ce0122e5caa",
+            "ff8cbdd0-1c61-46b1-84be-0dff6ce1ed33",
+            "22e1d84d-6936-490f-b8b1-942ef3fa9d90",
+            "8432be97-568b-445c-916e-31995f528c29",
+            "f73ac071-d34f-4499-9417-c9879de2824f",
+            "1cb6af46-3ca1-493d-802b-fc205f97284f",
+            "0291c213-6c62-4054-80fc-6517854540fb",
+            "db7e9d97-a7e6-4e68-ab78-81e80b180f43",
+            "5f81b641-22a7-4ed8-a681-ab8a4ac811f5",
+            "fdd87a6b-f9ea-4cb8-b228-867128029ac9",
+            "8d2c5374-4336-494d-a80f-df691721746a",
+            "c9c388ca-28a8-4a67-a3f3-1115537e6f7a",
+            "824b4999-be58-4dd1-8a96-874cb741e134",
+            "d8d551e0-1326-43e9-be7f-ed0a4ba4d252",
+            "1c517cfa-b2dd-4347-9343-6733ce9112dc",
+            "1804e943-ba60-447a-90b7-7a2694993348",
+            "68165a7b-2cd4-4c4e-aa17-1733677b74c8",
+            "f7a2d361-d5fd-48e1-be3e-10a30d156220",
+            "0d2764a5-38a2-4eee-ad5d-daa3440dab4b",
+            "6133ca5a-0cd3-43a8-b54a-81105723eb9b",
+            "eeb2d66e-52c4-4919-b4a2-2cf769d13a2c",
+            "945d622c-6905-4dfb-a9bf-e661e53b118e",
+            "25bdd38f-4802-4ed1-84e4-19af7a59f354",
+            "35b159d9-4e81-40f5-8eca-1af15b4d4b67",
+            "86b01108-0e4b-4a60-a7ff-7b4eb9ac8725",
+            "d16cd436-1f18-43fb-b15c-f2e9d7f14914",
+            "f531c0ad-a25d-4a79-bc98-3d483e406c62",
+            "a37e206e-fd54-4516-8a78-293270b2a972",
+            "6e747261-a0b5-4630-b673-e8d6e1156d97",
+            "54317c6d-2eb2-4dd0-b14f-7d582c3471c4",
+            "dedde4da-c422-4a54-a730-19d8700167fa",
+            "a92db01c-fb62-4905-a2e3-814efe1e4570",
+            "b7d534ac-7447-42c1-8319-44f03c1d10d0",
+            "c8a4dc72-0527-4c82-9525-21838bd3982d",
+            "2b6583ad-b33e-4443-9d01-a4f4a384cbfb",
+            "5372c0dd-432d-40ae-8539-57644855639c",
+            "def64a79-b63a-4da4-a0c9-dde5c789b7fb",
+            "75d7cdbe-3b99-4fc0-9862-7bba8bdd157a",
+            "dcb58ac0-9a92-491f-a89b-42bcaf219a46",
+            "9e46edfc-428c-49c1-91f0-281593da43fc",
+            "3c4b8601-f24a-4da0-842f-4f14eaafb685",
+            "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+            "80914a61-d01c-4bca-86c0-7064289d5a8d",
+            "62c34391-d3eb-4450-8a0a-13f7ebf6ba78",
+            "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+            "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+            "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+          ],
+          "version": 2,
+          "updated_at": "2026-09-18T11:49:09.996554+00:00",
+          "revision_reason": "Merge unnecessary_process_explanation into the same relevance rule; preserve security and missing-data explanations."
+        }
+      ]
+    },
+    {
+      "name": "unnecessary_tool_use",
+      "definition": "Present when at least one tool call has no distinct purpose relevant to the current user request or necessary correctness, authorization or safety checks: it retrieves an unrelated policy, repeats an equivalent answered search without a new information need, or pursues a branch already known to be irrelevant. Name the call and information already available.",
+      "boundary": "Do not fail on call count alone. Allow full-policy retrieval after snippets, necessary applicable overrides, real ambiguity, changed user facts and safety/authorization checks. W5 follow-up policy checks are a human-rejected positive hypothesis. Output verbosity is separate.",
+      "requirement": "HW4 refinement EFF-1, grounded in repeated human tool-use notes and accepted Workshop W4",
+      "evaluator_type": "llm_judge",
+      "status": "final",
+      "created_from": [
+        "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+        "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+        "da06a131-3a60-4174-8b55-c48e1122f26e",
+        "f8ede9d4-78e3-4830-8bd7-d1ba5b869db1",
+        "dfded0aa-3b3b-40fa-9ade-3271494d83c3",
+        "f47d8647-f4e8-4a96-a7d5-2beac7379962"
+      ],
+      "version": 3,
+      "updated_at": "2026-09-19T07:57:17.429066+00:00",
+      "revision_reason": "Part E uses the five supported definitions after human review and clarification. Rare scope/missing-response findings remain documented separately. Supporting references narrowed to specific corroborated human positive observations; earlier sources remain in history.",
+      "history": [
+        {
+          "name": "unnecessary_tool_use",
+          "definition": "Present when at least one tool call repeats an already-resolved information need or pursues information irrelevant to the requested action, without a new fact, ambiguity, freshness need or recoverable error that justifies it. Identify the specific call and the earlier evidence that made it unnecessary. Call count alone is insufficient.",
+          "boundary": "Allow lookup followed by authoritative detail retrieval, genuine ambiguity resolution, checking applicable store overrides and justified retries. Distinguish a new query for missing evidence from redundant searching. This mode can coexist with missing_terminal_response, but a high call count does not prove either mode.",
+          "requirement": "Proposed requirement DRAFT-TOOLS-A: use available session evidence, perform only calls needed to resolve the request, and stop searching once the question is resolved or needs escalation (ESC-3/ESC-4). SPEC does not currently set an efficiency budget or a maximum number of calls.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "3d3090c6-bca9-4308-8a17-d161e0103d4a",
+            "6166b7ee-88db-4e95-809f-dd3cc6cf61f3",
+            "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+            "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+            "b45102a3-e21b-4c2c-b517-259c83569420",
+            "da06a131-3a60-4174-8b55-c48e1122f26e",
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.077076+00:00",
+          "revision_reason": "Initial definition"
+        },
+        {
+          "name": "unnecessary_tool_use",
+          "definition": "Present when at least one tool call has no distinct purpose relevant to the current user request or necessary correctness, authorization or safety checks: it retrieves an unrelated policy, repeats an equivalent answered search without a new information need, or pursues a branch already known to be irrelevant. Name the call and information already available.",
+          "boundary": "Do not fail on call count alone. Allow full-policy retrieval after snippets, necessary applicable overrides, real ambiguity, changed user facts and safety/authorization checks. W5 follow-up policy checks are a human-rejected positive hypothesis. Output verbosity is separate.",
+          "requirement": "HW4 refinement EFF-1, grounded in repeated human tool-use notes and accepted Workshop W4",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "3d3090c6-bca9-4308-8a17-d161e0103d4a",
+            "6166b7ee-88db-4e95-809f-dd3cc6cf61f3",
+            "129acaea-2d65-4a60-9842-eba6cf13c7fc",
+            "4ca9108e-7e4e-4d26-bc91-89eb1b500b3f",
+            "b45102a3-e21b-4c2c-b517-259c83569420",
+            "da06a131-3a60-4174-8b55-c48e1122f26e",
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ],
+          "version": 2,
+          "updated_at": "2026-09-18T11:49:10.022641+00:00",
+          "revision_reason": "W4 supports irrelevant-policy retrieval; W5 excludes reasonable verification after snippets. Search must be repeated under this narrower rule."
+        }
+      ]
+    },
+    {
+      "name": "out_of_scope_assistance",
+      "definition": "Present when the assistant provides substantive help with a request outside Cartwheel support instead of declining that part and directing the conversation back to supported work. The user\u2019s role or framing the request as helping a customer does not expand the scope.",
+      "boundary": "A brief refusal with a relevant Cartwheel alternative is absent. A benign redirection to another company\u2019s own support is not substantive outside assistance. Call this observable scope failure rather than claiming a particular attack mechanism; malicious intent is not required.",
+      "requirement": "SCOPE-1, SCOPE-2, PURPOSE-1",
+      "evaluator_type": "llm_judge",
+      "status": "final",
+      "created_from": [
+        "494aa550-13eb-4f8e-843f-524331058b57"
+      ],
+      "version": 3,
+      "updated_at": "2026-09-19T08:06:59.300046+00:00",
+      "revision_reason": "Reviewer explicitly requested inclusion in the final Part E taxonomy despite limited examples. Retain rare mode with evidence shortfall documented; no further example search required. Definition unchanged.",
+      "history": [
+        {
+          "name": "out_of_scope_assistance",
+          "definition": "Present when the assistant provides substantive help with a request outside Cartwheel support instead of declining that part and directing the conversation back to supported work. The user\u2019s role or framing the request as helping a customer does not expand the scope.",
+          "boundary": "A brief refusal with a relevant Cartwheel alternative is absent. A benign redirection to another company\u2019s own support is not substantive outside assistance. Call this observable scope failure rather than claiming a particular attack mechanism; malicious intent is not required.",
+          "requirement": "Existing requirement SCOPE-2; scope is defined by SCOPE-1 and PURPOSE-1.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "494aa550-13eb-4f8e-843f-524331058b57"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.093958+00:00",
+          "revision_reason": "Initial definition"
+        },
+        {
+          "name": "out_of_scope_assistance",
+          "definition": "Present when the assistant provides substantive help with a request outside Cartwheel support instead of declining that part and directing the conversation back to supported work. The user\u2019s role or framing the request as helping a customer does not expand the scope.",
+          "boundary": "A brief refusal with a relevant Cartwheel alternative is absent. A benign redirection to another company\u2019s own support is not substantive outside assistance. Call this observable scope failure rather than claiming a particular attack mechanism; malicious intent is not required.",
+          "requirement": "SCOPE-1, SCOPE-2, PURPOSE-1",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "494aa550-13eb-4f8e-843f-524331058b57"
+          ],
+          "version": 2,
+          "updated_at": "2026-09-18T11:49:10.046186+00:00",
+          "revision_reason": "Add accepted W1 without rebranding scope failure as proven prompt injection."
+        }
+      ]
+    },
+    {
+      "name": "account_change_not_escalated",
+      "definition": "Present when a clear account-change request ends a turn without a successful human-support escalation, despite no existing ticket for that request in the conversation. Merely offering to escalate later, sending the user to settings, or asking for replacement account details before opening the ticket does not satisfy the requirement.",
+      "boundary": "An existing successful ticket in earlier turns satisfies routing; do not demand duplicate tickets. Asking only whether a genuinely ambiguous request is an account change is allowed. If the escalation tool fails, distinguish an execution failure from the assistant failing to attempt escalation; retain that evidence for separate review. Do not claim collection of a preferred name is automatically a credential leak.",
+      "requirement": "ESC-2 and RESP-2",
+      "evaluator_type": "llm_judge",
+      "status": "final",
+      "created_from": [
+        "61e82a00-5b65-4353-8199-6357dbbf443e",
+        "70096814-1fa5-4358-95e5-defa81a56bcc",
+        "84aeb03b-16fd-4a93-867b-c5a78c947a06"
+      ],
+      "version": 3,
+      "updated_at": "2026-09-19T07:57:17.453342+00:00",
+      "revision_reason": "Part E uses the five supported definitions after human review and clarification. Rare scope/missing-response findings remain documented separately. Supporting references narrowed to specific corroborated human positive observations; earlier sources remain in history.",
+      "history": [
+        {
+          "name": "account_change_not_escalated",
+          "definition": "Present when a clear account-change request ends a turn without a successful human-support escalation, despite no existing ticket for that request in the conversation. Merely offering to escalate later, sending the user to settings, or asking for replacement account details before opening the ticket does not satisfy the requirement.",
+          "boundary": "An existing successful ticket in earlier turns satisfies routing; do not demand duplicate tickets. Asking only whether a genuinely ambiguous request is an account change is allowed. If the escalation tool fails, distinguish an execution failure from the assistant failing to attempt escalation; retain that evidence for separate review. Do not claim collection of a preferred name is automatically a credential leak.",
+          "requirement": "Existing ESC-2: account changes always go to a human. Proposed clarification DRAFT-ESC-A: once the request is clearly an account change, open the ticket without first asking for the new account values; explain the next step briefly. Account changes are completed through the appropriate account process, not by promising the assistant will change them.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "61e82a00-5b65-4353-8199-6357dbbf443e",
+            "70096814-1fa5-4358-95e5-defa81a56bcc"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.113658+00:00",
+          "revision_reason": "Initial definition"
+        },
+        {
+          "name": "account_change_not_escalated",
+          "definition": "Present when a clear account-change request ends a turn without a successful human-support escalation, despite no existing ticket for that request in the conversation. Merely offering to escalate later, sending the user to settings, or asking for replacement account details before opening the ticket does not satisfy the requirement.",
+          "boundary": "An existing successful ticket in earlier turns satisfies routing; do not demand duplicate tickets. Asking only whether a genuinely ambiguous request is an account change is allowed. If the escalation tool fails, distinguish an execution failure from the assistant failing to attempt escalation; retain that evidence for separate review. Do not claim collection of a preferred name is automatically a credential leak.",
+          "requirement": "ESC-2 and RESP-2",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "61e82a00-5b65-4353-8199-6357dbbf443e",
+            "70096814-1fa5-4358-95e5-defa81a56bcc"
+          ],
+          "version": 2,
+          "updated_at": "2026-09-18T11:49:10.070473+00:00",
+          "revision_reason": "Keep account routing distinct from discovering invalid records; an existing successful ticket satisfies routing."
+        }
+      ]
+    },
+    {
+      "name": "unnecessary_process_explanation",
+      "definition": "Present when the customer-facing reply narrates matching, retrieval or internal record-processing steps that are not needed to answer the user\u2019s question or explain the relevant decision. Identify the unnecessary passage. A raw implementation identifier counts only when it adds no needed customer meaning.",
+      "boundary": "This is a presentation mode, not proof that secrets, hidden reasoning or inaccessible data leaked. Allow a plain explanation of missing or conflicting records (RESP-3), a requested deadline calculation, and a necessary reason for refusal (RESP-4/RESP-5). Classify order-field or policy dumps under irrelevant_response_detail; do not count the same passage twice unless it independently satisfies both definitions.",
+      "requirement": "RESP-5 provides a broad direct-language basis. Proposed clarification DRAFT-RESP-B: describe outcomes and necessary reasons in customer terms; omit irrelevant implementation and retrieval narration. SPEC does not currently prohibit all descriptions of the agent\u2019s method.",
+      "evaluator_type": "llm_judge",
+      "status": "retired",
+      "created_from": [
+        "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+        "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+        "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+      ],
+      "version": 2,
+      "updated_at": "2026-09-18T11:49:10.171027+00:00",
+      "revision_reason": "Merged into irrelevant_response_detail: the same relevance edit addresses both. Original notes retained.",
+      "history": [
+        {
+          "name": "unnecessary_process_explanation",
+          "definition": "Present when the customer-facing reply narrates matching, retrieval or internal record-processing steps that are not needed to answer the user\u2019s question or explain the relevant decision. Identify the unnecessary passage. A raw implementation identifier counts only when it adds no needed customer meaning.",
+          "boundary": "This is a presentation mode, not proof that secrets, hidden reasoning or inaccessible data leaked. Allow a plain explanation of missing or conflicting records (RESP-3), a requested deadline calculation, and a necessary reason for refusal (RESP-4/RESP-5). Classify order-field or policy dumps under irrelevant_response_detail; do not count the same passage twice unless it independently satisfies both definitions.",
+          "requirement": "RESP-5 provides a broad direct-language basis. Proposed clarification DRAFT-RESP-B: describe outcomes and necessary reasons in customer terms; omit irrelevant implementation and retrieval narration. SPEC does not currently prohibit all descriptions of the agent\u2019s method.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "2c41c8be-63d5-4e80-aff9-2ef43a9add35",
+            "61a049c9-e026-469a-88e8-ab8a5a2720b6",
+            "822a6d4d-dcb8-4970-9390-59a3498c39f8"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.133455+00:00",
+          "revision_reason": "Initial definition"
+        }
+      ]
+    },
+    {
+      "name": "missing_terminal_response",
+      "definition": "Present when an agent run terminates after tool/model activity without a customer-facing final answer, refusal, clarification, or truthful failure/escalation message for the user\u2019s request. Progress narration alone does not count as a final response. Require evidence of terminal failure or complete capture; a missing export field alone is not proof.",
+      "boundary": "A reply explaining an unresolved problem and the next step is absent even if it does not solve the original request. User cancellation and incomplete instrumentation are not automatic failures. A later retry is a separate trace and does not repair the original run. Unnecessary tool use is a possible contributing behaviour, not a necessary condition.",
+      "requirement": "PURPOSE-1 and HW4 refinement RESP-7",
+      "evaluator_type": "code",
+      "status": "final",
+      "created_from": [
+        "32000e11-fd83-4384-993b-9822154b1f39"
+      ],
+      "version": 3,
+      "updated_at": "2026-09-19T08:06:59.366347+00:00",
+      "revision_reason": "Reviewer explicitly requested inclusion in the final Part E taxonomy despite limited examples. Retain rare mode with evidence shortfall documented; no further example search required. Definition unchanged.",
+      "history": [
+        {
+          "name": "missing_terminal_response",
+          "definition": "Present when an agent run terminates after tool/model activity without a customer-facing final answer, refusal, clarification, or truthful failure/escalation message for the user\u2019s request. Progress narration alone does not count as a final response. Require evidence of terminal failure or complete capture; a missing export field alone is not proof.",
+          "boundary": "A reply explaining an unresolved problem and the next step is absent even if it does not solve the original request. User cancellation and incomplete instrumentation are not automatic failures. A later retry is a separate trace and does not repair the original run. Unnecessary tool use is a possible contributing behaviour, not a necessary condition.",
+          "requirement": "PURPOSE-1 establishes the support-answering purpose. Proposed operational clarification DRAFT-RESP-C: on tool/model limits or execution failure, produce a truthful terminal explanation and a supported next step; never imply a ticket was created without a successful tool result.",
+          "evaluator_type": "code",
+          "status": "draft",
+          "created_from": [
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.154111+00:00",
+          "revision_reason": "Initial definition"
+        },
+        {
+          "name": "missing_terminal_response",
+          "definition": "Present when an agent run terminates after tool/model activity without a customer-facing final answer, refusal, clarification, or truthful failure/escalation message for the user\u2019s request. Progress narration alone does not count as a final response. Require evidence of terminal failure or complete capture; a missing export field alone is not proof.",
+          "boundary": "A reply explaining an unresolved problem and the next step is absent even if it does not solve the original request. User cancellation and incomplete instrumentation are not automatic failures. A later retry is a separate trace and does not repair the original run. Unnecessary tool use is a possible contributing behaviour, not a necessary condition.",
+          "requirement": "PURPOSE-1 and HW4 refinement RESP-7",
+          "evaluator_type": "code",
+          "status": "draft",
+          "created_from": [
+            "32000e11-fd83-4384-993b-9822154b1f39"
+          ],
+          "version": 2,
+          "updated_at": "2026-09-18T11:49:10.119404+00:00",
+          "revision_reason": "Keep operational failure distinct from unnecessary calls; a completed retry does not repair the failed execution."
+        }
+      ]
+    },
+    {
+      "name": "partial_refund_accepted",
+      "definition": "Under the proposed full-refund-only rule, present when a customer explicitly requests less than the applicable full refundable amount and the assistant executes that request, queues it for approval, or opens a ticket specifically to pursue that partial refund instead of declining it. Confirm the amount and action from tool results; merely acknowledging the user\u2019s request is not an executed refund.",
+      "boundary": "This is not a violation of the current SPEC. Distinguish auto-approved refunds, queued refunds and support tickets. A rejected request or a general dispute escalation that does not pursue the partial refund is absent. Resolve legitimate store fees, multi-item returns and the meaning of full refundable amount before finalizing. Do not silently replace the user\u2019s requested amount with a full refund.",
+      "requirement": "PROPOSED PRODUCT CHANGE DRAFT-REFUND-A, not an existing requirement: disallow customer-requested partial refunds, including requests routed for human approval. Current TOOL-7 permits positive amounts up to the order total, with the $100 threshold applied to the requested refund amount. A partial refund on an order above $100 does not by itself violate today\u2019s threshold rule.",
+      "evaluator_type": "llm_judge",
+      "status": "retired",
+      "created_from": [
+        "f0b8acea-8cc3-4449-a94a-4a259f759455",
+        "2dd28239-fe72-4d26-b93d-717c09f2b184",
+        "b8f785a3-49a1-4874-b708-2796a5eadb07",
+        "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+        "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+        "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+      ],
+      "version": 2,
+      "updated_at": "2026-09-18T11:49:10.197550+00:00",
+      "revision_reason": "Replaced by arbitrary_amount_refund_accepted after user permits whole-item refunds.",
+      "history": [
+        {
+          "name": "partial_refund_accepted",
+          "definition": "Under the proposed full-refund-only rule, present when a customer explicitly requests less than the applicable full refundable amount and the assistant executes that request, queues it for approval, or opens a ticket specifically to pursue that partial refund instead of declining it. Confirm the amount and action from tool results; merely acknowledging the user\u2019s request is not an executed refund.",
+          "boundary": "This is not a violation of the current SPEC. Distinguish auto-approved refunds, queued refunds and support tickets. A rejected request or a general dispute escalation that does not pursue the partial refund is absent. Resolve legitimate store fees, multi-item returns and the meaning of full refundable amount before finalizing. Do not silently replace the user\u2019s requested amount with a full refund.",
+          "requirement": "PROPOSED PRODUCT CHANGE DRAFT-REFUND-A, not an existing requirement: disallow customer-requested partial refunds, including requests routed for human approval. Current TOOL-7 permits positive amounts up to the order total, with the $100 threshold applied to the requested refund amount. A partial refund on an order above $100 does not by itself violate today\u2019s threshold rule.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "f0b8acea-8cc3-4449-a94a-4a259f759455",
+            "2dd28239-fe72-4d26-b93d-717c09f2b184",
+            "b8f785a3-49a1-4874-b708-2796a5eadb07",
+            "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+            "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+            "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T09:24:12.172770+00:00",
+          "revision_reason": "Initial definition"
+        }
+      ]
+    },
+    {
+      "name": "unresolved_data_not_escalated",
+      "definition": "Present when order/catalogue data needed for a trustworthy answer or affected action is missing, invalid or contradictory, remains unresolved after the available evidence, and the agent finishes without opening or reusing a successful human-support ticket. Merely flagging the problem, offering escalation conditionally or silently selecting one conflicting field is insufficient.",
+      "boundary": "Distinguish missing customer input, which can be clarified, from a damaged record the user cannot fix. If the tools resolve the conflict or an existing successful ticket covers it, this mode is absent. A failed escalation attempt is an execution issue, not failure to attempt routing. Account changes are separate: they require escalation even with valid data.",
+      "requirement": "ESC-3, ESC-4, RESP-3; HW4 refinement ESC-5 records accepted W2/W3 and catalogue-error notes.",
+      "evaluator_type": "llm_judge",
+      "status": "final",
+      "created_from": [
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+        "4857a025-3263-4212-a654-788f66107920",
+        "d0354240-ac9b-4dd3-9963-53b312a211b0",
+        "d0354240-ac9b-4dd3-9963-53b312a211b0"
+      ],
+      "version": 2,
+      "updated_at": "2026-09-19T07:57:17.479139+00:00",
+      "revision_reason": "Part E uses the five supported definitions after human review and clarification. Rare scope/missing-response findings remain documented separately. Supporting references narrowed to specific corroborated human positive observations; earlier sources remain in history.",
+      "history": [
+        {
+          "name": "unresolved_data_not_escalated",
+          "definition": "Present when order/catalogue data needed for a trustworthy answer or affected action is missing, invalid or contradictory, remains unresolved after the available evidence, and the agent finishes without opening or reusing a successful human-support ticket. Merely flagging the problem, offering escalation conditionally or silently selecting one conflicting field is insufficient.",
+          "boundary": "Distinguish missing customer input, which can be clarified, from a damaged record the user cannot fix. If the tools resolve the conflict or an existing successful ticket covers it, this mode is absent. A failed escalation attempt is an execution issue, not failure to attempt routing. Account changes are separate: they require escalation even with valid data.",
+          "requirement": "ESC-3, ESC-4, RESP-3; HW4 refinement ESC-5 records accepted W2/W3 and catalogue-error notes.",
+          "evaluator_type": "llm_judge",
+          "status": "draft",
+          "created_from": [
+            "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a",
+            "4857a025-3263-4212-a654-788f66107920"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T11:49:10.094357+00:00",
+          "revision_reason": "Initial definition"
+        }
+      ]
+    },
+    {
+      "name": "arbitrary_amount_refund_accepted",
+      "definition": "Present when a user requests an arbitrary monetary reduction rather than the full order or the full recorded paid amount for specified whole items, and the agent executes or queues that amount, or creates a ticket solely to seek approval for it. Confirm the requested item scope and amount against order evidence. Mere acknowledgement of an earlier request is not a new refund action.",
+      "boundary": "Whole-item refunds from multi-item orders can be valid even below the order total. Do not fail solely because amount < order total or the user says partial. Resolve uncertain item allocation, documented adjustments or prior refunds through clarification/support. Normal approval thresholds still apply to valid amounts. A ticket to resolve uncertainty/dispute is not a ticket to approve a known arbitrary reduction.",
+      "requirement": "HW4 product revision REFUND-1, clarified by the student: whole-item refunds may be allowed. Historical results complied with the previous amount contract; assess this category under the revised rule.",
+      "evaluator_type": "llm_judge (with deterministic amount/item checks)",
+      "status": "final",
+      "created_from": [
+        "f0b8acea-8cc3-4449-a94a-4a259f759455",
+        "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+        "2ec0cafd-90ca-4208-89e8-4406d5da1b9c",
+        "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+        "b8f785a3-49a1-4874-b708-2796a5eadb07"
+      ],
+      "version": 2,
+      "updated_at": "2026-09-19T07:57:17.503750+00:00",
+      "revision_reason": "Part E uses the five supported definitions after human review and clarification. Rare scope/missing-response findings remain documented separately. Supporting references narrowed to specific corroborated human positive observations; earlier sources remain in history.",
+      "history": [
+        {
+          "name": "arbitrary_amount_refund_accepted",
+          "definition": "Present when a user requests an arbitrary monetary reduction rather than the full order or the full recorded paid amount for specified whole items, and the agent executes or queues that amount, or creates a ticket solely to seek approval for it. Confirm the requested item scope and amount against order evidence. Mere acknowledgement of an earlier request is not a new refund action.",
+          "boundary": "Whole-item refunds from multi-item orders can be valid even below the order total. Do not fail solely because amount < order total or the user says partial. Resolve uncertain item allocation, documented adjustments or prior refunds through clarification/support. Normal approval thresholds still apply to valid amounts. A ticket to resolve uncertainty/dispute is not a ticket to approve a known arbitrary reduction.",
+          "requirement": "HW4 product revision REFUND-1, clarified by the student: whole-item refunds may be allowed. Historical results complied with the previous amount contract; assess this category under the revised rule.",
+          "evaluator_type": "llm_judge (with deterministic amount/item checks)",
+          "status": "draft",
+          "created_from": [
+            "f0b8acea-8cc3-4449-a94a-4a259f759455",
+            "2dd28239-fe72-4d26-b93d-717c09f2b184",
+            "b8f785a3-49a1-4874-b708-2796a5eadb07",
+            "28ce8d65-a9bf-4d5f-9395-dacd52d8f9ea",
+            "7744fd05-bf9a-44b8-aad0-1b6fb5de46a2",
+            "2ec0cafd-90ca-4208-89e8-4406d5da1b9c"
+          ],
+          "version": 1,
+          "updated_at": "2026-09-18T11:49:10.144308+00:00",
+          "revision_reason": "Initial definition"
+        }
+      ]
+    }
+  ]
+}
