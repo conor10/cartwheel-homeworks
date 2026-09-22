@@ -1,0 +1,186 @@
+{
+  "status": "second human review reconciled; revision 2 preparation",
+  "gpt": {
+    "judge_id": "irrelevant_response_detail-v0",
+    "split": "dev",
+    "tpr": 0.7647,
+    "tnr": 0.5,
+    "tpr_interval": [
+      0.5274,
+      0.9045
+    ],
+    "tnr_interval": [
+      0.28,
+      0.72
+    ],
+    "agreement": 0.6364,
+    "tp": 13,
+    "fn": 4,
+    "tn": 8,
+    "fp": 8,
+    "n": 33,
+    "disagreements": [
+      "074086beab0c95b58cffa685f0ec14fd",
+      "25abeda1734cf4ca6193c41e68ae6a3c",
+      "51fb46f3697f53b8e5efe14d68aaf914",
+      "57b34eee82f436656e6212b5c5c1051f",
+      "7836f09bee962c9960f56b03847767d9",
+      "9b1992c61269c5847959a4b8f0f0cf91",
+      "d065d46422e713861716fedc2ce02fb9",
+      "d4a6d18873b365aa343fb6734dc5dded",
+      "ee0ca1a218be4b50b1afc57e0f57a1a5",
+      "f13d0e1b1d2063a92f92135571ad7369",
+      "f62566babc635dda7d85dcf9f0d30197",
+      "fe7dda644e211cc3d75d0cb59317196d"
+    ]
+  },
+  "jev": {
+    "tp": 17,
+    "fn": 0,
+    "tn": 4,
+    "fp": 12,
+    "n": 33,
+    "pass_count": 17,
+    "fail_count": 16,
+    "tpr": 1.0,
+    "tnr": 0.25,
+    "tpr_interval": [
+      0.8157,
+      1.0
+    ],
+    "tnr_interval": [
+      0.1018,
+      0.495
+    ],
+    "disagreements": [
+      "074086beab0c95b58cffa685f0ec14fd",
+      "59b72a2a18358c2d7a150d57f6ef9550",
+      "5b612a026be64901047a346dc10d5dee",
+      "7836f09bee962c9960f56b03847767d9",
+      "97b0e296ef55a92d760859499d34a883",
+      "9b1992c61269c5847959a4b8f0f0cf91",
+      "d065d46422e713861716fedc2ce02fb9",
+      "d23514c235b4876546abc0c3a2729d7b",
+      "d4a6d18873b365aa343fb6734dc5dded",
+      "dc8930ec741c527757739f3ac423c741",
+      "f62566babc635dda7d85dcf9f0d30197",
+      "fe7dda644e211cc3d75d0cb59317196d"
+    ],
+    "label_convention": "Pass=1 / Fail=0",
+    "interval_method": "95% Wilson",
+    "model": "jev-1.13.0",
+    "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-88a1bd3a6b1e269d.json",
+    "fingerprint": "88a1bd3a6b1e269dca892a4e8d430d917d7975e575665b584ba56babfff0611e",
+    "split": "dev",
+    "written_critique_available": false,
+    "latency_seconds": 21.673398624407127,
+    "usage": {
+      "input_tokens": 149666,
+      "output_tokens": 1122
+    }
+  },
+  "review_queue": [
+    {
+      "trace_id": "074086beab0c95b58cffa685f0ec14fd",
+      "scenario_id": "support-0029",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "25abeda1734cf4ca6193c41e68ae6a3c",
+      "scenario_id": "support-0064",
+      "gpt_disagrees": true,
+      "jev_disagrees": false
+    },
+    {
+      "trace_id": "51fb46f3697f53b8e5efe14d68aaf914",
+      "scenario_id": "support-0250",
+      "gpt_disagrees": true,
+      "jev_disagrees": false
+    },
+    {
+      "trace_id": "57b34eee82f436656e6212b5c5c1051f",
+      "scenario_id": "support-0211",
+      "gpt_disagrees": true,
+      "jev_disagrees": false
+    },
+    {
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "scenario_id": "support-0084",
+      "gpt_disagrees": false,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "5b612a026be64901047a346dc10d5dee",
+      "scenario_id": "support-0238",
+      "gpt_disagrees": false,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "7836f09bee962c9960f56b03847767d9",
+      "scenario_id": "support-0222",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "scenario_id": "support-0044",
+      "gpt_disagrees": false,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "9b1992c61269c5847959a4b8f0f0cf91",
+      "scenario_id": "support-0096",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "d065d46422e713861716fedc2ce02fb9",
+      "scenario_id": "support-0014",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "scenario_id": "support-0008",
+      "gpt_disagrees": false,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "scenario_id": "support-0246",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "dc8930ec741c527757739f3ac423c741",
+      "scenario_id": "support-0081",
+      "gpt_disagrees": false,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "ee0ca1a218be4b50b1afc57e0f57a1a5",
+      "scenario_id": "support-0035",
+      "gpt_disagrees": true,
+      "jev_disagrees": false
+    },
+    {
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "scenario_id": "support-0087",
+      "gpt_disagrees": true,
+      "jev_disagrees": false
+    },
+    {
+      "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+      "scenario_id": "support-0243",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    },
+    {
+      "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+      "scenario_id": "support-0062",
+      "gpt_disagrees": true,
+      "jev_disagrees": true
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "status": "final development review reconciled; student final version choice pending",
+  "label_counts": {
+    "Pass": 20,
+    "Fail": 13
+  },
+  "reports": {
+    "GPT v0": {
+      "judge_id": "irrelevant_response_detail-v0",
+      "split": "dev",
+      "tpr": 0.7,
+      "tnr": 0.4615,
+      "tpr_interval": [
+        0.481,
+        0.8545
+      ],
+      "tnr_interval": [
+        0.2321,
+        0.7086
+      ],
+      "agreement": 0.6061,
+      "tp": 14,
+      "fn": 6,
+      "tn": 6,
+      "fp": 7,
+      "n": 33,
+      "disagreements": [
+        "074086beab0c95b58cffa685f0ec14fd",
+        "25abeda1734cf4ca6193c41e68ae6a3c",
+        "51fb46f3697f53b8e5efe14d68aaf914",
+        "57b34eee82f436656e6212b5c5c1051f",
+        "5b612a026be64901047a346dc10d5dee",
+        "761777dc49e843565dd712bdc2468260",
+        "7836f09bee962c9960f56b03847767d9",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "d065d46422e713861716fedc2ce02fb9",
+        "d4a6d18873b365aa343fb6734dc5dded",
+        "dc8930ec741c527757739f3ac423c741",
+        "f13d0e1b1d2063a92f92135571ad7369",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ]
+    },
+    "GPT v1": {
+      "judge_id": "irrelevant_response_detail-v1",
+      "split": "dev",
+      "tpr": 0.65,
+      "tnr": 0.4615,
+      "tpr_interval": [
+        0.4329,
+        0.8188
+      ],
+      "tnr_interval": [
+        0.2321,
+        0.7086
+      ],
+      "agreement": 0.5758,
+      "tp": 13,
+      "fn": 7,
+      "tn": 6,
+      "fp": 7,
+      "n": 33,
+      "disagreements": [
+        "074086beab0c95b58cffa685f0ec14fd",
+        "3a16bb5be9d36c6b9e625965d780ee94",
+        "57b34eee82f436656e6212b5c5c1051f",
+        "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+        "761777dc49e843565dd712bdc2468260",
+        "7836f09bee962c9960f56b03847767d9",
+        "97b0e296ef55a92d760859499d34a883",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "bbfcd91525d2d9054d0a16a6f6cecf4e",
+        "d065d46422e713861716fedc2ce02fb9",
+        "d4a6d18873b365aa343fb6734dc5dded",
+        "dc8930ec741c527757739f3ac423c741",
+        "f62566babc635dda7d85dcf9f0d30197",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ]
+    },
+    "GPT v2": {
+      "judge_id": "irrelevant_response_detail-v2",
+      "split": "dev",
+      "tpr": 0.85,
+      "tnr": 0.3846,
+      "tpr_interval": [
+        0.6396,
+        0.9476
+      ],
+      "tnr_interval": [
+        0.1771,
+        0.6448
+      ],
+      "agreement": 0.6667,
+      "tp": 17,
+      "fn": 3,
+      "tn": 5,
+      "fp": 8,
+      "n": 33,
+      "disagreements": [
+        "074086beab0c95b58cffa685f0ec14fd",
+        "59b72a2a18358c2d7a150d57f6ef9550",
+        "761777dc49e843565dd712bdc2468260",
+        "7836f09bee962c9960f56b03847767d9",
+        "97b0e296ef55a92d760859499d34a883",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "d065d46422e713861716fedc2ce02fb9",
+        "d4a6d18873b365aa343fb6734dc5dded",
+        "dc8930ec741c527757739f3ac423c741",
+        "f62566babc635dda7d85dcf9f0d30197",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ]
+    },
+    "Jev v0": {
+      "tp": 19,
+      "fn": 1,
+      "tn": 3,
+      "fp": 10,
+      "n": 33,
+      "pass_count": 20,
+      "fail_count": 13,
+      "tpr": 0.95,
+      "tnr": 0.23076923076923078,
+      "tpr_interval": [
+        0.7639,
+        0.9911
+      ],
+      "tnr_interval": [
+        0.0818,
+        0.5026
+      ],
+      "disagreements": [
+        "074086beab0c95b58cffa685f0ec14fd",
+        "59b72a2a18358c2d7a150d57f6ef9550",
+        "761777dc49e843565dd712bdc2468260",
+        "7836f09bee962c9960f56b03847767d9",
+        "97b0e296ef55a92d760859499d34a883",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "d065d46422e713861716fedc2ce02fb9",
+        "d23514c235b4876546abc0c3a2729d7b",
+        "d4a6d18873b365aa343fb6734dc5dded",
+        "ee0ca1a218be4b50b1afc57e0f57a1a5",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ],
+      "label_convention": "Pass=1 / Fail=0",
+      "interval_method": "95% Wilson",
+      "model": "jev-1.13.0",
+      "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-88a1bd3a6b1e269d.json",
+      "fingerprint": "88a1bd3a6b1e269dca892a4e8d430d917d7975e575665b584ba56babfff0611e",
+      "split": "dev",
+      "written_critique_available": false,
+      "latency_seconds": 21.673398624407127,
+      "usage": {
+        "input_tokens": 149666,
+        "output_tokens": 1122
+      }
+    },
+    "Jev v1": {
+      "tp": 18,
+      "fn": 2,
+      "tn": 8,
+      "fp": 5,
+      "n": 33,
+      "pass_count": 20,
+      "fail_count": 13,
+      "tpr": 0.9,
+      "tnr": 0.6153846153846154,
+      "tpr_interval": [
+        0.699,
+        0.9721
+      ],
+      "tnr_interval": [
+        0.3552,
+        0.8229
+      ],
+      "disagreements": [
+        "761777dc49e843565dd712bdc2468260",
+        "7836f09bee962c9960f56b03847767d9",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "d23514c235b4876546abc0c3a2729d7b",
+        "dc8930ec741c527757739f3ac423c741",
+        "ee0ca1a218be4b50b1afc57e0f57a1a5",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ],
+      "label_convention": "Pass=1 / Fail=0",
+      "interval_method": "95% Wilson",
+      "model": "jev-1.13.0",
+      "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-f5f874d49235b187.json",
+      "fingerprint": "f5f874d49235b187bd380d4010b514ead0ff3c8b1ead16141d70affeb44624d3",
+      "split": "dev",
+      "written_critique_available": false,
+      "latency_seconds": 23.358328578528017,
+      "usage": {
+        "input_tokens": 163196,
+        "output_tokens": 1122
+      }
+    },
+    "Jev v2": {
+      "tp": 20,
+      "fn": 0,
+      "tn": 4,
+      "fp": 9,
+      "n": 33,
+      "pass_count": 20,
+      "fail_count": 13,
+      "tpr": 1.0,
+      "tnr": 0.3076923076923077,
+      "tpr_interval": [
+        0.8389,
+        1.0
+      ],
+      "tnr_interval": [
+        0.1268,
+        0.5763
+      ],
+      "disagreements": [
+        "074086beab0c95b58cffa685f0ec14fd",
+        "59b72a2a18358c2d7a150d57f6ef9550",
+        "7836f09bee962c9960f56b03847767d9",
+        "97b0e296ef55a92d760859499d34a883",
+        "9b1992c61269c5847959a4b8f0f0cf91",
+        "d065d46422e713861716fedc2ce02fb9",
+        "d23514c235b4876546abc0c3a2729d7b",
+        "ee0ca1a218be4b50b1afc57e0f57a1a5",
+        "fe7dda644e211cc3d75d0cb59317196d"
+      ],
+      "label_convention": "Pass=1 / Fail=0",
+      "interval_method": "95% Wilson",
+      "model": "jev-1.13.0",
+      "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-5086396eacb24f35.json",
+      "fingerprint": "5086396eacb24f358376cf58dcd71e0b67877419426216e6dcf0aee600214433",
+      "split": "dev",
+      "written_critique_available": false,
+      "latency_seconds": 24.05023816623725,
+      "usage": {
+        "input_tokens": 167090,
+        "output_tokens": 1122
+      }
+    }
+  },
+  "new_model_calls": 0,
+  "test_untouched": true
+}

@@ -1,0 +1,42 @@
+{
+  "tp": 10,
+  "fn": 3,
+  "tn": 14,
+  "fp": 6,
+  "n": 33,
+  "pass_count": 13,
+  "fail_count": 20,
+  "tpr": 0.7692307692307693,
+  "tnr": 0.7,
+  "tpr_interval": [
+    0.4974,
+    0.9182
+  ],
+  "tnr_interval": [
+    0.481,
+    0.8545
+  ],
+  "disagreements": [
+    "0da87ff86664e09c350f2c207a6d0fa1",
+    "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+    "6f5ed97a6c1489ee58e3ffb159bad2bb",
+    "9a60065cb584f4c8e4f006a99d703653",
+    "b1c44c4824f6bfa5b8fe4571a6575bca",
+    "b82f2d1fc0a9ede623abb8e5ec2961e4",
+    "bddad359a79cb0a83d110e87acbf4bc5",
+    "e00b156ce4fdb500a66cc540f3f886a2",
+    "f10092e2583e8cc37f4ed518ab41fc81"
+  ],
+  "label_convention": "Pass=1 / Fail=0",
+  "interval_method": "95% Wilson",
+  "model": "jev-1.13.0",
+  "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-41cd69cdecadedd0.json",
+  "fingerprint": "41cd69cdecadedd00d9dd1fe0beb983d402e1ef8d440e388068e12c5e0c53eac",
+  "split": "test",
+  "written_critique_available": false,
+  "latency_seconds": 23.23325482942164,
+  "usage": {
+    "input_tokens": 149251,
+    "output_tokens": 1122
+  }
+}

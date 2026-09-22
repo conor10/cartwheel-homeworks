@@ -1,0 +1,31 @@
+{
+  "mode": "irrelevant_response_detail",
+  "status": "development complete; human review pending",
+  "model": "gpt-4o-mini",
+  "development_trace_count": 33,
+  "prompt_path": "analysis/prompts/irrelevant_response_detail-v1.txt",
+  "prompt_sha256": "729ddffde157828f5eb7c934caa91bb6809ae9988fce937a06f561e9aaa5c725",
+  "examples": [
+    {
+      "trace_id": "2a25ef50aa4237269cbcc1415abd0214",
+      "kind": "Clear Pass",
+      "human_verdict": "Pass",
+      "split": "train"
+    },
+    {
+      "trace_id": "583cd552d21948d076711aa17b664f49",
+      "kind": "Clear Fail",
+      "human_verdict": "Fail",
+      "split": "train"
+    },
+    {
+      "trace_id": "387254f5a3a7ef46bc17203b3000d828",
+      "kind": "Borderline Pass",
+      "human_verdict": "Pass",
+      "split": "train"
+    }
+  ],
+  "critique_provenance": "Assistant explanations of existing human training labels; no relabeling",
+  "inputs_sha256": "0d439e18f63330f62dc8e828923001c6e10cb222a144d98d22713a7892097bcb",
+  "revision_reason": "Student development review: enforce useful granularity for order fields/policies, avoid history dumps and premature refund detail, preserve concise clarification and requested calculations. No development examples added."
+}

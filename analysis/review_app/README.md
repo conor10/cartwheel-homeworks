@@ -197,3 +197,25 @@ The tests use temporary files and a fake score API. They cover session/retry
 separation, missing outputs, pending-write recovery, stable score IDs, stale
 browser revisions, evidence ownership, definition history, suggestion
 decisions and the four disjoint sampling batches. They make no model calls.
+
+## HW5 focused review
+
+The **HW5 review** tab loads `analysis/state/hw5_review.json`. It shows one
+selected reply per conversation, earlier turns for context, and expandable
+observations with tool arguments/results. Only the selected reply is judged.
+Choose Pass (no irrelevant detail) or Fail (irrelevant detail present), add an
+evidence reason, and save. Saving stays on the same trace; **Next candidate**
+moves to an unlabelled case. Use **Saved decisions** to edit an existing label.
+Draft reasons stay in browser storage.
+
+Decisions are saved locally, append-only, under
+`analysis/state/hw5_labels/irrelevant_response_detail.jsonl`, with **Pass=1,
+Fail=0**. The latest entry for a trace is current. These decisions do not change
+HW4 files or write Langfuse scores. Counts reflect saved judgments only.
+The target is at least 30 of each class, not completion of the entire queue.
+A final independence check precedes Part B; no split or judge is created here.
+
+`python -m analysis.prepare_hw5_review` prepared the initial queue using the
+Part A audit and the supplied `next_to_label` helper. It refuses to overwrite
+an existing queue or labels. The manifest records grouping and exclusions;
+reused HW4 labels retain their evidence and source with inverted encoding.

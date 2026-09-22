@@ -1,0 +1,41 @@
+{
+  "tp": 10,
+  "fn": 3,
+  "tn": 10,
+  "fp": 10,
+  "n": 33,
+  "pass_count": 13,
+  "fail_count": 20,
+  "tpr": 0.7692307692307693,
+  "tnr": 0.5,
+  "tpr_interval": [
+    0.4974,
+    0.9182
+  ],
+  "tnr_interval": [
+    0.2993,
+    0.7007
+  ],
+  "disagreements": [
+    "0da87ff86664e09c350f2c207a6d0fa1",
+    "0ea8b40f1b05dd02edc26c842ffdb2c6",
+    "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+    "3fa1b92484d5ca9799cb1db4f79dc4c9",
+    "56b2f4959f5c86b4825fbfb565022743",
+    "73a0872a3674871fe9bb7bf11d96a7a4",
+    "9a60065cb584f4c8e4f006a99d703653",
+    "b1c44c4824f6bfa5b8fe4571a6575bca",
+    "b82f2d1fc0a9ede623abb8e5ec2961e4",
+    "c81d5fb5468dbde1c8e2a43d285afc00",
+    "e00b156ce4fdb500a66cc540f3f886a2",
+    "f02251e79b9eda3b3021c0fd862fc3f1",
+    "f10092e2583e8cc37f4ed518ab41fc81"
+  ],
+  "label_convention": "Pass=1 / Fail=0",
+  "interval_method": "95% Wilson",
+  "model": "gpt-5.5-2026-04-23",
+  "split": "test",
+  "fingerprint": "149b43e732fad9691968838ed69c7ae5ea219b12e86db97b15f4cea15106dee0",
+  "purpose": "Exploratory comparison chosen after seeing original held-out results; no prompt tuning",
+  "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/gpt55-frozen-v2-test.json"
+}

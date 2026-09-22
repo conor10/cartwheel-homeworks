@@ -1,0 +1,101 @@
+[
+  {
+    "scenario_id": "support-0078",
+    "trace_id": "761777dc49e843565dd712bdc2468260",
+    "old_label": 0,
+    "new_label": 1,
+    "evidence": [
+      [
+        "jev-5086396eacb24f35:761777dc49e843565dd712bdc2468260",
+        {
+          "decision": "judge_wrong",
+          "reason": "Response from agent is good.",
+          "updated_at": "2026-09-22T09:58:06.050280+00:00",
+          "history": []
+        }
+      ]
+    ],
+    "interpretation": "Final development review: Response from agent is good. Interpreted as Pass for the agent response, consistent with the student\u2019s prior clarification that these notes refer to the agent response; saved selector said judge_wrong."
+  },
+  {
+    "scenario_id": "support-0081",
+    "trace_id": "dc8930ec741c527757739f3ac423c741",
+    "old_label": 0,
+    "new_label": 1,
+    "evidence": [
+      [
+        "jev-5086396eacb24f35:dc8930ec741c527757739f3ac423c741",
+        {
+          "decision": "judge_wrong",
+          "reason": "Agent response is good.",
+          "updated_at": "2026-09-22T09:58:16.783750+00:00",
+          "history": []
+        }
+      ]
+    ],
+    "interpretation": "Final development review: Agent response is good. Interpreted as Pass for the agent response, consistent with the student\u2019s prior clarification that these notes refer to the agent response; saved selector said judge_wrong."
+  },
+  {
+    "scenario_id": "support-0243",
+    "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+    "old_label": 0,
+    "new_label": 1,
+    "evidence": [
+      [
+        "jev-5086396eacb24f35:f62566babc635dda7d85dcf9f0d30197",
+        {
+          "decision": "judge_wrong",
+          "reason": "Response from agent is adequate.",
+          "updated_at": "2026-09-22T10:00:12.742201+00:00",
+          "history": []
+        }
+      ]
+    ],
+    "interpretation": "Final development review: Response from agent is adequate. Interpreted as Pass for the agent response, consistent with the student\u2019s prior clarification that these notes refer to the agent response; saved selector said judge_wrong."
+  },
+  {
+    "scenario_id": "support-0238",
+    "trace_id": "5b612a026be64901047a346dc10d5dee",
+    "old_label": 0,
+    "new_label": 1,
+    "evidence": [
+      [
+        "jev-5086396eacb24f35:5b612a026be64901047a346dc10d5dee",
+        {
+          "decision": "human_label_wrong",
+          "reason": "Agree with judgement.",
+          "updated_at": "2026-09-22T09:59:54.189070+00:00",
+          "history": []
+        }
+      ],
+      [
+        "irrelevant_response_detail-v2:5b612a026be64901047a346dc10d5dee",
+        {
+          "decision": "human_label_wrong",
+          "reason": "Agree with judgement.",
+          "updated_at": "2026-09-22T09:59:58.181935+00:00",
+          "history": []
+        }
+      ]
+    ],
+    "interpretation": "Final development review: Agree with judgement."
+  },
+  {
+    "scenario_id": "support-0035",
+    "trace_id": "ee0ca1a218be4b50b1afc57e0f57a1a5",
+    "old_label": 1,
+    "new_label": 0,
+    "evidence": [
+      [
+        "irrelevant_response_detail-v2:ee0ca1a218be4b50b1afc57e0f57a1a5",
+        {
+          "decision": "human_label_wrong",
+          "reason": "Agree with judge here.",
+          "updated_at": "2026-09-22T10:02:37.762439+00:00",
+          "history": []
+        }
+      ]
+    ],
+    "interpretation": "Final development review: Agree with judge here."
+  }
+]

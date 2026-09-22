@@ -1,0 +1,841 @@
+{
+  "mode": "irrelevant_response_detail",
+  "mode_version": 3,
+  "mode_confirmed": true,
+  "trace_source": "traces/support_traces.json",
+  "trace_source_sha256": "4248876d34e810c59c31bd2af8ef506f4a244084fd4ad35b598e32923aad1e27",
+  "grouping_rule": "Same data-quality fixture and intent; otherwise same order and intent; non-order cases share substantive dimensions excluding wording style, turn count, user identity and expected tool count. One session per record.",
+  "independence_status": "Known fixture/order/structural variants removed; inspect remaining semantic variants before Part B.",
+  "rows": [
+    {
+      "trace_id": "6fa4898356a08ebe740a6623cb8ad710",
+      "scenario_id": "support-0001",
+      "session_id": "3f40bba9-e152-4b81-8918-e7c0ca6ad6bc",
+      "group_key": "[\"order\", 1935, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "8b268fa87ef735c0d83bebb09a48e23b",
+      "scenario_id": "support-0004",
+      "session_id": "7d738585-d97d-4d78-a158-372d2d064333",
+      "group_key": "[\"order\", 3100, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+      "scenario_id": "support-0008",
+      "session_id": "3ab8e970-03e7-457e-b5ea-54f7d98c0ea1",
+      "group_key": "[\"order\", 4366, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "c81d5fb5468dbde1c8e2a43d285afc00",
+      "scenario_id": "support-0015",
+      "session_id": "4d8a24ee-1c10-4059-9fc5-08a571e42ff1",
+      "group_key": "[\"order\", 9435, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "99e29d5ba9000c988db4b6625b91c42b",
+      "scenario_id": "support-0022",
+      "session_id": "0b3a5047-add9-4520-9cc7-ab5c9b6649ab",
+      "group_key": "[\"order\", 2476, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "2a2f1ecd81819dd62ab04d6f1b2876b9",
+      "scenario_id": "support-0024",
+      "session_id": "742deb52-c8d3-410d-8f09-087e166fbdf3",
+      "group_key": "[\"order\", 762, \"order_status\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "f8c6e23a19fa0bdbd488d294e4fb0f99",
+      "scenario_id": "support-0038",
+      "session_id": "2aefc630-0f06-47de-98a0-02a817609f05",
+      "group_key": "[\"order\", 5177, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "97b0e296ef55a92d760859499d34a883",
+      "scenario_id": "support-0044",
+      "session_id": "e1dd959a-7f03-4f95-8f16-0477f790e956",
+      "group_key": "[\"order\", 7484, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "9a60065cb584f4c8e4f006a99d703653",
+      "scenario_id": "support-0046",
+      "session_id": "61268f15-d291-4149-bcb4-dd0b265ca508",
+      "group_key": "[\"order\", 7941, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "0ea8b40f1b05dd02edc26c842ffdb2c6",
+      "scenario_id": "support-0049",
+      "session_id": "ccab5e69-fded-4491-afac-cb342021d996",
+      "group_key": "[\"order\", 5064, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+      "scenario_id": "support-0062",
+      "session_id": "596157be-c459-4055-9417-8a923076a002",
+      "group_key": "[\"order\", 1381, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "bd46ac060ae97f1aed4f004552a6dd94",
+      "scenario_id": "support-0063",
+      "session_id": "d23d760a-7e0f-48b5-bde6-fc54e3294d19",
+      "group_key": "[\"order\", 1843, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "797b20e54b16f6e68a006d027d147aee",
+      "scenario_id": "support-0069",
+      "session_id": "de069056-26ce-409c-afcc-86f9434927f0",
+      "group_key": "[\"order\", 2078, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "16b79f0fe1bfc9c7b35dd7dce8a57a0b",
+      "scenario_id": "support-0070",
+      "session_id": "ded501b9-38fc-499d-b79a-e03239b31ee1",
+      "group_key": "[\"order\", 4326, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "3fa1b92484d5ca9799cb1db4f79dc4c9",
+      "scenario_id": "support-0073",
+      "session_id": "11e3b697-f02b-4ad5-9561-1d124a3bb2ab",
+      "group_key": "[\"order\", 7433, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "16e9683522f7527e28f1510f73e54cf7",
+      "scenario_id": "support-0074",
+      "session_id": "ed685175-b294-4153-9add-0dff99c7a398",
+      "group_key": "[\"order\", 6552, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "761777dc49e843565dd712bdc2468260",
+      "scenario_id": "support-0078",
+      "session_id": "54663143-ac62-4452-b0d9-e0b85cda39c1",
+      "group_key": "[\"order\", 5375, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "b82f2d1fc0a9ede623abb8e5ec2961e4",
+      "scenario_id": "support-0080",
+      "session_id": "8de6754f-5fdd-447d-9b2f-09f1e88dab1a",
+      "group_key": "[\"order\", 4722, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "dc8930ec741c527757739f3ac423c741",
+      "scenario_id": "support-0081",
+      "session_id": "bec0c31b-f33c-44bc-b5fa-59a28efa53b4",
+      "group_key": "[\"order\", 6134, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "59b72a2a18358c2d7a150d57f6ef9550",
+      "scenario_id": "support-0084",
+      "session_id": "0a5b993e-07bf-4b30-84b0-40534b5dbf42",
+      "group_key": "[\"order\", 5017, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+      "scenario_id": "support-0087",
+      "session_id": "2e71a306-8e78-41c8-bc1a-e7f681919443",
+      "group_key": "[\"order\", 8293, \"find_order\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "160fc92612cdc3a4bc5c3778ec7c337a",
+      "scenario_id": "support-0089",
+      "session_id": "44325837-ac37-442a-8d7b-28dd2ef0f007",
+      "group_key": "[\"order\", 8569, \"find_order\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "583cd552d21948d076711aa17b664f49",
+      "scenario_id": "support-0092",
+      "session_id": "310224c2-521d-436d-9345-4be0924bc3b3",
+      "group_key": "[\"order\", 4744, \"find_order\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "9107cd84be9579469cafe4755b32b5c1",
+      "scenario_id": "support-0093",
+      "session_id": "08494bee-989d-4c0a-a421-4483d32c7b13",
+      "group_key": "[\"order\", 7066, \"find_order\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "09d263a3a13c1f1f7137921218e82ff5",
+      "scenario_id": "support-0095",
+      "session_id": "cdc631e4-ccb5-4f09-8757-3815e5be4316",
+      "group_key": "[\"order\", 1052, \"find_order\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "37d735b14344be618d407f41e20a25ce",
+      "scenario_id": "support-0098",
+      "session_id": "bc23340d-2e3f-449f-8d73-a1e483ae5632",
+      "group_key": "[\"order\", 9193, \"return_deadline\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "28fd1dc60960b3718831b853dd07f217",
+      "scenario_id": "support-0100",
+      "session_id": "2b6f2e4e-0a1f-4830-be50-0e25e76141cd",
+      "group_key": "[\"order\", 6314, \"return_deadline\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "0da87ff86664e09c350f2c207a6d0fa1",
+      "scenario_id": "support-0105",
+      "session_id": "44956892-e558-4436-9109-360ff7acbda5",
+      "group_key": "[\"order\", 6716, \"return_deadline\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "97aa687a10de8bcdeff961939adad03f",
+      "scenario_id": "support-0123",
+      "session_id": "bd00d2d4-c420-44df-bccf-57947c359339",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-store-overrides\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"merchant\", \"store_id\": 18}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "9261a25cffa7851307d4cf760304fb92",
+      "scenario_id": "support-0158",
+      "session_id": "940ef3d9-9e43-461e-a35d-ccea9241dece",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"well_specified\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+      "scenario_id": "support-0168",
+      "session_id": "9c76b038-7941-405f-b7d4-5832c695a401",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 8}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "bddad359a79cb0a83d110e87acbf4bc5",
+      "scenario_id": "support-0179",
+      "session_id": "9a5c5448-1e38-42e6-bbc3-08a1cd2a3967",
+      "group_key": "[\"fixture\", \"dq-order-missing-delivery-date\", \"return_deadline\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "25540e433c57393f644a90f703cfcbd4",
+      "scenario_id": "support-0197",
+      "session_id": "800f875f-a505-402c-b35f-6da1a2672bb5",
+      "group_key": "[\"fixture\", \"dq-product-invalid-price\", \"product_search\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "79c09bc3267cffec65517f3e7845c3da",
+      "scenario_id": "support-0206",
+      "session_id": "1d5839b3-b47b-4722-be7b-b833c50cadc9",
+      "group_key": "[\"order\", 8662, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "52f2fc0018f1dc217e65e663ac43075f",
+      "scenario_id": "support-0214",
+      "session_id": "df9a8f35-d9ae-4105-b7dd-ace351439673",
+      "group_key": "[\"order\", 2756, \"refund\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "f02251e79b9eda3b3021c0fd862fc3f1",
+      "scenario_id": "support-0221",
+      "session_id": "eeb1d725-38d1-4319-bacd-dc065094bb3e",
+      "group_key": "[\"order\", 3584, \"cancellation\"]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "f10092e2583e8cc37f4ed518ab41fc81",
+      "scenario_id": "support-0235",
+      "session_id": "b2ff85b2-cc7e-4881-9825-e84cb1b56c48",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"correction_across_turns\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "5b612a026be64901047a346dc10d5dee",
+      "scenario_id": "support-0238",
+      "session_id": "ccc76fe5-cfde-4401-bacb-56f0c8ea2239",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 14}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "f62566babc635dda7d85dcf9f0d30197",
+      "scenario_id": "support-0243",
+      "session_id": "b62962e3-cecc-4b3c-bf95-8ecc5ef013e6",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-returns, cw-store-overrides, store-saltbox-pantry-policy\", \"difficulty\": \"boundary\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+      "scenario_id": "support-0246",
+      "session_id": "e2306428-671c-4002-851d-d0ad227f39bc",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"missing_information\", \"intent\": \"find_order\", \"record_state\": \"unidentified_order\", \"role\": \"shopper\"}]",
+      "selection_reason": "Existing mode-specific HW4 human judgment"
+    },
+    {
+      "trace_id": "bcf376467184a5b472651aff9cc4cb4b",
+      "scenario_id": "support-0132",
+      "session_id": "3fedf8f3-c386-4527-9651-1ed6d8e115b4",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-restocking-fees\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "d7a9f2a303482d26e69fc64d73e7935f",
+      "scenario_id": "support-0146",
+      "session_id": "6f2c574e-2f71-4226-907b-3ddbf88f06bc",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"max_price_usd\": 235.5, \"product_id\": 401, \"record_state\": \"product\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "5238406fcccb7a83d924858de6af045c",
+      "scenario_id": "support-0169",
+      "session_id": "11f32c51-1e5a-4d90-b0b5-686cc4dc8ad0",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"out_of_scope\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "6f5ed97a6c1489ee58e3ffb159bad2bb",
+      "scenario_id": "support-0170",
+      "session_id": "ff1f94c3-8311-410d-89c0-b8a8c4d3cf80",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"out_of_scope\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 2}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "a046d299f7da2005c50b198ce8c7e393",
+      "scenario_id": "support-0192",
+      "session_id": "2a9c19bc-904f-4ea1-a77f-8cfc2af712fd",
+      "group_key": "[\"fixture\", \"dq-product-duplicate-title\", \"product_search\"]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "9c53346a93d085ffc93c90ee27ced70e",
+      "scenario_id": "support-0115",
+      "session_id": "f71a8776-5166-4197-8008-d8aa07435ebd",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-account-security\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "d9766adfe3f5c2a296b77bf1bfacf75e",
+      "scenario_id": "support-0125",
+      "session_id": "013bbf16-a308-47d9-af03-d6c2e4cc38e7",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-account-security\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"merchant\", \"store_id\": 20}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "6e5b61822c58234a96834b782036495e",
+      "scenario_id": "support-0126",
+      "session_id": "46af658a-27d4-4286-8166-611efac230b9",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-returns\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "2a25ef50aa4237269cbcc1415abd0214",
+      "scenario_id": "support-0137",
+      "session_id": "691b55ee-2f2e-46d9-8168-24414c4747c3",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"product_id\": 41, \"record_state\": \"product\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "242d33228c5d6950ae9695f4ca26fd4c",
+      "scenario_id": "support-0151",
+      "session_id": "d89538ed-218e-4b1f-88a1-5eda0716775f",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"product_id\": 601, \"record_state\": \"product\", \"role\": \"merchant\", \"store_id\": 16}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "62a23920085b93154ccf267844c9d9e9",
+      "scenario_id": "support-0164",
+      "session_id": "f9644e01-10a1-4854-9c76-f5d6d20e2c48",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "d33dc879d1bf87b348cfdc3b6e9b08ad",
+      "scenario_id": "support-0230",
+      "session_id": "991b0c75-24c4-4dcb-9a29-5512f6e2599a",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "51fb46f3697f53b8e5efe14d68aaf914",
+      "scenario_id": "support-0250",
+      "session_id": "c1a72eb2-1082-4a44-a052-1c8dd6fdd801",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"missing_information\", \"intent\": \"cancellation\", \"record_state\": \"unidentified_order\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "6d8ecece0afc421087950cac44dbdeb6",
+      "scenario_id": "support-0133",
+      "session_id": "3ae6ef99-fcde-461a-98d7-ec6e6a5dc0ba",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-store-overrides\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "d2f29271976fdd4112bca1e4ec51ea33",
+      "scenario_id": "support-0135",
+      "session_id": "3c720497-aa22-4083-80d4-d15f55b4c0ca",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-account-security\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "1c035bd817e8ba66707ef7eed1eea3cf",
+      "scenario_id": "support-0163",
+      "session_id": "b7eeb593-d065-4205-ad46-3d7eed620ac6",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "0554e1b51fb8e4f539de2b256c7873a8",
+      "scenario_id": "support-0174",
+      "session_id": "58ccd424-1304-4de2-92b1-f9cfc4266500",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"out_of_scope\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "c3ace2462e44bb0b4772f7459efb7520",
+      "scenario_id": "support-0247",
+      "session_id": "ac61e958-24c8-4e2a-93bc-dd107b11ce0f",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"missing_information\", \"intent\": \"find_order\", \"record_state\": \"unidentified_order\", \"role\": \"merchant\", \"store_id\": 7}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "79c16965b0fed9e21eac761560528738",
+      "scenario_id": "support-0106",
+      "session_id": "2532e79c-35a7-415f-b3b4-18ae57b9157d",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-returns\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior no-failure review; confirm response relevance specifically"
+    },
+    {
+      "trace_id": "9b1992c61269c5847959a4b8f0f0cf91",
+      "scenario_id": "support-0096",
+      "session_id": "7232bf87-e672-403c-a153-21b953402e0e",
+      "group_key": "[\"order\", 184, \"return_deadline\"]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "03eea94e339079ee9def08a11381d891",
+      "scenario_id": "support-0107",
+      "session_id": "323789b1-181b-49b4-b160-c717e2fa9b24",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-refunds\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "21a4cd2657d5a85f73e45d541ef74a1a",
+      "scenario_id": "support-0113",
+      "session_id": "5f3d13cb-585a-4ee9-9cdb-a0a0ee1b767b",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-store-overrides\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "5b837ec63fe035d8f5a30e747439cd78",
+      "scenario_id": "support-0120",
+      "session_id": "03c4202e-127f-4d7f-af47-f83f6f68445c",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"merchant\", \"store_id\": 15}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "56b2f4959f5c86b4825fbfb565022743",
+      "scenario_id": "support-0224",
+      "session_id": "5407df65-ec18-4408-90a0-8c8a3cef715e",
+      "group_key": "[\"order\", 63, \"cancellation\"]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "089507b64071be7c8c4a5106d91ba528",
+      "scenario_id": "support-0173",
+      "session_id": "e36f13a1-0647-48f6-96e3-747d5ca33278",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"out_of_scope\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 5}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "7836f09bee962c9960f56b03847767d9",
+      "scenario_id": "support-0222",
+      "session_id": "8b031694-c138-49e1-a3cf-5c0e7b27b6d8",
+      "group_key": "[\"order\", 1058, \"cancellation\"]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "c81c00408d16cc3c4fa83ed70eb5692d",
+      "scenario_id": "support-0007",
+      "session_id": "3ca96c2e-5703-4381-a12f-4ee10b36d084",
+      "group_key": "[\"order\", 3320, \"order_status\"]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "15722bec05498dbe2f89313b8fa0cfc7",
+      "scenario_id": "support-0241",
+      "session_id": "f9c6354e-3a4c-470a-b99f-5c6ff20df88e",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-restocking-fees\", \"difficulty\": \"boundary\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"merchant\", \"store_id\": 5}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "e00b156ce4fdb500a66cc540f3f886a2",
+      "scenario_id": "support-0248",
+      "session_id": "3afa62ed-bdc8-42b6-928a-c0a4e50c5fa3",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"missing_information\", \"intent\": \"find_order\", \"record_state\": \"unidentified_order\", \"role\": \"support\"}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "280ce1f5f27c324844d6c95519435ee6",
+      "scenario_id": "support-0076",
+      "session_id": "048c7210-5d92-4538-9096-4eb7b40c14e7",
+      "group_key": "[\"order\", 5646, \"cancellation\"]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "387254f5a3a7ef46bc17203b3000d828",
+      "scenario_id": "support-0108",
+      "session_id": "ed499dc8-af56-4532-afd8-f934fa07e79e",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-cancellations\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Prior review needs a mode-specific boundary decision"
+    },
+    {
+      "trace_id": "57b34eee82f436656e6212b5c5c1051f",
+      "scenario_id": "support-0211",
+      "session_id": "7882fb35-5493-4613-a5d1-f909873272eb",
+      "group_key": "[\"order\", 6838, \"refund\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "0747b378a05c0266270b55cc8b66d547",
+      "scenario_id": "support-0143",
+      "session_id": "51d196a9-a779-4562-85a1-765334dbeabc",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"product_id\": 281, \"record_state\": \"product\", \"role\": \"support\"}]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "25abeda1734cf4ca6193c41e68ae6a3c",
+      "scenario_id": "support-0064",
+      "session_id": "d283276a-56b5-4def-ae67-2f048f70ff20",
+      "group_key": "[\"order\", 6727, \"refund\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "99f31adcbf7a97ab4356c61c07315b68",
+      "scenario_id": "support-0232",
+      "session_id": "10ad867e-5f96-49b1-93dd-a746a790c8ca",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"correction_across_turns\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 15}]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "09a615422a2e7e708e5720f7e391f718",
+      "scenario_id": "support-0013",
+      "session_id": "3869b2ab-c0fb-48f0-9a4d-d98ccc6d748e",
+      "group_key": "[\"order\", 5295, \"order_status\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "921b29e58cbbecb4b9785dd9cbe58a38",
+      "scenario_id": "support-0090",
+      "session_id": "e2683d5d-6d9e-4ba6-9eed-c773d7f7babf",
+      "group_key": "[\"order\", 1241, \"find_order\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "73a0872a3674871fe9bb7bf11d96a7a4",
+      "scenario_id": "support-0114",
+      "session_id": "87edd1a3-44ff-4ae2-872a-2ffe7fa2476e",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-payouts\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "d6cf2c1bd1fddb712e9f635e5eed3680",
+      "scenario_id": "support-0186",
+      "session_id": "c910d6f3-0443-4548-abb9-523b8caf485b",
+      "group_key": "[\"fixture\", \"dq-order-store-mismatch\", \"order_status\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "125897c7edc5615bcb88319c79849dea",
+      "scenario_id": "support-0227",
+      "session_id": "4bc028f9-28ea-42b4-ae79-b2703197b90f",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"merchant\", \"store_id\": 3}]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "e5653729adf3085712725686de971da2",
+      "scenario_id": "support-0101",
+      "session_id": "9cf9768e-2796-4c46-ba68-282a75f86d4d",
+      "group_key": "[\"order\", 8332, \"return_deadline\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "b1c44c4824f6bfa5b8fe4571a6575bca",
+      "scenario_id": "support-0136",
+      "session_id": "d316288f-c990-45dd-84c7-8e07382890c6",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"max_price_usd\": 97.25, \"product_id\": 5, \"record_state\": \"product\", \"role\": \"merchant\", \"store_id\": 1}]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "ef1e96e1f18cfda1b651da3e06af2a88",
+      "scenario_id": "support-0219",
+      "session_id": "7a242152-12a7-4e62-8424-5738c716ae23",
+      "group_key": "[\"order\", 262, \"refund\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "bbfcd91525d2d9054d0a16a6f6cecf4e",
+      "scenario_id": "support-0071",
+      "session_id": "73389ed1-3231-4a49-a2d7-6ef200e67e5f",
+      "group_key": "[\"order\", 7936, \"cancellation\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "3a16bb5be9d36c6b9e625965d780ee94",
+      "scenario_id": "support-0072",
+      "session_id": "873b6406-d269-41a3-b717-e76915033655",
+      "group_key": "[\"order\", 2221, \"cancellation\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "d065d46422e713861716fedc2ce02fb9",
+      "scenario_id": "support-0014",
+      "session_id": "439ba825-1e48-47f9-a7f9-af7cbc10e159",
+      "group_key": "[\"order\", 9060, \"order_status\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "074086beab0c95b58cffa685f0ec14fd",
+      "scenario_id": "support-0029",
+      "session_id": "28356160-dd71-49a1-81ef-f60d1939dece",
+      "group_key": "[\"order\", 1387, \"order_status\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "ee0ca1a218be4b50b1afc57e0f57a1a5",
+      "scenario_id": "support-0035",
+      "session_id": "2287eb5b-d454-401a-b570-e1122050774d",
+      "group_key": "[\"order\", 5729, \"refund\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "850177d0407cde7694664024b55719c7",
+      "scenario_id": "support-0005",
+      "session_id": "a9fc7177-055f-4a61-8c9b-c627bf9df226",
+      "group_key": "[\"order\", 1871, \"order_status\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    },
+    {
+      "trace_id": "52cfd130a6b50567a8f29ec39c62a21b",
+      "scenario_id": "support-0099",
+      "session_id": "97ffa087-f7fc-4605-99b2-a7775a342390",
+      "group_key": "[\"order\", 3661, \"return_deadline\"]",
+      "selection_reason": "Random candidate from the supplied next_to_label helper"
+    }
+  ],
+  "excluded": [
+    {
+      "trace_id": "19923cbb3c90697e6efd2cb5c1777ee5",
+      "scenario_id": "support-0180",
+      "group_key": "[\"fixture\", \"dq-order-missing-delivery-date\", \"return_deadline\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "scenario_id": "support-0199",
+      "group_key": "[\"fixture\", \"dq-product-invalid-price\", \"product_search\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "24236f8dba7acf1357062f9c642ee2d2",
+      "scenario_id": "support-0198",
+      "group_key": "[\"fixture\", \"dq-product-invalid-price\", \"product_search\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "f79d8fb14f6f267c9f7033ef947d9330",
+      "scenario_id": "support-0175",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"out_of_scope\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "5ef3d4aa226924959b5fe2743563f400",
+      "scenario_id": "support-0234",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"correction_across_turns\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "32520e43a4392cb5a6062b72e765345c",
+      "scenario_id": "support-0236",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "c18bcb9be0cb78acc8c47db5ea087d4c",
+      "scenario_id": "support-0156",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"well_specified\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "dd1418c78cd4b249d3806b25df80f6eb",
+      "scenario_id": "support-0161",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "2682dde8b2239494f3b3a5fdea4e4493",
+      "scenario_id": "support-0167",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "1fb8b587914f42d9125691799a26779d",
+      "scenario_id": "support-0236",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "8913597b16825f83ae89926e935519b9",
+      "scenario_id": "support-0239",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "c3981d608beda60d92f4617b981e5fcb",
+      "scenario_id": "support-0228",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "2cecaa222db6b280395da968ed1461ba",
+      "scenario_id": "support-0228",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "17a91c870ab21621cfa58936b0a6c51f",
+      "scenario_id": "support-0237",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "1c035bd817e8ba66707ef7eed1eea3cf",
+      "scenario_id": "support-0163",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "fd41aae3fca152ec16e655eeadb7805d",
+      "scenario_id": "support-0238",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"merchant\", \"store_id\": 14}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "6c813ecb4514356984e4da33f23cbe48",
+      "scenario_id": "support-0106",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-returns\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "1afd89767569315bce039543b7b26406",
+      "scenario_id": "support-0226",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "242d33228c5d6950ae9695f4ca26fd4c",
+      "scenario_id": "support-0151",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"product_id\": 601, \"record_state\": \"product\", \"role\": \"merchant\", \"store_id\": 16}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "1fb8b587914f42d9125691799a26779d",
+      "scenario_id": "support-0236",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "9e0a174b090b5bb316faff187f0724eb",
+      "scenario_id": "support-0194",
+      "group_key": "[\"fixture\", \"dq-product-duplicate-title\", \"product_search\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "15722bec05498dbe2f89313b8fa0cfc7",
+      "scenario_id": "support-0241",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-restocking-fees\", \"difficulty\": \"boundary\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"merchant\", \"store_id\": 5}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "c3981d608beda60d92f4617b981e5fcb",
+      "scenario_id": "support-0228",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-roles\", \"difficulty\": \"authorization_boundary\", \"intent\": \"find_order\", \"record_state\": \"outside_authorized_scope\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "6d8ecece0afc421087950cac44dbdeb6",
+      "scenario_id": "support-0133",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-store-overrides\", \"difficulty\": \"well_specified\", \"intent\": \"policy_question\", \"record_state\": \"policy_page\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "2a25ef50aa4237269cbcc1415abd0214",
+      "scenario_id": "support-0137",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"none\", \"difficulty\": \"well_specified\", \"intent\": \"product_search\", \"product_id\": 41, \"record_state\": \"product\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "dd1d953d3bd3936a80c21929245706b0",
+      "scenario_id": "support-0233",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"correction_across_turns\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "5b7c7215ff4f4f065950b570bcb3b5fc",
+      "scenario_id": "support-0235",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-escalations, cw-account-security\", \"difficulty\": \"correction_across_turns\", \"intent\": \"account_change\", \"record_state\": \"none\", \"role\": \"shopper\"}]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "b18c6eefa098db3131d31601e8f74fa5",
+      "scenario_id": "support-0096",
+      "group_key": "[\"order\", 184, \"return_deadline\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "bf7eb779c96e0932746be28505cb87ba",
+      "scenario_id": "support-0191",
+      "group_key": "[\"fixture\", \"dq-product-duplicate-title\", \"product_search\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "76cd50259ce5e21580150e6e77cd4190",
+      "scenario_id": "support-0092",
+      "group_key": "[\"order\", 4744, \"find_order\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "c81c00408d16cc3c4fa83ed70eb5692d",
+      "scenario_id": "support-0007",
+      "group_key": "[\"order\", 3320, \"order_status\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "a046d299f7da2005c50b198ce8c7e393",
+      "scenario_id": "support-0192",
+      "group_key": "[\"fixture\", \"dq-product-duplicate-title\", \"product_search\"]",
+      "reason": "Already represented conversation or close variant"
+    },
+    {
+      "trace_id": "ad11fc493e054a24ce73f0a1231832a4",
+      "scenario_id": "support-0239",
+      "group_key": "[\"dimensions\", {\"applicable_policy\": \"cw-disputes, cw-escalations\", \"difficulty\": \"missing_information\", \"intent\": \"dispute\", \"record_state\": \"none\", \"role\": \"support\"}]",
+      "reason": "Already represented conversation or close variant"
+    }
+  ]
+}

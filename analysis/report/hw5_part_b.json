@@ -1,0 +1,25 @@
+{
+  "mode": "irrelevant_response_detail",
+  "counts": {
+    "train": {
+      "Pass": 6,
+      "Fail": 10
+    },
+    "dev": {
+      "Fail": 20,
+      "Pass": 13
+    },
+    "test": {
+      "Pass": 13,
+      "Fail": 20
+    }
+  },
+  "inputs_sha256": "0d439e18f63330f62dc8e828923001c6e10cb222a144d98d22713a7892097bcb",
+  "fractions": [
+    0.2,
+    0.4,
+    0.4
+  ],
+  "seed": 7,
+  "label_convention": "Pass=1 / Fail=0"
+}

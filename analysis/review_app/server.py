@@ -13,12 +13,14 @@ from observability.instrument import load_env
 from analysis.helpers import langfuse_io, selection
 from .state import Conflict, Workspace
 from .traces import TraceStore
+from .hw5 import HW5Review
 
 ROOT = Path(__file__).resolve().parents[2]
 UI = Path(__file__).parent / "ui"
 
 
 def make_handler(store, workspace, offline_reason=""):
+    hw5 = HW5Review(workspace.directory)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             pass
@@ -47,6 +49,7 @@ def make_handler(store, workspace, offline_reason=""):
                 path = urlparse(self.path)
                 params = parse_qs(path.query)
                 assets = {"/": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascript"),
+                          "/hw5.js": ("hw5.js", "text/javascript"),
                           "/style.css": ("style.css", "text/css")}
                 if path.path in assets:
                     name, kind = assets[path.path]
@@ -57,6 +60,8 @@ def make_handler(store, workspace, offline_reason=""):
                                       "offline_reason": offline_reason, "spec": (ROOT / "SPEC.md").read_text()})
                 if path.path == "/api/state":
                     return self.send(workspace.snapshot())
+                if path.path == "/api/hw5":
+                    return self.send(hw5.snapshot())
                 if path.path == "/api/session":
                     return self.send(store.session(params.get("trace_id", [""])[0]))
                 if path.path == "/api/map":
@@ -94,6 +99,10 @@ def make_handler(store, workspace, offline_reason=""):
                 path = urlparse(self.path).path
                 if not path.startswith("/api/"):
                     return self.send({"error": "Not found"}, 404)
+                if path == "/api/hw5-label":
+                    return self.send(hw5.save(body))
+                if path == "/api/hw5-disagreement":
+                    return self.send(hw5.save_disagreement(body))
                 result = workspace.mutate(path.removeprefix("/api/"), body, store)
                 self.send(result)
             except Conflict as exc:

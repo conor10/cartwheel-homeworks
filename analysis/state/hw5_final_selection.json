@@ -1,0 +1,31 @@
+{
+  "status": "frozen",
+  "selected_by": "Student confirmed GPT v2 and Jev v1 after final development review",
+  "frozen_at": "2026-09-22T10:09:04.016834+00:00",
+  "gpt": {
+    "judge_id": "irrelevant_response_detail-v2",
+    "model": "gpt-4o-mini",
+    "prompt_sha256": "c1acabfa6a33abfdec24cebf15a7092c6f7ef3c97650d917521ce1d9055a179d"
+  },
+  "jev": {
+    "version": 1,
+    "model": "jev-1.13.0",
+    "config_path": "analysis/prompts/irrelevant_response_detail-jev-v1.json",
+    "config_sha256": "adc528fb945bc5d5fc55b90abfa6d1ddfbee22e44a0e96b554fbc8acaddcdf0a"
+  },
+  "locked_files": {
+    "analysis/state/hw5_trace_inputs.json": "0d439e18f63330f62dc8e828923001c6e10cb222a144d98d22713a7892097bcb",
+    "analysis/state/splits.json": "f1478d73079aa8c8cf1ee9f70dfb98b84b96fdff6ef6c1cf6120444478bad614",
+    "analysis/state/hw5_labels/irrelevant_response_detail.jsonl": "6d3efc18f7725a1873fa46ec08c0a28dc7fe865874c95b52d8492c94477f804d",
+    "analysis/prompts/irrelevant_response_detail-v2.txt": "c1acabfa6a33abfdec24cebf15a7092c6f7ef3c97650d917521ce1d9055a179d",
+    "analysis/prompts/irrelevant_response_detail-jev-v1.json": "adc528fb945bc5d5fc55b90abfa6d1ddfbee22e44a0e96b554fbc8acaddcdf0a"
+  },
+  "test_count": 33,
+  "test_class_counts": {
+    "Pass": 13,
+    "Fail": 20
+  },
+  "paid_test_approval": "Student explicitly approved both models on 33 held-out traces each",
+  "test_execution": "completed for both approved models",
+  "test_report": "analysis/report/hw5_test_comparison.json"
+}

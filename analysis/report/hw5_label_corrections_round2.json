@@ -1,0 +1,21 @@
+{
+  "source": "Explicit student chat clarification and approval",
+  "changes": [
+    {
+      "trace_id": "57b34eee82f436656e6212b5c5c1051f",
+      "scenario_id": "support-0211",
+      "label": 1
+    },
+    {
+      "trace_id": "25abeda1734cf4ca6193c41e68ae6a3c",
+      "scenario_id": "support-0064",
+      "label": 1
+    },
+    {
+      "trace_id": "ee0ca1a218be4b50b1afc57e0f57a1a5",
+      "scenario_id": "support-0035",
+      "label": 1
+    }
+  ],
+  "new_model_calls": 0
+}

@@ -336,7 +336,7 @@ function switchView(next) {
 }
 function render() {
   status();
-  ({review:renderReview,explore:renderExplore,taxonomy:renderTaxonomy,labels:renderLabels,progress:renderProgress,suggestions:renderSuggestions}[view])();
+  ({review:renderReview,explore:renderExplore,taxonomy:renderTaxonomy,labels:renderLabels,progress:renderProgress,suggestions:renderSuggestions,hw5:renderHW5}[view])();
 }
 
 function renderExplore() {
@@ -471,6 +471,7 @@ document.addEventListener('click', async event => {
   const el=event.target.closest('[data-action]'); if(!el)return;
   event.preventDefault();
   const action=el.dataset.action,id=el.dataset.id;
+  if(action.startsWith('hw5-'))return;
   const originalContent=el.innerHTML, originalDisabled=el.disabled;
   try {
     if(action==='dismiss')return notice('');
@@ -576,6 +577,7 @@ document.addEventListener('click', async event => {
 });
 
 document.addEventListener('submit',async event=>{
+  if(event.target.id==='hw5-form' || event.target.matches('[data-hw5-disagreement]'))return;
   event.preventDefault();const form=event.target,submit=event.submitter;
   if(submit)submit.disabled=true;
   try{

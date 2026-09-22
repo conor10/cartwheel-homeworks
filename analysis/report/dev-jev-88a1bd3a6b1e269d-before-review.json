@@ -1,0 +1,51 @@
+{
+  "tp": 12,
+  "fn": 1,
+  "tn": 3,
+  "fp": 17,
+  "n": 33,
+  "pass_count": 13,
+  "fail_count": 20,
+  "tpr": 0.9230769230769231,
+  "tnr": 0.15,
+  "tpr_interval": [
+    0.6669,
+    0.9863
+  ],
+  "tnr_interval": [
+    0.0524,
+    0.3604
+  ],
+  "disagreements": [
+    "074086beab0c95b58cffa685f0ec14fd",
+    "16e9683522f7527e28f1510f73e54cf7",
+    "25540e433c57393f644a90f703cfcbd4",
+    "37d735b14344be618d407f41e20a25ce",
+    "59b72a2a18358c2d7a150d57f6ef9550",
+    "5b612a026be64901047a346dc10d5dee",
+    "5c9b9ae52a51ad8c960bfd2c0eb64c63",
+    "7836f09bee962c9960f56b03847767d9",
+    "97b0e296ef55a92d760859499d34a883",
+    "9b1992c61269c5847959a4b8f0f0cf91",
+    "c81c00408d16cc3c4fa83ed70eb5692d",
+    "d065d46422e713861716fedc2ce02fb9",
+    "d23514c235b4876546abc0c3a2729d7b",
+    "d4a6d18873b365aa343fb6734dc5dded",
+    "dc8930ec741c527757739f3ac423c741",
+    "ee0ca1a218be4b50b1afc57e0f57a1a5",
+    "f62566babc635dda7d85dcf9f0d30197",
+    "fe7dda644e211cc3d75d0cb59317196d"
+  ],
+  "label_convention": "Pass=1 / Fail=0",
+  "interval_method": "95% Wilson",
+  "model": "jev-1.13.0",
+  "run_file": "/Users/Conor/code/ai/cartwheel-homeworks/analysis/state/comparisons/jev-88a1bd3a6b1e269d.json",
+  "fingerprint": "88a1bd3a6b1e269dca892a4e8d430d917d7975e575665b584ba56babfff0611e",
+  "split": "dev",
+  "written_critique_available": false,
+  "latency_seconds": 21.673398624407127,
+  "usage": {
+    "input_tokens": 149666,
+    "output_tokens": 1122
+  }
+}

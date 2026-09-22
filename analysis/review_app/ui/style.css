@@ -16,3 +16,13 @@ mark.draft-highlight{background:#fff0bb;border-bottom:2px dashed #a67516}
 
 .depth-edit-list{max-height:420px;overflow:auto;margin-top:12px}.depth-edit-row{display:flex;align-items:flex-start;gap:10px;padding:10px;border-bottom:1px solid var(--line);font-size:12px;font-weight:400}.depth-edit-row input{width:auto;margin-top:5px}.depth-edit-row small{display:block;margin-top:5px}#depth-remove-feedback{margin-top:10px;color:var(--red)}
 .category-actions{position:sticky;top:0;z-index:2;box-shadow:0 3px 10px #20304018}.category-actions p{margin:8px 0 0}#category-label-form h2{flex:1}#category-label-form textarea{min-height:100px}
+
+/* A separate homework queue keeps the original HW4 review outcomes intact. */
+.hw5-header{padding:16px 24px;border-bottom:1px solid var(--line);background:white}
+.hw5-header h1{margin:0}.hw5-header p{margin:6px 0}
+.hw5-layout{display:grid;grid-template-columns:220px minmax(350px,1fr) 310px;height:calc(100vh - 255px);min-height:400px}
+.hw5-layout>.queue,.hw5-layout>.notes-pane,.hw5-conversation{overflow:auto;padding:18px}
+.hw5-conversation .prose{white-space:pre-wrap}.hw5-turn{margin-bottom:28px}
+#hw5-note{min-height:160px}#hw5-feedback{color:var(--teal)}
+@media(max-width:1000px){.hw5-layout{grid-template-columns:180px minmax(300px,1fr);height:auto}.hw5-layout>.notes-pane{grid-column:1/-1}.hw5-layout>.queue{max-height:600px}}
+.hw5-layout>.queue{display:block}
