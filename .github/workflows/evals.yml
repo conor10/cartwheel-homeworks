@@ -35,9 +35,42 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync
 
-      # Homework 6: install Harbor 0.23.0.
-      # Generate the classified tasks in eval_cases/cases.jsonl.
-      # Run five attempts per task in fresh Docker containers.
-      # Pass the agent and judge provider keys to Harbor.
-      # Summarize the job and upload the job files with `if: always()` so a
-      # failed regression keeps its evidence.
+      - name: Check the selected agent model
+        run: test -n "$CARTWHEEL_MODEL"
+
+      - name: Install Harbor
+        run: uv tool install 'harbor==0.23.0'
+
+      - name: Generate classified Harbor tasks
+        run: uv run python scripts/export_harbor_tasks.py
+
+      - name: Run the evaluation suite
+        run: |
+          harbor run \
+            -p .harbor/tasks \
+            -a harbor_adapter.agent:CartwheelAgent \
+            -m "$CARTWHEEL_MODEL" \
+            -e docker \
+            --n-attempts 5 \
+            --job-name hw6-evals \
+            --jobs-dir .harbor/jobs \
+            --yes
+
+      - name: Summarize evaluation results
+        if: always()
+        run: |
+          if [ -f .harbor/jobs/hw6-evals/result.json ]; then
+            uv run python scripts/summarize_harbor_job.py \
+              .harbor/jobs/hw6-evals \
+              --expected-attempts 5
+          else
+            echo 'Harbor did not produce a job result; see the earlier step for the failure.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload Harbor results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hw6-evals
+          path: .harbor/jobs/hw6-evals
+          if-no-files-found: warn
