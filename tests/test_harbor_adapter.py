@@ -352,7 +352,7 @@ def test_capability_analysis_uses_5_10_and_15_observed_runs(
     assert result["rewards"][:3] == [1, 0, 1]
     assert result["model"] == "student/provider-model"
     assert result["trials"][0]["trial_name"] == "trial-14"
-    assert result["trial_order"] == "result.json trial_results order"
+    assert result["trial_order"].startswith("result.json trial_results order")
     assert [row["n"] for row in result["comparisons"]] == [5, 10, 15]
     assert set(result["comparisons"][-1]["pass_at_k"]) == {
         "1",
@@ -361,3 +361,32 @@ def test_capability_analysis_uses_5_10_and_15_observed_runs(
         "10",
         "15",
     }
+
+
+def test_capability_analysis_reads_harbor_023_per_trial_files(
+    tmp_path: Path,
+) -> None:
+    job = tmp_path / "job"
+    job.mkdir()
+    (job / "result.json").write_text(json.dumps({"stats": {"n_total_trials": 15}}))
+    for attempt in range(15):
+        trial_dir = job / f"e-401__trial-{attempt:02d}"
+        trial_dir.mkdir()
+        trial = {
+            "task_name": "cartwheel/evals__e-401",
+            "trial_name": f"e-401__trial-{attempt:02d}",
+            "started_at": f"2026-09-25T00:{attempt:02d}:00Z",
+            "verifier_result": {
+                "rewards": {"reward": 1.0 if attempt < 12 else 0.0}
+            },
+            "agent_info": {"model_info": {"name": "gpt-5.5", "provider": None}},
+            "exception_info": None,
+        }
+        (trial_dir / "result.json").write_text(json.dumps(trial))
+
+    result = analyze_capability_job(job, "e-401")
+
+    assert result["n"] == 15
+    assert result["successes"] == 12
+    assert result["trials"][0]["trial_name"] == "e-401__trial-00"
+    assert "started_at then trial_name" in result["trial_order"]
