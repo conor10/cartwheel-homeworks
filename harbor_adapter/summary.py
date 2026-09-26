@@ -30,6 +30,34 @@ def _reward(trial: dict[str, Any]) -> float | None:
     return None
 
 
+def _load_trial_results(job_dir: Path, result: dict[str, Any]) -> list[dict[str, Any]]:
+    """Load trials from Harbor's job result or its per-trial result files.
+
+    Harbor 0.23 writes aggregate statistics to the job-level ``result.json``
+    and each full trial record to ``<job>/<trial>/result.json``. Keep support
+    for the ``trial_results`` list used by fixtures and other Harbor versions.
+    """
+    embedded = result.get("trial_results")
+    if isinstance(embedded, list) and embedded:
+        return embedded
+
+    trial_results: list[dict[str, Any]] = []
+    for trial_path in job_dir.glob("*/result.json"):
+        try:
+            trial = json.loads(trial_path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(trial, dict) and "task_name" in trial:
+            trial_results.append(trial)
+    trial_results.sort(
+        key=lambda trial: (
+            str(trial.get("started_at", "")),
+            str(trial.get("trial_name", "")),
+        )
+    )
+    return trial_results
+
+
 def summarize_job(
     job_dir: Path,
     *,
@@ -49,7 +77,7 @@ def summarize_job(
     result = json.loads(result_path.read_text())
     trials: dict[str, list[dict[str, Any]]] = defaultdict(list)
     unknown: list[str] = []
-    for trial in result.get("trial_results", []):
+    for trial in _load_trial_results(job_dir, result):
         case_id = _case_id(str(trial.get("task_name", "")), set(by_id))
         if case_id is None:
             unknown.append(str(trial.get("task_name", "")))

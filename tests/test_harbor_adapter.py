@@ -168,6 +168,41 @@ def test_summary_blocks_regressions_but_reports_capabilities(
     assert "| `e-202` | capability | 2 | 5 | 0.400" in markdown
 
 
+def test_summary_reads_harbor_023_per_trial_result_files(tmp_path: Path) -> None:
+    cases_path = tmp_path / "cases.jsonl"
+    case = {
+        "id": "e-204",
+        "mode": "response_quality",
+        "kind": "regression",
+        "input": {"role": "shopper", "user_id": 1, "message": "hello"},
+        "initial_state": {"world": "reseed", "fixture": None},
+        "expected": {"checks": [{"check": "reply_asks_question"}]},
+    }
+    _write_cases(cases_path, [case])
+
+    job = tmp_path / "job"
+    job.mkdir()
+    (job / "result.json").write_text(json.dumps({"stats": {"n_total_trials": 5}}))
+    for attempt in range(5):
+        trial_dir = job / f"e-204__trial-{attempt}"
+        trial_dir.mkdir()
+        trial = {
+            "task_name": "cartwheel/evals__e-204",
+            "trial_name": f"e-204__trial-{attempt}",
+            "started_at": f"2026-09-25T00:0{attempt}:00Z",
+            "verifier_result": {"rewards": {"reward": 1.0}},
+            "exception_info": None,
+        }
+        (trial_dir / "result.json").write_text(json.dumps(trial))
+
+    markdown, passed = summarize_job(
+        job, cases_path=cases_path, expected_attempts=5
+    )
+
+    assert passed is True
+    assert "| `e-204` | regression | 5 | 5 |" in markdown
+
+
 def test_baseline_summary_reports_the_observed_classification(tmp_path: Path) -> None:
     cases_path = tmp_path / "cases.jsonl"
     base = {
