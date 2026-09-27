@@ -1,0 +1,25 @@
+{
+  "status": "drafted for student review; unclassified",
+  "agent_model": "gpt-5.5",
+  "cases": 10,
+  "modes": {
+    "irrelevant_response_detail": 5,
+    "account_change_not_escalated": 2,
+    "unresolved_data_not_escalated": 3
+  },
+  "baseline_agent_runs": 50,
+  "judge_calls_per_full_five-run-baseline": 25,
+  "judge": "frozen irrelevant_response_detail-v2, gpt-4o-mini",
+  "source_scenarios": {
+    "e-001": "support-0029",
+    "e-002": "support-0014",
+    "e-003": "support-0005",
+    "e-004": "support-0008",
+    "e-005": "support-0022",
+    "e-006": "support-0234",
+    "e-007": "support-0235",
+    "e-008": "support-0187",
+    "e-009": "support-0199",
+    "e-010": "support-0201"
+  }
+}
