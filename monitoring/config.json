@@ -26,5 +26,19 @@
       "to": "2026-09-28T13:05:15.177343Z"
     }
   ],
-  "dashboard_url": "http://localhost:3000/project/cartwheel-dev/dashboards/cmuljpqwn0004mp07hht8u10o"
+  "dashboard_url": "http://localhost:3000/project/cartwheel-dev/dashboards/cmuljpqwn0004mp07hht8u10o",
+  "workflow_verification": {
+    "run_url": "https://github.com/conor10/cartwheel-homeworks/actions/runs/36468869767",
+    "commit": "5b57d0710456f379e74103ba6143300a2b740c8b",
+    "conclusion": "success",
+    "trigger": "workflow_dispatch",
+    "window_hours": 24,
+    "conversations": 50,
+    "cached_verdicts": 25,
+    "new_judge_evaluations": 4,
+    "scores_verified": 36,
+    "artifact": "hw7-monitor-36468869767",
+    "runner_removed": true,
+    "recurring_monitoring_enabled": false
+  }
 }
