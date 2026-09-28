@@ -1,0 +1,30 @@
+{
+  "judge_id": "irrelevant_response_detail-v2",
+  "judge_mode": "irrelevant_response_detail",
+  "model": "gpt-5.5-2026-04-23",
+  "random_rate": 0.2,
+  "risk_groups": [
+    "policy_lookup"
+  ],
+  "threshold": 0.15,
+  "periods": [
+    {
+      "label": "before",
+      "from": "2026-09-15T16:00:00Z",
+      "to": "2026-09-15T17:44:00Z",
+      "not_judgeable": [
+        {
+          "scenario_id": "support-0187",
+          "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+          "reason": "Original HW3 conversation ended at the turn limit with no final reply. User approved retaining it in the population and marking it not judgeable for irrelevant_response_detail. Keep sample membership; do not replace, impute a verdict, or send it to the frozen judge. This is a disclosed exception to the complete-period requirement; missing outcomes may bias the comparison."
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "from": "2026-09-28T12:49:29.497798Z",
+      "to": "2026-09-28T13:05:15.177343Z"
+    }
+  ],
+  "dashboard_url": "http://localhost:3000/project/cartwheel-dev/dashboards/cmuljpqwn0004mp07hht8u10o"
+}

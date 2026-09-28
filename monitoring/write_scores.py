@@ -70,8 +70,17 @@ def build_score_records(
         A list of score record dicts with keys: score_id, name, value,
         data_type, trace_id, comment (comment is None for verdicts).
     """
-    ### YOUR CODE HERE (hw7)
-    raise NotImplementedError("hw7: implement build_score_records")
+    records = []
+    for kind, verdicts in (("verdict", random_verdicts), ("risk_verdict", risk_verdicts)):
+        for trace_id, value in verdicts.items():
+            records.append({"score_id": _stable_id(mode, kind, trace_id),
+                            "name": f"{mode}_{kind}", "value": float(value),
+                            "data_type": "NUMERIC", "trace_id": trace_id, "comment": None})
+    records.append({"score_id": _stable_id(mode, "prevalence", batch_label),
+                    "name": f"{mode}_corrected_prevalence", "value": estimate["corrected"],
+                    "data_type": "NUMERIC", "trace_id": None,
+                    "comment": f"95% CI {estimate['ci_low']}-{estimate['ci_high']}, raw {estimate['raw']}, n={estimate['n_sample']}"})
+    return records
 
 
 # ---------------------------------------------------------------------------
@@ -83,8 +92,8 @@ def build_score_records(
 def post_scores(records: list[dict[str, Any]]) -> int:
     """Write score records to Langfuse. Returns the number written.
 
-    Uses the SDK's ``create_score`` with the ``score_id`` idempotency
-    parameter, so writing a record again updates the existing score.
+    Uses the synchronous Scores API with the stable record ID, so writing
+    a record again updates the existing score and API errors propagate.
     """
     from analysis.helpers import langfuse_io
 
@@ -94,6 +103,7 @@ def post_scores(records: list[dict[str, Any]]) -> int:
             "to write scores; the offline path only builds score records"
         )
     from langfuse import get_client
+    from langfuse.api.resources.score.types.create_score_request import CreateScoreRequest
 
     client = get_client()
     for record in records:
@@ -101,12 +111,17 @@ def post_scores(records: list[dict[str, Any]]) -> int:
             "name": record["name"],
             "value": record["value"],
             "data_type": record["data_type"],
-            "score_id": record["score_id"],
+            "id": record["score_id"],
         }
         if record.get("trace_id") is not None:
             kwargs["trace_id"] = record["trace_id"]
+        else:
+            # Langfuse requires a trace, session, or dataset run target. Use a
+            # stable batch session for prevalence, never an arbitrary trace.
+            kwargs["session_id"] = f"monitoring-{record['score_id']}"
         if record.get("comment"):
             kwargs["comment"] = record["comment"]
-        client.create_score(**kwargs)
-    client.flush()
+        # A synchronous response exposes rejected scores instead of reporting
+        # success after an asynchronous batch merely logs an ingestion error.
+        client.api.score.create(request=CreateScoreRequest(**kwargs))
     return len(records)

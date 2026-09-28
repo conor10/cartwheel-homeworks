@@ -1,0 +1,75 @@
+name: HW7 monitoring
+
+on:
+  schedule:
+    - cron: '17 8 * * *'
+  workflow_dispatch:
+    inputs:
+      run_monitor:
+        description: 'Run the monitor on the local Langfuse runner'
+        type: boolean
+        default: false
+      max_judge_calls:
+        description: 'Maximum new paid judge calls (0 = cached verdicts only)'
+        type: number
+        default: 0
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hw7-monitoring
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    # No push/PR trigger. Recurring execution is explicitly opt-in.
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.run_monitor == true) ||
+      (github.event_name == 'schedule' && vars.HW7_MONITOR_ENABLED == 'true')
+    runs-on: [self-hosted, cartwheel-monitor]
+    timeout-minutes: 20
+    env:
+      LANGFUSE_HOST: ${{ vars.LANGFUSE_HOST }}
+      LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+      LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MAX_JUDGE_CALLS: ${{ github.event_name == 'workflow_dispatch' && format('{0}', inputs.max_judge_calls) || vars.HW7_MAX_JUDGE_CALLS || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --locked
+      - name: Seed previously approved local verdicts (optional)
+        env:
+          LOCAL_VERDICT_CACHE: ${{ vars.HW7_LOCAL_VERDICT_CACHE }}
+        shell: bash
+        run: |
+          if [ -n "$LOCAL_VERDICT_CACHE" ] && [ -d "$LOCAL_VERDICT_CACHE" ]; then
+            mkdir -p .harbor/hw7/monitoring
+            cp -R "$LOCAL_VERDICT_CACHE"/. .harbor/hw7/monitoring/
+          fi
+      - name: Restore frozen monitoring verdicts
+        uses: actions/cache@v4
+        with:
+          path: .harbor/hw7/monitoring
+          key: hw7-monitor-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: hw7-monitor-${{ runner.os }}-
+      - name: Run previous 24 hours
+        shell: bash
+        run: |
+          mkdir -p .harbor/hw7
+          set -o pipefail
+          uv run python -u -m monitoring.run --last-hours 24 \
+            --approve-paid-run --max-judge-calls "$MAX_JUDGE_CALLS" --publish \
+            2>&1 | tee .harbor/hw7/workflow.log
+      - name: Upload monitoring evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hw7-monitor-${{ github.run_id }}
+          path: .harbor/hw7/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
