@@ -3,6 +3,13 @@ name: evals
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      run_paid_evaluations:
+        description: 'Run paid Harbor agent and judge evaluations'
+        required: true
+        type: boolean
+        default: false
 
 jobs:
   offline-checks:
@@ -19,7 +26,9 @@ jobs:
 
   complete-evaluations:
     name: Harbor evaluations
-    if: github.event_name == 'pull_request'
+    # HW6 automatic-run evidence is preserved in ci-runs.json and commit e224747.
+    # Further paid evaluations require an explicit manual opt-in.
+    if: github.event_name == 'workflow_dispatch' && inputs.run_paid_evaluations == true
     runs-on: ubuntu-latest
     env:
       CARTWHEEL_MODEL: ${{ vars.CARTWHEEL_MODEL }}
