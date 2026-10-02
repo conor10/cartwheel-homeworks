@@ -20,7 +20,7 @@ import hashlib
 import json
 from typing import Any
 
-from agents import Agent, ModelSettings, RunContextWrapper, function_tool
+from agents import Agent, AgentHooks, ModelSettings, RunContextWrapper, function_tool
 
 from agent import db
 from agent import tools as hw_tools
@@ -499,6 +499,69 @@ def _tools_with_defenses(role: str) -> list[Any]:
     return [defended_refund if tool is issue_refund else tool for tool in TOOLS_BY_ROLE[role]]
 
 
+class _NegativePriceEscalation(AgentHooks[AuthContext]):
+    """Route observed invalid prices through the normal, traced escalation tool."""
+
+    def __init__(self, instructions: str):
+        self.base_instructions = instructions
+        self.owner: AuthContext | None = None
+        self.pending: set[int] = set()
+        self.reported: set[int] = set()
+        self.failed = False
+
+    async def on_start(self, context, agent):
+        # A reused agent must not carry another caller's observations or tickets.
+        if self.owner is not context.context:
+            self.owner = context.context
+            self.pending.clear()
+            self.reported.clear()
+            self.failed = False
+            agent.model_settings.tool_choice = "auto"
+
+    def instructions(self, context, agent):
+        if self.pending:
+            return self.base_instructions + (
+                "\n\nExecution check: the successful catalogue lookup returned a "
+                "negative price for product IDs " + json.dumps(sorted(self.pending)) +
+                ". Call escalate_to_human now with those identifiers and the "
+                "observed price defect. Do not offer the invalid price or claim "
+                "the record has been corrected."
+            )
+        if self.failed:
+            return self.base_instructions + (
+                "\n\nExecution check: escalation of the invalid catalogue price "
+                "failed. Tell the user it was not completed; do not claim a "
+                "ticket exists or that the invalid price has been corrected."
+            )
+        return self.base_instructions
+
+    async def on_tool_end(self, context, agent, tool, result):
+        if isinstance(result, str):
+            try:
+                result = json.loads(result)
+            except ValueError:
+                return
+        if not isinstance(result, dict):
+            return
+        if tool.name == "search_products" and result.get("ok") is True:
+            for product in result.get("products", []):
+                if not isinstance(product, dict):
+                    continue
+                pid, price = product.get("product_id"), product.get("price_usd")
+                if (type(pid) is int and type(price) in (int, float)
+                        and price < 0 and pid not in self.reported):
+                    self.pending.add(pid)
+        elif tool.name == "escalate_to_human" and self.pending:
+            self.failed = not (result.get("ok") is True and result.get("ticket_id"))
+            if self.failed:
+                agent.model_settings.tool_choice = "auto"
+                self.pending.clear()
+                return
+            self.reported.update(self.pending)
+            self.pending.clear()
+        agent.model_settings.tool_choice = "escalate_to_human" if self.pending else "auto"
+
+
 def build_agent(
     ctx: AuthContext,
     model: str | None = None,
@@ -533,10 +596,13 @@ def build_agent(
     """
     resolved = resolve_model(model)
     configure_model_tracing(openai_model=isinstance(resolved, str))
+    routing = _NegativePriceEscalation(render_system_prompt(ctx, prompt_template))
     if not defenses:
         return Agent[AuthContext](
             name="cartwheel-support",
-            instructions=render_system_prompt(ctx, prompt_template),
+            instructions=routing.instructions,
+            hooks=routing,
+            reset_tool_choice=False,
             tools=TOOLS_BY_ROLE[ctx.role],
             model=resolved,
             model_settings=model_settings_for(resolved),
@@ -547,7 +613,9 @@ def build_agent(
 
     return Agent[AuthContext](
         name="cartwheel-support",
-        instructions=render_system_prompt(ctx, prompt_template),
+        instructions=routing.instructions,
+        hooks=routing,
+        reset_tool_choice=False,
         tools=_tools_with_defenses(ctx.role),
         model=resolved,
         model_settings=model_settings_for(resolved),
