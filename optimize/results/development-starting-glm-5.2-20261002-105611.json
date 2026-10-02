@@ -1,0 +1,198 @@
+{
+  "candidate": "starting",
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "e-002",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        6.8856
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for a \"Sturdy Pitcher\" to find that purchase. Let me look that up now.\nThe search returned two possible matches. Let me get the details on both so I can identify the one from Juniper Home Goods.\nI found your order from Juniper Home Goods. Here's what happened:\n\n- **Order ID:** 9060\n- **Store:** Juniper Home Goods\n- **Product:** Sturdy Pitcher\n- **Quantity:** 2\n- **Total:** $290.00\n- **Ordered:** March 20, 2026\n- **Status:** Cancelled\n- **Shipped:** Never shipped\n- **Delivered:** Never delivered\n- **Refund eligible:** No\n\nThe order was cancelled before it ever shipped, so nothing was delivered. It's also currently showing as **not eligible for a refund**.\n\nI want to make sure I give you accurate info on the refund situation, so let me look up the policy on cancelled orders and refunds.\nLet me get the full refund policy text to understand why the order might not be refund-eligible.\nHere's the full picture of your order:\n\n**Your Sturdy Pitcher order from Juniper Home Goods (Order #9060)** was **cancelled before it ever shipped**, on or after March 20, 2026. Since it never shipped, nothing was delivered.\n\nPer Cartwheel's cancellation policy (policy_id: `cw-cancellations`), an order can be cancelled at no cost any time before the store ships it \u2014 so the cancellation itself was within policy.\n\nHowever, the order is currently showing as **not eligible for a refund**. Since the order total was $290 (above the $100 auto-approval threshold), any refund would need to be queued for human review before money is returned (policy_id: `cw-refunds`). It's possible a refund was already processed, or there may be another reason the eligibility flag is set to \"no.\"\n\nWould you like me to escalate this to a human support agent so they can investigate why the refund eligibility is showing as \"no\" and make sure you're taken care of? They'll be able to dig into the payment and refund history for this order.",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is primarily concerned about the refund eligibility for their cancelled order. The assistant provides a detailed account of the order status, including the cancellation policy and the refund policy. However, the repeated mention of the order details (like quantity, total, and the fact that it was never shipped or delivered) is unnecessary after the initial summary. Specifically, the phrases 'the order was cancelled before it ever shipped, so nothing was delivered' and 'it's also currently showing as not eligible for a refund' can be removed without losing the essential information about the refund eligibility. This additional detail does not directly address the user's request regarding the refund situation.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-003",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        2.1513
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I totally understand the frustration of not knowing where your order stands. Let me search for your Modern Headlamp order right away.\nI found an order matching your search. Let me pull up the full details so I can give you a complete picture.\nHere's the full rundown on your Modern Headlamp order from Meridian Cycles:\n\n| Detail | Info |\n|---|---|\n| **Order ID** | 1871 |\n| **Product** | Modern Headlamp (qty: 1) |\n| **Total** | $204.25 |\n| **Ordered** | April 6, 2025 |\n| **Shipped** | April 8, 2025 |\n| **Delivered** | April 15, 2025 |\n| **Current Status** | Refunded |\n\nIt looks like the order was shipped, delivered, and has since been refunded. Since it's already been refunded, it's no longer eligible for another refund.\n\nIs there something specific about this order that's still unclear, or were you expecting a different outcome? I'm happy to help sort it out!",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is inquiring about the status of their order, and the assistant provides a detailed rundown including order ID, product, total, ordered, shipped, delivered dates, and current status. However, after stating the current status as 'Refunded,' the assistant adds that it is no longer eligible for another refund. This last detail is unnecessary because the user did not ask about refund eligibility; they only wanted to know the order status. The assistant could have simply stated the order was refunded without elaborating on the refund eligibility, which does not serve the user's request.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        3.8511
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for a \"Signature Daypack\" to find the relevant order and check its delivery details.\nThe fuzzy search returned several matching orders. I need to check the full details of each to identify which one is from Meridian Cycles. Let me retrieve all four orders.\nI found two orders from **Meridian Cycles** matching your search. Here's the delivery information recorded for each:\n\n---\n\n**Order #4366** \u2014 $41.75\n- **Order placed:** March 13, 2026\n- **Shipped:** March 14, 2026\n- **Delivered:** March 18, 2026\n- **Status:** Delivered\n\n---\n\n**Order #7438** \u2014 $50.75\n- **Order placed:** March 4, 2025\n- **Shipped:** March 7, 2025\n- **Delivered:** March 10, 2025\n- **Status:** Delivered\n\n---\n\nUnfortunately, the order details don't include the product name, so I can't confirm which one is specifically the \"Signature Daypack.\" If you can tell me the approximate date or amount of your purchase, I can point you to the right order. Is there anything else you'd like to know about either order?",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is trying to identify the order for a 'Signature Daypack' from Meridian Cycles. The assistant provides details for two orders from Meridian Cycles, including delivery information, but does not specify which order corresponds to the requested item. The assistant's mention of needing the user to provide additional details about the purchase is relevant, but the extensive delivery information for both orders is unnecessary since it does not help identify the specific order for the 'Signature Daypack.' The assistant could have simply stated that there are two orders and asked for more details without listing all the delivery information.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-005",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        2.1215
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for a \"Portable Level\" to find the one from Copperline Tools and check its status.\nI found two orders matching \"Portable Level.\" Let me pull up the details on both to identify which one is from Copperline Tools and check its shipment status.\nGood news \u2014 your Portable Level from **Copperline Tools** (Order #2476) has indeed left the store. Here are the details:\n\n- **Order ID:** 2476\n- **Store:** Copperline Tools\n- **Status:** Shipped\n- **Ordered on:** June 27, 2026\n- **Shipped on:** June 28, 2026\n- **Delivered:** Not yet\n\nSo it was shipped out the day after you ordered it and is currently in transit. Is there anything else you'd like to know about this order?",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requested the status of their order for a 'Portable Level' from Copperline Tools. The assistant provides the order ID, store name, status, and relevant dates. However, the details about the order being shipped the day after it was ordered and the note that it is currently in transit are unnecessary for answering the user's request about the order status. The essential information could be conveyed more succinctly by stating only that the order has shipped and is currently in transit, making the additional context about the timing of the shipment redundant.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        6.8548
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "Got it \u2014 this is strictly about your account profile, not an order issue. I understand, but my hands are still tied here: per our account security policy (cw-account-security), support assistants can't make account detail changes in chat, including profile updates like a preferred name.\n\nYou have two options:\n\n1. **Update it yourself** through your Cartwheel account settings \u2014 this is the quickest way.\n2. **I can escalate to a human support agent** who can help with the change directly. They typically respond within 24 hours (cw-escalations).\n\nWould you like me to open a ticket for you?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        7.3906
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I'll look up your order for \"Portable Jam Trio\" and also search the product catalog to check the store associated with that item. Let me do both at the same time.\nI found your order and the product listing, but I notice something important: the order and the product catalog show different store IDs. Let me get the full order details to confirm the store information.\nThe order confirms that your Portable Jam Trio purchase (order #8003) was placed with **Blue Heron Ceramics** (store ID 1), which matches what your account shows. The product listing in the catalog shows a different store ID (14), but what matters for returns is the store you actually purchased from \u2014 which is Blue Heron Ceramics.\n\nNow let me search the help center for the return policy that applies to this store.\nThe general Cartwheel return policy mentions that individual stores may override the default return window. I need to check whether Blue Heron Ceramics has its own store-specific return policy. Let me search for that.\nLet me retrieve the full store overrides policy and search specifically for a Blue Heron Ceramics store policy page.\nI searched thoroughly but couldn't find a store-specific policy page for Blue Heron Ceramics in the help center. Let me try one more search to be certain.\nHere's what I found after checking both your order and the product listing:\n\n---\n\n**Your Order (Order #8003)**\n- **Item:** Portable Jam Trio (2 units, $214.75 each)\n- **Store:** Blue Heron Ceramics (store ID 1) \u2014 this matches what your account shows\n- **Status:** Delivered on April 8, 2026\n- **Refund eligible:** No (the order is currently outside the return window)\n\n**Product Catalog Listing**\n- The same product (product ID 553) also appears in the catalog under a different store (store ID 14). However, the store that matters for returns is the one you actually purchased from \u2014 which your order confirms is **Blue Heron Ceramics**.\n\n---\n\n**Which Return Policy Applies**\n\nSince I could not find a store-specific retur",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-009",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        3.9215
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "Good call \u2014 here's what stands out from the product data that you'll want to resolve before relying on this item's info:\n\n1. **Invalid price** \u2014 The listed price is **-$5.00**, which isn't a usable retail figure. It likely stems from a data entry error or an accidental override in the catalog. You'll want to correct this in your store dashboard.\n\n2. **Only one match returned** \u2014 The search returned a single product titled \"Rustic Pitcher\" (product ID 4), so there's no ambiguity about which listing this is. That's good, but it's worth confirming the corrected price still applies to the right SKU.\n\n3. **Store ID matches** \u2014 The product is under store ID 1, which aligns with your Blue Heron Ceramics store. No mismatch there.\n\nIn short, the only real blocker is the price field. Once that's corrected, the rest of the product info should be ready to use. If you'd like me to escalate the pricing issue to a human agent for a closer look, just say the word!",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 1.503309,
+  "cost_usd": 0.105232,
+  "created_at": "2026-10-02T09:56:56.145350+00:00",
+  "evaluated_case_runs": 7,
+  "git_commit": "03ca86d007259e08671f59ea0c6cb17d582f256e",
+  "input_tokens": 53156,
+  "median_latency_seconds": 3.9215,
+  "model": "glm-5.2",
+  "output_tokens": 7003,
+  "price_date": "2026-10-02",
+  "prompt_sha256_12": "2fec8afa5aa7",
+  "schema_version": 1,
+  "score": 0.0,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}
