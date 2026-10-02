@@ -1,5 +1,106 @@
 {
   "maximum_calls": 150,
-  "reservations": [],
-  "used_calls": 0
+  "reservations": [
+    {
+      "calls": 1,
+      "label": "gepa:e-002:1",
+      "reserved_at": "2026-10-02T16:07:48.537846+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-003:1",
+      "reserved_at": "2026-10-02T16:08:06.970581+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-004:1",
+      "reserved_at": "2026-10-02T16:08:13.093839+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-005:1",
+      "reserved_at": "2026-10-02T16:08:21.894445+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-006:1",
+      "reserved_at": "2026-10-02T16:08:27.948720+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-008:1",
+      "reserved_at": "2026-10-02T16:08:30.822716+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-009:1",
+      "reserved_at": "2026-10-02T16:08:42.795952+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-006:1",
+      "reserved_at": "2026-10-02T16:08:48.061845+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-003:1",
+      "reserved_at": "2026-10-02T16:08:59.661263+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-008:1",
+      "reserved_at": "2026-10-02T16:09:11.210855+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-006:1",
+      "reserved_at": "2026-10-02T16:09:41.533527+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-003:1",
+      "reserved_at": "2026-10-02T16:09:50.835752+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-008:1",
+      "reserved_at": "2026-10-02T16:09:57.004693+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-002:1",
+      "reserved_at": "2026-10-02T16:10:06.137463+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-003:1",
+      "reserved_at": "2026-10-02T16:10:13.848213+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-004:1",
+      "reserved_at": "2026-10-02T16:10:19.126779+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-005:1",
+      "reserved_at": "2026-10-02T16:10:28.573099+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-006:1",
+      "reserved_at": "2026-10-02T16:10:46.516773+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-008:1",
+      "reserved_at": "2026-10-02T16:10:48.562368+00:00"
+    },
+    {
+      "calls": 1,
+      "label": "gepa:e-009:1",
+      "reserved_at": "2026-10-02T16:10:56.446732+00:00"
+    }
+  ],
+  "used_calls": 20
 }

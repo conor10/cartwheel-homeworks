@@ -1,0 +1,55 @@
+{
+  "status": "completed; candidate not applied",
+  "command": "uv run --extra optimization python -u -m optimize.gepa_adapter --max-runs 20",
+  "evaluated_case_runs": 20,
+  "judge_evaluations_expected_from_case_membership": 10,
+  "reflection_proposals_observed": 1,
+  "models": {
+    "agent": "glm-5.2",
+    "judge": "gpt-4o-mini",
+    "reflection": "anthropic/claude-opus-4-6"
+  },
+  "fresh_search_baseline": {
+    "suite_passed": 1,
+    "suite_cases": 7,
+    "target_passed": 1,
+    "target_cases": 2
+  },
+  "gepa_candidate": {
+    "suite_passed": 3,
+    "suite_cases": 7,
+    "target_passed": 2,
+    "target_cases": 2,
+    "passed_case_ids": [
+      "e-006",
+      "e-008",
+      "e-009"
+    ]
+  },
+  "previous_manual_harness": {
+    "suite_passed": 3,
+    "suite_cases": 7,
+    "target_passed": 2,
+    "target_cases": 2
+  },
+  "prompt_changes": [
+    "Added focused response-style guidance",
+    "Added explicit account-change escalation instructions",
+    "Added explicit inconsistent-data escalation and no-guessing instructions"
+  ],
+  "review": {
+    "candidate_identifiers": "No evaluation case IDs or specific customer/order/product IDs in the generated prompt. Session template fields preserved.",
+    "preserved": "Existing policy-citation and refund-eligibility instructions remain; no authorization or tool implementation was changed by GEPA.",
+    "caution": "The new account/credential escalation wording should be considered alongside the existing refusal of payment-card and credential changes. Missing-data wording also needs review against ordinary customer clarification.",
+    "harness_limitation": "Current search retains the negative-price harness and its incidental-match escalation limitation; GEPA did not repair that code."
+  },
+  "limitations": [
+    "Matches the best earlier manual score; does not demonstrate superiority over that candidate.",
+    "Single evaluations with observed model variation; independent development rerun is still required before using the result for final selection.",
+    "Four response-detail cases continue to fail under the documented judge-input limitation.",
+    "GEPA feedback records checks and assertions rather than full replies/tool logs, limiting semantic review of the new executions.",
+    "Complete agent/judge/reflection cost is not reported by the supplied adapter."
+  ],
+  "budget_remaining": 130,
+  "next_step": "Review the candidate with the student, then approve a separate development rerun before final selection. Do not run held-out test cases before saving the final configuration."
+}
