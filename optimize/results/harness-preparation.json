@@ -1,0 +1,23 @@
+{
+  "candidate": "harness_negative_price",
+  "status": "prepared; paid evaluation pending",
+  "base": "Kept tool_data_escalation candidate",
+  "scope": "Successful catalogue results with numeric negative prices trigger named-tool choice for escalate_to_human. Existing tool executes and records the call normally. This is not a general detector for every possible record defect.",
+  "offline_checks": {
+    "sdk_loop": "Scripted model with normal SDK tool execution confirmed auto -> escalate_to_human -> auto -> auto for lookup, ticket creation, repeat lookup and reply.",
+    "boundaries": [
+      "Zero/positive prices do not trigger",
+      "Unsuccessful/malformed lookup outputs do not trigger",
+      "Different caller context clears stored observations",
+      "Failed ticket result is not marked successfully reported and adds truthful-failure guidance"
+    ],
+    "regressions": "28 tests passed: tests/test_cli.py tests/test_optimization.py",
+    "integrity": "System prompt hash, fixed split and grading file hashes unchanged"
+  },
+  "limits": [
+    "Forcing the next tool call relies on provider support for named tool choice; verify with the approved live batch.",
+    "Only product identifiers observed by this agent instance are tracked; no cross-session ticket lookup.",
+    "Successful ticket creation does not fix the catalogue data.",
+    "No new live model calls were made during preparation."
+  ]
+}

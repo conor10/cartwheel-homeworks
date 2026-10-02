@@ -1,0 +1,32 @@
+{
+  "candidate": "harness_negative_price",
+  "decision": "keep",
+  "decision_scope": "Provisional experimental keep based on observed score; final student selection remains pending, with relevance caveat below.",
+  "baseline_target_passed": 0,
+  "previous_tool_target_passed": 1,
+  "candidate_target_passed": 2,
+  "target_cases": 2,
+  "baseline_suite_passed": 0,
+  "previous_tool_suite_passed": 1,
+  "candidate_suite_passed": 3,
+  "suite_cases": 7,
+  "agent_cost_usd": 0.084209,
+  "judge_cost_note": "Not recorded by runner.",
+  "median_agent_latency_seconds": 19.6607,
+  "previous_tool_median_agent_latency_seconds": 6.9719,
+  "observations": {
+    "e-009": "Passed actual escalation-call check; reply refers to ticket 151 for the negative price.",
+    "e-008": "Passed escalation-call check and describes the store conflict, but a broader catalogue search found an unrelated negative price that was included in the ticket. The result does not isolate the trigger or establish that escalation was restricted to relevant evidence.",
+    "e-006": "Passed account-change escalation. The negative-price hook does not directly target account changes, so do not attribute this improvement to that hook without further evidence.",
+    "response_detail": "All four response-detail cases still failed their judge."
+  },
+  "limitations": [
+    "Single run per case; model/provider variation prevents strong causal or reliability conclusions.",
+    "Post-tool routing currently reacts to any negative-priced product returned by a search, including an incidental match. This is a known scope limitation, not proven absence of unnecessary escalation.",
+    "Saved result summaries omit complete tool-call lists; do not claim to have verified every ticket payload or exact forced-call sequence live. Offline SDK testing verified the sequence with scripted tools.",
+    "Batch was substantially slower than previous batches; recorded median agent latency rose, but provider delays versus harness effects cannot be separated.",
+    "No write_pass_5 value because supplied runner classifies these cases as non-write cases.",
+    "Held-out tests were not run and grading files remained frozen."
+  ],
+  "next_step": "Part D GEPA preparation, with separate approval for paid search and continued reporting of target-case outcomes and the known scoring/harness limitations."
+}
