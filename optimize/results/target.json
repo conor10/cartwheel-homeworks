@@ -1,0 +1,85 @@
+{
+  "failure_mode": "unresolved_data_not_escalated",
+  "source": "Human-reviewed HW4 findings retained alongside HW5/HW6 artifacts: analysis/report/part_e_proposals.json and analysis/report/review_summary.md",
+  "prevalence": null,
+  "prevalence_note": "Three human-supported positive findings in the 100-trace reviewed sample; per-mode absence labels are incomplete and sampling was targeted. This is not a measured population prevalence. No numeric prevalence is invented.",
+  "requirement": "ESC-5",
+  "example_trace_ids": [
+    "77b2d7c307707ace923a55e3596f1746",
+    "76c8e18fa4c2178b34ce3595aed9696b",
+    "9e69303d64cf7e2ef0b0f2f69feff344"
+  ],
+  "why_agent_can_change_it": "The agent can recognize unresolved contradictions or invalid required data and call escalate_to_human rather than choosing a field as authoritative, offering escalation without performing it, or continuing unproductive lookups. The three reviewed examples concern a store mismatch, a negative price, and a blank product title.",
+  "selection": {
+    "status": "student_approved",
+    "date": "2026-10-02",
+    "reason": "Prefer an actionable failure with direct tool-call checks over subjective response-detail scoring with missing request context.",
+    "handout_departure": "Chosen for measurement reliability, not as the highest-prevalence HW5 failure. The prevalence field remains null because no defensible rate is available."
+  },
+  "evidence": [
+    {
+      "scenario_id": "support-0199",
+      "trace_id": "77b2d7c307707ace923a55e3596f1746",
+      "observation": "Prior turn returned Rustic Pitcher price -$5. The selected follow-up warns it is invalid but only conditionally offers a ticket; neither turn opens one. Human note says make the negative price clear and escalate to a human.",
+      "span_ids": [
+        "ec794ac6c4d35d47",
+        "1752c77d2ddafe61"
+      ],
+      "human_annotation_ids": [
+        "9376dadf-8f64-42d1-bf71-d68e3b6b2d2a"
+      ],
+      "human_decision_ids": []
+    },
+    {
+      "scenario_id": "support-0187",
+      "trace_id": "76c8e18fa4c2178b34ce3595aed9696b",
+      "observation": "Product 553 is returned under store 14, while order 8003 records store 1. The conflict remains unresolved and no escalation is attempted before MaxTurnsExceeded. Latest human decision for hw4-part-d-02 explicitly says this mismatch should have been escalated at the start; its rejection concerns the unnecessary-tool-use explanation, not this mode.",
+      "span_ids": [
+        "20d2ea249280dbb4",
+        "f11ae52748070c5b",
+        "210fda5acea00eaf"
+      ],
+      "human_annotation_ids": [],
+      "human_decision_ids": [
+        "hw4-part-d-02"
+      ]
+    },
+    {
+      "scenario_id": "support-0201",
+      "trace_id": "9e69303d64cf7e2ef0b0f2f69feff344",
+      "observation": "The product 3 title is empty. The agent reports the blank title and ends without escalation. The human note explicitly says this error should be escalated to support for resolution.",
+      "span_ids": [
+        "4c91d6148848d0a9",
+        "c8ab11279351d034"
+      ],
+      "human_annotation_ids": [
+        "4857a025-3263-4212-a654-788f66107920"
+      ],
+      "human_decision_ids": []
+    }
+  ],
+  "development_case_ids": [
+    "e-008",
+    "e-009"
+  ],
+  "baseline": {
+    "result_file": "optimize/results/development-starting-glm-5.2-20261002-105611.json",
+    "target_passed": 0,
+    "target_cases": 2,
+    "suite_passed": 0,
+    "suite_cases": 7,
+    "model": "glm-5.2"
+  },
+  "measurement_limits": [
+    "The code check verifies that the escalation tool was called, not ticket quality or correctness of the entire response.",
+    "The existing suite does not provide a dedicated check against unnecessary escalation; manually review development replies and proposed changes for this behavior.",
+    "GEPA still optimizes the complete frozen development suite, including four response-detail cases with the documented judge-input limitation. Report target-case results separately without changing the scoring rules."
+  ],
+  "automated_method": "gepa",
+  "preserved": [
+    "Fixed split and search budget",
+    "Starting agent version and baseline",
+    "Evaluation cases, tests, and frozen judges"
+  ],
+  "next_step": "Part C: predict and evaluate one prompt, tool, and harness change separately. Obtain approval for each paid batch before execution."
+}
