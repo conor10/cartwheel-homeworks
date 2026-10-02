@@ -1,0 +1,23 @@
+{
+  "candidate": "prompt_data_escalation",
+  "decision": "revert",
+  "reason": "No observed improvement in either target case or the overall development score.",
+  "baseline_target_passed": 0,
+  "candidate_target_passed": 0,
+  "target_cases": 2,
+  "baseline_suite_passed": 0,
+  "candidate_suite_passed": 0,
+  "suite_cases": 7,
+  "agent_cost_usd": 0.099053,
+  "judge_cost_note": "Not recorded by runner.",
+  "observations": {
+    "e-008": "Acknowledged the store mismatch but treated the order store as authoritative and continued to policy advice; required escalation call absent.",
+    "e-009": "Identified the negative price but asked whether the user wanted escalation; required escalation call absent."
+  },
+  "limitations": [
+    "One run per case does not establish that prompt changes cannot help.",
+    "The four response-detail outcomes remain affected by the documented judging limitation.",
+    "The saved summaries do not include full tool-call lists and truncate replies at 2000 characters, so they cannot establish the absence of unnecessary escalation throughout the suite."
+  ],
+  "next_experiment": "Tool-description change at the point where the model chooses escalation; prepare separately from the reverted prompt change."
+}
