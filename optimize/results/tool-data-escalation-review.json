@@ -1,0 +1,26 @@
+{
+  "candidate": "tool_data_escalation",
+  "decision": "keep",
+  "decision_scope": "Provisional manual-experiment decision, not final configuration selection.",
+  "reason": "One observed target-case improvement and no observed pass-to-fail regressions against the starting baseline.",
+  "baseline_target_passed": 0,
+  "candidate_target_passed": 1,
+  "target_cases": 2,
+  "baseline_suite_passed": 0,
+  "candidate_suite_passed": 1,
+  "suite_cases": 7,
+  "agent_cost_usd": 0.092092,
+  "judge_cost_note": "Not recorded by runner.",
+  "observations": {
+    "e-008": "Passed the code check requiring an actual escalate_to_human call. The recorded reply acknowledges that conflicting records prevent a confident policy decision.",
+    "e-009": "Still failed the escalation-call check; reply identifies the negative price but merely offers escalation.",
+    "e-006": "Account-change escalation still fails; separate from the selected target."
+  },
+  "limitations": [
+    "One run per case; improvement may reflect model variation and needs later confirmation.",
+    "No write_pass_5 measurement: the supplied runner classifies these cases as expected_write=false.",
+    "Replies are truncated at 2000 characters and tool-call lists are absent from saved summaries; do not claim exhaustive verification of ticket quality or unnecessary escalation.",
+    "The four response-detail cases still fail their judge and retain the documented grading-input limitation."
+  ],
+  "next_experiment": "Harness-layer experiment; explicitly record whether it builds on this kept tool description to make the comparison interpretable."
+}
