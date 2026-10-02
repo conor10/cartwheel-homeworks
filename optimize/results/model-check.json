@@ -1,0 +1,22 @@
+{
+  "checked_on": "2026-10-02",
+  "command": "uv run python -m optimize.check_models",
+  "results": {
+    "gpt-5.5": {
+      "ok": true,
+      "case": "e-001",
+      "passed": false
+    },
+    "claude-opus-4-6": {
+      "ok": true,
+      "case": "e-001",
+      "passed": false
+    },
+    "glm-5.2": {
+      "ok": true,
+      "case": "e-001",
+      "passed": false
+    }
+  },
+  "note": "Compatibility succeeded for all three models. All three recorded passed=false on e-001; this output does not include the grader reasons or token usage."
+}
