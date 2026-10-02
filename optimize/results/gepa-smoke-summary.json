@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "command": "uv run --extra optimization python -u -m optimize.gepa_adapter --smoke",
+  "task_model": "glm-5.2",
+  "reflection_model": "anthropic/claude-opus-4-6",
+  "judge_model": "gpt-4o-mini",
+  "case_id": "e-002",
+  "evaluations": 7,
+  "proposals_observed": 1,
+  "accepted_new_candidates": 0,
+  "seed_score": 0.0,
+  "original_minibatch_scores": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "proposed_minibatch_scores": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "prompt_applied": false,
+  "automated_search_budget_used": 0,
+  "interpretation": "Agent evaluation, judging, reflection and rejection of a non-improving proposal completed. This one-case smoke test is infrastructure verification, not evidence of target-mode improvement.",
+  "cost_note": "The supplied smoke output does not report a complete agent/judge/reflection cost. No exact total is claimed.",
+  "warning": "Optional cloudpickle was absent; GEPA successfully used standard pickle checkpoints.",
+  "limitations": [
+    "Seven evaluations exceeded the nominal four-evaluation stopping target because GEPA checks the budget between steps; this was within the approved 4\u20138 estimate.",
+    "Smoke uses the first development case, a response-detail case with the known judging limitation.",
+    "Full search still requires separate approval."
+  ]
+}
