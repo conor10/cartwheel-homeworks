@@ -1,0 +1,23 @@
+diff --git a/agent/agent.py b/agent/agent.py
+index 4daefee..7ade83f 100644
+--- a/agent/agent.py
++++ b/agent/agent.py
+@@ -385,7 +385,17 @@ def issue_refund(
+ def escalate_to_human(
+     wrapper: RunContextWrapper[AuthContext], summary: str, context: str
+ ) -> dict[str, Any]:
+-    """Open a ticket for a human support agent when a case is above your authority."""
++    """Create a human support ticket for cases above your authority or unresolved
++    problems with required order or catalogue data. Use this tool when relevant
++    authorized lookups leave essential facts missing, invalid, or contradictory;
++    do not choose a conflicting record as authoritative or invent a correction.
++    For those unresolved data problems, call this tool before giving a definitive
++    answer or taking the affected action, rather than merely offering a ticket.
++    Include the observed problem and affected record identifiers in the context.
++    Reuse a successful ticket for the same issue. Ordinary ambiguity that the
++    customer can clarify does not require a ticket. Report creation only after
++    the tool returns a ticket_id successfully.
++    """
+     return _call(wrapper, escalate_to_human_logic, summary, context)
+ 
+ 
