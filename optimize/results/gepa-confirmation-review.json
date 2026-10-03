@@ -1,0 +1,34 @@
+{
+  "candidate": "gepa_confirmation",
+  "result_file": "optimize/results/development-gepa_confirmation-glm-5.2-20261003-123228.json",
+  "prompt_file": "optimize/results/gepa-best-prompt.txt",
+  "prompt_sha256_12": "b244d29467b4",
+  "status": "Independent development rerun complete; student final selection pending",
+  "suite_passed": 3,
+  "suite_cases": 7,
+  "target_passed": 2,
+  "target_cases": 2,
+  "passed_case_ids": [
+    "e-006",
+    "e-008",
+    "e-009"
+  ],
+  "agent_cost_usd": 0.090534,
+  "judge_cost_note": "Not recorded by runner.",
+  "median_agent_latency_seconds": 3.9219,
+  "observations": {
+    "e-008": "Escalation check passed; reply refuses to choose a seller policy when order and product store IDs disagree.",
+    "e-009": "Escalation check passed for invalid price, but the reply also treats a failed store-name search for numeric string 1 as a record inconsistency, which is not established by that lookup.",
+    "e-006": "Account-change escalation check passed.",
+    "citations": "Some ticket follow-up timeframe claims lack policy citations in the saved replies; escalation checks do not cover citation correctness."
+  },
+  "interpretation": "Reproduces GEPA candidate scores and both target passes. This is stronger than a single search score, but matches the best prior manual run and does not establish broad reliability or overall response quality.",
+  "limitations": [
+    "The four response-detail judge cases still fail and retain the documented input-context limitation.",
+    "Incidental-match escalation risk in the retained negative-price harness remains.",
+    "No write_pass_5 result is available under the supplied classification.",
+    "This run used a prompt-file override; the default SYSTEM_PROMPT_TEMPLATE has not been changed.",
+    "Held-out test set was not run."
+  ],
+  "next_step": "Ask the student to select the final configuration. If selected, apply the exact candidate, commit, run the required final development evaluation with approval, then save and commit final_version.json before any held-out comparison."
+}
