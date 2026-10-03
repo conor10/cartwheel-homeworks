@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "date": "2026-10-03",
+  "live_evaluation": {
+    "agent_case_runs": 12,
+    "judge_calls": 4,
+    "cases_per_configuration": 3,
+    "agent_cost_usd": 0.384393,
+    "judge_cost": "not recorded by runner"
+  },
+  "comparison": [
+    {
+      "configuration": 1,
+      "model": "gpt-5.5",
+      "agent_version": "starting",
+      "passed": 0,
+      "cases": 3,
+      "cost_per_100_conversations_usd": 6.835333
+    },
+    {
+      "configuration": 2,
+      "model": "claude-opus-4-6",
+      "agent_version": "starting",
+      "passed": 0,
+      "cases": 3,
+      "cost_per_100_conversations_usd": 3.926333
+    },
+    {
+      "configuration": 3,
+      "model": "glm-5.2",
+      "agent_version": "starting",
+      "passed": 0,
+      "cases": 3,
+      "cost_per_100_conversations_usd": 0.683413
+    },
+    {
+      "configuration": 4,
+      "model": "glm-5.2",
+      "agent_version": "final",
+      "passed": 2,
+      "cases": 3,
+      "cost_per_100_conversations_usd": 1.36802
+    }
+  ],
+  "finding": "Final GLM passed 2/3 versus 0/3 for starting GLM. Changing only the starting model did not improve these observed results. The final agent roughly doubled GLM cost per conversation.",
+  "final_case_results": {
+    "e-001": "failed response-detail judge",
+    "e-007": "passed account-change escalation check",
+    "e-010": "passed catalogue-data escalation check"
+  },
+  "limitations": [
+    "Only three cases and one trial per case; this does not establish general model superiority or reliable success rates.",
+    "e-001 was exposed during model compatibility checks before the fixed split; the test set was not wholly unseen.",
+    "The response-detail judge receives no original user question, limiting interpretation of its decisions.",
+    "The final e-010 reply reports an incidental negative-price product as well as the blank title. This is consistent with the retained harness triggering on negative price; the result does not isolate successful handling of blank titles.",
+    "Escalation checks establish the tool was called, not that all ticket content and reply claims are correct. Saved optimization results do not retain full tool-call details.",
+    "The final replies still omit policy citations, and e-001 makes an unsupported refund inference. Passing escalation checks does not imply full specification compliance.",
+    "write_pass_5 is unavailable because the supplied classifier does not treat these cases as expected-write cases."
+  ],
+  "offline_validation": [
+    "Recomputed pass counts and checked frontier scores and costs against saved results.",
+    "Validated fixed model selection, grading hash and split membership against saved versions.",
+    "Verified agent/agent.py matches the selected final commit."
+  ],
+  "post_test_agent_changes": false,
+  "remaining_student_deliverable": "Student interpretation and continuous video, including offline regeneration of a committed number."
+}

@@ -1,0 +1,96 @@
+{
+  "candidate": "starting-version-model-3",
+  "case_count": 3,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        3.9475
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "Let me search your orders for \"Midnight Hot Sauce\" to find that purchase and see what's going on with it.\nI found two orders matching \"Midnight Hot Sauce.\" Let me pull up the full details on both so I can identify which one is from Saltbox Pantry and give you a clear picture of what happened.\nI found your Midnight Hot Sauce order from **Saltbox Pantry**. Here's what I can see:\n\n- **Order ID:** 1387\n- **Product:** Midnight Hot Sauce\n- **Quantity:** 2\n- **Total:** $113.00\n- **Ordered on:** April 10, 2026\n- **Status:** Cancelled\n- **Shipped/Delivered:** Not applicable (the order was cancelled before shipping)\n\nSo it looks like this order was cancelled \u2014 it never shipped or was delivered. The cancellation could have been initiated by you, the store, or the system (for example, if the item went out of stock).\n\nWould you like me to help with anything further, such as reordering the sauce or looking into why the cancellation happened? If you'd like more detail than what I can see here, I can also escalate this to a human support agent who may be able to dig deeper.",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is inquiring about the status of their order for Midnight Hot Sauce. The assistant provides the order details, including the order ID, product, quantity, total, order date, and status, which are all relevant to the user's request. However, the explanation about the cancellation reasons ('the cancellation could have been initiated by you, the store, or the system') adds unnecessary detail that does not directly address the user's request for the order status. This passage could be removed without losing the essential information about the order's cancellation status.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-007",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.6079
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I understand \u2014 you're looking to update your contact details at the account level, not tied to any particular order. Unfortunately, that's still outside what I'm able to do. I don't have the ability to modify account profile information, notification preferences, or contact details.\n\nIf you'd like, I can escalate this to a human support agent who can make those changes for you. Would you like me to go ahead and do that?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.0843
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I'll search the product catalog for that listing. Let me look up \"Blue Heron Ceramics Portable Tray\" to find the exact title.\nThe catalog search returned one matching product (product ID 3) in your store, priced at $9.75 \u2014 but the title field came back blank. That's unusual and might indicate a data issue with that listing.\n\nCould you double-check the listing directly in your merchant dashboard? If the title is missing there too, it may be worth fixing the product record. If you'd like, I can escalate this to our support team for further investigation.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.683413,
+  "cost_usd": 0.020502,
+  "created_at": "2026-10-03T11:44:06.522694+00:00",
+  "evaluated_case_runs": 3,
+  "git_commit": "03ca86d007259e08671f59ea0c6cb17d582f256e",
+  "input_tokens": 11222,
+  "median_latency_seconds": 2.0843,
+  "model": "glm-5.2",
+  "output_tokens": 1089,
+  "price_date": "2026-10-02",
+  "prompt_sha256_12": "2fec8afa5aa7",
+  "schema_version": 1,
+  "score": 0.0,
+  "split": "test",
+  "test_plan_sha256": "f2edc3ec3ab2d815d848dab557bd65f72ce7936f9d654b20e2c379c781f47322",
+  "write_pass_5": null
+}

@@ -1,0 +1,12 @@
+{
+  "completed_at": "2026-10-03T11:44:23.360799+00:00",
+  "completed_configurations": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "frontier_csv": "/Users/Conor/code/ai/cartwheel-homeworks/optimize/results/frontier.csv",
+  "plan_sha256": "f2edc3ec3ab2d815d848dab557bd65f72ce7936f9d654b20e2c379c781f47322",
+  "started_at": "2026-10-03T11:42:09.117455+00:00"
+}

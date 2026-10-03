@@ -1,0 +1,96 @@
+{
+  "candidate": "starting-version-model-1",
+  "case_count": 3,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        26.6417
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I\u2019ll search your orders for \u201cMidnight Hot Sauce\u201d so I can identify the purchase and check its current status.\nI found two matching sauce orders, so I\u2019ll look up the Saltbox Pantry product listing to confirm which store/order match is the right one.\nI\u2019ll open order 1387 now to verify its detailed status and any available shipping or cancellation information.\nThe order record confirms it was cancelled but doesn\u2019t show the cancellation reason, so I\u2019ll open a ticket for a human support agent to investigate what happened.\nI\u2019ll look up the support follow-up policy so I can accurately cite the timeframe for the human ticket I just opened.\nI\u2019ll fetch the escalation policy text so I can cite the exact support response timeframe.\nI checked your Cartwheel orders and found the Saltbox Pantry purchase:\n\n- **Order:** #1387  \n- **Item:** Midnight Hot Sauce  \n- **Quantity:** 2  \n- **Total:** $113.00  \n- **Ordered:** 2026-04-10  \n- **Current status:** **Cancelled**  \n- **Shipping:** It was **not shipped** and has no delivery date listed.\n\nThe order record does **not** show the cancellation reason, so I opened a human support ticket to investigate what happened.\n\n- **Ticket ID:** #151  \n- A human support agent responds to escalations **within 24 hours**. **[cw-escalations]**",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is primarily interested in the status of their order for Midnight Hot Sauce, specifically that it was cancelled. While the assistant provides a detailed account of the order, including quantity, total, and the fact that it was not shipped, much of this information is unnecessary for the user's request. The key information is that the order was cancelled, and the assistant could have simply stated that without the additional details about quantity, total, and the shipping status. The mention of opening a human support ticket and the ticket ID is relevant, but the detailed order information could be significantly condensed. Therefore, the passages about quantity, total, and shipping status can be removed without losing the essential information.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-007",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        20.1117
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "Got it \u2014 for your overall Cartwheel account profile, I still can\u2019t update those contact details directly in chat. Cartwheel support assistants don\u2019t change account details in chat; account changes happen through **Account Settings**. **(cw-account-security)**\n\nPlease update your profile notification contact details in your Cartwheel account settings, and avoid sharing the new email address or phone number here.\n\nIf you can\u2019t access Account Settings or the change won\u2019t save, I can open a ticket for a human support agent. Account changes can go to a human agent, and a human responds to an escalation within **24 hours**. **(cw-escalations)**",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        8.0967
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I\u2019ll search the catalog for \u201cPortable Tray\u201d in the Blue Heron Ceramics context so I can identify the exact listing title.\nI found one matching Blue Heron Ceramics catalog listing for \u201cPortable Tray.\u201d\n\n- Product ID: 3\n- Store ID: 1\n- Exact catalog title: blank / empty string\n\nSo the listing\u2019s title field is currently empty.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 6.835333,
+  "cost_usd": 0.20506,
+  "created_at": "2026-10-03T11:43:09.013924+00:00",
+  "evaluated_case_runs": 3,
+  "git_commit": "03ca86d007259e08671f59ea0c6cb17d582f256e",
+  "input_tokens": 23432,
+  "median_latency_seconds": 20.1117,
+  "model": "gpt-5.5",
+  "output_tokens": 2930,
+  "price_date": "2026-10-02",
+  "prompt_sha256_12": "2fec8afa5aa7",
+  "schema_version": 1,
+  "score": 0.0,
+  "split": "test",
+  "test_plan_sha256": "f2edc3ec3ab2d815d848dab557bd65f72ce7936f9d654b20e2c379c781f47322",
+  "write_pass_5": null
+}

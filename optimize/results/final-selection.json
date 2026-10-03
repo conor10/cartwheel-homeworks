@@ -26,8 +26,8 @@
     "The test-set compatibility case was exposed before splitting; preserve and disclose this rather than reshuffle.",
     "No write_pass_5 estimate is available under the supplied expected-write classification."
   ],
-  "part_f_comparison_run": false,
-  "prior_test_exposure": "e-001 compatibility pass/fail was seen before the fixed split; no Part F results have been inspected.",
+  "part_f_comparison_run": true,
+  "prior_test_exposure": "e-001 compatibility pass/fail was seen before the fixed split. The approved Part F comparison is now complete; no subsequent agent changes were made.",
   "final_version_file": "optimize/state/final_version.json",
   "final_development_result": "optimize/results/development-final-glm-5.2-20261003-123815.json",
   "final_development_summary": {
@@ -37,5 +37,6 @@
     "suite_cases": 7,
     "agent_cost_usd": 0.110563,
     "judge_cost": "not recorded by runner"
-  }
+  },
+  "part_f_review": "optimize/results/frontier-review.json"
 }
