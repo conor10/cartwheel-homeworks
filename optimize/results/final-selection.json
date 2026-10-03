@@ -1,0 +1,31 @@
+{
+  "status": "student_selected; final development run and version lock pending",
+  "selected_on": "2026-10-03",
+  "selection_source": "Student confirmed GEPA prompt plus retained tool and harness changes in chat.",
+  "prompt_source": "optimize/results/gepa-best-prompt.txt",
+  "layers": [
+    "prompt",
+    "tool",
+    "harness"
+  ],
+  "methods": [
+    "manual",
+    "gepa"
+  ],
+  "development_model": "glm-5.2",
+  "rationale": "Both target escalation cases passed during GEPA candidate evaluation and an independent development rerun; this addresses the chosen failure mode. Overall 3/7 matches the strongest prior manual result, so this is not a claim of superiority over every manual candidate.",
+  "evidence": [
+    "optimize/results/gepa-search-review.json",
+    "optimize/results/development-gepa_confirmation-glm-5.2-20261003-123228.json",
+    "optimize/results/gepa-confirmation-review.json"
+  ],
+  "known_limits": [
+    "Response-detail judging lacks the original request; overall score has a known measurement limitation.",
+    "Negative-price routing can react to incidental catalogue matches.",
+    "Some replies omit required citations or overinterpret a store-name lookup error.",
+    "The test-set compatibility case was exposed before splitting; preserve and disclose this rather than reshuffle.",
+    "No write_pass_5 estimate is available under the supplied expected-write classification."
+  ],
+  "part_f_comparison_run": false,
+  "prior_test_exposure": "e-001 compatibility pass/fail was seen before the fixed split; no Part F results have been inspected."
+}
