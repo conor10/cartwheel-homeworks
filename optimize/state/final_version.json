@@ -1,0 +1,133 @@
+{
+  "changed_layers": [
+    "prompt",
+    "tool",
+    "harness"
+  ],
+  "comparison_models": [
+    "gpt-5.5",
+    "claude-opus-4-6",
+    "glm-5.2"
+  ],
+  "created_at": "2026-10-03T11:39:28.460128+00:00",
+  "development_model": "glm-5.2",
+  "development_result": "optimize/results/development-final-glm-5.2-20261003-123815.json",
+  "development_score": 0.428571,
+  "git_commit": "eb232c66378b1e9061c2bf611880bef65e5b379c",
+  "grader_sha256": "cd1019aa8ada1e3c979064b30b861140a70a99d28b00ef9cf6326c4c78ea672b",
+  "kind": "final",
+  "method": [
+    "manual",
+    "gepa"
+  ],
+  "model_selection_sha256": "f727a44eb548a2cb0a308d649e47a51fa23dd41066aff68f1f51f0241550bcb6",
+  "prompt_sha256_12": "b244d29467b4",
+  "search_budget": {
+    "maximum_calls": 150,
+    "reservations": [
+      {
+        "calls": 1,
+        "label": "gepa:e-002:1",
+        "reserved_at": "2026-10-02T16:07:48.537846+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-003:1",
+        "reserved_at": "2026-10-02T16:08:06.970581+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-004:1",
+        "reserved_at": "2026-10-02T16:08:13.093839+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-005:1",
+        "reserved_at": "2026-10-02T16:08:21.894445+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-006:1",
+        "reserved_at": "2026-10-02T16:08:27.948720+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-008:1",
+        "reserved_at": "2026-10-02T16:08:30.822716+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-009:1",
+        "reserved_at": "2026-10-02T16:08:42.795952+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-006:1",
+        "reserved_at": "2026-10-02T16:08:48.061845+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-003:1",
+        "reserved_at": "2026-10-02T16:08:59.661263+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-008:1",
+        "reserved_at": "2026-10-02T16:09:11.210855+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-006:1",
+        "reserved_at": "2026-10-02T16:09:41.533527+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-003:1",
+        "reserved_at": "2026-10-02T16:09:50.835752+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-008:1",
+        "reserved_at": "2026-10-02T16:09:57.004693+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-002:1",
+        "reserved_at": "2026-10-02T16:10:06.137463+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-003:1",
+        "reserved_at": "2026-10-02T16:10:13.848213+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-004:1",
+        "reserved_at": "2026-10-02T16:10:19.126779+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-005:1",
+        "reserved_at": "2026-10-02T16:10:28.573099+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-006:1",
+        "reserved_at": "2026-10-02T16:10:46.516773+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-008:1",
+        "reserved_at": "2026-10-02T16:10:48.562368+00:00"
+      },
+      {
+        "calls": 1,
+        "label": "gepa:e-009:1",
+        "reserved_at": "2026-10-02T16:10:56.446732+00:00"
+      }
+    ],
+    "used_calls": 20
+  },
+  "split_membership_sha256": "e662454b2768a1b70d50230596fda2d85c074a06af2e140351dca098fe9115ea",
+  "write_pass_5": null
+}

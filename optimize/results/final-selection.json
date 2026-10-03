@@ -1,5 +1,5 @@
 {
-  "status": "student_selected; final development run and version lock pending",
+  "status": "student_selected; final development run completed and final version saved",
   "selected_on": "2026-10-03",
   "selection_source": "Student confirmed GEPA prompt plus retained tool and harness changes in chat.",
   "prompt_source": "optimize/results/gepa-best-prompt.txt",
@@ -27,5 +27,15 @@
     "No write_pass_5 estimate is available under the supplied expected-write classification."
   ],
   "part_f_comparison_run": false,
-  "prior_test_exposure": "e-001 compatibility pass/fail was seen before the fixed split; no Part F results have been inspected."
+  "prior_test_exposure": "e-001 compatibility pass/fail was seen before the fixed split; no Part F results have been inspected.",
+  "final_version_file": "optimize/state/final_version.json",
+  "final_development_result": "optimize/results/development-final-glm-5.2-20261003-123815.json",
+  "final_development_summary": {
+    "target_passed": 2,
+    "target_cases": 2,
+    "suite_passed": 3,
+    "suite_cases": 7,
+    "agent_cost_usd": 0.110563,
+    "judge_cost": "not recorded by runner"
+  }
 }
