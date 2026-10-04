@@ -24,3 +24,7 @@ scenarios/demo_pilot_gt.json
 
 # Local evaluator process locks
 analysis/state/comparisons/*.lock
+
+# Local GEPA resume checkpoints; readable experiment records stay tracked.
+optimize/results/gepa-smoke/gepa_state.bin
+optimize/results/gepa-workspace/gepa_state.bin
