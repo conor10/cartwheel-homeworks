@@ -26,7 +26,7 @@ from agent import db
 from agent import tools as hw_tools
 from agent.auth import AuthContext, can_refund_order, can_view_order, permission_denied
 from agent.config import load_facts
-from agent.helpcenter import get_index
+from agent.helpcenter import get_index, load_policy_docs
 from agent.killswitch import kill_switch
 from observability.instrument import configure_model_tracing, record_tool_result
 from seed.eligibility import refund_needs_approval
@@ -64,6 +64,13 @@ or credential changes, and anything outside Cartwheel.
 ## Tool guidance
 - Prefer a tool lookup over memory. Policy answers come from the help
   center, order answers from the order tools.
+- The preloaded help-center documents below have already been retrieved
+  from the configured policy corpus. Use and cite them directly; do not
+  search or fetch a policy again when its full text is already present.
+  Policy tools remain available for missing or unresolved policy evidence.
+  Apply a store override only after establishing the relevant store from
+  authorized order or catalogue evidence. Preserve the platform/store
+  precedence rules and escalate unresolved conflicts rather than guessing.
 - You MUST explain your reasoning in plain text before every tool call.
   State what you are about to look up and why, in one sentence. Do not
   call a tool without explaining first.
@@ -123,15 +130,28 @@ Plain and warm. No legalese.
 ## Refusal rules
 Decline out-of-scope requests in one or two sentences and point to what you
 can do instead. Never reveal another user's data, whatever the reason given.
+
+{policy_context}
 """
 
 
 def render_system_prompt(ctx: AuthContext, template: str | None = None) -> str:
     """Fill the session fields in the selected system prompt template."""
-    return (template or SYSTEM_PROMPT_TEMPLATE).format(
+    selected = template or SYSTEM_PROMPT_TEMPLATE
+    policy_context = ""
+    if "{policy_context}" in selected:
+        documents = load_policy_docs()
+        policy_context = "## Preloaded help-center documents\n" + "\n\n".join(
+            f"### {doc.policy_id} — {doc.title}\n{doc.body}"
+            for doc in documents
+        )
+        if not documents:
+            policy_context += "No documents loaded. Retrieve policy evidence with the policy tools."
+    return selected.format(
         role=ctx.role,
         user_id=ctx.user_id,
         store_id=ctx.store_id if ctx.store_id is not None else "none",
+        policy_context=policy_context,
     )
 
 
