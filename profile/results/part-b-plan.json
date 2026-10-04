@@ -11,7 +11,7 @@
     0.1,
     0.3
   ],
-  "decision": "pending student review",
+  "decision": "revert",
   "measurement_limits": [
     "Tokens can increase on requests that do not need policies.",
     "Model variability and the frozen response-detail judge limit conclusions from one seven-case run.",
@@ -37,5 +37,7 @@
     "data/policies/store-northwind-books-policy.md": "ba4fabe0263f8c68007f819518ec521e2332741eb9245eb8f8e7176bedec5089",
     "data/policies/store-saltbox-pantry-policy.md": "a4e0e1fe397f404ce844688e46d80f9273574b5ad4e20d386164c0e034580480",
     "data/policies/store-second-stitch-apparel-policy.md": "19af2ecf4be20c8b6701eb3b7e39e95682159cf4d24cbe04c18c21342f7923ea"
-  }
+  },
+  "decision_source": "Student explicitly chose to revert because cost increased.",
+  "decision_reason": "Observed cost per 100 conversations increased by 7.96% with unchanged 3/7 development score. Student did not consider the small latency improvement sufficient."
 }

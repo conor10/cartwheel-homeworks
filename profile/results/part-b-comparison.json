@@ -52,6 +52,8 @@
   "live_judge_calls": 4,
   "agent_cost_usd": 0.119369,
   "judge_cost": "Not recorded by supplied runner.",
-  "decision": "pending student review",
-  "caution": "One seven-case run; no evidence of fewer tool calls is available in the saved aggregate result. Scores retain the known response-detail judge limitations."
+  "decision": "revert",
+  "caution": "One seven-case run; no evidence of fewer tool calls is available in the saved aggregate result. Scores retain the known response-detail judge limitations.",
+  "decision_source": "Student explicitly chose to revert because cost increased.",
+  "decision_reason": "Observed cost per 100 conversations increased by 7.96% with unchanged 3/7 development score. Student did not consider the small latency improvement sufficient."
 }
