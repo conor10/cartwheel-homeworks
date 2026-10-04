@@ -1,0 +1,188 @@
+{
+  "cached_fraction": 0.61241,
+  "cached_input_tokens": 43840,
+  "candidate": "fewer-tokens",
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "e-002",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        6.5575
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "Let me look up your order for the Sturdy Pitcher from Juniper Home Goods.\nThe search returned two orders matching \"Sturdy Pitcher.\" Let me get the full details on both to identify which one is your Juniper Home Goods order.\nHere's what I found for your Sturdy Pitcher purchase from Juniper Home Goods:\n\n**Order #9060**\n- **Status:** Cancelled\n- **Ordered:** March 20, 2026\n- **Quantity:** 2\n- **Total:** $290.00\n- **Shipped:** Never\n- **Delivered:** Never\n- **Refund eligible:** No\n\nThe order was cancelled before it shipped, so no items were sent. Since it was cancelled, it is no longer eligible for a refund through the return process \u2014 cancellations and returns are separate processes (cw-cancellations, cw-returns).\n\nIs there anything specific about this order you'd like help with?",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requested details about their order for the Sturdy Pitcher. The assistant provides the order status, quantity, total, and relevant dates, which are useful. However, the details about the order being cancelled, the refund eligibility, and the explanation about cancellations and returns are excessive given that the user only asked for order details. Specifically, the phrases 'the order was cancelled before it shipped' and 'it is no longer eligible for a refund through the return process' could be removed without losing the essential information about the order itself. These details do not directly address the user's request for order information.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-003",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        2.4897
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for the Modern Headlamp so I can pull up the latest status for you.\nHere's the full timeline for your Modern Headlamp order (#1871) from Meridian Cycles:\n\n1. **Ordered:** April 6, 2025\n2. **Shipped:** April 8, 2025\n3. **Delivered:** April 15, 2025\n4. **Status:** Refunded\n\nIt looks like this order has already been refunded. If you weren't expecting a refund or have questions about it, let me know and I can dig further!",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requests the latest status of their order for the Modern Headlamp. The assistant provides the order timeline, including the ordered, shipped, and delivered dates, along with the status of the order being refunded. However, the details about the ordered, shipped, and delivered dates are unnecessary since the user only needs to know the current status, which is already provided as 'Refunded.' This information can be removed without losing the answer to the user's request.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        11.1008
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for a \"Signature Daypack\" to find the relevant order and its delivery details.\nI found several \"Signature Daypack\" orders, but I need to identify which one is from Meridian Cycles. Let me fetch the full details of each to find the right store.\nI found two Signature Daypack orders from Meridian Cycles. Here are the delivery details for each:\n\n**Order #4366** \u2014 $41.75, delivered\n- Ordered: March 13, 2026\n- Shipped: March 14, 2026\n- Delivered: March 18, 2026\n\n**Order #7438** \u2014 $50.75, delivered\n- Ordered: March 4, 2025\n- Shipped: March 7, 2025\n- Delivered: March 10, 2025\n\nBoth orders show as delivered. Is there a specific one you'd like to know more about?",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is trying to identify a specific order for the 'Signature Daypack' from Meridian Cycles. The assistant provides details for two orders, including their prices, order dates, shipping dates, and delivery dates. However, the user only needs to know which order to inquire about further. The detailed delivery information for both orders can be seen as excessive since the user did not request this level of detail. The assistant could have simply asked which order the user wanted to know more about without listing all the details for both orders.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-005",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        2.5861
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I'll search your orders for the Portable Level to check its shipping status.\nThe search returned two possible orders. I need to confirm which one is from Copperline Tools, so let me look up both orders and also search the product catalog for the Portable Level.\nYes, your Portable Level from Copperline Tools has left the store! Here are the details:\n\n- **Order ID:** 2476\n- **Status:** Shipped\n- **Ordered:** June 27, 2026\n- **Shipped:** June 28, 2026\n\nPer Cartwheel's shipping policy, standard delivery takes up to 7 days in transit after shipment, so you can expect it by around July 5, 2026. Tracking is available on your order page (cw-shipping).",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requests the shipping status of the Portable Level. The assistant provides the order ID, status, and relevant dates, which are necessary details. However, the mention of the standard delivery timeframe and the tracking availability could be considered unnecessary since the user only asked for the shipping status. Specifically, the phrase 'Per Cartwheel's shipping policy, standard delivery takes up to 7 days in transit after shipment, so you can expect it by around July 5, 2026' can be removed without losing the core answer to the user's request.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        2.0572
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Absolutely \u2014 understood! This is purely an account profile update, and that's exactly why it needs a human agent. Ticket #151 is already in place for that change, and someone will reach out within 24 hours. No further action needed on your end!",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.3429
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll look up your order for \"Portable Jam Trio\" and also search the product catalog for it, so we can cross-check the store and item details.\nI found a data inconsistency that I can't resolve, so let me explain what I see and then escalate for human review:\n\n- **Your order (Order #8003)** lists the Portable Jam Trio under **store_id 1**, delivered 2026-04-08.\n- **The product catalog** lists the same Portable Jam Trio (product_id 553) under **store_id 14**.\n- You mention **Blue Heron Ceramics**, which doesn't match the store IDs I see on either the order or the listing, and I don't have a stored policy for that store.\n\nBecause the store on the order doesn't match the store on the product listing, I can't confidently determine which store's return policy applies to your purchase. I'm escalating this to a human agent to sort out the discrepancy.\nA human agent will look into this and follow up with you within 24 hours (Ticket #151). Once they determine which store is correct for your order, the applicable return policy will be clear. If you'd like, I can help with anything else in the meantime.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-009",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.0588
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Here are the details from the catalog result for **Rustic Pitcher** that need clarification:\n\n1. **Invalid price** \u2014 The catalog returned a price of **\u2212$5.00**, which is clearly a data error. This has already been escalated under ticket **#151**.\n\n2. **Store name mismatch** \u2014 You mentioned \"Blue Heron Ceramics,\" but the product record only shows **store_id 1** with no store name attached. I don't have a store-name mapping to confirm that store_id 1 is indeed \"Blue Heron Ceramics,\" and \"Blue Heron Ceramics\" doesn't appear in any of the available store policy pages. If the store name is incorrect or the product landed on the wrong store, that would also need human review.\n\nUntil the price (and potentially the store association) is corrected, I wouldn't rely on this catalog entry. Would you like me to add the store-name concern to the existing ticket?",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 1.705274,
+  "cost_usd": 0.119369,
+  "created_at": "2026-10-04T13:40:31.809668+00:00",
+  "evaluated_case_runs": 7,
+  "git_commit": "fb70089a19581b11c892ab0f5ee7263a8c3bea89",
+  "input_tokens": 71586,
+  "median_latency_seconds": 4.0588,
+  "model": "glm-5.2",
+  "output_tokens": 4352,
+  "price_date": "2026-10-02",
+  "prompt_sha256_12": "23a65fdac10c",
+  "schema_version": 1,
+  "score": 0.428571,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}
