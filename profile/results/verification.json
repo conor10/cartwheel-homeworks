@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Offline regeneration produces byte-identical costs.csv.",
+    "Customer count, tokens and costs independently matched to unique source generations.",
+    "Collector and aggregator assert unique records and total counts."
+  ],
+  "live_model_calls": 0,
+  "customer_trace_count": 322,
+  "retained_model_call_count": 1483,
+  "limitations_file": "profile/results/audit-method.json"
+}

@@ -1,0 +1,41 @@
+{
+  "source_sha256": {
+    "traces/support_traces.json": "4248876d34e810c59c31bd2af8ef506f4a244084fd4ad35b598e32923aad1e27",
+    "analysis/state/hw5_trace_inputs.json": "0d439e18f63330f62dc8e828923001c6e10cb222a144d98d22713a7892097bcb",
+    "analysis/state/judges/irrelevant_response_detail-v0.json": "907c4bdfec340d14923133330dc4b609978b845a439ca4d661c070054b2af840",
+    "analysis/state/judges/irrelevant_response_detail-v1.json": "14456f2067a2b2d47df45c61b60798c26d2d4175b37325870ca317109f5d66be",
+    "analysis/state/judges/irrelevant_response_detail-v2.json": "b33a3b366c88b2791c78d7eb14a8ca639bb23bdafd6ffce1daa6ef76ef94eb76",
+    "analysis/state/comparisons/gpt55-frozen-v2-test.json": "6b7a93d93127c1a4d14bfa83ce7181c781d1298bb948053d66d6ff08e956a453",
+    "analysis/state/comparisons/jev-41cd69cdecadedd0.json": "2138f3d01adfc4654892a0139e0136ddc846b636bd50cf6cd7010020c077739a",
+    "analysis/state/comparisons/jev-5086396eacb24f35.json": "c83e11eda95751a5d45223526cd271dcf0cac7a0e285b3979d51a68ff220a7d1",
+    "analysis/state/comparisons/jev-88a1bd3a6b1e269d.json": "c90e4e99f06e44f550a11af7c12a7fd43d9751bcd5bcaba018edd756c8e8494e",
+    "analysis/state/comparisons/jev-f5f874d49235b187.json": "309ef4f43cf10fcb81477c9865461cbada611fdb4f0f667119d275527e5cae53",
+    ".harbor/hw7/github-verification/monitoring/24945883c8e96e2d71a3a932e0cc58bcb09d9b78d1ad490d44d06f715c8f416f/verdicts.json": "1ab9d1b252d9edfab15e6ff220d3bea471622b17aab9e853e55dc3076519316f",
+    ".harbor/hw7/github-verification/monitoring/24945883c8e96e2d71a3a932e0cc58bcb09d9b78d1ad490d44d06f715c8f416f/plan.json": "6c3e69eacf1ea627a66097a7f4ff8f52d0165f1a21e0316f6ce44675414e83d2",
+    ".harbor/hw7/github-verification/monitoring/849de27c06177f6b18f2f45657635bdb37e6cf27818313ade276c66cdc22d30d/verdicts.json": "9e93d2534932241cfcde99a3ea559d8847edf263f10695bb85e4ca7fe642bf9d",
+    ".harbor/hw7/github-verification/monitoring/849de27c06177f6b18f2f45657635bdb37e6cf27818313ade276c66cdc22d30d/plan.json": "3c598464c7d735b2a3520690c6163cd0a39a206cd0373644666bf39f9b74b20e",
+    ".harbor/hw7/github-verification/monitoring/b5dd33168c135d0dc8adbe194b39c4c1fa2809df911c243c48720c37a09f0769/verdicts.json": "f0e70659707db46889941ce8bda7554d50e74e4545826e703af72bb80d2447fa",
+    ".harbor/hw7/github-verification/monitoring/b5dd33168c135d0dc8adbe194b39c4c1fa2809df911c243c48720c37a09f0769/plan.json": "9954b01efb5c39741781066979f6928d306e428ac4a15e97bb8387ee371f1080",
+    ".harbor/hw7/monitoring/24945883c8e96e2d71a3a932e0cc58bcb09d9b78d1ad490d44d06f715c8f416f/verdicts.json": "1ab9d1b252d9edfab15e6ff220d3bea471622b17aab9e853e55dc3076519316f",
+    ".harbor/hw7/monitoring/24945883c8e96e2d71a3a932e0cc58bcb09d9b78d1ad490d44d06f715c8f416f/plan.json": "6c3e69eacf1ea627a66097a7f4ff8f52d0165f1a21e0316f6ce44675414e83d2",
+    ".harbor/hw7/monitoring/849de27c06177f6b18f2f45657635bdb37e6cf27818313ade276c66cdc22d30d/verdicts.json": "9e93d2534932241cfcde99a3ea559d8847edf263f10695bb85e4ca7fe642bf9d",
+    ".harbor/hw7/monitoring/849de27c06177f6b18f2f45657635bdb37e6cf27818313ade276c66cdc22d30d/plan.json": "3c598464c7d735b2a3520690c6163cd0a39a206cd0373644666bf39f9b74b20e",
+    ".harbor/hw7/monitoring/b5dd33168c135d0dc8adbe194b39c4c1fa2809df911c243c48720c37a09f0769/verdicts.json": "f0e70659707db46889941ce8bda7554d50e74e4545826e703af72bb80d2447fa",
+    ".harbor/hw7/monitoring/b5dd33168c135d0dc8adbe194b39c4c1fa2809df911c243c48720c37a09f0769/plan.json": "9954b01efb5c39741781066979f6928d306e428ac4a15e97bb8387ee371f1080"
+  },
+  "scope": "HW3 exported customer generations; retained HW5 real judge variants/comparisons; completed HW7 local monitoring verdicts.",
+  "customer_attribution": "Application call site server/app.py Runner.run; each SDK generation is one call, not one conversation.",
+  "aggregation": "costs.csv has one row per call site; costs-by-model.csv preserves model-specific breakdowns.",
+  "judge_estimation": "ceil(character count / 4) for reconstructed visible prompt and reply; no claim of exact tokenization. HW7 critiques absent, so use median estimated HW5 GPT-4o-mini output length.",
+  "hw7_output_tokens_assumed_per_call": 176,
+  "deduplication": "Customer observation ID; HW5 prompt/config identity plus trace ID; HW7 judge/model/prompt and exact evidence, including overlapping random/risk selections and copied exports.",
+  "limitations": [
+    "Retained evidence audit, not a complete provider invoice. Missing or overwritten retries/runs cannot be recovered.",
+    "Judge estimates exclude unknown DocETL formatting, hidden reasoning, cache discounts, and retries; expensive GPT-5.5 judge output may be underestimated.",
+    "HW7 plans without completed verdict records are excluded; workflow reports four new evaluations whose detailed verdict artifacts are not retained here.",
+    "Starter unsupported_policy_claim store-XXXX predictions are demo/reference data and excluded from paid usage.",
+    "HW8 evaluation costs are not mixed into the HW3/HW5/HW7 call-site audit.",
+    "Customer costs use exported Langfuse calculated costs including cache discounts. Judge costs use reference list prices, not historical invoices.",
+    "Default regeneration uses the portable token ledger. --collect needs ignored local HW7 artifacts, which are not copied into the repository."
+  ]
+}

@@ -1,0 +1,6 @@
+cost_category,call_site,purpose,model,calls,input_tokens,output_tokens,cost_usd
+customer_conversation,server/app.py:201,HW3 support agent; recorded API tokens and Langfuse costs including cached input,gpt-5.5-2026-04-23,1124,2105378,283763,16.150564
+judge,analysis/helpers/scale.py:259,"HW5 judge runs; ESTIMATED tokens from saved prompt, evidence and critique",gpt-4o-mini,132,557963,24149,0.098184
+judge,analysis/helpers/scale.py:259,"HW5 judge runs; ESTIMATED tokens from saved prompt, evidence and critique",gpt-5.5-2026-04-23,33,140003,4850,0.845515
+judge,analysis/run_jev.py:57,"HW5 Jev comparison; recorded API tokens, estimated list-price cost",jev-1.13.0,132,629203,4488,0.026427
+judge,monitoring/run_judges.py:127,HW7 monitoring; ESTIMATED input tokens; output estimated from HW5 median,gpt-4o-mini,62,274964,10912,0.047792
