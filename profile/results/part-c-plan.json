@@ -22,5 +22,7 @@
     "Single small sample; latency, outputs and judge decisions can vary.",
     "No guaranteed savings or hard spending cap."
   ],
-  "decision": "pending student review"
+  "decision": "keep",
+  "decision_source": "Student approved keeping the reordered prompt and proceeding to Part D planning.",
+  "decision_reason": "Development score unchanged at 3/7, satisfying the handout keep rule. Observed cost fell 1.64%, but cached fraction decreased; no demonstrated caching benefit."
 }
