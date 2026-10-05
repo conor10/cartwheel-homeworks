@@ -1,0 +1,188 @@
+{
+  "cached_fraction": 0.209383,
+  "cached_input_tokens": 9216,
+  "candidate": "cache-after",
+  "case_count": 7,
+  "cases": [
+    {
+      "case_id": "e-002",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        17.0092
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I\u2019ll search your orders for \u201cSturdy Pitcher\u201d so I can identify the specific purchase you\u2019re asking about.\nI found multiple matching order records, so I\u2019ll check the catalog for \u201cSturdy Pitcher\u201d at Juniper Home Goods to verify which product/order should apply.\nI\u2019ll open the Juniper Home Goods order record I found so I can confirm its current status and relevant details.\nYour Juniper Home Goods \u201cSturdy Pitcher\u201d purchase is order **#9060**. It was placed on **2026-03-20** for **2 pitchers**, total **$290.00**, and the order status is **cancelled**; it was **not shipped or delivered**.",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is seeking the current status of their order for a 'Sturdy Pitcher.' The assistant provides the order ID and status, which are relevant. However, the details about the quantity (2 pitchers) and total cost ($290.00) are unnecessary for answering the user's request about the order status. The user did not ask for this additional information, and it does not contribute to understanding the current status of the order, which is already clearly stated as 'cancelled.' Therefore, the passages about quantity and total cost can be removed without losing the essential information needed to address the user's inquiry.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-003",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        8.626
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I\u2019ll search your orders for \u201cModern Headlamp\u201d so I can pull up the matching purchase and its current recorded status.\nI found your Modern Headlamp order: **#1871**.\n\nRecorded progress:\n- **Ordered:** Apr 6, 2025  \n- **Shipped:** Apr 8, 2025  \n- **Delivered:** Apr 15, 2025  \n- **Current status:** **Refunded**\n\nSo the latest record shows the order was delivered and later marked as refunded.",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requested the current status of their order for the Modern Headlamp. The assistant provides the order ID and a detailed timeline of the order's progress, including ordered, shipped, and delivered dates. However, the user only needed the current status, which is 'Refunded.' The additional details about the ordered, shipped, and delivered dates can be removed without losing the essential information about the current status of the order.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        13.5634
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I\u2019ll search your orders for the Signature Daypack so I can check the recorded delivery details for that purchase.\nI found several fuzzy matches, so I\u2019ll look up the catalog entry to confirm which product/store record is the Meridian Cycles Signature Daypack before answering.\nI\u2019ll open the matching order so I can provide the recorded delivery information from the order record.\nFor your Meridian Cycles \u201cSignature Daypack\u201d order #4366, the recorded delivery information is:\n\n- Status: delivered  \n- Ordered: 2026-03-13  \n- Shipped: 2026-03-14  \n- Delivered: 2026-03-18",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user is seeking the recorded delivery details for the Signature Daypack order. The assistant provides the delivery status and relevant dates, which are necessary to answer the user's request. However, the initial sentences about searching for orders and confirming the product/store record are unnecessary and can be removed without losing the essential information about the delivery details. These passages do not contribute to answering the user's request directly.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-005",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:irrelevant_response_detail"
+      ],
+      "latencies_seconds": [
+        9.1171
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:irrelevant_response_detail"
+          ],
+          "final_reply": "I\u2019ll search your orders for \u201cPortable Level\u201d so I can check its current fulfillment/shipping status.\nI found two matching orders, so I\u2019ll look up the product/store details to confirm which one is from Copperline Tools before answering.\nYes \u2014 your Portable Level from Copperline Tools has left the store. Order #2476 is marked **shipped**, with a shipped date of **June 28, 2026**. It has not been marked delivered yet.",
+          "judge_reasons": {
+            "irrelevant_response_detail": "{\"critique\": \"The user requests the current fulfillment/shipping status of the 'Portable Level' order. The assistant provides the order ID, shipping status, and shipped date, which are all relevant to the user's request. However, the mention of 'I found two matching orders' and the process of looking up product/store details is unnecessary, as it does not contribute to answering the user's question about the specific order's status. This introductory context could be removed without losing the essential information about the order's shipping status.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        16.6234
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Got it \u2014 that\u2019s exactly why it was routed to a human agent. Account profile changes are handled by human support, not through chat automation, and ticket **#151** is already open; a human responds within **24 hours** (**cw-escalations**).",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        15.2602
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll look up your order for \u201cPortable Jam Trio\u201d and the product listing so I can compare the purchase record with the item\u2019s listed store before identifying the applicable return policy.\nI found a mismatch between the purchase record and the product listing, so I\u2019m escalating this for human review rather than choosing a store policy based on conflicting data.\nI checked both records before applying any return rules, and they conflict: your purchase record for the exact \u201cPortable Jam Trio\u201d item shows order **8003**, product **553**, under **store_id 1**, while the current item listing for product **553** shows **store_id 14**. Because those store records don\u2019t match, I can\u2019t safely choose which store\u2019s return policy applies.\n\nI\u2019ve escalated this to a human agent for review under ticket **#151** so they can resolve the store mismatch and confirm the correct return rules.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-009",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        19.042
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Yes \u2014 before you use the item info, the key clarification needed is:\n\n- **Price:** The Rustic Pitcher record shows **price_usd: -5.00**, which is invalid and needs correction/confirmation before use.\n- **Item identity:** The catalog match is **product_id 4**, titled **\u201cRustic Pitcher\u201d**, for **Blue Heron Ceramics / store_id 1**. That part appears to identify the item, but the price cannot be relied on until reviewed.\n- **Escalation:** Human review is already open as ticket **#151** for the invalid catalog price.\n\nUntil the price is fixed or confirmed, I\u2019d avoid using this item\u2019s price in listings, quotes, invoices, or checkout setup.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 4.613757,
+  "cost_usd": 0.322963,
+  "created_at": "2026-10-05T08:25:37.153232+00:00",
+  "evaluated_case_runs": 7,
+  "git_commit": "ddf0ed4da363c6c25bd276bfb12c1f45b51c1c81",
+  "input_tokens": 44015,
+  "median_latency_seconds": 15.2602,
+  "model": "gpt-5.5",
+  "output_tokens": 4812,
+  "price_date": "2026-10-02",
+  "prompt_sha256_12": "f5a056f31f03",
+  "schema_version": 1,
+  "score": 0.428571,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}

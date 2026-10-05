@@ -1,0 +1,70 @@
+{
+  "before_result": "optimize/results/development-cache-before-gpt-5.5-20261005-092103.json",
+  "after_result": "optimize/results/development-cache-after-gpt-5.5-20261005-092349.json",
+  "metrics": {
+    "score": {
+      "before": 0.428571,
+      "after": 0.428571,
+      "relative_change_percent": 0.0
+    },
+    "write_pass_5": {
+      "before": null,
+      "after": null
+    },
+    "input_tokens": {
+      "before": 47561,
+      "after": 44015,
+      "relative_change_percent": -7.46
+    },
+    "cached_input_tokens": {
+      "before": 14848,
+      "after": 9216,
+      "relative_change_percent": -37.93
+    },
+    "cached_fraction": {
+      "before": 0.312189,
+      "after": 0.209383,
+      "relative_change_percent": -32.93
+    },
+    "output_tokens": {
+      "before": 5245,
+      "after": 4812,
+      "relative_change_percent": -8.26
+    },
+    "cost_per_100_conversations_usd": {
+      "before": 4.690557,
+      "after": 4.613757,
+      "relative_change_percent": -1.64
+    },
+    "median_latency_seconds": {
+      "before": 15.0714,
+      "after": 15.2602,
+      "relative_change_percent": 1.25
+    }
+  },
+  "before_passed": [
+    "e-006",
+    "e-008",
+    "e-009"
+  ],
+  "after_passed": [
+    "e-006",
+    "e-008",
+    "e-009"
+  ],
+  "live_agent_case_runs": 14,
+  "live_judge_calls": 8,
+  "total_agent_cost_usd": 0.651302,
+  "judge_cost": "Not recorded by supplied runner.",
+  "offline_checks": [
+    "Exact session-block move verified with all words preserved.",
+    "28 relevant offline tests passed.",
+    "Cached fractions and cache-aware costs independently recomputed."
+  ],
+  "decision": "pending student review",
+  "limitations": [
+    "One run per configuration; small differences may be model or cache-routing variability.",
+    "Sequential runs are not a controlled cold-cache experiment.",
+    "Score retains the known response-detail judge limitation; write_pass_5 unavailable."
+  ]
+}
