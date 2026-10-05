@@ -1,0 +1,26 @@
+{
+  "model": "gpt-5.5",
+  "judge_model": "gpt-4o-mini",
+  "development_case_runs": 14,
+  "judge_calls": 8,
+  "approved_cost_estimate_usd": [
+    1,
+    2
+  ],
+  "price_verified_date": "2026-10-05",
+  "price_source": "https://developers.openai.com/api/docs/models/gpt-5.5",
+  "prices_per_million_tokens_usd": {
+    "input": 5,
+    "cached_input": 0.5,
+    "output": 30
+  },
+  "change": "Move the existing session-context block to the end of SYSTEM_PROMPT_TEMPLATE, preserving all wording. Policy preloading remains reverted.",
+  "hypothesis": "A longer shared prefix may increase cached input fraction and reduce cost without lowering development score.",
+  "design": "Same model and seven development cases before and after; one run per configuration, baseline completed before editing. No test cases.",
+  "limitations": [
+    "No cache reset or control of server routing; run order and natural cache warming may affect observed cache hits.",
+    "Single small sample; latency, outputs and judge decisions can vary.",
+    "No guaranteed savings or hard spending cap."
+  ],
+  "decision": "pending student review"
+}
