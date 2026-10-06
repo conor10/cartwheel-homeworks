@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf5c718c3c616-68f25e49",
+    "object": "chat.completion",
+    "created": 1791198419,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user explicitly asks for delivery information recorded for their purchase. The assistant provides the order ID, status, ordered date, shipped date, delivered date, store, quantity, and total. The user's request is to know what delivery information is recorded, and the assistant lists the relevant dates and status. The assistant also clarifies that no additional delivery fields (carrier, tracking, etc.) are available. This directly answers the user's request without unnecessary detail. The quantity and total are standard order fields that help identify the purchase, and the dates are the core delivery information requested. No specific passage can be removed without losing the answer or useful identification.\",\n  \"confidence\": 0.9\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3710,
+      "completion_tokens": 157,
+      "total_tokens": 3867,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 3710,
+    "completion_tokens": 157,
+    "total_tokens": 3867,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "latency_seconds": 2.532593249808997,
+  "result": "Pass",
+  "confidence": 0.9,
+  "critique": "The user explicitly asks for delivery information recorded for their purchase. The assistant provides the order ID, status, ordered date, shipped date, delivered date, store, quantity, and total. The user's request is to know what delivery information is recorded, and the assistant lists the relevant dates and status. The assistant also clarifies that no additional delivery fields (carrier, tracking, etc.) are available. This directly answers the user's request without unnecessary detail. The quantity and total are standard order fields that help identify the purchase, and the dates are the core delivery information requested. No specific passage can be removed without losing the answer or useful identification.",
+  "status": "valid",
+  "trace_id": "09a615422a2e7e708e5720f7e391f718",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

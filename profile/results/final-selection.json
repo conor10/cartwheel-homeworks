@@ -1,0 +1,15 @@
+{
+  "candidate": "hw8-final",
+  "model": "glm-5.2",
+  "git_commit": "eb232c66378b1e9061c2bf611880bef65e5b379c",
+  "result_path": "optimize/results/development-final-glm-5.2-20261003-123815.json",
+  "result_sha256": "d764add4f9636202926d23fad75c823a3ab1f7ee6f67e86e9ca4b432fd7f3cce",
+  "decision_source": "Student selected the measured HW8 GLM configuration after reviewing the Part E frontier.",
+  "reason": "Lowest measured cost among configurations with the same 3/7 development score.",
+  "development_score": 0.428571,
+  "cost_per_100_conversations_usd": 1.579477,
+  "median_latency_seconds": 4.2427,
+  "scope": "Configuration preference recorded for HW9. This does not restore the working-tree agent to the historical commit. The earlier Part C prompt reorder remains in the working tree.",
+  "cascade_decision": "Rejected; see cascade/results/decision.json",
+  "held_out_cascade_check": "Not run: no development threshold met the minimum agreement."
+}

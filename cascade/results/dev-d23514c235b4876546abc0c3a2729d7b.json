@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf7ad6a7c7723-153aad0f",
+    "object": "chat.completion",
+    "created": 1791198497,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user asks for delivery information for a specific purchase. The assistant correctly identifies the order and provides the relevant delivery details: order ID, status, ordered date, shipped date, and delivered date. The assistant also notes the absence of carrier name, tracking number, delivery address, or signature details, which is a truthful explanation of missing data. This information directly answers the request and explains the limitations of the available data. No specific passage can be removed without losing the answer or a useful identifier. The reply is concise and relevant.\",\n  \"result\": \"Pass\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4084,
+      "completion_tokens": 133,
+      "total_tokens": 4217,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4084,
+    "completion_tokens": 133,
+    "total_tokens": 4217,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 2.0243855826556683,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user asks for delivery information for a specific purchase. The assistant correctly identifies the order and provides the relevant delivery details: order ID, status, ordered date, shipped date, and delivered date. The assistant also notes the absence of carrier name, tracking number, delivery address, or signature details, which is a truthful explanation of missing data. This information directly answers the request and explains the limitations of the available data. No specific passage can be removed without losing the answer or a useful identifier. The reply is concise and relevant.",
+  "status": "valid",
+  "trace_id": "d23514c235b4876546abc0c3a2729d7b",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

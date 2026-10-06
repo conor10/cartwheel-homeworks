@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf8393f1a5f1b-2ade58b8",
+    "object": "chat.completion",
+    "created": 1791198519,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user requested a full refund for the Modern Mechanical Keyboard from Cascade Audio. The assistant correctly identified the order, confirmed eligibility, and explained that the refund amount ($100.25) exceeds the $100 automatic threshold, requiring human review. The assistant provided the ticket ID, SLA, and refund processing details. However, the reply includes redundant policy citations and repeated explanations. Specifically, the assistant cites [cw-refunds] and [cw-escalations] multiple times for the same information (refund limit and human review). The explanation of the $100 limit and human review is stated twice: once in the context of the refund limit and again when citing the escalation policy. This repetition is unnecessary. Additionally, the assistant provides the order details (Store, Item, Total, Status) which are helpful for identification, but the repeated policy citations and the restatement of the human review process in two separate bullet points constitute irrelevant detail. The core information (ticket ID, reason for escalation, SLA, refund processing) is present, but the redundant policy explanations and citations can be removed without losing the necessary information for the user's request.\",\n  \"result\": \"Fail\",\n  \"confidence\": 0.9\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4986,
+      "completion_tokens": 261,
+      "total_tokens": 5247,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4986,
+    "completion_tokens": 261,
+    "total_tokens": 5247,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 5.005037374794483,
+  "result": "Fail",
+  "confidence": 0.9,
+  "critique": "The user requested a full refund for the Modern Mechanical Keyboard from Cascade Audio. The assistant correctly identified the order, confirmed eligibility, and explained that the refund amount ($100.25) exceeds the $100 automatic threshold, requiring human review. The assistant provided the ticket ID, SLA, and refund processing details. However, the reply includes redundant policy citations and repeated explanations. Specifically, the assistant cites [cw-refunds] and [cw-escalations] multiple times for the same information (refund limit and human review). The explanation of the $100 limit and human review is stated twice: once in the context of the refund limit and again when citing the escalation policy. This repetition is unnecessary. Additionally, the assistant provides the order details (Store, Item, Total, Status) which are helpful for identification, but the repeated policy citations and the restatement of the human review process in two separate bullet points constitute irrelevant detail. The core information (ticket ID, reason for escalation, SLA, refund processing) is present, but the redundant policy explanations and citations can be removed without losing the necessary information for the user's request.",
+  "status": "valid",
+  "trace_id": "fe7dda644e211cc3d75d0cb59317196d",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

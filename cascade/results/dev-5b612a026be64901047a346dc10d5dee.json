@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf6999cbaef3c-242e8de7",
+    "object": "chat.completion",
+    "created": 1791198452,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user's final request is to confirm that the suspected duplicate charge is being investigated and to reassure them it won't sit without review. The assistant's final reply directly addresses this by reiterating the ticket ID (197), confirming the suspected nature of the charge, stating the 24-hour SLA for human follow-up, citing the relevant policy (cw-getting-help), and clarifying the agent's limitations regarding payment records. This information is necessary to explain the outcome, provide the relevant next step (waiting for human follow-up), and address the user's concern about the issue being left unresolved. No specific passage can be removed without losing the function of reassuring the user and explaining the process.\",\n  \"confidence\": 1\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4117,
+      "completion_tokens": 167,
+      "total_tokens": 4284,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4117,
+    "completion_tokens": 167,
+    "total_tokens": 4284,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 2.3757811249233782,
+  "result": "Pass",
+  "confidence": 1,
+  "critique": "The user's final request is to confirm that the suspected duplicate charge is being investigated and to reassure them it won't sit without review. The assistant's final reply directly addresses this by reiterating the ticket ID (197), confirming the suspected nature of the charge, stating the 24-hour SLA for human follow-up, citing the relevant policy (cw-getting-help), and clarifying the agent's limitations regarding payment records. This information is necessary to explain the outcome, provide the relevant next step (waiting for human follow-up), and address the user's concern about the issue being left unresolved. No specific passage can be removed without losing the function of reassuring the user and explaining the process.",
+  "status": "valid",
+  "trace_id": "5b612a026be64901047a346dc10d5dee",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

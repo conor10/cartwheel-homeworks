@@ -1,0 +1,8 @@
+{
+  "status": "transport_error",
+  "http_status": 403,
+  "latency_seconds": 0.13247745810076594,
+  "trace_id": "2a25ef50aa4237269cbcc1415abd0214",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

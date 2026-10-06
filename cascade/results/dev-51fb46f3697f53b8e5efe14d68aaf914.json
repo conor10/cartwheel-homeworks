@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf63e2cd46cef-b2ff6f0b",
+    "object": "chat.completion",
+    "created": 1791198438,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user's request is to cancel a customer order. The assistant's final reply asks for the Cartwheel order ID, which is the necessary next step to proceed with the cancellation. It also briefly explains what will happen once the ID is provided (look up status, confirm eligibility, process if eligible). This information is directly relevant to the user's request and provides a clear next step. There is no unnecessary detail, unrelated order fields, redundant inventory, or unrelated policy branches. The reply is concise and serves the purpose of gathering the required information to fulfill the request.\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3204,
+      "completion_tokens": 141,
+      "total_tokens": 3345,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 3204,
+    "completion_tokens": 141,
+    "total_tokens": 3345,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "latency_seconds": 3.19581654202193,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user's request is to cancel a customer order. The assistant's final reply asks for the Cartwheel order ID, which is the necessary next step to proceed with the cancellation. It also briefly explains what will happen once the ID is provided (look up status, confirm eligibility, process if eligible). This information is directly relevant to the user's request and provides a clear next step. There is no unnecessary detail, unrelated order fields, redundant inventory, or unrelated policy branches. The reply is concise and serves the purpose of gathering the required information to fulfill the request.",
+  "status": "valid",
+  "trace_id": "51fb46f3697f53b8e5efe14d68aaf914",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

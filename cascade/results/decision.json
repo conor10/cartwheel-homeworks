@@ -1,0 +1,14 @@
+{
+  "decision": "reject",
+  "decision_source": "Student confirmed rejection after reviewing the development results.",
+  "stage": "development",
+  "minimum_agreement_with_oracle": 0.95,
+  "best_observed_agreement_with_oracle": 0.8484848484848485,
+  "disagreements_at_strictest_threshold": 5,
+  "development_count": 33,
+  "selected_threshold": null,
+  "reason": "No threshold in [0, 1] meets the agreed 95% requirement. Five disagreements remain even at confidence 1.0.",
+  "test_status": "not_run",
+  "test_reason": "Rejected during development; no qualifying threshold was selected. The handout Part D step 3 held-out check has not been performed.",
+  "deployment_decision": "Do not use the Bonsai cascade. Retain Jev as the comparison judge; this does not certify Jev for CI or monitoring."
+}

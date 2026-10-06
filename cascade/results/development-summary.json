@@ -1,0 +1,15 @@
+{
+  "n": 33,
+  "minimum_agreement": 0.95,
+  "lowest_qualifying_threshold": null,
+  "oracle_agreement_with_humans": 0.7878787878787878,
+  "oracle_cost_per_1000_verdicts_usd": 0.20770400000000003,
+  "invalid_proxy_outputs": 2,
+  "cost_method": "Projected deployment cost: proxy on every review, Jev only on fallbacks. Saved oracle verdicts reused, no live Jev spend.",
+  "actual_proxy_model_cost_usd_at_published_price": 0,
+  "best_agreement_with_oracle": 0.8484848484848485,
+  "confidence_one_count": 26,
+  "confidence_one_disagreements": 5,
+  "status": "Rejected by student during development; no threshold selected; test not run",
+  "student_decision": "reject"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf5f4da003936-ac088967",
+    "object": "chat.completion",
+    "created": 1791198426,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user asks whether the displayed price for the Rustic Pitcher is reliable or might change at checkout. The assistant correctly identifies the price is invalid (-$5.00) and states it cannot verify reliability. The reply includes the ticket number (#182), the 24-hour response SLA, and a clear recommendation not to proceed. The policy citation (cw-escalations) is relevant to the escalation timeframe. No specific passage can be removed without losing the answer, the useful identifier (ticket), the relevant decision (don't buy), or the next step (wait for human). The explanation of the invalid price and the escalation is necessary context for the user's request.\",\n  \"result\": \"Pass\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4999,
+      "completion_tokens": 167,
+      "total_tokens": 5166,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4999,
+    "completion_tokens": 167,
+    "total_tokens": 5166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "latency_seconds": 4.441621374804527,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user asks whether the displayed price for the Rustic Pitcher is reliable or might change at checkout. The assistant correctly identifies the price is invalid (-$5.00) and states it cannot verify reliability. The reply includes the ticket number (#182), the 24-hour response SLA, and a clear recommendation not to proceed. The policy citation (cw-escalations) is relevant to the escalation timeframe. No specific passage can be removed without losing the answer, the useful identifier (ticket), the relevant decision (don't buy), or the next step (wait for human). The explanation of the invalid price and the escalation is necessary context for the user's request.",
+  "status": "valid",
+  "trace_id": "25540e433c57393f644a90f703cfcbd4",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf7c3cff179c2-a84a5a01",
+    "object": "chat.completion",
+    "created": 1791198500,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user explicitly asked the agent to look through their account to find the order they cannot remember. The agent provided a comprehensive list of all 16 orders with store names, dates, totals, and statuses. This information is directly relevant to helping the user identify the order they are looking for. The agent also provided helpful categorization tips (e.g., 'If it was a toy/gift order...') and a set of clarifying questions to help the user narrow it down. While the response is long, every part serves the purpose of helping the user identify the specific order they need. No specific passage can be removed without losing the functionality of helping the user find their order.\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 11528,
+      "completion_tokens": 165,
+      "total_tokens": 11693,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 11528,
+    "completion_tokens": 165,
+    "total_tokens": 11693,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 4.499231458175927,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user explicitly asked the agent to look through their account to find the order they cannot remember. The agent provided a comprehensive list of all 16 orders with store names, dates, totals, and statuses. This information is directly relevant to helping the user identify the order they are looking for. The agent also provided helpful categorization tips (e.g., 'If it was a toy/gift order...') and a set of clarifying questions to help the user narrow it down. While the response is long, every part serves the purpose of helping the user identify the specific order they need. No specific passage can be removed without losing the functionality of helping the user find their order.",
+  "status": "valid",
+  "trace_id": "d4a6d18873b365aa343fb6734dc5dded",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

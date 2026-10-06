@@ -1,0 +1,48 @@
+{
+  "sources": [
+    {
+      "candidate": "hw8-final",
+      "source": "optimize/results/development-final-glm-5.2-20261003-123815.json",
+      "sha256": "d764add4f9636202926d23fad75c823a3ab1f7ee6f67e86e9ca4b432fd7f3cce",
+      "git_commit": "eb232c66378b1e9061c2bf611880bef65e5b379c"
+    },
+    {
+      "candidate": "fewer-tokens",
+      "source": "optimize/results/development-fewer-tokens-glm-5.2-20261004-143947.json",
+      "sha256": "23b20350c29275c0cad99b82aa6502b1a2852ab1656ab0d0fcdba79276870fbb",
+      "git_commit": "fb70089a19581b11c892ab0f5ee7263a8c3bea89"
+    },
+    {
+      "candidate": "cache-before",
+      "source": "optimize/results/development-cache-before-gpt-5.5-20261005-092103.json",
+      "sha256": "a7a97d0d01f77cd02ff6aac79f6a21cffa141d3b8985680a2f8a1fbbec130f70",
+      "git_commit": "e5c229fa70962858153097cd268296db55249a1a"
+    },
+    {
+      "candidate": "cache-after",
+      "source": "optimize/results/development-cache-after-gpt-5.5-20261005-092349.json",
+      "sha256": "39e91815d607e6ab1ebdaa71b8dfefde990e849b71fca04b9006298e36277bcd",
+      "git_commit": "ddf0ed4da363c6c25bd276bfb12c1f45b51c1c81"
+    }
+  ],
+  "development_case_ids": [
+    "e-002",
+    "e-003",
+    "e-004",
+    "e-005",
+    "e-006",
+    "e-008",
+    "e-009"
+  ],
+  "rule": "Only development score and cost determine dominance; equal score and equal cost do not dominate each other.",
+  "verification": "Same case membership; scores recalculated from case pass rates; costs reconciled with saved totals allowing rounding.",
+  "limitations": [
+    "One run per configuration, seven development cases; no statistical claim of equal model quality.",
+    "Blank write_pass_5 means unavailable, not zero or verified write safety.",
+    "Costs are saved agent-run estimates, excluding judge calls and retaining the original pricing assumptions.",
+    "The GLM baseline predates the prompt reorder. The current GLM plus reordered prompt combination has not been measured.",
+    "Scores retain the known response-detail judge limitations."
+  ],
+  "student_configuration_choice": "hw8-final",
+  "new_model_calls": 0
+}

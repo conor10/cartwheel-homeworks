@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf6109a2694b1-147d2df0",
+    "object": "chat.completion",
+    "created": 1791198430,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user asks whether a refund can be issued for their purchase of Everyday Olive Oil from Golden Hour Coffee. The assistant identifies the correct order (6727, Golden Hour Coffee, Everyday Olive Oil, $131.00) and states that a new refund cannot be issued because the order is already marked 'refunded' and eligibility is false. This directly answers the question. The mention of escalation is a reasonable next step if the user believes the status is incorrect. No unnecessary details are present; the reply is concise and directly addresses the request.\",\n  \"result\": \"Pass\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5248,
+      "completion_tokens": 141,
+      "total_tokens": 5389,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 5248,
+    "completion_tokens": 141,
+    "total_tokens": 5389,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 2.3368876669555902,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user asks whether a refund can be issued for their purchase of Everyday Olive Oil from Golden Hour Coffee. The assistant identifies the correct order (6727, Golden Hour Coffee, Everyday Olive Oil, $131.00) and states that a new refund cannot be issued because the order is already marked 'refunded' and eligibility is false. This directly answers the question. The mention of escalation is a reasonable next step if the user believes the status is incorrect. No unnecessary details are present; the reply is concise and directly addresses the request.",
+  "status": "valid",
+  "trace_id": "25abeda1734cf4ca6193c41e68ae6a3c",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

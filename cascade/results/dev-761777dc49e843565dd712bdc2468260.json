@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf6ce4a7593d7-2f3e9cbc",
+    "object": "chat.completion",
+    "created": 1791198461,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user asks to cancel the order. The assistant confirms it is already canceled, provides the order ID, status, and shipment status. The policy explanation is brief and directly relevant to why the cancellation is possible. No unnecessary details are present.\",\n  \"confidence\": 1\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4117,
+      "completion_tokens": 74,
+      "total_tokens": 4191,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4117,
+    "completion_tokens": 74,
+    "total_tokens": 4191,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 1.2632559998892248,
+  "result": "Pass",
+  "confidence": 1,
+  "critique": "The user asks to cancel the order. The assistant confirms it is already canceled, provides the order ID, status, and shipment status. The policy explanation is brief and directly relevant to why the cancellation is possible. No unnecessary details are present.",
+  "status": "valid",
+  "trace_id": "761777dc49e843565dd712bdc2468260",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

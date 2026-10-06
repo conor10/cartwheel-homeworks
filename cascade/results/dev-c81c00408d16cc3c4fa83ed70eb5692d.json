@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf78d8b17003a-bc038415",
+    "object": "chat.completion",
+    "created": 1791198491,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user asks whether their Vintage Jam Trio purchase from Saltbox Pantry has left the store. The assistant identifies the correct order (#3320), confirms it has left the store, states the status (shipped), and provides the shipped date. The mention of the older order (#3853) is relevant because the search returned two matching orders, and distinguishing the recent one from the older delivered one helps clarify which purchase the user is asking about. No specific passage can be removed without losing the answer or necessary identification.\",\n  \"confidence\": 1\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3524,
+      "completion_tokens": 133,
+      "total_tokens": 3657,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 3524,
+    "completion_tokens": 133,
+    "total_tokens": 3657,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 1.6923144171014428,
+  "result": "Pass",
+  "confidence": 1,
+  "critique": "The user asks whether their Vintage Jam Trio purchase from Saltbox Pantry has left the store. The assistant identifies the correct order (#3320), confirms it has left the store, states the status (shipped), and provides the shipped date. The mention of the older order (#3853) is relevant because the search returned two matching orders, and distinguishing the recent one from the older delivered one helps clarify which purchase the user is asking about. No specific passage can be removed without losing the answer or necessary identification.",
+  "status": "valid",
+  "trace_id": "c81c00408d16cc3c4fa83ed70eb5692d",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

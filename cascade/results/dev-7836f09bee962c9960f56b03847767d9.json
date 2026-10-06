@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf6d62e999a7c-e9262250",
+    "object": "chat.completion",
+    "created": 1791198462,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user explicitly asks to cancel the purchase of the Handmade USB-C Hub from Cascade Audio. The assistant correctly identifies the order (1058) and states it is shipped. The assistant then explains that cancellation is not possible because the order has shipped, citing the relevant policy [cw-cancellations]. The assistant then provides the next steps: wait for delivery and request a return. The assistant includes details about the return window (30 days from delivery), condition requirements, and the potential restocking fee for Cascade Audio. These details are relevant because they explain what the user can do instead of canceling, which directly addresses the user's goal of stopping the purchase. The information is necessary to inform the user about the return process and potential fees, which are part of the decision and next steps. No specific passage can be removed without losing information needed for the decision or next step.\",\n  \"confidence\": 1\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5724,
+      "completion_tokens": 204,
+      "total_tokens": 5928,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 5724,
+    "completion_tokens": 204,
+    "total_tokens": 5928,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 3.4978808746673167,
+  "result": "Pass",
+  "confidence": 1,
+  "critique": "The user explicitly asks to cancel the purchase of the Handmade USB-C Hub from Cascade Audio. The assistant correctly identifies the order (1058) and states it is shipped. The assistant then explains that cancellation is not possible because the order has shipped, citing the relevant policy [cw-cancellations]. The assistant then provides the next steps: wait for delivery and request a return. The assistant includes details about the return window (30 days from delivery), condition requirements, and the potential restocking fee for Cascade Audio. These details are relevant because they explain what the user can do instead of canceling, which directly addresses the user's goal of stopping the purchase. The information is necessary to inform the user about the return process and potential fees, which are part of the decision and next steps. No specific passage can be removed without losing information needed for the decision or next step.",
+  "status": "valid",
+  "trace_id": "7836f09bee962c9960f56b03847767d9",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

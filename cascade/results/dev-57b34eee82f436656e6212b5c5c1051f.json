@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf65fda43579e-76ba3bc6",
+    "object": "chat.completion",
+    "created": 1791198444,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user asks to return Travel Wool Socks for a full refund if allowed. The final reply confirms the order is refund-eligible, explains the $163.50 amount exceeds the $100 automatic limit requiring human review, cites the relevant policies (cw-refunds, cw-escalations), provides the ticket ID (#185), the 24-hour SLA, and the refund processing timeline (5-10 business days to original payment method). All details directly address the user's request, explain the decision, and provide necessary next steps. No passage can be removed without losing information needed for the request.\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4835,
+      "completion_tokens": 157,
+      "total_tokens": 4992,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4835,
+    "completion_tokens": 157,
+    "total_tokens": 4992,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 3.692116250284016,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user asks to return Travel Wool Socks for a full refund if allowed. The final reply confirms the order is refund-eligible, explains the $163.50 amount exceeds the $100 automatic limit requiring human review, cites the relevant policies (cw-refunds, cw-escalations), provides the ticket ID (#185), the 24-hour SLA, and the refund processing timeline (5-10 business days to original payment method). All details directly address the user's request, explain the decision, and provide necessary next steps. No passage can be removed without losing information needed for the request.",
+  "status": "valid",
+  "trace_id": "57b34eee82f436656e6212b5c5c1051f",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

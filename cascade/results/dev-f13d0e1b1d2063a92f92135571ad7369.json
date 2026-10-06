@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf8134a170015-40a0565c",
+    "object": "chat.completion",
+    "created": 1791198513,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user explicitly requested the current status for the purchase of the Classic Water Bottle from Meridian Cycles. The assistant correctly identified the matching order (ID 8293) and provided the status as Delivered. The additional details (Order ID, Product, Quantity, Ordered, Shipped, Delivered dates) are relevant for confirming the specific purchase and providing a complete status update. While the user only asked for the status, providing the order ID and delivery timeline is standard and helpful for verification. No specific passage can be removed without losing useful context or the answer to the request. The reply is concise and directly addresses the user's need.\",\n  \"confidence\": 0.9\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3777,
+      "completion_tokens": 158,
+      "total_tokens": 3935,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 158,
+    "total_tokens": 3935,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 2.3869417500682175,
+  "result": "Pass",
+  "confidence": 0.9,
+  "critique": "The user explicitly requested the current status for the purchase of the Classic Water Bottle from Meridian Cycles. The assistant correctly identified the matching order (ID 8293) and provided the status as Delivered. The additional details (Order ID, Product, Quantity, Ordered, Shipped, Delivered dates) are relevant for confirming the specific purchase and providing a complete status update. While the user only asked for the status, providing the order ID and delivery timeline is standard and helpful for verification. No specific passage can be removed without losing useful context or the answer to the request. The reply is concise and directly addresses the user's need.",
+  "status": "valid",
+  "trace_id": "f13d0e1b1d2063a92f92135571ad7369",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf633791376ba-46e96d51",
+    "object": "chat.completion",
+    "created": 1791198436,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user requested cancellation of a specific order. The assistant correctly identifies the order, states it cannot be cancelled because it has shipped, cites the relevant policy, and provides the next step (return after delivery). The reply includes the order ID, status, shipment date, policy citation, and next step. No unnecessary details are present. The information is directly relevant to the request and necessary for the decision and next steps.\",\n  \"result\": \"Pass\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4414,
+      "completion_tokens": 111,
+      "total_tokens": 4525,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4414,
+    "completion_tokens": 111,
+    "total_tokens": 4525,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 1.7109732911922038,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user requested cancellation of a specific order. The assistant correctly identifies the order, states it cannot be cancelled because it has shipped, cites the relevant policy, and provides the next step (return after delivery). The reply includes the order ID, status, shipment date, policy citation, and next step. No unnecessary details are present. The information is directly relevant to the request and necessary for the decision and next steps.",
+  "status": "valid",
+  "trace_id": "3a16bb5be9d36c6b9e625965d780ee94",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

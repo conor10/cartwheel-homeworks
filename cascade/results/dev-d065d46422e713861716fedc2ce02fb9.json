@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf7982d83bc8b-679084f7",
+    "object": "chat.completion",
+    "created": 1791198493,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user asked to check what happened with their Sturdy Pitcher purchase from Juniper Home Goods. The assistant correctly identifies the specific order (#9060), provides the relevant details (quantity, total, date, status), distinguishes it from the unrelated fuzzy match, and provides the ticket ID and SLA for the human review. The information is directly relevant to the user's request and the context of the conversation. No specific passage can be removed without losing the answer, useful order ID, or next step.\",\n  \"result\": \"Pass\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4710,
+      "completion_tokens": 132,
+      "total_tokens": 4842,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4710,
+    "completion_tokens": 132,
+    "total_tokens": 4842,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 3.3899620841257274,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user asked to check what happened with their Sturdy Pitcher purchase from Juniper Home Goods. The assistant correctly identifies the specific order (#9060), provides the relevant details (quantity, total, date, status), distinguishes it from the unrelated fuzzy match, and provides the ticket ID and SLA for the human review. The information is directly relevant to the user's request and the context of the conversation. No specific passage can be removed without losing the answer, useful order ID, or next step.",
+  "status": "valid",
+  "trace_id": "d065d46422e713861716fedc2ce02fb9",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

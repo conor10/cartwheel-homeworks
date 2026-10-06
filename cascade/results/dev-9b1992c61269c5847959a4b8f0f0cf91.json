@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf75a5abdf650-0275f121",
+    "object": "chat.completion",
+    "created": 1791198483,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"critique\": \"The user asks how the last return day is calculated. The assistant explains the rule (30 days from delivery, not purchase date) and provides a day-by-day arithmetic breakdown (Jan 20 = day 1 through Feb 18 = day 30). The policy explanation and the final date are necessary. However, the day-by-day arithmetic is unnecessary detail. The user only needs to understand the calculation method and the result. The breakdown can be removed without losing the answer or the relevant decision. The policy citation and the final date are preserved. The arithmetic is an internal process explanation that does not help the customer understand the rule or the outcome.\",\n  \"result\": \"Fail\",\n  \"confidence\": 0.9\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5288,
+      "completion_tokens": 161,
+      "total_tokens": 5449,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 5288,
+    "completion_tokens": 161,
+    "total_tokens": 5449,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 3.097340542357415,
+  "result": "Fail",
+  "confidence": 0.9,
+  "critique": "The user asks how the last return day is calculated. The assistant explains the rule (30 days from delivery, not purchase date) and provides a day-by-day arithmetic breakdown (Jan 20 = day 1 through Feb 18 = day 30). The policy explanation and the final date are necessary. However, the day-by-day arithmetic is unnecessary detail. The user only needs to understand the calculation method and the result. The breakdown can be removed without losing the answer or the relevant decision. The policy citation and the final date are preserved. The arithmetic is an internal process explanation that does not help the customer understand the rule or the outcome.",
+  "status": "valid",
+  "trace_id": "9b1992c61269c5847959a4b8f0f0cf91",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

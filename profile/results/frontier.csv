@@ -1,0 +1,5 @@
+candidate,model,development_score,write_pass_5,cost_per_100_conversations_usd,median_latency_seconds,frontier_status
+hw8-final,glm-5.2,0.428571,,1.579477,4.2427,frontier
+fewer-tokens,glm-5.2,0.428571,,1.705274,4.0588,dominated
+cache-before,gpt-5.5,0.428571,,4.690557,15.0714,dominated
+cache-after,gpt-5.5,0.428571,,4.613757,15.2602,dominated

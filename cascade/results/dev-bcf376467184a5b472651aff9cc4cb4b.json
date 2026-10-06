@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf776ca2f94e4-6ac36c57",
+    "object": "chat.completion",
+    "created": 1791198488,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user asks when a restocking fee is allowed and what conditions must be true before support can mention it might apply. The assistant reply lists four conditions (opened item, store opted in, fee stated on policy page, max 15%) and explicitly states when support should not mention it (unopened items). It also provides a suggested customer-facing line. All of this directly answers the user's question about the conditions and when it's appropriate to mention the fee. The policy citation [cw-restocking-fees] is preserved. No specific passage can be removed without losing the answer to the user's explicit question about conditions and when to mention it. The length and structure are appropriate for clarifying the conditions.\",\n  \"confidence\": 1\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4017,
+      "completion_tokens": 169,
+      "total_tokens": 4186,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 4017,
+    "completion_tokens": 169,
+    "total_tokens": 4186,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 3.653996958397329,
+  "result": "Pass",
+  "confidence": 1,
+  "critique": "The user asks when a restocking fee is allowed and what conditions must be true before support can mention it might apply. The assistant reply lists four conditions (opened item, store opted in, fee stated on policy page, max 15%) and explicitly states when support should not mention it (unopened items). It also provides a suggested customer-facing line. All of this directly answers the user's question about the conditions and when it's appropriate to mention the fee. The policy citation [cw-restocking-fees] is preserved. No specific passage can be removed without losing the answer to the user's explicit question about conditions and when to mention it. The length and structure are appropriate for clarifying the conditions.",
+  "status": "valid",
+  "trace_id": "bcf376467184a5b472651aff9cc4cb4b",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}

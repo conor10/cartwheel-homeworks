@@ -1,0 +1,29 @@
+{
+  "connection_issue": "urllib requests blocked with HTTP 403 / firewall error 1010. Read-only model catalog succeeded with httpx; switched to httpx and api.together.ai.",
+  "preserved_failed_attempt": "smoke-blocked-urllib.json",
+  "catalog_verified": {
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "input_price_per_million": 0,
+    "output_price_per_million": 0,
+    "context_length": 262144,
+    "date": "2026-10-05"
+  },
+  "offline_checks": [
+    "Frozen HW5 file hashes match",
+    "Development IDs disjoint from test",
+    "Jev oracle cache matches exact frozen v1 questions, model and development IDs",
+    "Rubric preserved verbatim",
+    "Confidence accepts 0 and 1 and rejects booleans, NaN and out-of-range values",
+    "7 optimization tests passed",
+    "All threshold agreements and fallback costs independently recalculated",
+    "All 33 saved raw responses revalidated, including two invalid outputs"
+  ],
+  "oracle_cache": "analysis/state/comparisons/jev-f5f874d49235b187.json",
+  "live_calls": {
+    "successful_http_smoke": 1,
+    "successful_http_development": 33,
+    "firewall_blocked_smoke": 1,
+    "new_oracle": 0,
+    "test": 0
+  }
+}

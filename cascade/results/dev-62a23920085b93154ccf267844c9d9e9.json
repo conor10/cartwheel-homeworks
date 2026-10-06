@@ -1,0 +1,45 @@
+{
+  "raw_response": {
+    "id": "a45bf6be58a6ef39-9b9cc509",
+    "object": "chat.completion",
+    "created": 1791198458,
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"result\": \"Pass\",\n  \"critique\": \"The user explicitly states they are stuck in the automated path because they lack details and wants a human review. The assistant confirms the ticket is already open, validates that incomplete details are acceptable, and provides a focused, helpful list of what the human agent can use. The security warning about not sending full card numbers is necessary and relevant to the investigation process. No specific passage can be removed without losing the helpful guidance or the confirmation of the ticket status.\",\n  \"confidence\": 1.0\n}",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "matched_stop": 248046
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3775,
+      "completion_tokens": 117,
+      "total_tokens": 3892,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      }
+    },
+    "system_fingerprint": "default"
+  },
+  "usage": {
+    "prompt_tokens": 3775,
+    "completion_tokens": 117,
+    "total_tokens": 3892,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "latency_seconds": 2.5491604171693325,
+  "result": "Pass",
+  "confidence": 1.0,
+  "critique": "The user explicitly states they are stuck in the automated path because they lack details and wants a human review. The assistant confirms the ticket is already open, validates that incomplete details are acceptable, and provides a focused, helpful list of what the human agent can use. The security warning about not sending full card numbers is necessary and relevant to the investigation process. No specific passage can be removed without losing the helpful guidance or the confirmation of the ticket status.",
+  "status": "valid",
+  "trace_id": "62a23920085b93154ccf267844c9d9e9",
+  "requested_model": "Prism-ML/Ternary-Bonsai-27B",
+  "system_prompt_sha256": "00df3433ab37fe883dfaa7f9d49c190ec20d2666bb3fcc40d24fd732d16e904f"
+}
